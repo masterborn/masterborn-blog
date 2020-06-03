@@ -71,7 +71,7 @@ const plugins = [
     resolve: `gatsby-plugin-emotion`,
     options: {
       sourceMap: true,
-      autoLabel: process.env.NODE_ENV !== 'production',
+      autoLabel: true,
       labelFormat: '[local]',
       cssPropOptimization: true,
     },
