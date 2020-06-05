@@ -12,7 +12,7 @@ const FeaturePost = ({ post }) => {
   const { title, description, author, authorAvatar, slug } = post;
   return (
     <div>
-      <PostDetailsBox>FEATURE ARTICLE</PostDetailsBox>
+      <PostDetailsBox>FEATURED ARTICLE</PostDetailsBox>
       <PostLink to={slug}>
         <Heading as="h1">{title}</Heading>
       </PostLink>
