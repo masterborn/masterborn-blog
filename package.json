@@ -58,7 +58,7 @@
     "gatsby-transformer-sharp": "2.3.19",
     "graphql": "14.6.0",
     "is-absolute-url": "3.0.3",
-    "lodash": "4.17.15",
+    "lodash": "4.17.19",
     "polished": "3.4.4",
     "prism-react-renderer": "1.0.2",
     "prop-types": "15.7.2",
