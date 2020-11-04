@@ -56,8 +56,6 @@ export default function BlogTemplate(props) {
     ? authorAvatar.childImageSharp.fixed.src
     : defaultAvatar;
 
-  get(metaImage, 'childImageSharp.fixed.src', null);
-
   const metaImageSrc = get(metaImage, 'childImageSharp.fixed.src', null);
 
   return (
