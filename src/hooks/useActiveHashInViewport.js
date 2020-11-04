@@ -12,7 +12,6 @@ const useActiveHashInViewport = (hashes = []) => {
     }
     const windowHeight =
       window.innerHeight || document.documentElement.clientHeight;
-    console.log('hashes', hashes);
     const elements = hashes.map(hash =>
       document.getElementById(hash.substring(1))
     );
