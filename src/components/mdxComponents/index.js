@@ -10,9 +10,9 @@ import Blockquote from './Blockqute';
 import Hr from './Hr';
 import List from './List';
 import ListOrdered from './ListOrdered';
-import LinkedImage from './LinkedImage';
 import Table from './Table';
 import Strong from './Strong';
+import Image from '../Image';
 
 const generateHeading = size => props => (
   <Heading {...props} as={size} linked>
@@ -35,7 +35,7 @@ export default {
   a: props => <AnchorTag {...props} />,
   ul: props => <List {...props} />,
   ol: props => <ListOrdered {...props} />,
-  img: props => <LinkedImage {...props} />,
+  img: props => <Image {...props} />,
   // TODO add `blockquote`
   // TODO add `li`
   table: props => <Table {...props} mb={4} />,

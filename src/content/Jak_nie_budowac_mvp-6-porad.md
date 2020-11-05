@@ -3,7 +3,7 @@ title: 'Jak NIE budować MVP - 6 porad dla CEO i Founderów'
 date: 2020-10-05
 description: 'At MasterBorn, we are obsessed with improving the process of software development. For most companies and teams, this begins with creating and defining an MVP. We have built a lot of MVPs and I wanted to share some insights and best practices we have learned thus far, sometimes the hard way!'
 author: 'Gray Skinner'
-authorAvatar: ./assets/default_avatar.png
+authorAvatar: ./assets/avatar_gray_skinner.jpeg
 metaImage: ./assets/How_not_to_build_a_mvp/elevator_image.jpg
 metaTitle: 'Jak NIE budować MVP - 6 porad dla CEO i Founderów'
 metaDescription: 'W MasterBorn ulepszanie procesu tworzenia oprogramowania stało się naszą firmową “obsesją”. W przypadku większości firm i zespołów proces ten zaczyna się od utworzenia i zdefiniowania MVP. W tym artykule chciałbym się podzielić spostrzeżeniami i najlepszymi praktykami, których nauczyliśmy się tworząc MVP dla naszych amerykańskich Klientów.'
@@ -73,7 +73,7 @@ Czy znaczy to, że zupełnie nie ma sensu wchodzić w nisze, które są już zaj
 
 **Ciekawostka: [najwyżej wycenianym jednorożcem](<(https://www.statista.com/statistics/407888/ranking-of-highest-valued-startup-companies-worldwide/)>) w 2020 roku jest chińska firma ANT Financial, fintechowy spin-off Alibaby.**
 
-![purple_cow_book](assets/How_not_to_build_a_mvp/purple_cow_book.jpg)
+[![purple_cow_book](assets/How_not_to_build_a_mvp/purple_cow_book.jpg)](https://www.facebook.com/MasterbornSoftware/posts/3448792958547593)
 
 ## 5. Zatrudnienie niewłaściwego zespołu do jego budowy
 

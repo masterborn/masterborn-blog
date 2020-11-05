@@ -3,7 +3,7 @@ title: '6 Tips on How NOT to Build a Minimum Viable Product – for CEOs and Fou
 date: 2020-10-05
 description: 'At MasterBorn, we are obsessed with improving the process of software development. For most companies and teams, this begins with creating and defining an MVP. We have built a lot of MVPs and I wanted to share some insights and best practices we have learned thus far, sometimes the hard way!'
 author: 'Gray Skinner'
-authorAvatar: ./assets/default_avatar.png
+authorAvatar: ./assets/avatar_gray_skinner.jpeg
 metaImage: ./assets/How_not_to_build_a_mvp/elevator_image.jpg
 metaTitle: '6 Tips on How NOT to Build a Minimum Viable Product – for CEOs and Founders'
 metaDescription: 'At MasterBorn, we are obsessed with improving the process of software development. For most companies and teams, this begins with creating and defining an MVP. We have built a lot of MVPs and I wanted to share some insights and best practices we have learned thus far, sometimes the hard way!'
@@ -12,7 +12,7 @@ isFeature: true
 
 At MasterBorn, we are obsessed with improving the process of software development. For most companies and teams, this begins with creating and defining an MVP. We have built a lot of MVPs and I wanted to share some insights and best practices we have learned thus far, sometimes the hard way!
 
-![elevator_heading_image](assets/How_not_to_build_a_mvp/elevator_image.jpg)
+![elevator_heading_image](./assets/How_not_to_build_a_mvp/elevator_image.jpg)
 
 <br/>
 
@@ -20,7 +20,7 @@ At MasterBorn, we are obsessed with improving the process of software developmen
 
 I know for a fact that software projects tend to be very personal – especially for founders and owners. It is only natural. Building a product MVP often comes from a deeper intellectual or emotional need. Some people want to make the world a better place, for others it’s a chance to start a new career or make it big in the digital age.
 
-While individual goals are very important, because they drive us forward, any product must be built predominantly with users (that is clients) in mind. It is them who adapt or reject the application. Failing to validate your product with your actual target audience will probably kill it within months. This is one of the main reasons why [90% of startups fail](https://www.forbes.com/sites/neilpatel/2015/01/16/90-of-startups-will-fail-heres-what-you-need-to-know-about-the-10/) .
+While individual goals are very important, because they drive us forward, any product must be built predominantly with users (that is clients) in mind. It is them who adapt or reject the application. Failing to validate your product with your actual target audience will probably kill it within months. This is one of the main reasons why [90% of startups fail](https://www.forbes.com/sites/neilpatel/2015/01/16/90-of-startups-will-fail-heres-what-you-need-to-know-about-the-10/).
 
 There are two ways to tackle this problem. One is to go through a research phase before the first lines of code are written. A good understanding of your potential market will also help when looking for investors, who often prefer to understand the business model than to see a prototype.
 
@@ -28,9 +28,9 @@ The second approach is to invest in the UX phase, which is often misunderstood a
 
 **Core lesson: take a deep breath, do your homework and ask your users what they really want before investing in the MVP.**
 
-FunFact: the term MVP (or Minimum Viable Product) first appeared around 2001 in the context of Apple Maps. [This article](https://ianbell.com/2012/10/01/apple-shouldnt-build-minimum-viable-products/) , first published in 2001, is one of the early examples.
+FunFact: the term MVP (or Minimum Viable Product) first appeared around 2001 in the context of Apple Maps. [This article](https://ianbell.com/2012/10/01/apple-shouldnt-build-minimum-viable-products/), first published in 2001, is one of the early examples.
 
-![it_guy_with_phone](assets/How_not_to_build_a_mvp/it_guy_telephone.jpg)
+![it_guy_with_phone](./assets/How_not_to_build_a_mvp/it_guy_telephone.jpg)
 
 ## 2. Misunderstanding of what "minimum" and "viable" really means
 
@@ -46,7 +46,7 @@ But “minimum” does not mean overly simplistic, coarse or clunky. If the MVP 
 
 FunFact: [45% of startups](https://websitebuilder.org/blog/startup-statistics/) fail because they run out of money, 42% because they haven’t identified the market properly.
 
-![office_laptop_hands](assets/How_not_to_build_a_mvp/office_laptop_hands.jpg)
+![office_laptop_hands](./assets/How_not_to_build_a_mvp/office_laptop_hands.jpg)
 
 ## 3. Choosing the wrong tech stack
 
@@ -60,7 +60,7 @@ Of course not all technologies are equal: for example a web app that is accompan
 
 **Core lesson: while you need results here and now, think how the technology choice will impact the future.**
 
-FunFact: the three most popular technologies among developers in 2020 are [JavaScript, HTML/CSS and SQL](https://insights.stackoverflow.com/survey/2020#technology-programming-scripting-and-markup-languages-professional-developers) .
+FunFact: the three most popular technologies among developers in 2020 are [JavaScript, HTML/CSS and SQL](https://insights.stackoverflow.com/survey/2020#technology-programming-scripting-and-markup-languages-professional-developers).
 
 ## 4. Misunderstanding of your product’s key differentiators
 
@@ -74,7 +74,7 @@ Well, there might be a point if you do it right. As Seth Godin observed in his [
 
 **FunFact: [the highest valued Unicorn](https://www.statista.com/statistics/407888/ranking-of-highest-valued-startup-companies-worldwide/) as of 2020 is a chinese company ANT Financial, Alibaba’s FinTech spin-off.**
 
-![purple_cow_book](assets/How_not_to_build_a_mvp/purple_cow_book.jpg)
+[![purple_cow_book](./assets/How_not_to_build_a_mvp/purple_cow_book.jpg)](https://www.linkedin.com/feed/update/urn:li:activity:6726858078978940928)
 
 ## 5. Hiring the wrong team to build it
 
@@ -91,7 +91,7 @@ It is also tempting to have a close-knit in-house team from day 1. It’s great 
 
 **Fun fact: [according to some studies](https://www.qsm.com/process_improvement_01.html), team efficiency drops significantly if there are 9 or more team members.**
 
-![office_it_gouys](assets/How_not_to_build_a_mvp/office_it_guys.jpg)
+![office_it_gouys](./assets/How_not_to_build_a_mvp/office_it_guys.jpg)
 
 ## 6. Product-centred approach
 
