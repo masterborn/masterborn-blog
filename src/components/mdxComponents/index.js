@@ -27,7 +27,7 @@ export default {
   h4: generateHeading('h4'),
   h5: generateHeading('h5'),
   h6: generateHeading('h6'),
-  p: props => <Text {...props} mt={3} mb={3} />,
+  p: props => <Text {...props} mt={4} mb={4} />,
   pre: Pre,
   code: CodeBlock,
   strong: Strong,

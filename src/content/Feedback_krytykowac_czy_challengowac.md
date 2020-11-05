@@ -4,7 +4,7 @@ date: 2020-05-20
 description: 'W ostatnim  czasie dużo można zauważyć artykułów, opinii, podcastów na temat prawdziwości i skuteczności informacji zwrotnej. Pada wiele pytań po co feedback, jaki on powinien być, w czym on nam tak naprawdę pomoże'
 author: 'Adrianna Wojewoda'
 authorAvatar: ./assets/default_avatar.png
-isFeature: true
+isFeature: false
 ---
 
 W ostatnim czasie dużo można zauważyć artykułów, opinii, podcastów na temat prawdziwości i skuteczności informacji zwrotnej. Pada wiele pytań po co feedback, jaki on powinien być, w czym on nam tak naprawdę pomoże. Odpowiedzi do tej pory były proste, feedback powinien być taki aby pokazał pracownikowi co źle robi, co powinien poprawić, na co zwrócić uwagę, a w skrócie podsumować jego pracę. Nie jest to jednak odpowiednie podejście do rozumienia kultury dawania informacji zwrotnej. Musimy zacząć od kilku bardzo ważnych zasadach udzielania feedbacku, które pomogą nam odpowiednio do niego się przygotować.

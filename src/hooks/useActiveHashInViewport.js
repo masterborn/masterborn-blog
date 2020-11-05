@@ -12,7 +12,9 @@ const useActiveHashInViewport = (hashes = []) => {
     }
     const windowHeight =
       window.innerHeight || document.documentElement.clientHeight;
-    const elements = hashes.map(hash => document.querySelector(hash));
+    const elements = hashes.map(hash =>
+      document.getElementById(hash.substring(1))
+    );
     const activeEl = elements.find((item, index) => {
       const rect = item.getBoundingClientRect();
       const vertInView =

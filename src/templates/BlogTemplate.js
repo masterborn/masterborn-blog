@@ -2,6 +2,7 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
+import get from 'lodash/get';
 
 import SEO from '../components/SEO';
 import PageLayout from '../layouts/PageLayout';
@@ -37,7 +38,14 @@ export default function BlogTemplate(props) {
   } = props;
 
   const {
-    frontmatter: { metaTitle, metaDescription, date, author, authorAvatar },
+    frontmatter: {
+      metaTitle,
+      metaDescription,
+      metaImage,
+      date,
+      author,
+      authorAvatar,
+    },
     fields: { slug, title },
     parent: { relativePath },
     body,
@@ -48,9 +56,16 @@ export default function BlogTemplate(props) {
     ? authorAvatar.childImageSharp.fixed.src
     : defaultAvatar;
 
+  const metaImageSrc = get(metaImage, 'childImageSharp.fixed.src', null);
+
   return (
     <PageLayout location={location} themeName="blog">
-      <SEO title={metaTitle} description={metaDescription} slug={slug} />
+      <SEO
+        title={metaTitle}
+        description={metaDescription}
+        image={metaImageSrc}
+        slug={slug}
+      />
       <Wrapper>
         <GreyWrapper />
         <Content>
@@ -133,6 +148,13 @@ export const pageQuery = graphql`
       frontmatter {
         metaTitle
         metaDescription
+        metaImage {
+          childImageSharp {
+            fixed {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
         date
         author
         authorAvatar {
