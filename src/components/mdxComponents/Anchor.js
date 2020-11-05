@@ -35,7 +35,12 @@ const AnchorTag = ({ children: link, href }) => {
     const basePath = getBasePathToFolder(location.pathname);
     to = `${basePath}/${toPath}`;
   }
-  return <StyledLink to={to}>{link}</StyledLink>;
+  const isExternalLink = !href.startsWith('/');
+  return (
+    <StyledLink to={to} target={isExternalLink ? '_blank' : null}>
+      {link}
+    </StyledLink>
+  );
 };
 
 AnchorTag.propTypes = {
