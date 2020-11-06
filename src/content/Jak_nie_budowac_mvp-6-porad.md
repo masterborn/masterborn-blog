@@ -1,7 +1,7 @@
 ---
 title: 'Jak NIE budować MVP - 6 porad dla CEO i Founderów'
 date: 2020-10-05
-description: 'At MasterBorn, we are obsessed with improving the process of software development. For most companies and teams, this begins with creating and defining an MVP. We have built a lot of MVPs and I wanted to share some insights and best practices we have learned thus far, sometimes the hard way!'
+description: 'W MasterBorn ulepszanie procesu tworzenia oprogramowania stało się naszą firmową “obsesją”. W przypadku większości firm i zespołów proces ten zaczyna się od utworzenia i zdefiniowania MVP. W tym artykule chciałbym się podzielić spostrzeżeniami i najlepszymi praktykami, których nauczyliśmy się tworząc MVP dla naszych amerykańskich Klientów.'
 author: 'Gray Skinner'
 authorAvatar: ./assets/avatar_gray_skinner.jpeg
 metaImage: ./assets/How_not_to_build_a_mvp/elevator_image.jpg
@@ -20,7 +20,7 @@ W MasterBorn ulepszanie procesu tworzenia oprogramowania stało się naszą firm
 
 To naturalne, że projekty software’owe są zwykle bardzo osobiste - szczególnie dla founderów i właścicieli. Tworzenie MVP produktu często wynika z głębszej potrzeby intelektualnej lub emocjonalnej. Niektórzy chcą, aby świat stał się lepszym miejscem, dla innych jest to szansa na rozpoczęcie nowej kariery lub osiągnięcie sukcesu w erze cyfrowej.
 
-Podczas gdy indywidualne cele są bardzo ważne, ponieważ napędzają nas do działania, każdy produkt musi być tworzony głównie z myślą o użytkownikach (czyli odbiorcach). To oni akceptują lub odrzucają aplikację. Brak weryfikacji produktu z rzeczywistą grupą docelową prawdopodobnie doprowadzi do jego porażki w ciągu kilku miesięcy (co stanowi jeden z głównych powodów [niepowodzenia 90% startupów](<(https://www.forbes.com/sites/neilpatel/2015/01/16/90-of-startups-will-fail-heres-what-you-need-to-know-about-the-10/).>)
+Podczas gdy indywidualne cele są bardzo ważne, ponieważ napędzają nas do działania, każdy produkt musi być tworzony głównie z myślą o użytkownikach (czyli odbiorcach). To oni akceptują lub odrzucają aplikację. Brak weryfikacji produktu z rzeczywistą grupą docelową prawdopodobnie doprowadzi do jego porażki w ciągu kilku miesięcy (co stanowi jeden z głównych powodów [niepowodzenia 90% startupów](https://www.forbes.com/sites/neilpatel/2015/01/16/90-of-startups-will-fail-heres-what-you-need-to-know-about-the-10/).
 
 Istnieją dwa sposoby rozwiązania tego problemu. Jednym z nich jest przejście przez fazę badawczą (research), zanim zostaną napisane pierwsze linie kodu. Tu pomocne okazują się warsztaty biznesowe i narzędzia takie jak choćby BMC (Business Model Canvas). Dobre zrozumienie Twojego potencjalnego rynku pomoże również w poszukiwaniu inwestorów, którym często bardziej zależy na tym, by zrozumieć model biznesowy niż na tym, by zobaczyć prototyp aplikacji.
 
@@ -28,7 +28,7 @@ Drugie podejście polega na zainwestowaniu w fazę UX, która często jest mylni
 
 **Główna lekcja: weź głęboki oddech, odrób pracę domową i zapytaj użytkowników, czego naprawdę chcą, zanim zainwestujesz w MVP.**
 
-Ciekawostka: termin MVP (lub Minimum Viable Product) pojawił się po raz pierwszy około 2001 roku w kontekście Apple Maps. [Ten artykuł](<(https://ianbell.com/2012/10/01/apple-shouldnt-build-minimum-viable-products/)>) , opublikowany po raz pierwszy w 2001 roku, jest jednym z wczesnych przykładów MVP.
+Ciekawostka: termin MVP (lub Minimum Viable Product) pojawił się po raz pierwszy około 2001 roku w kontekście Apple Maps. [Ten artykuł](https://ianbell.com/2012/10/01/apple-shouldnt-build-minimum-viable-products/), opublikowany po raz pierwszy w 2001 roku, jest jednym z wczesnych przykładów MVP.
 
 ![it_guy_with_phone](assets/How_not_to_build_a_mvp/it_guy_telephone.jpg)
 
@@ -59,7 +59,7 @@ Oczywiście nie wszystkie technologie są sobie równe: na przykład aplikacja w
 
 Główna lekcja: chociaż potrzebujesz wyników tu i teraz, zastanów się, w jaki sposób wybór technologii wpłynie na przyszłość produktu i Twojej firmy.
 
-Ciekawostka: trzy najpopularniejsze technologie wśród programistów w 2020 roku to [JavaScript, HTML / CSS i SQL](<(https://insights.stackoverflow.com/survey/2020#technology-programming-scripting-and-markup-languages-professional-developers)>) .
+Ciekawostka: trzy najpopularniejsze technologie wśród programistów w 2020 roku to [JavaScript, HTML / CSS i SQL](https://insights.stackoverflow.com/survey/2020#technology-programming-scripting-and-markup-languages-professional-developers).
 
 ## 4. Niezrozumienie kluczowych wyróżników Twojego produktu
 
@@ -67,7 +67,7 @@ Jednym z kluczowych czynników sukcesu MVP i dojrzałego produktu jest dobrze zb
 
 Wielu założycieli startupów, z którymi rozmawiam, ignoruje fakt, że nie wystarczy mieć “super” produktu. Wyjaśniam im, że ich propozycja musi mieć realne znaczenie dla użytkowników i oferować odczuwalnie wyższą wartość niż istniejące rozwiązania.
 
-Czy znaczy to, że zupełnie nie ma sensu wchodzić w nisze, które są już zajęte? Nie do końca. Jak zauważył Seth Godin w swojej fioletowej [książce „Purple Cow”](<(https://www.goodreads.com/book/show/641604.Purple_Cow)>), niektóre firmy mogą na nowo opracować stary model biznesowy, przekształcić go i stać się liderami rynkowymi. Starbucks, Apple i Krispy Kreme prosperowały w ugruntowanych niszach, ale je zrewolucjonizowały. Podobnie Uber wymyślił na nowo taksówki, AirBnB hotele, a bankowość Revolut.
+Czy znaczy to, że zupełnie nie ma sensu wchodzić w nisze, które są już zajęte? Nie do końca. Jak zauważył Seth Godin w swojej fioletowej [książce „Purple Cow”](https://www.goodreads.com/book/show/641604.Purple_Cow), niektóre firmy mogą na nowo opracować stary model biznesowy, przekształcić go i stać się liderami rynkowymi. Starbucks, Apple i Krispy Kreme prosperowały w ugruntowanych niszach, ale je zrewolucjonizowały. Podobnie Uber wymyślił na nowo taksówki, AirBnB hotele, a bankowość Revolut.
 
 **Główna lekcja: znajdź USP, które obejmuje klientów i konkurencję, ale nie bój się zrewolucjonizować istniejącego rynku.**
 
@@ -75,7 +75,7 @@ Czy znaczy to, że zupełnie nie ma sensu wchodzić w nisze, które są już zaj
 
 [![purple_cow_book](assets/How_not_to_build_a_mvp/purple_cow_book.jpg)](https://www.facebook.com/MasterbornSoftware/posts/3448792958547593)
 
-## 5. Zatrudnienie niewłaściwego zespołu do jego budowy
+## 5. Zatrudnienie Niewłaściwego Zespołu Do Budowy MVP
 
 Istnieją trzy główne przyczyny niepowodzeń zespołów projektowych na etapie MVP. Widzę je następująco.
 
@@ -88,7 +88,7 @@ Zlecając prace na zewnątrz skracasz czas wejścia MVP na rynek, redukujesz kos
 
 **Główna lekcja: upewnij się, że Twój zespół jest dobrze dobrany do zakładanych celów i zrozum jego mocne i słabe strony, aby zapobiegać problemom, które mogą pojawić się w przyszłości.**
 
-**Ciekawostka: [według niektórych badań](<(https://www.qsm.com/process_improvement_01.html)>) wydajność zespołu znacznie spada, jeśli jest 9 lub więcej członków.**
+**Ciekawostka: [według badań](https://www.qsm.com/process_improvement_01.html) wydajność zespołu znacznie spada, jeśli jest 9 lub więcej członków.**
 
 ![office_it_gouys](assets/How_not_to_build_a_mvp/office_it_guys.jpg)
 
@@ -103,8 +103,8 @@ Warto zwrócić uwagę, że niektórzy założyciele znajdują inwestorów i fun
 
 **Lekcja główna: myśl o oprogramowaniu jako o środku do celu, a nie o celu samym w sobie.**
 
-**Ciekawostka: [mniej niż 57% startupów](<(https://www.forbes.com/sites/johnkoetsier/2020/04/30/74-of-startups-have-trimmed-staff-65-have-less-than-6-months-of-cash/)>) ma dedykowany zespół marketingowy.**
+**Ciekawostka: [mniej niż 57% startupów](https://www.forbes.com/sites/johnkoetsier/2020/04/30/74-of-startups-have-trimmed-staff-65-have-less-than-6-months-of-cash/) ma dedykowany zespół marketingowy.**
 
 ## Summary
 
-Mam nadzieję, że ten krótki artykuł wniesie do Twojej pracy realną wartość i nową, świeżą jakość. Jestem bardzo ciekaw Twojego zdania i przemyśleń także zachęcam do kontaktu (np. na [LinkedIn](https://www.linkedin.com/in/grayskinner/)). W MasterBorn stale się rozwijamy, a jedną z najlepszych form nauki jest dzielenie się nasza wiedzą z innymi dlatego spodziewaj się kolejnych podobnych artykułów już niebawem!
+Mam nadzieję, że ten krótki artykuł wniesie do Twojej pracy realną wartość i nową, świeżą jakość. Jestem bardzo ciekaw Twojego zdania i przemyśleń także zachęcam do kontaktu (np. na [LinkedIn](https://www.linkedin.com/in/grayskinner/). W MasterBorn stale się rozwijamy, a jedną z najlepszych form nauki jest dzielenie się nasza wiedzą z innymi dlatego spodziewaj się kolejnych podobnych artykułów już niebawem!
