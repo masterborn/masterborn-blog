@@ -29,7 +29,7 @@ BaseHeading.defaultProps = {
   color: 'heading',
   fontFamily: 'heading',
   fontWeight: 'heading',
-  capitalize: true,
+  capitalize: false,
 };
 
 const AnchorIcon = styled(Icon)`
