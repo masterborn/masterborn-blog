@@ -105,6 +105,6 @@ Warto zwrócić uwagę, że niektórzy założyciele znajdują inwestorów i fun
 
 **Ciekawostka: [mniej niż 57% startupów](https://www.forbes.com/sites/johnkoetsier/2020/04/30/74-of-startups-have-trimmed-staff-65-have-less-than-6-months-of-cash/) ma dedykowany zespół marketingowy.**
 
-## Summary
+## Podsumowanie
 
-Mam nadzieję, że ten krótki artykuł wniesie do Twojej pracy realną wartość i nową, świeżą jakość. Jestem bardzo ciekaw Twojego zdania i przemyśleń także zachęcam do kontaktu (np. na [LinkedIn](https://www.linkedin.com/in/grayskinner/). W MasterBorn stale się rozwijamy, a jedną z najlepszych form nauki jest dzielenie się nasza wiedzą z innymi dlatego spodziewaj się kolejnych podobnych artykułów już niebawem!
+Mam nadzieję, że ten krótki artykuł wniesie do Twojej pracy realną wartość i nową, świeżą jakość. Jestem bardzo ciekaw Twojego zdania i przemyśleń także zachęcam do kontaktu (np. na [LinkedIn](https://www.linkedin.com/in/grayskinner/)). W MasterBorn stale się rozwijamy, a jedną z najlepszych form nauki jest dzielenie się nasza wiedzą z innymi dlatego spodziewaj się kolejnych podobnych artykułów już niebawem!

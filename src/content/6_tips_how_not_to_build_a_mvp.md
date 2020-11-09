@@ -20,7 +20,7 @@ At MasterBorn, we are obsessed with improving the process of software developmen
 
 I know for a fact that software projects tend to be very personal – especially for founders and owners. It is only natural. Building a product MVP often comes from a deeper intellectual or emotional need. Some people want to make the world a better place, for others it’s a chance to start a new career or make it big in the digital age.
 
-While individual goals are very important, because they drive us forward, any product must be built predominantly with users (that is clients) in mind. It is them who adapt or reject the application. Failing to validate your product with your actual target audience will probably kill it within months. This is one of the main reasons why [90% of startups fail](https://www.forbes.com/sites/neilpatel/2015/01/16/90-of-startups-will-fail-heres-what-you-need-to-know-about-the-10/).
+While individual goals are very important, because they drive us forward, any product must be built predominantly with users (clients) in mind. It is them who adapt or reject the application. Failing to validate your product with your actual target audience will probably kill it within months. This is one of the main reasons why [90% of startups fail](https://www.forbes.com/sites/neilpatel/2015/01/16/90-of-startups-will-fail-heres-what-you-need-to-know-about-the-10/).
 
 There are two ways to tackle this problem. One is to go through a research phase before the first lines of code are written. A good understanding of your potential market will also help when looking for investors, who often prefer to understand the business model than to see a prototype.
 
@@ -66,7 +66,7 @@ FunFact: the three most popular technologies among developers in 2020 are [JavaS
 
 One of the key success factors of an MVP, and a mature product, is a well-explored Unique Sales Proposition. For any product a USP is a combination of three factors: what your clients want, what you can give them and what your competition doesn’t offer. Thus to find a good USP at least three exploration exercises have to be made to see if there is a market potential.
 
-When I talk with some startup founders I often realize they ignore the fact that it’s not enough to have an awesome! product. It has to make a real difference for the users and do it better than existing solutions. What is the point of inventing a new cola drink if Coke and Pepsi have the majority of the market?...
+When I talk with some startup founders I often realize they ignore the fact that it’s not enough to have an awesome product. It has to make a real difference for the users and do it better than existing solutions. What is the point of inventing a new cola drink if Coke and Pepsi have the majority of the market?
 
 Well, there might be a point if you do it right. As Seth Godin observed in his [great book "Purple Cow"](https://www.goodreads.com/book/show/641604.Purple_Cow) some companies can reinvent the old business model, transform it and become market leaders in the process. Starbucks, Apple and KripsyKreme have thrived in established niches, but they turned around. Similarly Uber reinvented taxis, AirBnB hotels and Revolut banking.
 
