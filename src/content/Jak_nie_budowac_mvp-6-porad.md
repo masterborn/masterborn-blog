@@ -1,6 +1,6 @@
 ---
 title: 'Jak NIE budować MVP - 6 porad dla CEO i Founderów'
-date: 2020-10-09
+date: 2020-11-09
 description: 'W MasterBorn ulepszanie procesu tworzenia oprogramowania stało się naszą firmową “obsesją”. W przypadku większości firm i zespołów proces ten zaczyna się od utworzenia i zdefiniowania MVP. W tym artykule chciałbym się podzielić spostrzeżeniami i najlepszymi praktykami, których nauczyliśmy się tworząc MVP dla naszych amerykańskich Klientów.'
 author: 'Gray Skinner'
 authorAvatar: ./assets/avatar_gray_skinner.jpeg

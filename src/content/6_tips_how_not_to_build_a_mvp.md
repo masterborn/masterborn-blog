@@ -1,6 +1,6 @@
 ---
 title: '6 Tips on How NOT to Build a Minimum Viable Product – for CEOs and Founders'
-date: 2020-10-09
+date: 2020-11-09
 description: 'At MasterBorn, we are obsessed with improving the process of software development. For most companies and teams, this begins with creating and defining an MVP. We have built a lot of MVPs and I wanted to share some insights and best practices we have learned thus far, sometimes the hard way.'
 author: 'Gray Skinner'
 authorAvatar: ./assets/avatar_gray_skinner.jpeg
