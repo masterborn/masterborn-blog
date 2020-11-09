@@ -20,7 +20,7 @@ W MasterBorn ulepszanie procesu tworzenia oprogramowania stało się naszą firm
 
 To naturalne, że projekty software’owe są zwykle bardzo osobiste - szczególnie dla founderów i właścicieli. Tworzenie MVP produktu często wynika z głębszej potrzeby intelektualnej lub emocjonalnej. Niektórzy chcą, aby świat stał się lepszym miejscem, dla innych jest to szansa na rozpoczęcie nowej kariery lub osiągnięcie sukcesu w erze cyfrowej.
 
-Podczas gdy indywidualne cele są bardzo ważne, ponieważ napędzają nas do działania, każdy produkt musi być tworzony głównie z myślą o użytkownikach (czyli odbiorcach). To oni akceptują lub odrzucają aplikację. Brak weryfikacji produktu z rzeczywistą grupą docelową prawdopodobnie doprowadzi do jego porażki w ciągu kilku miesięcy (co stanowi jeden z głównych powodów [niepowodzenia 90% startupów](https://www.forbes.com/sites/neilpatel/2015/01/16/90-of-startups-will-fail-heres-what-you-need-to-know-about-the-10/).
+Podczas gdy indywidualne cele są bardzo ważne, ponieważ napędzają nas do działania, każdy produkt musi być tworzony głównie z myślą o użytkownikach (czyli odbiorcach). To oni akceptują lub odrzucają aplikację. Brak weryfikacji produktu z rzeczywistą grupą docelową prawdopodobnie doprowadzi do jego porażki w ciągu kilku miesięcy (co stanowi jeden z głównych powodów [niepowodzenia 90% startupów](https://www.forbes.com/sites/neilpatel/2015/01/16/90-of-startups-will-fail-heres-what-you-need-to-know-about-the-10/)).
 
 Istnieją dwa sposoby rozwiązania tego problemu. Jednym z nich jest przejście przez fazę badawczą (research), zanim zostaną napisane pierwsze linie kodu. Tu pomocne okazują się warsztaty biznesowe i narzędzia takie jak choćby BMC (Business Model Canvas). Dobre zrozumienie Twojego potencjalnego rynku pomoże również w poszukiwaniu inwestorów, którym często bardziej zależy na tym, by zrozumieć model biznesowy niż na tym, by zobaczyć prototyp aplikacji.
 
@@ -45,13 +45,13 @@ MVP ma być Optymalne.
 
 **Główna lekcja: znajdź równowagę między wartością dla użytkowników, a niezbędnym, optymalnym zakresem funkcjonalnościowym.**
 
-Ciekawostka: [45% startupów upada](https://websitebuilder.org/blog/startup-statistics/) z powodu braku funduszy, 42% z powodu braku zapotrzebowania rynkowego na produkt
+Ciekawostka: [45% startupów upada](https://websitebuilder.org/blog/startup-statistics/) z powodu braku funduszy, 42% z powodu braku zapotrzebowania rynkowego na produkt.
 
 ![office_laptop_hands](assets/How_not_to_build_a_mvp/office_laptop_hands.jpg)
 
 ## 3. Wybór niewłaściwego stosu technologicznego
 
-Większość nowoczesnych języków programowania pozwala na budowanie praktycznie dowolnych funkcjonalności (szczególnie we wczesnych etapach MVP), jednak trzeba mieć na uwadze, że staranny dobór stosu jest wyborem technologicznym, biznesowym ale także psychologiczno-socjologicznym.
+Większość nowoczesnych języków programowania pozwala na budowanie praktycznie dowolnych funkcjonalności (szczególnie we wczesnych etapach MVP), jednak trzeba mieć na uwadze, że staranny dobór stosu jest wyborem technologicznym, biznesowym, ale także psychologiczno-socjologicznym.
 
 Istnieją technologie, które są preferowane przez społeczność programistów, są stosunkowo łatwe do nauczenia i ciągle się rozwijają (np. JavaScript). Inne, choć nadal są w użyciu, bywają odrzucane przez inżynierów i ich przyszłość nie jest tak świetlana (w moim odczuciu np. PHP). Doświadczenie podpowiada mi, że wybór niewłaściwego stosu może oznaczać, że w ciągu kilku lat dostępność wykwalifikowanych osób do skalowania i utrzymywania aplikacji będzie ograniczona, a pozyskiwanie najlepszych ludzi będzie kosztowne.
 
