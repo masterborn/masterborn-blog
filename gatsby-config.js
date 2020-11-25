@@ -77,20 +77,20 @@ const plugins = [
     },
   },
   {
-    resolve: `gatsby-plugin-prefetch-google-fonts`,
+    resolve: `gatsby-plugin-google-fonts`,
     options: {
       fonts: [
-        {
-          family: `IBM Plex Sans`,
-          subsets: ['latin-ext'],
-          variants: ['300', '400', '400i', '500', '600', '700'],
-        },
-        {
-          family: `IBM Plex Mono`,
-          subsets: ['latin-ext'],
-          variants: ['300', '400', '500'],
-        },
+        `IBM Plex Sans\:300`,
+        `IBM Plex Sans\:400i`,
+        `IBM Plex Sans\:400`,
+        `IBM Plex Sans\:500`,
+        `IBM Plex Sans\:600`,
+        `IBM Plex Sans\:700`,
+        `IBM Plex Mono\:300`,
+        `IBM Plex Mono\:400`,
+        `IBM Plex Mono\:500`,
       ],
+      display: 'swap',
     },
   },
 ];
