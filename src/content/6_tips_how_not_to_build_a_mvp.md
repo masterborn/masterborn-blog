@@ -7,7 +7,6 @@ authorAvatar: ./assets/avatar_gray_skinner.jpeg
 metaImage: ./assets/How_not_to_build_a_mvp/elevator_image.jpg
 metaTitle: '6 Tips on How NOT to Build a Minimum Viable Product – for CEOs and Founders'
 metaDescription: 'At MasterBorn, we are obsessed with improving the process of software development. For most companies and teams, this begins with creating and defining an MVP. We have built a lot of MVPs and I wanted to share some insights and best practices we have learned thus far, sometimes the hard way.'
-isFeature: true
 ---
 
 At MasterBorn, we are obsessed with improving the process of software development. For most companies and teams, this begins with creating and defining an MVP. We have built a lot of MVPs and I wanted to share some insights and best practices we have learned thus far, sometimes the hard way.
