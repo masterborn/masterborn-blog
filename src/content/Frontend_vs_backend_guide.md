@@ -145,9 +145,8 @@ Quite against the common understanding, DevOps isn’t only about development or
 
 [Conway's law](https://en.wikipedia.org/wiki/Conway%27s_law), introduced in 1967, nicely reflects this concept, stating that organizations design systems that mirror, or mimic their internal communication structure.
 
-Any organization that designs a system (defined broadly) will produce a design whose structure is a copy of the organization's communication structure.
-
-— Melvin E. Conway
+_"Any organization that designs a system (defined broadly) will produce a design whose structure is a copy of the organization's communication structure."_
+Melvin E. Conway
 
 ![developer_women_at_work](./assets/Frontend_vs_backend_guide/developer_women_at_work.jpeg)
 

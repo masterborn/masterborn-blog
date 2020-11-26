@@ -65,7 +65,7 @@ Jak sama nazwa wskazuje, programiści Back-end pracują „na zapleczu” oprogr
 - Języki wykorzystywane po stronie serwera (Java, Ruby lub Python, .NET)
 - Protokoły komunikacyjne API (REST, SOAP, RPC)
 - Bazy danych (MySQL, MongoDB, Oracle, SQL Server)
-- Serwery (Apache, Nginx, serwery IIS, Microsoft IIS).
+- Serwery (Apache, Nginx, serwery IIS, Microsoft IIS)
 
 ### Jakie są obowiązki programisty Back-end?
 
@@ -79,9 +79,9 @@ Jak sama nazwa wskazuje, programiści Back-end pracują „na zapleczu” oprogr
 
 Programiści Full-stack to przysłowiowe „złote rączki” branży IT. Łączą oni umiejętności programistów Front-end i Back-end.
 
-Są to specjaliści, którzy odnajdują się zarówno w pracy nad projektami, które obejmują bazy danych i algorytmy, ale równie dobrze orientują się w technologiach dla użytkowników. Od programisty Full-stack oczekuje się znajomości HTML, CSS i JavaScript, ale także znajomości jednego lub kilku języków programowania wykorzystywanych przez Back-end, np. Ruby, PHP lub Python. Zakres doświadczenie dewelopera Full-stack łączy elementy zarządzania projektami, projektowania stron internetowych i UX.
+Są to specjaliści, którzy odnajdują się zarówno w pracy nad projektami, które obejmują bazy danych i algorytmy, ale równie dobrze orientują się w technologiach dla użytkowników. Od programisty Full-stack oczekuje się znajomości HTML, CSS i JavaScript, ale także znajomości jednego lub kilku języków programowania wykorzystywanych przez Back-end, np. Ruby, PHP lub Python. Doświadczenie dewelopera Full-stack łączy elementy zarządzania projektami, projektowania stron internetowych i UX.
 
-Nie oznacza to oczywiście, że są ludźmi od wszystkiego i w każdej z tych technologii są w stanie samodzielnie napisać cały kod. W rzeczywistości prawie każdy Full-stack wciąż spędza większość czasu jako programista Front-end lub Back-end, ale jeśli zajdzie taka potrzeba, jest gotowy przejąć różne zadania i zajrzeć „pod maskę”, lub sprawnie naprawić "karoserię" .
+Nie oznacza to oczywiście, że są ludźmi od wszystkiego i w każdej z tych technologii są w stanie samodzielnie napisać cały kod. W rzeczywistości prawie każdy Full-stack wciąż spędza większość czasu jako programista Front-end lub Back-end, ale jeśli zajdzie taka potrzeba, jest gotowy przejąć różne zadania i zajrzeć „pod maskę”, lub sprawnie naprawić "karoserię".
 
 ### Technologie i umiejętności Full-stack
 
@@ -89,8 +89,8 @@ Nie oznacza to oczywiście, że są ludźmi od wszystkiego i w każdej z tych te
 - Technologie back-end (jeden lub więcej języków programowania, np. Python, PHP, Ruby, .Net itp.)
 - Bazy danych, cache i message brokery (MySQL, MongoDB, Oracle, SQL Server, Redis)
 - Podstawowe umiejętności graficzne (najlepiej podstawowe umiejętności projektowania prototypów i projektowania UI / UX)
-- Systemy kontroli wersji, takie jak Git.
-- API (REST i SOAP). Umiejętność tworzenia usług REST i SOAP jest mile widziana.
+- Systemy kontroli wersji, takie jak Git
+- API (REST i SOAP). Umiejętność tworzenia usług REST i SOAP jest mile widziana
 
 ### Jakie są obowiązki programisty Full-stack?
 
@@ -133,7 +133,7 @@ Wbrew powszechnemu wyobrażeniu DevOps to coś więcej niż połączenie ról de
 
 [Prawo Conwaya](https://en.wikipedia.org/wiki/Conway%27s_law) z 1967 roku dość dobrze odzwierciedla tę koncepcję, mówiąc, że organizacje projektują systemy, w sposób który mimowolnie odzwierciedla lub naśladuje ich własną strukturę komunikacji wewnętrznej.
 
-_Każda organizacja, która projektuje system (dowolny, szeroko rozumiany), stworzy coś, czego struktura jest kopią struktury komunikacyjnej organizacji._
+_"Każda organizacja, która projektuje system (dowolny, szeroko rozumiany), stworzy coś, czego struktura jest kopią struktury komunikacyjnej organizacji."_
 Melvin E. Conway
 
 ## Zarobki Developerów w USA
@@ -152,7 +152,7 @@ Według portalu indeed.com, programiści Full-stack z doświadczeniem w nowoczes
 
 ### Jakie są typowe zarobki inżyniera DevOps?
 
-Wykwalifikowani inżynierowie DevOps są bardzo poszukiwani przez firmy informatyczne i, w zależności od konkretnych obowiązków na stanowisku, pensje w Stanach Zjednoczonych [oscylują wokół](https://www.indeed.com/career/development-operations-engineer/salaries) [125 000 USD rocznie](https://www.indeed.com/career/development-operations-engineer/salaries), ale w niektórych stanach rosną do ponad 170 000 USD rocznie.
+Wykwalifikowani inżynierowie DevOps są bardzo poszukiwani przez firmy informatyczne i w zależności od konkretnych obowiązków na stanowisku, pensje w Stanach Zjednoczonych [oscylują wokół](https://www.indeed.com/career/development-operations-engineer/salaries) [125 000 USD rocznie](https://www.indeed.com/career/development-operations-engineer/salaries), ale w niektórych stanach rosną do ponad 170 000 USD rocznie.
 
 ## Porada dotycząca zarabiania (nie tylko) dla Developerów
 
