@@ -64,7 +64,7 @@ Just like the very name suggests, back-end developers work “behind the scenes�
 - Server-side languages (Java, Ruby, or Python, .NET)
 - API communication protocols (REST, SOAP, RPC)
 - Databases (MySQL, MongoDB, Oracle, SQLServer)
-- Servers (Apache, Nginx, IIS servers, Microsoft IIS).
+- Servers (Apache, Nginx, IIS servers, Microsoft IIS)
 
 ### What are the responsibilities of a back-end developer?
 
@@ -92,8 +92,8 @@ That doesn’t, of course, mean that they are masters at all these technologies 
 - Back-end technologies (one or more programming languages, e.g. Python, PHP, Ruby, .Net etc.)
 - Databases, cache and message brokers (MySQL, MongoDB, Oracle, SQLServer, Redis)
 - Basic design skills as a plus (ideally basic prototype design and UI /UX design skills)
-- Version control systems like Git.
-- APIs (REST & SOAP). Ability to create REST and SOAP services is desirable.
+- Version control systems like Git
+- APIs (REST & SOAP). Ability to create REST and SOAP services is desirable
 
 ### What are the responsibilities of a full-stack developer?
 
@@ -119,7 +119,7 @@ Patrick Debois, a software engineer from Belgium, first used the term DevOps as 
 ### What are the responsibilities of DevOps?
 
 - Managing and streamlining projects
-- Performance testing and evaluation. DevOps engineers are knowledgeable about the capacity of the software (product) and accommodate it as users save data to it.
+- Performance testing and evaluation. DevOps engineers are knowledgeable about the capacity of the software (product) and accommodate it as users save data to it
 - Designing and improving infrastructure and team collaboration
 - Designing a setup environment for users, making the experience better, more automated and intuitive
 - Creating CI/CD (continuous integration and deployment) workflow processes
@@ -148,7 +148,7 @@ Quite against the common understanding, DevOps isn’t only about development or
 _"Any organization that designs a system (defined broadly) will produce a design whose structure is a copy of the organization's communication structure."_
 Melvin E. Conway
 
-![developer_women_at_work](./assets/Frontend_vs_backend_guide/developer_women_at_work.jpeg)
+![developer_women_at_work](./assets/Frontend_vs_backend_guide/developer_team_presentation.jpeg)
 
 ## Summary
 
