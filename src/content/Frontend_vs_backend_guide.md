@@ -47,7 +47,7 @@ From the site’s navigation, responsive design, all the way to animations – f
 
 ### What is the typical paycheck of a front-end developer?
 
-The average salary for a front-end developer is [\$110,490 per year in the United States](https://www.indeed.com/career/front-end-developer/salaries?from=top_sb). On top of that, developers can count on an extra [\$2,500 annual cash bonus](https://www.indeed.com/career/front-end-developer/salaries?from=top_sb). The more lucrative jobs pay as much as \$180k yearly. The spread is significant, but specialization definitely pays off – knowledge of niche, in-demand technologies can be a plus. For example, expertise in XSLT is rewarded by over 50% higher salaries.
+The average salary for a front-end developer is [$110,490 per year in the United States](https://www.indeed.com/career/front-end-developer/salaries?from=top_sb). On top of that, developers can count on an extra [$2,500 annual cash bonus](https://www.indeed.com/career/front-end-developer/salaries?from=top_sb). The more lucrative jobs pay as much as $180k yearly. The spread is significant, but specialization definitely pays off – knowledge of niche, in-demand technologies can be a plus. For example, expertise in XSLT is rewarded by over 50% higher salaries.
 
 ## Who is a back-end developer?
 
@@ -76,7 +76,7 @@ Just like the very name suggests, back-end developers work “behind the scenes�
 
 ### What is the typical paycheck of a back-end developer?
 
-According to the employment website Indeed, the salaries for US-based back-end related jobs [average around \$128k per year](https://www.indeed.com/salaries/Back-End-Developer-Salaries), depending on seniority and location. California and Washington are the highest paying states, and salaries there range up to [\$151k per year](https://www.indeed.com/salaries/Senior-Back-End-Developer-Salaries).
+According to the employment website Indeed, the salaries for US-based back-end related jobs [average around $128k per year](https://www.indeed.com/salaries/Back-End-Developer-Salaries), depending on seniority and location. California and Washington are the highest paying states, and salaries there range up to [$151k per year](https://www.indeed.com/salaries/Senior-Back-End-Developer-Salaries).
 
 ## Who is a full-stack developer?
 
@@ -129,7 +129,7 @@ Patrick Debois, a software engineer from Belgium, first used the term DevOps as 
 
 ### What is the typical paycheck of a DevOps engineer?
 
-Skilled DevOps engineers are in high demand and, depending on the specific responsibilities of the role, US salaries for the jobs [hover around \$125k per year](https://www.indeed.com/career/development-operations-engineer/salaries) but can go up to over \$170k per year in certain states.
+Skilled DevOps engineers are in high demand and, depending on the specific responsibilities of the role, US salaries for the jobs [hover around $125k per year](https://www.indeed.com/career/development-operations-engineer/salaries) but can go up to over $170k per year in certain states.
 
 ### DevOps in the Silicon Valley
 
@@ -148,7 +148,7 @@ Quite against the common understanding, DevOps isn’t only about development or
 _"Any organization that designs a system (defined broadly) will produce a design whose structure is a copy of the organization's communication structure."_
 Melvin E. Conway
 
-![developer_women_at_work](./assets/Frontend_vs_backend_guide/developer_women_at_work.jpeg)
+![developer_women_at_work](./assets/Frontend_vs_backend_guide/developer_team_presentation.jpeg)
 
 ## Summary
 
@@ -156,7 +156,7 @@ Hopefully you can use this short guide to gain a better understanding of full-st
 
 This being said, there has never been a better time to make your foray into the IT industry, be it as a developer or a founder. Employment of web developers is projected to grow 27 percent between 2014 to 2024, way above the average for all other occupations.
 
-In the US, as the above estimates provided by Indeed.com suggest, the paychecks for these jobs never go under \$100k per year and yet can soar dangerously high for certain specializations.
+In the US, as the above estimates provided by Indeed.com suggest, the paychecks for these jobs never go under $100k per year and yet can soar dangerously high for certain specializations.
 
 ## Pro Tip for Founders and CEOs
 
