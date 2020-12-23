@@ -18,11 +18,6 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "clean": "gatsby clean"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "pretty-quick --staged"
-    }
-  },
   "dependencies": {
     "@emotion/core": "^10.0.28",
     "@emotion/is-prop-valid": "^0.8.8",
