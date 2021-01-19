@@ -7,7 +7,7 @@ authorAvatar: ./assets/avatar_gray_skinner.jpeg
 metaImage: ./assets/Why_your_startup_doesnt_need_a_CTO/lead_article_photo.jpeg
 metaTitle: 'Why your startup doesn’t need a CTO'
 metaDescription: 'I know it’s a bold statement, but I don’t believe every company needs a CTO in the very beginning.'
-isFeature: true
+isFeature: false
 ---
 
 ![developer_hero_image](./assets/Why_your_startup_doesnt_need_a_CTO/lead_article_photo.jpeg)
