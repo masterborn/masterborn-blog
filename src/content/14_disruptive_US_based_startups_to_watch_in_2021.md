@@ -126,12 +126,12 @@ Founded: **2016**<br/>
 Location: **New York City**<br/>
 Funding: **$5 million**<br/>
 
-Brand claim: “Curb management for fast-changing cities”
+Brand claim: “Curb management for fast-changing cities.”
 
 
 Coord has already helped cities from Pittsburgh to Seattle [manage 4.9+ million curb spaces](https://www.smartcitiesdive.com/news/coord-to-pilot-smart-parking-zones-cities/580821/#:~:text=Dive%20Insight%3A&text=Coord%20looked%20for%20cities%20open,individual%20parking%2C%22%20she%20said.). Backed by Sidewalk Labs (owned by Alphabet, the parent company of Google), the startup was founded with the mission of streets serving people, not vehicles. Coord offers a detailed digital view of how curbs are being used. This helps local authorities to mitigate urban problems such as safety, congestion, and revenue-generation. Today, Coord supports over 17,000 curb miles across 15 cities, with the goal of serving over 100 cities across the globe by the end of 2021.
 
-Life sciences
+Life Sciences
 
 8. [Sana Biotechnology](https://sana.com/)
 
@@ -145,7 +145,7 @@ Brand claim: “Engineers cells as medicine.”
 
 Life sciences is an exciting field for innovation and here's one among life sciences startups to watch in 2021. Led by several co-founders of Juno Therapeutics, Sana Biotechnology focuses on technologies for using engineered cells as medicine with the first applications expected to start as early as 2022. The ability to modify genes and use cells this way is predicted to be one of the most important advances in healthcare today.
 
-This could help discover treatments for patients with diseases that are currently untreatable. “Our long-term aspirations are to be able to control or modify any gene in the body, to replace any cell that is damaged or missing, and to markedly improve access to cellular and gene-based medicines,” Sana Biotechnology wrote in its IPO prospectus.
+This could help discover treatments for patients with diseases that are currently untreatable. “Our long-term aspirations are to be able to control or modify any gene in the body, to replace any cell that is damaged or missing, and to markedly improve access to cellular and gene-based medicines.” Sana Biotechnology wrote in its IPO prospectus.
 
 With $700 million of funding, it’s one of the most heavily-funded startups to emerge in the Seattle area in the past few years. Less than 3 years after it was founded and without any revenue on the books, Sana Biotechnology just [filed](https://www.sec.gov/Archives/edgar/data/1770121/000119312521007483/d60414ds1.htm) to go public, planning to trade on Nasdaq under SANA and raising up to $150 million.
 
@@ -193,7 +193,7 @@ Brand claim: “Let’s advance learning.”
 
 Even though it was founded in the late 90s, Blackboard embraced innovative technologies and today is one of the leading EdTech startups that serve the higher education, K-12, as well as business and government clients around the world.
 
-Their mission is to support educators and institutions in realizing their goals and preparing for tomorrow’sthe challenges of tomorrow - especially relevant during the restrictions caused by the COVID-19 pandemic.
+Their mission is to support educators and institutions in realizing their goals and preparing for tomorrow’s challenges - especially relevant during the restrictions caused by the COVID-19 pandemic.
 
 The company combines a deep understanding of education with a tech-savvy approach to creating new learning products such as Blackboard App or Blackboard Learn. The latter is a well-established learning management system used by prestigious educational institutions and large companies around the world.
 

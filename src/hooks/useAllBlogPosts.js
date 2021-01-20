@@ -21,6 +21,13 @@ const useAllBlogPosts = () => {
               date
               author
               isFeature
+              metaImage {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
               authorAvatar {
                 childImageSharp {
                   fixed {

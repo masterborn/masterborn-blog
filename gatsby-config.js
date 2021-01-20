@@ -30,6 +30,7 @@ const plugins = [
           options: {
             maxWidth: 1035,
             quality: 75,
+            linkImagesToOriginal: false
           },
         },
         {
