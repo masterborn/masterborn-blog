@@ -131,7 +131,7 @@ Brand claim: “Curb management for fast-changing cities.”
 
 Coord has already helped cities from Pittsburgh to Seattle [manage 4.9+ million curb spaces](https://www.smartcitiesdive.com/news/coord-to-pilot-smart-parking-zones-cities/580821/#:~:text=Dive%20Insight%3A&text=Coord%20looked%20for%20cities%20open,individual%20parking%2C%22%20she%20said.). Backed by Sidewalk Labs (owned by Alphabet, the parent company of Google), the startup was founded with the mission of streets serving people, not vehicles. Coord offers a detailed digital view of how curbs are being used. This helps local authorities to mitigate urban problems such as safety, congestion, and revenue-generation. Today, Coord supports over 17,000 curb miles across 15 cities, with the goal of serving over 100 cities across the globe by the end of 2021.
 
-Life Sciences
+### Life Sciences
 
 8. [Sana Biotechnology](https://sana.com/)
 
