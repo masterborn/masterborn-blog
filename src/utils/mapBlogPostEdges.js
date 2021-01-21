@@ -11,6 +11,9 @@ const mapBlogPostEdges = postsEdges => {
     date: node.frontmatter.date,
     author: node.frontmatter.author,
     isFeature: node.frontmatter.isFeature,
+    metaImage: node.frontmatter.metaImage
+      ? node.frontmatter.metaImage.childImageSharp
+      : {},
     authorAvatar: node.frontmatter.authorAvatar
       ? node.frontmatter.authorAvatar.childImageSharp.fixed.src
       : defaultAvatar,

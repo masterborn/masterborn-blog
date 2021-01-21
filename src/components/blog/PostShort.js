@@ -9,20 +9,23 @@ import Hr from '../Hr';
 import AuthorBox from './AuthorBox';
 import PostDetailsBox from './PostDetailsBox';
 import PostLink from './PostLink';
+import Image from 'gatsby-image'
 
 const Container = styled.div`
   margin-bottom: ${props => props.theme.space.large};
 `;
 
+
 const PostShort = ({
-  post: { date, slug, title, description, authorAvatar, author },
+  post: { date, slug, title, description, authorAvatar, author, metaImage },
 }) => {
   const localeDate = new Date(date).toLocaleDateString();
   return (
     <Container>
-      <PostDetailsBox>{localeDate}</PostDetailsBox>
+      <PostDetailsBox>Published at: {localeDate}</PostDetailsBox>
       <PostLink to={slug}>
-        <Heading as="h4" mb={2}>
+        <Image fluid={metaImage.fluid} />
+        <Heading as="h4" mb={2} mt={3}>
           {title}
         </Heading>
       </PostLink>
