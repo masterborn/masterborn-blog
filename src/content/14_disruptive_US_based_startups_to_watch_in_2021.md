@@ -7,7 +7,7 @@ authorAvatar: ./assets/avatar_malgorzata_g.jpeg
 metaImage: ./assets/14_disruptive_US_based_startups_to_watch_in_2021/hero_image.jpeg
 metaTitle: '14 disruptive U.S.-based startups to watch in 2021'
 metaDescription: 'When it comes to startups and innovative tech, the United States is way more than just Silicon Valley today. The country is full of tech hubs that give birth to countless exciting startups.'
-isFeature: true
+isFeature: false
 ---
 
 When it comes to startups and innovative tech, the United States is way more than just Silicon Valley today. The country is full of tech hubs that give birth to countless exciting startups.
