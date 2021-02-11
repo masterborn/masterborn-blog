@@ -7,7 +7,8 @@ authorAvatar: ./assets/avatar_rafal_swietek.png
 metaImage: ./assets/Separation_of_concerns_in_react_apps/meta_image.png
 metaTitle: 'Separation of concerns in modern React apps - key principles and examples'
 metaDescription: 'Building React apps, ever wondered where to put that "thing", and how to name it?'
-isFeature: false
+isFeature: true
+isPreview: true
 ---
 
 A few years ago, when React started becoming popular, one of the things that made developers love it was its flexibility in implementation. Everyone pointed out that it’s not a framework, but a library and anyone can implement it as one likes.
