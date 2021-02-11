@@ -7,14 +7,14 @@ authorAvatar: ./assets/avatar_rafal_swietek.png
 metaImage: ./assets/Separation_of_concerns_in_react_apps/meta_image.png
 metaTitle: 'Separation of concerns in modern React apps - key principles and examples'
 metaDescription: 'Building React apps, ever wondered where to put that "thing", and how to name it?'
-isFeature: false
+isFeature: true
 ---
 
 A few years ago, when React started becoming popular, one of the things that made developers love it was its flexibility in implementation. Everyone pointed out that it’s not a framework, but a library and anyone can implement it as one likes.
 
 Well, that hasn’t changed yet, but React mutated so much that if you take a look at the app’s code written using their technology in 2016 and compare it to what we write today, you would probably think that these are 2 completely different things.
 
-![hero](./assets/Separation_of_concerns_in_react_apps/hero.jpg)
+![hero](./assets/Separation_of_concerns_in_react_apps/meta_image.jpg)
 
 In 2019, hooks were introduced and that significantly changed the way we create and structure our components and logic. Hooks began to gradually push class components out and it feels like we finally have a clean and dedicated solution for separating logic from the visual layer.
 
@@ -42,7 +42,7 @@ You don’t want to know that the machine had to count the money you put inside,
 
 The vending machine probably also doesn’t care about the fact that you’d like to eat a Snickers. It doesn’t need to know that the button you pushed had a “SNICKERS” logo on it. For that machine, it’s just a product laying on shelf #12.
 
-![hero](./assets/Separation_of_concerns_in_react_apps/vending_machine.jpg)
+![vending machine](./assets/Separation_of_concerns_in_react_apps/vending_machine.jpg)
 
 In this example, you’re just like a React component trying to use a custom hook (the vending machine). I think you already know what I’m trying to say. From here, the more interesting part starts.
 
