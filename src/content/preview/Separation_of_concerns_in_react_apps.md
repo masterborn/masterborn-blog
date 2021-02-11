@@ -15,7 +15,7 @@ A few years ago, when React started becoming popular, one of the things that mad
 
 Well, that hasn’t changed yet, but React mutated so much that if you take a look at the app’s code written using their technology in 2016 and compare it to what we write today, you would probably think that these are 2 completely different things.
 
-![hero](./assets/Separation_of_concerns_in_react_apps/meta_image.jpg)
+![hero](./assets/Separation_of_concerns_in_react_apps/meta_image.png)
 
 In 2019, hooks were introduced and that significantly changed the way we create and structure our components and logic. Hooks began to gradually push class components out and it feels like we finally have a clean and dedicated solution for separating logic from the visual layer.
 
