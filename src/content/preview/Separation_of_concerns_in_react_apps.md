@@ -56,8 +56,11 @@ const ProductPage = ({ productId }) => {
   const [selectedVariantId, setSelectedVariantId] = useState(0);
   
   useEffect(() => {
-    const res = await fetch(`https://api.example.com/products/${productId}`);
-    setProduct(res.json());
+    const fetchProduct = async () => {
+      const res = await fetch(`https://api.example.com/products/${productId}`);
+      setProduct(res.json());
+    };
+    fetchProduct();
   }, []);
 
   const onSubmit = () => {
@@ -125,8 +128,11 @@ const ProductPage = ({ productId }) => {
   const [selectedVariantId, setSelectedVariantId] = useState(0);
 
   useEffect(() => {
-    const res = await fetch(`https://api.example.com/products/${productId}`);
-    setProduct(res.json());
+    const fetchProduct = async () => {
+      const res = await fetch(`https://api.example.com/products/${productId}`);
+      setProduct(res.json());
+    };
+    fetchProduct();
   }, []);
 
   const addToCart = () => {
@@ -170,9 +176,13 @@ The way I prefer is to create a custom hook that would become a layer of abstrac
 const useSingleProduct = (productId) => {
   const [product, setProduct] = useState(null);
 
-  useEffect(() => {
+  const fetchProduct = async () => {
     const res = await fetch(`https://api.example.com/products/${productId}`);
     setProduct(res.json());
+  };
+
+  useEffect(() => {
+    fetchProduct();
   }, [productId]);
 
   return product;
@@ -229,9 +239,13 @@ In the case of the “super sale” badge, for some of us, it might be tempting 
 const useSingleProduct = (productId) => {
   const [product, setProduct] = useState(null);
 
-  useEffect(() => {
+  const fetchProduct = async () => {
     const res = await fetch(`https://api.example.com/products/${productId}`);
     setProduct(res.json());
+  };
+
+  useEffect(() => {
+    fetchProduct();
   }, [productId]);
 
   const currentPrice = useMemo(() => product?.discountPrice || product?.price, [product]);
@@ -284,9 +298,13 @@ Great! There’s one more thing we could do with this example to make it even be
 const useSingleProduct = (productId) => {
   const [product, setProduct] = useState(null);
 
-  useEffect(() => {
+  const fetchProduct = async () => {
     const res = await fetch(`https://api.example.com/products/${productId}`);
     setProduct(res.json());
+  };
+
+  useEffect(() => {
+    fetchProduct();
   }, [productId]);
 
   const currentPrice = useMemo(() => product?.discountPrice || product?.price, [product]);
