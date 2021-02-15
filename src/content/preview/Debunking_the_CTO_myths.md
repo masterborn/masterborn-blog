@@ -3,7 +3,7 @@ title: 'Debunking the CTO myths with Masterborn’s CTO Przemysław Królik'
 date: 2021-01-28
 description: 'When talking about companies like Uber, Facebook or Amazon, people tend to excessively focus on their founding fathers – the famed and rich CEOs who reap all the splendor and get all the spotlight. But somewhere behind the scenes, whether it’s a startup or multinational behemoth like Amazon, there is an important person who rarely gets the credit they deserve – a CTO. Lurking in the shadows and doing their job unbeknownst to the public eye, CTOs are the unsung leaders who make critical decisions about the technology used at the company and have a significant impact on how the business grows – and ultimately succeeds.'
 author: 'Przemysław Królik'
-authorAvatar: ./assets/default_avatar.png
+authorAvatar: ./assets/avatar_przemyslaw_k.jpg
 metaImage: ./assets/hero_image_przemek.jpg
 metaTitle: 'Debunking the CTO myths with Masterborn’s CTO Przemysław Królik'
 metaDescription: 'When talking about companies like Uber, Facebook or Amazon, people tend to excessively focus on their founding fathers – the famed and rich CEOs who reap all the splendor and get all the spotlight'
