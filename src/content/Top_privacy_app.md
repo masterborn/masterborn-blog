@@ -7,12 +7,11 @@ authorAvatar: ./assets/avatar_malgorzata_g.jpeg
 metaImage: ./assets/Top_privacy_apps/hero_image_top_privacy_app.jpg
 metaTitle: 'Signal, DuckDuckGo, Brave and other TOP privacy apps for 2021'
 metaDescription: 'We all love to use tech products like messaging apps, email apps, and search engines. But this comfort comes at a price. Tech giants like Facebook and Google, which own the most popular communication tools in the world, are in the business of user data. Scandals like Cambridge Analytica made that painfully clear.'
-isFeature: true
+isFeature: false
 ---
 
 
 ![hero_top_privacy_app](./assets/Top_privacy_apps/hero_image_top_privacy_app.jpg)
-
 
 We all love to use tech products like messaging apps, email apps, and search engines. **But this comfort comes at a price.** Tech giants like Facebook and Google, which own the most popular communication tools in the world, are in the business of user data. Scandals like Cambridge Analytica made that painfully clear.
 
