@@ -309,4 +309,4 @@ But one thing is certain – the future will definitely be shaped by these techn
 
 *****
 
-Are you an innovator looking to leverage disruptive technologies? At Masterborn, we love ambitious, challenging projects and are fascinated by the emerging possibilities of AI and ML. If you have a technology project you’d like to discuss, drop me a line at malgorzata.g@masterborn.com. Our engineers will be more than happy to get back to you and discuss how we can help.
+Are you an innovator looking to leverage disruptive technologies? At MasterBorn, we love ambitious, challenging projects and are fascinated by the emerging possibilities of AI and ML. If you have a technology project you’d like to discuss, drop me a line at malgorzata.g@masterborn.com. Our engineers will be more than happy to get back to you and discuss how we can help.
