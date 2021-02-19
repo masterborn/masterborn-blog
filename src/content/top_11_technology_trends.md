@@ -12,7 +12,7 @@ isFeature: true
 
 ![hero_top_privacy_app](./assets/top_11_technology_trends/top_11_technology_trends_hero_image.jpg)
 
-COVID-19 has redefined pretty much everything we took for granted before 2020, and prompted the emergence or advancement of certain phenomena, technologies or concepts. We know it’s hard to keep up with the technology trends at the pace at which it's morphing and evolving.
+COVID-19 has redefined pretty much everything we took for granted before 2020, and prompted the emergence or advancement of certain phenomena, technologies or concepts. We know it’s hard to keep up with the technology trends at the pace at which they are morphing and evolving.
 
 To help you stay on top of things in the new internet reality, you need to get familiar with some key phrases that were either coined or gained prominence only during the pandemic. Some of these technologies have been around for a while, while others are only emerging.
 
