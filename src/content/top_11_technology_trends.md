@@ -48,7 +48,7 @@ The jobs that are least at risk of automation include:
 -   Clergy (Chance of automation: 0.81%)
 
 
-## 2. Universal basic income
+## 2. Universal Basic Income (UBI)
 
 The looming threat of technological unemployment around the world has brought about the concept of universal basic income – the idea whereby all people are getting paid a basic income to cover their costs of living. While not necessarily a tech trend, universal basic income may soon be a part (and direct consequence) of the digital transformation.
 
