@@ -7,7 +7,7 @@ authorAvatar: ./assets/avatar_malgorzata_g.jpeg
 metaImage: ./assets/top_11_technology_trends/top_11_technology_trends_hero_image.jpg
 metaTitle: 'Top 11 technology trends and concepts to follow in 2021'
 metaDescription: 'Read about top 11 technology trends 2021: XaaS, IoB, IoE, VUI, Quantum Computing, MCommerce, BCI, XR, Hyperautomation and more.'
-isFeature: true
+isFeature: false
 ---
 
 ![hero_top_privacy_app](./assets/top_11_technology_trends/top_11_technology_trends_hero_image.jpg)
