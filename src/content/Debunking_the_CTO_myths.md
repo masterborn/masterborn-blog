@@ -9,10 +9,8 @@ metaTitle: 'Debunking the CTO myths with Masterborn’s CTO Przemysław Królik'
 metaDescription: "What is a CTO and what are the most popular myths about the role of a CTO? Read the Interview with MasterBorn's CTO Przemek Królik"
 isFeature: true
 ---
-Therefore, my role as a CTO is to have a "helicopter view" of how the business is managed.
 
 When talking about companies like Uber, Facebook or Amazon, people tend to excessively focus on their founding fathers – the famed and rich CEOs who reap all the splendor and get all the spotlight. But somewhere behind the scenes, whether it’s a startup or multinational behemoth like Amazon, there is an important person who rarely gets the credit they deserve – a CTO. Lurking in the shadows and doing their job unbeknownst to the public eye, CTOs are the unsung leaders who make critical decisions about the technology used at the company and have a significant impact on how the business grows – and ultimately succeeds.
-
 
 ![hero_image](/assets/Debuking_the_CTO_myths/hero_image_przemek.jpg)
 
@@ -24,7 +22,7 @@ Without any further ado, let’s cut straight to it.
 
 There is a lot of confusion regarding the definition of the CTO. Some people like to believe a CTO is some kind of mastermind who knows everything about the company’s technology stack. But most people have no idea about who a CTO really is. Let’s set the record straight.
 
-**Przemysław Królik:** A CTO is a person working at the interface of business and technology. He or she must primarily focus on the company’s business vision – and be able to map out a way to reach it through specific tech. Therefore my role as a CTO is to take a "helicopter view" of how the business is managed.
+**Przemysław Królik:** A CTO is a person working at the interface of business and technology. He or she must primarily focus on the company’s business vision – and be able to map out a way to reach it through specific tech. Therefore my role as a CTO is to have a "helicopter view" of how the business is managed.
 
 ![1_image](/assets/Debuking_the_CTO_myths/1.jpeg)
 
@@ -127,7 +125,7 @@ I often serve as an interface between technology and business people. When I spe
 What is the role of the CTO in the recruitment process? Do CTOs need to get involved in hiring new staff?
 
 
-**Przemysław Królik:** Yes, as a CTO you need to dip your toes in recruitment, there is no way around it. In a nutshell, if you get surrounded with people you are not happy with, you will never obtain reach the best results. I like to believe that every company strives to find people who share the same set of beliefs and work ethics. This is a fail-safe way to build a self-controlling system which is self propelling and strives for perfection all the time. I think this works equally well for the technology and business sides.
+**Przemysław Królik:** Yes, as a CTO you need to dip your toes in recruitment, there is no way around it. In a nutshell, if you get surrounded with people you are not happy with, you will never obtain the best results. I like to believe that every company strives to find people who share the same set of beliefs and work ethics. This is a fail-safe way to build a self-controlling system which is self propelling and strives for perfection all the time. I think this works equally well for the technology and business sides.
 
 When I take part in backend recruitment processes, I always try to look at things from two perspectives. There are hard skills (technical knowledge) and the so-called soft skills – how the person communicates, how the person describes processes. If the person can make a complex technical issue easy to understand and implement, it is a testament to certain business sensibility, and also a strong technical background.
 
