@@ -22,7 +22,7 @@ Without any further ado, let’s cut straight to it.
 
 There is a lot of confusion regarding the definition of the CTO. Some people like to believe a CTO is some kind of mastermind who knows everything about the company’s technology stack. But most people have no idea about who a CTO really is. Let’s set the record straight.
 
-**Przemysław Królik:** A CTO is a person working at the interface of business and technology. He or she must primarily focus on the company’s business vision – and be able to map out a way to reach it through specific tech. Therefore my role as a CTO is to have a "helicopter view" of how the business is managed.
+**Przemysław Królik:** A CTO is a person working at the interface of business and technology. He or she must primarily focus on the company’s business vision – and be able to map out a way to reach it through specific tech. Therefore, my role as a CTO is to have a "helicopter view" of how the business is managed.
 
 ![1_image](/assets/Debuking_the_CTO_myths/1.jpeg)
 
