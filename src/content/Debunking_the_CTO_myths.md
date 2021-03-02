@@ -1,15 +1,15 @@
 ---
 title: 'Debunking the CTO myths with Masterborn’s CTO Przemysław Królik'
-date: 2021-01-28
-description: 'When talking about companies like Uber, Facebook or Amazon, people tend to excessively focus on their founding fathers – the famed and rich CEOs who reap all the splendor and get all the spotlight. But somewhere behind the scenes, whether it’s a startup or multinational behemoth like Amazon, there is an important person who rarely gets the credit they deserve – a CTO. Lurking in the shadows and doing their job unbeknownst to the public eye, CTOs are the unsung leaders who make critical decisions about the technology used at the company and have a significant impact on how the business grows – and ultimately succeeds.'
+date: 2021-03-02
+description: "What is a CTO and what are the most popular myths about the role of a CTO? Read the Interview with MasterBorn's CTO Przemek Królik"
 author: 'Przemysław Królik'
 authorAvatar: ./assets/avatar_przemyslaw_k.jpg
-metaImage: ./assets/hero_image_przemek.jpg
+metaImage: ./assets/Debuking_the_CTO_myths/hero_image_przemek.jpg
 metaTitle: 'Debunking the CTO myths with Masterborn’s CTO Przemysław Królik'
-metaDescription: 'When talking about companies like Uber, Facebook or Amazon, people tend to excessively focus on their founding fathers – the famed and rich CEOs who reap all the splendor and get all the spotlight'
-isPreview: true
+metaDescription: "What is a CTO and what are the most popular myths about the role of a CTO? Read the Interview with MasterBorn's CTO Przemek Królik"
+isFeature: true
 ---
-
+Therefore, my role as a CTO is to have a "helicopter view" of how the business is managed.
 
 When talking about companies like Uber, Facebook or Amazon, people tend to excessively focus on their founding fathers – the famed and rich CEOs who reap all the splendor and get all the spotlight. But somewhere behind the scenes, whether it’s a startup or multinational behemoth like Amazon, there is an important person who rarely gets the credit they deserve – a CTO. Lurking in the shadows and doing their job unbeknownst to the public eye, CTOs are the unsung leaders who make critical decisions about the technology used at the company and have a significant impact on how the business grows – and ultimately succeeds.
 
@@ -43,7 +43,7 @@ Another common misconception about CTOs is that they must know every programming
 
 ![Does_the_CTO_language_image](/assets/Debuking_the_CTO_myths/Does_the_CTO_language.jpg)
 
-**Przemysław Królik:** Many people learn programming languages at university or by other means – but the data structures and semantics that are shared between them, helps you a lot at work. This gives you some solid base for learning other languages. At university I learned lots of programming languages myself: Java, C#, ASP.NET, JavaScript, Haskell, Ruby on Rails and Python and the list goes on and on. For example, while I am by no means a JavaScript master, I know just enough to be dangerous with the people I work with. I think I know the advantages and disadvantages of each programming language. I know where to apply a language, but again, would never consider myself a programming expert. And that’s ok.
+**Przemysław Królik:** Many people learn programming languages at university or by other means – but the data structures and semantics that are shared between them, helps you a lot at work. This gives you a solid base for learning other languages. At university I learned lots of programming languages myself: Java, C#, ASP.NET, JavaScript, Haskell, Ruby on Rails and Python and the list goes on and on. For example, while I am by no means a JavaScript master, I know just enough to be dangerous with the people I work with. I think I know the advantages and disadvantages of each programming language. I know where to apply a language, but again, would never consider myself a programming expert. And that’s ok.
 
 
 
@@ -51,9 +51,9 @@ Anyway, programming is a tough industry, and the pace at which the languages and
 
 ## Q: Do CTOs need to know the frontend and backend?
 
-Contrary to common belief, nobody expects from a CTO to be a jack of all trades (and, effectively, master of none). Instead, as a CTO, you must accept there are people smarter than you. It’s your job to find people and know how to work with them. For example, do CTOs need to know the frontend and backend?
+Contrary to common belief, nobody expects a CTO to be a jack of all trades (and, effectively, master of none). Instead, as a CTO, you must accept there are people smarter than you. It’s your job to find people and know how to work with them. For example, do CTOs need to know the frontend and backend?
 
-**Przemysław Królik:** No, they don’t. Actually, it would also be quite impossible to be proficient at both – and be a CTO on top of that. The thing is being a CTO is about understanding technology more than it is about an in-depth knowledge of CSS, database engines, etc.
+**Przemysław Królik:** No, they don’t. Actually, it would also be quite impossible to be proficient at both – and be a CTO on top of that. The thing is, being a CTO is about understanding technology more than it is about an in-depth knowledge of CSS, database engines, etc.
 
 
 Of course, at some point in my life, I had to know it all – frontend and backend. I used to be a full stack developer at my second job, which allowed me to gain huge experience. But I know in the long run it doesn’t allow you to learn as much as when you’re focused on a single area and that’s why I focused mostly on the backend.
@@ -114,31 +114,31 @@ We like to think about tech people as antisocial geeks, but real life is complet
 **Przemysław Królik:** That’s true, but even introverts need people to some extent. I am no different – I need to be with other people and I’m fine with it, but it is exhausting in the long term. I just need to give the most of myself to show my best, but it ultimately kills my batteries. I relax best when there’s nobody around.
 However, I believe that as a CTO you are not the technology man, but a people man first.
 
-You have to keep your people up to date with the tech goals of the company. You need to make sure they grow professionally while keeping their focus on the goals. To get the most of the people you need to make them feel they’ve found their own spot and are understood. Make sure that their goals are met while you achieve the goals of the company.
+You have to keep your people up to date with the tech goals of the company. You need to make sure they grow professionally while keeping their focus on the goals. To get the most out of the people you need to make them feel they’ve found their own spot and are understood. Make sure that their goals are met while you achieve the goals of the company.
 
 ![4_image](/assets/Debuking_the_CTO_myths/4.jpeg)
 
 Also, you have to explain to them why we do things one way and not another. Make it clear to them what is important. Use business terms, and make them understand the motivations of the people who pay for our services.
 
-I often serve as an interface between technology and business people. When I speak to the business side I try to avoid the tech jargon. I just explain our technology choices and tell them how much they cost, and how they help us achieve our goals. Conversely, when I talk to the tech side, I would explain why a specific functionality is important and why we made it a priority rather than refactoring the code and fixing our technological debt.
+I often serve as an interface between technology and business people. When I speak to the business side I try to avoid the tech jargon. I just explain our technology choices and tell them how much they cost, and how they help us achieve our goals. Conversely, when I talk to the tech side, I explain why a specific functionality is important and why we made it a priority rather than refactoring the code and fixing our technological debt.
 
 ## Q: CTOs and recruitment?
 
 What is the role of the CTO in the recruitment process? Do CTOs need to get involved in hiring new staff?
 
 
-**Przemysław Królik:** Yes, as a CTO you need to dip your toes in recruitment, there is no way around it. In a nutshell, if you get surrounded with people you are not happy with, you will never reach the best results. I like to believe that every company strives to find people who share the same set of beliefs and work ethics. This is a fail-safe way to build a self-controlling system which is self propelling and strives to perfection all the time. I think this works equally well for the technology and business sides.
+**Przemysław Królik:** Yes, as a CTO you need to dip your toes in recruitment, there is no way around it. In a nutshell, if you get surrounded with people you are not happy with, you will never obtain reach the best results. I like to believe that every company strives to find people who share the same set of beliefs and work ethics. This is a fail-safe way to build a self-controlling system which is self propelling and strives for perfection all the time. I think this works equally well for the technology and business sides.
 
 When I take part in backend recruitment processes, I always try to look at things from two perspectives. There are hard skills (technical knowledge) and the so-called soft skills – how the person communicates, how the person describes processes. If the person can make a complex technical issue easy to understand and implement, it is a testament to certain business sensibility, and also a strong technical background.
 
 
 ![5_image](/assets/Debuking_the_CTO_myths/5.jpeg)
 
-There could be a candidate with strong soft skills and ability to understand things and explain them to non-technical people very easily. Although technologically this person may have problems or lack experience, I’d still prefer to go with such a person because I know it is hard to teach someone soft skills. It would be difficult to change the attitude, methods of communication and many other things. It’s much harder than showing a code and teaching the person step by step what to do with it.
+There could be a candidate with strong soft skills and the ability to understand things and explain them to non-technical people very easily. Although technologically this person may have problems or lack experience, I’d still prefer to go with such a person because I know it is hard to teach someone soft skills. It would be difficult to change the attitude, methods of communication and many other things. It’s much harder than showing a code and teaching the person step by step what to do with it.
 
 
 
-I think we give people the opportunity to learn things and develop with us at the company. We see a potential in you and your skills. We believe in you as a person. This is why I believe a programmer should not be assessed just from the perspective of technical skills.
+I think we give people the opportunity to learn things and develop with us at the company. We see potential in you and your skills. We believe in you as a person. This is why I believe a programmer should not be assessed just from the perspective of technical skills.
 
 
 
@@ -159,7 +159,7 @@ Some CTOs do things intuitively, but don’t have the right vocabulary to call t
 
 
 
-I typically paraphrase. When I discuss things with my people, I may know the answer, but still encourage the other person to come up with the solution independently. I just tell them just what I’d imagine the final result to be (although I have done it numerous times). I just give the general guidelines and wait for them to come up with a solution. This approach teaches me a lot about how other people think, and allows me to understand their points of view. It also teaches me a lot. And the person who is being assigned the task learns a lot too. This is pretty much the 7 levels of delegation. This is the fourth level – “we will agree together”. He agrees, I agree, and we’ve got a solution. This is important from the development point of view, and also to learn other people’s behavior. This builds great communication and allows everyone to feel comfortable in the team. At the same time you get the confidence that when delegating, I know the assigned tasks will be well made. I will just check it later. Of course, when the person is new, you might want to assess it more carefully,
+I typically paraphrase. When I discuss things with my people, I may know the answer, but still encourage the other person to come up with the solution independently. I just tell them what I’d imagine the final result to be (although I have done it numerous times). I just give the general guidelines and wait for them to come up with a solution. This approach teaches me a lot about how other people think, and allows me to understand their points of view. It also teaches me a lot. And the person who is being assigned the task learns a lot too. This is pretty much the 7 levels of delegation. This is the fourth level – “we will agree together”. He agrees, I agree, and we’ve got a solution. This is important from the development point of view, and also to learn other people’s behavior. This builds great communication and allows everyone to feel comfortable in the team. At the same time, you get the confidence that when delegating, I know the assigned tasks will be well made. I will just check it later. Of course, when the person is new, you might want to assess it more carefully,
 
 
 
@@ -173,7 +173,7 @@ But there is not one size fits all, you need some nuanced actions. And use the r
 
 
 
-So you’re basically trying to find the common ground. I can see empathy and careful listening is one of your key tools at work.
+So you’re basically trying to find common ground. I can see empathy and careful listening are some of your key tools at work.
 
 
 
@@ -189,19 +189,19 @@ At work, I try not to draw hasty conclusions. I pay attention to my and other pe
 
 ## Q: Does a CTO need experience in programming?
 
-Most CTOs working at big companies have strong programming backgrounds and many of them studied computer sciences at university. However, it seems you can still be a successful CTO knowing just the basics of the tech side. But a solid grasp of the tech stack and business aspects instead.
+Most CTOs working at big companies have strong programming backgrounds and many of them studied computer sciences at university. However, it seems you can still be a successful CTO knowing just the basics of the tech side.
 
 **Przemysław Królik:** It really boils down to what is understood by “programming background”. Does it mean that this person used to be a programmer? Worked in IT?
 
 
 
-Let’s say this person has working experience as a programmer – then my answer would be no, it’s not a requirement. CTOs at companies like Uber, Facebook, and probably 99% of other tech giants, probably have solid IT backgrounds. But there is a small present of people who do not have these strong programming skills. Instead, they have strong soft skills like understanding people and sticking to the company vision. Good budgeting skills come in handy too, as this can be one of the things the CTO does is some companies.
+Let’s say this person has working experience as a programmer – then my answer would be no, it’s not a requirement. CTOs at companies like Uber, Facebook, and probably 99% of other tech giants, probably have solid IT backgrounds. But there is a small present of people who do not have these strong programming skills. Instead, they have strong soft skills like understanding people and sticking to the company vision. Good budgeting skills come in handy too, as this can be one of the things the CTO does in some companies.
 
 
 
 So, in a nutshell, you can be a good CTO without a solid programming background. But knowing a little bit of this and that helps to support your decisions. Keep in mind that there is also a CIO role that non-programmers people tend to occupy in place of CTO.
 
-## Q: Should a CTO be always involved wherever decisions about technology are made?
+## Q: Should a CTO always be involved wherever decisions about technology are made?
 
 Delegating tasks, trusting other people and holding them accountable for their work is important. A good CTO should get involved wherever it helps the company, but also leave some autonomy to the people – support their development and independence.
 
@@ -249,7 +249,7 @@ It is believed that it’s the CTO’s responsibility to drive the company’s t
 ![6_image](/assets/Debuking_the_CTO_myths/6.jpeg)
 
 
-**Przemysław Królik:** Not really. I may sound conservative here. I enjoy new things, but “revolution” at all cost may not necessarily be the best idea. Certain caution is needed when looking at new stuff. The tool must ultimately help you meet the business goals. As a small company, we can try different things, but it must conceptually align with our core tech (our case: JavaScript). It is the common denominator for us. It gives us the business advantage. It is more about aligning the technology you use for the goals of the company.
+**Przemysław Królik:** Not really. I may sound conservative here. I enjoy new things, but “revolution” at all cost may not necessarily be the best idea. Certain caution is needed when looking at new stuff. The tool must ultimately help you meet the business goals. As a small company, we can try different things, but it must conceptually align with our core tech (our case: JavaScript). It is the common denominator for us. It gives us a business advantage. It is more about aligning the technology you use for the goals of the company.
 
 
 

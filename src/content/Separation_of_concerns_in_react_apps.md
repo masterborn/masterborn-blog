@@ -7,7 +7,7 @@ authorAvatar: ./assets/avatar_rafal_swietek.png
 metaImage: ./assets/Separation_of_concerns_in_react_apps/meta_image.png
 metaTitle: 'Separation of concerns in modern React apps - key principles and examples'
 metaDescription: 'Building React apps, ever wondered where to put that "thing", and how to name it?'
-isFeature: true
+isFeature: false
 ---
 
 A few years ago, when React started becoming popular, one of the things that made developers love it was its flexibility in implementation. Everyone pointed out that it’s not a framework, but a library and anyone can implement it as one likes.
@@ -54,7 +54,7 @@ Let’s say we’re developing an e-commerce app and we’re currently working o
 const ProductPage = ({ productId }) => {
   const [product, setProduct] = useState(null);
   const [selectedVariantId, setSelectedVariantId] = useState(0);
-  
+
   useEffect(() => {
     const fetchProduct = async () => {
       const res = await fetch(`https://api.example.com/products/${productId}`);
