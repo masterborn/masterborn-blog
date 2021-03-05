@@ -1,11 +1,11 @@
 ---
-title: 'Debunking the CTO myths with Masterborn’s CTO Przemysław Królik'
+title: 'CTO myths debunked: Interview with Masterborn’s CTO Przemysław Królik'
 date: 2021-03-02
 description: "What is a CTO and what are the most popular myths about the role of a CTO? Read the Interview with MasterBorn's CTO Przemek Królik"
 author: 'Przemysław Królik'
 authorAvatar: ./assets/avatar_przemyslaw_k.jpg
 metaImage: ./assets/Debuking_the_CTO_myths/hero_image_przemek.jpg
-metaTitle: 'Debunking the CTO myths with Masterborn’s CTO Przemysław Królik'
+metaTitle: 'CTO myths debunked: Interview with Masterborn’s CTO Przemysław Królik'
 metaDescription: "What is a CTO and what are the most popular myths about the role of a CTO? Read the Interview with MasterBorn's CTO Przemek Królik"
 isFeature: true
 ---
