@@ -1,12 +1,12 @@
 ---
 title: 'Refactoring vs. Rewrite - Which is a Better Option ?'
 date: 2021-03-05
-description: 'Refactoring vs Rewrite. When to Refactor or Rewrite Your Code? What factors should you consider before the final decision?'
+description: 'Refactoring vs. Rewrite. When to Refactor or Rewrite Your Code? What factors should you consider before the final decision?'
 author: 'Przemysław Królik'
 authorAvatar: ./assets/avatar_przemyslaw_k.jpg
 metaImage: ./assets/Refactoring_vs_rewrite/refactoring_vs_rewrite_cover_photo.jpg
 metaTitle: 'Refactoring vs. Rewrite - Which is a Better Option'
-metaDescription: 'Refactoring vs Rewrite. When to Refactor or Rewrite Your Code? What factors should you consider before the final decision?'
+metaDescription: 'Refactoring vs. Rewrite. When to Refactor or Rewrite Your Code? What factors should you consider before the final decision?'
 isPreview: true
 ---
 
@@ -21,7 +21,7 @@ At MasterBorn, we're quite new to the topic of technical debt management. Most o
 
 
 
-## Refactoring vs Rewrite
+## Refactoring vs. Rewrite
 
 People come to use with projects that require a lot of thought and some really hard decisions to be made. These usually touch upon key business decisions - adding new features or slowing down a bit to pay the technical debt.
 
@@ -111,7 +111,7 @@ The general conclusion here is that you need people who will be working on solvi
 
 To me, it's a tie.
 
-One magical sentence works really well here: "it depends." As you can see, many factors come into play when you're deciding between rewriting and refactoring. It's smart to take them all into account when making your final decision.
+One magical sentence works really well here: "It depends." As you can see, many factors come into play when you're deciding between rewriting and refactoring. It's smart to take them all into account when making your final decision.
 
 Neither refactoring nor rewriting is a "no brainer" decision when you're setting up a new business goal in terms of software development.
 
