@@ -5,6 +5,7 @@ const config = {
     siteUrl: process.env.GATSBY_ROOT_URL || 'http://localhost:3000',
   },
   env: {
+    masterbornWebsite: process.env.MASTERBORN_WEBSITE || 'https://masterborn.com/',
     ROOT_URL: process.env.GATSBY_ROOT_URL || 'http://localhost:3000',
   },
   general: {

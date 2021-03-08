@@ -5,8 +5,8 @@ import MenuIcon from 'emotion-icons/feather/Menu';
 import CrossIcon from 'emotion-icons/feather/X';
 
 import { media } from '../../utils/emotion';
+import config from '../../../config';
 import Menu from '../Menu/Menu';
-import Link from '../Link';
 import ToggleIcon from '../ToggleIcon';
 import MobileMenu from '../Menu/MobileMenu';
 import Icon from '../Icon';
@@ -14,7 +14,7 @@ import Logo from '../Logo';
 
 import Container from './HeaderContainer';
 
-const StyledLink = styled(Link)`
+const StyledLink = styled.a`
   margin-left: auto;
   margin-right: auto;
   ${media.desktop`
@@ -41,7 +41,7 @@ const Header = ({ isCollapsedHeader }) => {
   const toggleMobileMenu = () => setIsVisibleMenu(state => !state);
   return (
     <Container isCollapsedHeader={isCollapsedHeader}>
-      <StyledLink to="/">
+      <StyledLink href={config.env.masterbornWebsite} title="Masterborn.com">
         <Logo height={isCollapsedHeader ? '3rem' : undefined} />
       </StyledLink>
       <ToggleMenuButton

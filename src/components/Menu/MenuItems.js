@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import Link from '../Link';
 import useActiveMenuStyles from '../../hooks/useActiveMenuStyles';
+import config from '../../../config';
 
 import ContactButton from './ContactButton';
 
@@ -17,7 +18,7 @@ const MenuItems = ({ isCollapsedHeader, onClickItem, contactAsButton }) => {
         onClick={onClickItem}
         title="Home"
         padding={{ _: 2, lg: 3 }}
-        href="/"
+        href={config.env.masterbornWebsite}
       >
         Home
       </Link>
