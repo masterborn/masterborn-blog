@@ -4,10 +4,10 @@ date: 2021-03-05
 description: 'Refactoring vs. Rewrite. When to Refactor or Rewrite Your Code? What factors should you consider before the final decision?'
 author: 'Przemysław Królik'
 authorAvatar: ./assets/avatar_przemyslaw_k.jpg
-metaImage: ./assets/Refactoring_vs_rewrite/refactoring_vs_rewrite_cover_photo.jpg
+metaImage: ./assets/Refactoring_vs_rewrite/refactoring_vs_rewrite_cover_photo.png
 metaTitle: 'Refactoring vs. Rewrite - Which is a Better Option'
 metaDescription: 'Refactoring vs. Rewrite. When to Refactor or Rewrite Your Code? What factors should you consider before the final decision?'
-isPreview: true
+isFeature: true
 ---
 
 # Refactoring vs. Rewrite - Which is a Better Option?
