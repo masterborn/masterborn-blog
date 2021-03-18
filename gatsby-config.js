@@ -30,7 +30,7 @@ const plugins = [
           options: {
             maxWidth: 1035,
             quality: 75,
-            linkImagesToOriginal: false
+            linkImagesToOriginal: false,
           },
         },
         {
@@ -67,6 +67,12 @@ const plugins = [
       head: true,
       // enable ip anonymization
       anonymize: false,
+    },
+  },
+  {
+    resolve: `gatsby-plugin-facebook-pixel`,
+    options: {
+      pixelId: config.gatsby.faceBookPixelId,
     },
   },
   {

@@ -2,6 +2,7 @@ const config = {
   gatsby: {
     pathPrefix: '/blog',
     gaTrackingId: 'UA-140964154-1',
+    faceBookPixelId: '261143155633730',
     siteUrl: process.env.GATSBY_ROOT_URL || 'http://localhost:3000',
   },
   env: {
