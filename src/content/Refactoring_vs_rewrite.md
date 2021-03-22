@@ -7,7 +7,7 @@ authorAvatar: ./assets/avatar_przemyslaw_k.jpg
 metaImage: ./assets/Refactoring_vs_rewrite/refactoring_vs_rewrite_cover_photo.png
 metaTitle: 'Refactoring vs. Rewrite - Which is a Better Option'
 metaDescription: 'Refactoring vs. Rewrite. When to Refactor or Rewrite Your Code? What factors should you consider before the final decision?'
-isFeature: true
+isFeature: false
 ---
 
 # Refactoring vs. Rewrite - Which is a Better Option?
