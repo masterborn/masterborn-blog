@@ -7,7 +7,7 @@ authorAvatar: ./assets/avatar_malgorzata_g.jpeg
 metaImage: ./assets/Why_use_Node_9_apps/210305_mb_blog_node_cover.png
 metaTitle: 'Why use Node.js? 9 examples of successful Node.js apps'
 metaDescription: 'Why use Node.js? Let the examples of Node.js apps speak for themselves: discover Uber, Figma, SpaceX, Slack, Netflix and more!'
-isFeature: true
+isFeature: false
 ---
 
 ![cover_photo_node_apps](/assets/Why_use_Node_9_apps/210305_mb_blog_node_cover.png)
