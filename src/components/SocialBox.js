@@ -18,7 +18,6 @@ const Container = styled('div')`
   flex-direction: column;
   justify-content: flex-start;
   padding: 0 0 2.2rem 1.8rem;
-  padding-left: ;
     ${({ theme }) => theme.colors.accentBackground};
 `;
 
