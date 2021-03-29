@@ -1,12 +1,12 @@
 ---
 title: 'How to Become a JavaScript Developer? From Welder to Frontend Developer - INTERVIEW'
 date: 2021-03-26
-description: 'Read an Interview with Lukas, who after years of work as a welder, became a self-taught Front-end Developer.'
+description: 'Read an Interview with Lukas, who after years of working as a welder, became a self-taught Front-end Developer.'
 author: 'Łukasz Tucholski'
 authorAvatar: ./assets/avatar_lukasz_tucholski.jpg
 metaImage: ./assets/How_to_Become_a_JavaScript_Developer_Interview/cover_blog_210317_mb_blog_lukasz_blog.png
 metaTitle: 'How to Become a JavaScript Developer? From Welder to Frontend Developer - INTERVIEW'
-metaDescription: 'Read an Interview with Lukas, who after years of work as a welder, became a self-taught Front-end Developer.'
+metaDescription: 'Read an Interview with Lukas, who after years of working as a welder, became a self-taught Front-end Developer.'
 isFeature: true
 ---
 
