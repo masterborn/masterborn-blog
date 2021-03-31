@@ -12,18 +12,16 @@ import useLocation from '../hooks/useLocation';
 
 import ShareButton from './blog/ShareButton';
 import Text from './Text';
-import EditOnGithubLink from './EditOnGithubLink';
 
 const Container = styled('div')`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 2.2rem 0;
-  box-shadow: 0px -10px 29px -15px
+  padding: 0 0 2.2rem 1.8rem;
     ${({ theme }) => theme.colors.accentBackground};
 `;
 
-const SocialBox = ({ filePath }) => {
+const SocialBox = () => {
   const location = useLocation();
   const url = location.href || '';
   return (
@@ -38,16 +36,8 @@ const SocialBox = ({ filePath }) => {
       <ShareButton button={FacebookShareButton} icon={FacebookSquare} url={url}>
         Facebook
       </ShareButton>
-      <Text fontWeight="500" mt={3}>
-        Request change:
-      </Text>
-      <EditOnGithubLink filePath={filePath} />
     </Container>
   );
-};
-
-SocialBox.propTypes = {
-  filePath: PropTypes.string.isRequired,
 };
 
 export default SocialBox;
