@@ -7,7 +7,7 @@ authorAvatar: ./assets/avatar_lukasz_tucholski.jpg
 metaImage: ./assets/How_to_Become_a_JavaScript_Developer_Interview/cover_blog_210317_mb_blog_lukasz_blog.png
 metaTitle: 'How to Become a JavaScript Developer? From Welder to Frontend Developer - INTERVIEW'
 metaDescription: 'Read an Interview with Lukas, who after years of working as a welder, became a self-taught Front-end Developer.'
-isFeature: true
+isFeature: false
 ---
 
 ![Cover-photo](/assets/How_to_Become_a_JavaScript_Developer_Interview/cover_blog_210317_mb_blog_lukasz_blog.png)
