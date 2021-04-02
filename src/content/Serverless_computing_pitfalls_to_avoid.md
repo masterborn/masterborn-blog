@@ -17,11 +17,11 @@ isFeature: true
 
 With more and more popularity within the serverless computing and FaaS models (which stands from Function as a Service), we are more than eager to try it out, assess its possibilities and run things on this architecture, which may result in many "unpredictable" pitfalls of the serverless architecture.
 
-## Why use serverless computing?
+## Why use Serverless Computing?
 
 We at MasterBorn love to create serverless architectures based on FaaS (AWS Lambda especially) as it gives us many advantages inside our applications. We have been using serverless since the beginning of our company and have run many projects applications that utilise various parts from cloud providers.
 
-### My 3 top benefits of choosing Serverless computing are:
+### My 3 top benefits of choosing Serverless Computing are:
 
 1.  Solutions based on serverless computing and architecture, in general, automatically scale up and down - according to the current demand.
 2.  FaaS significantly cuts server costs - from my experience - by at least 20% depending on the service (for functions it may be even more depending on the application's use).
