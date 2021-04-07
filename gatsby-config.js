@@ -23,7 +23,7 @@ const plugins = [
         {
           resolve: "gatsby-remark-related-posts",
           options: {
-            posts_dir: `${__dirname}/src/content`,
+            posts_dir: `${__dirname}/${config.general.markdownPath}`,
           },
         },
       ],
