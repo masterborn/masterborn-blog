@@ -33,7 +33,7 @@ const Content = styled.div`
 `;
 export default function BlogTemplate(props) {
   const {
-    data: { mdx },
+    data: { mdx, relatedPosts },
     location,
   } = props;
 
@@ -114,6 +114,23 @@ BlogTemplate.propTypes = {
       }),
       body: PropTypes.string,
     }),
+    relatedPosts: PropTypes.shape({
+      nodes: PropTypes.arrayOf(PropTypes.shape({
+        fields: PropTypes.shape({
+          slug: PropTypes.string,
+          title: PropTypes.string,
+        }),
+        frontmatter: PropTypes.shape({
+          metaImage: PropTypes.shape({
+            childImageSharp: PropTypes.shape({
+              fixed: PropTypes.shape({
+                src: PropTypes.string,
+              }),
+            }),
+          }),
+        }),
+      })),
+    }),
   }),
   location: PropTypes.shape({
     pathname: PropTypes.string.isRequired,
@@ -131,7 +148,7 @@ BlogTemplate.defaultProps = {
 };
 
 export const pageQuery = graphql`
-  query($id: String!) {
+  query($id: String!, $relatedFileAbsolutePaths: [String!]!) {
     mdx(fields: { id: { eq: $id } }) {
       fields {
         id
@@ -161,6 +178,26 @@ export const pageQuery = graphql`
           childImageSharp {
             fixed {
               ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    }
+    relatedPosts: allMdx(
+      filter: { fileAbsolutePath: { in: $relatedFileAbsolutePaths } }
+      limit: 3
+    ) {
+      nodes {
+        fields {
+          title
+          slug
+        }
+        frontmatter {
+          metaImage {
+            childImageSharp {
+              fixed {
+                ...GatsbyImageSharpFixed
+              }
             }
           }
         }
