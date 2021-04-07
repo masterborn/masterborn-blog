@@ -8,6 +8,7 @@ const allMdxQuery = `
             fields {
               id
               slug
+              relatedFileAbsolutePaths
             }
             tableOfContents
           }
@@ -28,6 +29,7 @@ const getMarkdownPages = async graphql => {
       component: blogTemplate,
       context: {
         id: node.fields.id,
+        relatedFileAbsolutePaths: node.fields.relatedFileAbsolutePaths,
         pageType: 'BLOG_POST',
       },
     };
