@@ -84,23 +84,29 @@ const plugins = [
       cssPropOptimization: true,
     },
   },
-  {
-    resolve: `gatsby-plugin-google-fonts`,
-    options: {
-      fonts: [
-        `IBM Plex Sans\:300`,
-        `IBM Plex Sans\:400i`,
-        `IBM Plex Sans\:400`,
-        `IBM Plex Sans\:500`,
-        `IBM Plex Sans\:600`,
-        `IBM Plex Sans\:700`,
-        `IBM Plex Mono\:300`,
-        `IBM Plex Mono\:400`,
-        `IBM Plex Mono\:500`,
-      ],
-      display: 'swap',
+  // {
+  //   resolve: `gatsby-plugin-google-fonts`,
+  //   options: {
+  //     fonts: [
+  //       `Inter\:300`,
+  //       `Inter\:400`,
+  //       `Inter\:400i`,
+  //       `Inter\:500`,
+  //       `Inter\:600`,
+  //       `Inter\:700`,
+  //     ],
+  //     display: 'swap',
+  //   },
+  // },
+      {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        custom: {
+          families: ['Inter'],
+          urls: ['/fonts.css'],
+        },
+      },
     },
-  },
 ];
 
 module.exports = {

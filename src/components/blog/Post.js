@@ -15,7 +15,7 @@ import BlogContent from './BlogContent';
 
 const Wrapper = styled('div')`
   ${media.desktop`
-    padding-top: 7rem;
+    padding-top: 12rem;
   `}
 `;
 

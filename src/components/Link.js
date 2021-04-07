@@ -16,6 +16,7 @@ const ActionLink = styled('a')`
   cursor: pointer;
 `;
 
+// eslint-disable-next-line complexity
 const BaseLink = forwardRef(({ to, children, ...rest }, ref) => {
   const isAnchor = to ? false : to.charAt(0) === '#';
   if (isAnchor || isAbsoluteUrl(to)) {
@@ -46,10 +47,15 @@ const Link = styled(BaseLink)`
   ${layout};
   ${flexbox}
   ${position}
-  transition: all 150ms ease-in-out;
-  color: ${props => props.theme.colors.link.default};
+  color: ${props => props.theme.colors.header.color};
+  margin: 2rem;
+  padding: 1rem 0;
+  transition: all .3s;
+  border-bottom: 2px solid transparent;
   :hover {
-    color: ${props => props.theme.colors.link.hover};
+    color: ${props => props.theme.colors.menuTextActive};
+    fontw-weight: ${props => props.theme.fontWeights.heading};
+    border-bottom: 2px solid ${ props => props.theme.colors.primary};
     svg {
       color: ${props => props.theme.colors.link.hover};
     }

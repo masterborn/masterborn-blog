@@ -67,6 +67,10 @@ const colors = {
     defaultBorder: '#D4DDE5',
     defaultBackground: '#F5F7F9',
   },
+  header: {
+    headerBorderColor: '#F0F0F0',
+    color: '#222222',
+  },
 };
 
 /* eslint-disable prefer-destructuring */

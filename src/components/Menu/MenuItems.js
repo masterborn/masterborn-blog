@@ -7,9 +7,13 @@ import config from '../../../config';
 
 import ContactButton from './ContactButton';
 
+
 const MenuItems = ({ isCollapsedHeader, onClickItem, contactAsButton }) => {
   const { getActiveStyleForPathname } = useActiveMenuStyles();
   const LinkFontSize = isCollapsedHeader ? 1 : 2;
+
+  console.log(getActiveStyleForPathname('/blog'));
+
 
   return (
     <>
@@ -17,7 +21,6 @@ const MenuItems = ({ isCollapsedHeader, onClickItem, contactAsButton }) => {
         fontSize={LinkFontSize}
         onClick={onClickItem}
         title="Home"
-        padding={{ _: 2, lg: 3 }}
         href={config.env.masterbornWebsite}
       >
         Home
@@ -26,7 +29,6 @@ const MenuItems = ({ isCollapsedHeader, onClickItem, contactAsButton }) => {
         fontSize={LinkFontSize}
         onClick={onClickItem}
         title="About Us"
-        padding={{ _: 2, lg: 3 }}
         href="/about"
       >
         About Us
@@ -35,7 +37,6 @@ const MenuItems = ({ isCollapsedHeader, onClickItem, contactAsButton }) => {
         fontSize={LinkFontSize}
         onClick={onClickItem}
         title="Career"
-        padding={{ _: 2, lg: 3 }}
         href="/career"
       >
         Career
@@ -45,7 +46,6 @@ const MenuItems = ({ isCollapsedHeader, onClickItem, contactAsButton }) => {
         onClick={onClickItem}
         style={getActiveStyleForPathname('/blog')}
         title="Blog"
-        padding={{ _: 2, lg: 3 }}
         href="/blog"
       >
         Blog

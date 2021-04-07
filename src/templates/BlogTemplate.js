@@ -9,16 +9,6 @@ import PageLayout from '../layouts/PageLayout';
 import Post from '../components/blog/Post';
 import defaultAvatar from '../assets/default_avatar.png';
 
-const GreyWrapper = styled.div`
-  position: absolute;
-  top: -8.8rem;
-  left: 0;
-  width: 100%;
-  height: 62.5rem;
-  background-color: ${props => props.theme.colors.accentBackground};
-  z-index: 1;
-`;
-
 const Wrapper = styled.div`
   position: relative;
   background-color: ${props => props.theme.colors.background};
@@ -67,7 +57,6 @@ export default function BlogTemplate(props) {
         slug={slug}
       />
       <Wrapper>
-        <GreyWrapper />
         <Content>
           <Post
             body={body}

@@ -42,7 +42,7 @@ const Header = ({ isCollapsedHeader }) => {
   return (
     <Container isCollapsedHeader={isCollapsedHeader}>
       <StyledLink href={config.env.masterbornWebsite} title="Masterborn.com">
-        <Logo height={isCollapsedHeader ? '3rem' : undefined} />
+        <Logo height={isCollapsedHeader ? '4.5rem' : undefined} />
       </StyledLink>
       <ToggleMenuButton
         CollapsedIcon={BurgerIcon}

@@ -4,12 +4,15 @@ import PropTypes from 'prop-types';
 import Button from '../Button';
 import Link from '../Link';
 
+
+
 const ContactButton = ({ isCollapsedHeader, onClick, href }) => {
   return (
     <Button
       variant="primary"
       outline="primary"
-      size={isCollapsedHeader ? 'small' : 'default'}
+      size={isCollapsedHeader ? 'big' : 'default'}
+      borderRadius="20px"
       as={Link}
       href={href}
       ml={{
