@@ -116,11 +116,10 @@ BlogTemplate.propTypes = {
     }),
     relatedPosts: PropTypes.shape({
       nodes: PropTypes.arrayOf(PropTypes.shape({
-        fields: PropTypes.shape({
-          slug: PropTypes.string,
-          title: PropTypes.string,
-        }),
+        slug: PropTypes.string,
         frontmatter: PropTypes.shape({
+          title: PropTypes.string,
+          description: PropTypes.string,
           metaImage: PropTypes.shape({
             childImageSharp: PropTypes.shape({
               fixed: PropTypes.shape({
@@ -188,11 +187,10 @@ export const pageQuery = graphql`
       limit: 3
     ) {
       nodes {
-        fields {
-          title
-          slug
-        }
+        slug
         frontmatter {
+          title
+          description
           metaImage {
             childImageSharp {
               fixed {
