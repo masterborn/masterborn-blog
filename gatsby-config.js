@@ -18,7 +18,15 @@ const plugins = [
   {
     resolve: `gatsby-transformer-remark`,
     options: {
-      plugins: [`gatsby-remark-images`],
+      plugins: [
+        `gatsby-remark-images`,
+        {
+          resolve: "gatsby-remark-related-posts",
+          options: {
+            posts_dir: `${__dirname}/src/content`,
+          },
+        },
+      ],
     },
   },
   {
