@@ -31,6 +31,7 @@ export default function BlogTemplate(props) {
     frontmatter: {
       metaTitle,
       metaDescription,
+      description,
       metaImage,
       date,
       author,
@@ -40,6 +41,7 @@ export default function BlogTemplate(props) {
     parent: { relativePath },
     body,
     tableOfContents,
+    timeToRead,
   } = mdx;
 
   const imageAvatar = authorAvatar
@@ -47,7 +49,7 @@ export default function BlogTemplate(props) {
     : defaultAvatar;
 
   const metaImageSrc = get(metaImage, 'childImageSharp.fixed.src', null);
-
+  console.log(mdx);
   return (
     <PageLayout location={location} themeName="blog">
       <SEO
@@ -67,6 +69,8 @@ export default function BlogTemplate(props) {
             location={location}
             filePath={relativePath}
             tableOfContents={tableOfContents}
+            description={description}
+            timeToRead={timeToRead}
           />
         </Content>
       </Wrapper>
@@ -88,6 +92,7 @@ BlogTemplate.propTypes = {
       frontmatter: PropTypes.shape({
         metaTitle: PropTypes.string,
         metaDescription: PropTypes.string,
+        description: PropTypes.string,
         date: PropTypes.string,
         author: PropTypes.string,
         authorAvatar: PropTypes.shape({
@@ -102,6 +107,7 @@ BlogTemplate.propTypes = {
         items: PropTypes.arrayOf(PropTypes.shape({})),
       }),
       body: PropTypes.string,
+      timeToRead: PropTypes.number,
     }),
   }),
   location: PropTypes.shape({
@@ -137,6 +143,7 @@ export const pageQuery = graphql`
       frontmatter {
         metaTitle
         metaDescription
+        description
         metaImage {
           childImageSharp {
             fixed {
@@ -154,6 +161,7 @@ export const pageQuery = graphql`
           }
         }
       }
+      timeToRead
     }
   }
 `;

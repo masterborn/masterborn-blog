@@ -8,7 +8,7 @@ const BlogContent = styled(Content)`
   padding: 6.5rem 3rem 0 3rem;
 
   ${media.desktop`
-    padding: 6.5rem 9.5rem 6.5rem 9.5rem;
+    padding: 6.5rem 5.5rem 6.5rem 5.5rem;
       width: 100%;
       max-width: 100%;
   `};

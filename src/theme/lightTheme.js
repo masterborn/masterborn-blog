@@ -7,8 +7,8 @@ const colors = {
   background: '#fff',
   accentBackground: '#E6ECF1',
   icon: '#9DAAB6',
-  heading: '#242A31',
-  text: '#3C454E',
+  heading: '#222222',
+  text: '#616161',
   menuText: '#7A8895',
   menuTextActive: '#242A31',
   code: '#3C454E',
@@ -57,6 +57,8 @@ const colors = {
   },
   tableOfContent: {
     separatorBorder: '#E6ECF1',
+    itemColorActive: '#222222',
+    itemColor: '#747373',
   },
   mobileMenuItemDivider: '#E6ECF1',
   githubStarButton: {
@@ -70,6 +72,13 @@ const colors = {
   header: {
     headerBorderColor: '#F0F0F0',
     color: '#222222',
+  },
+  contactButton: {
+    borderColor: '#F7CA18',
+  },
+  authorHeader: {
+    author: '#131313',
+    authorDate: '#6B6B6B',
   },
 };
 

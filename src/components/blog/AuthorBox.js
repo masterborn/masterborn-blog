@@ -8,8 +8,14 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin: 3rem 0 -1rem;
 `;
 
+const ContentContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+
+`
 const Avatar = styled.div`
   border-radius: 50%;
   width: 4rem;
@@ -20,13 +26,19 @@ const Avatar = styled.div`
   background-size: cover;
 `;
 
-const AuthorBox = ({ image, name }) => {
+const AuthorBox = ({ image, name, date, timeToRead }) => {
   return (
     <Container>
       <Avatar src={image} />
-      <Caption fontSize={1} color="text">
-        {name}
-      </Caption>
+      <ContentContainer>
+        <Caption fontSize={0} color="authorHeader.author" opacity={0.9}>
+          {name}
+        </Caption>
+        <Caption fontSize={0} color="authorHeader.authorDate" mt={2} opacity={0.9}>
+          {date} | {timeToRead} min read
+        </Caption>
+      </ContentContainer>
+
     </Container>
   );
 };
@@ -34,6 +46,8 @@ const AuthorBox = ({ image, name }) => {
 AuthorBox.propTypes = {
   image: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired,
+  timeToRead: PropTypes.number.isRequired,
 };
 
 export default AuthorBox;

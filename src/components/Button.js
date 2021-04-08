@@ -10,11 +10,13 @@ import {
 
 const statesForButtonVariant = {
   primary: theme => `
-    &:hover {
+      &:hover {
+      box-shadow: 0 12px 24px -10px ${theme.colors.button.primaryShadow};
       color: ${theme.colors.white};
     }
     &:focus {
       border: 1px solid ${theme.colors.button.primaryActive};
+      box-shadow: 0 0 4px 1px ${theme.colors.primary};
     }`,
   white: theme => `
     &:active {
@@ -42,11 +44,13 @@ const statesForButtonVariant = {
 
 const statesForButtonOutline = {
   primary: theme => `
-    &:hover {
+      &:hover {
+      box-shadow: 0 12px 24px -10px ${theme.colors.button.primaryShadow};
       color: ${theme.colors.button.primaryOutlineHover};
     }
     &:focus {
       border: 1px solid ${theme.colors.button.primaryActive};
+      box-shadow: 0 0 4px 1px ${theme.colors.primary};
     }`,
 };
 
@@ -88,6 +92,10 @@ const Button = styled('button')(
         justifyContent: 'flex-start',
         alignItems: 'center',
       },
+      cta: {
+        color: 'dark',
+        bg: 'primary',
+      },
     },
   }),
   variant({
@@ -103,22 +111,17 @@ const Button = styled('button')(
         padding: '0.9rem 1.5rem',
         fontWeight: 'buttonSmall',
       },
-      big: {
-        fontSize: 2,
-        padding: '0.6rem 4rem',
-        fontWeight: 'buttonBig',
-      },
     },
   }),
   variant({
     prop: 'outline',
     variants: {
       primary: {
-        bg: 'primary',
+        bg: 'transparent',
         borderStyle: 'solid',
         borderWidth: 2,
         borderColor: 'dirtyPrimary',
-        color: 'black',
+        color: 'primary',
       },
       white: {
         bg: 'transparent',

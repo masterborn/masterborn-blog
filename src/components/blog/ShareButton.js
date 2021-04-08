@@ -55,7 +55,12 @@ ShareButton.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node),
-  ]).isRequired,
+  ]),
 };
+
+ShareButton.defaultProps = {
+  children: null,
+};
+
 
 export default ShareButton;

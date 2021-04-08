@@ -11,8 +11,6 @@ import useActiveHashInViewport from '../../hooks/useActiveHashInViewport';
 import TableOfContentItem from './TableOfContentItem';
 
 const StickyContainer = styled('div')`
-  border-left: 1px solid
-    ${props => props.theme.colors.tableOfContent.separatorBorder};
   display: none;
   margin-bottom: 4rem;
   ${media.desktop`
@@ -21,18 +19,18 @@ const StickyContainer = styled('div')`
 `;
 
 const Heading = styled(BaseHeading)`
-  text-transform: uppercase;
   font-weight: 500;
-  margin-bottom: 0;
-  padding-left: 1rem;
+  margin-bottom: 4rem;
 `;
 
 const List = styled(BaseList)`
   margin-left: 0;
   margin-bottom: 0;
   padding-left: 0;
+  border-left: 1px solid
+  ${props => props.theme.colors.tableOfContent.separatorBorder};
   ${TableOfContentItem} {
-    margin: 0;
+    margin: 1rem 0;
   }
 `;
 
@@ -75,8 +73,8 @@ const TableOfContent = ({ items }) => {
 
   return (
     <StickyContainer>
-      <Heading fontSize="caption" fontFamily="special" as="h6">
-        On this page
+      <Heading as="h6">
+        Table of Content
       </Heading>
       <List>
         {itemsWithoutRoot.map(lvl1Item => (

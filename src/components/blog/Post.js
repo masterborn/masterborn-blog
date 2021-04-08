@@ -10,7 +10,6 @@ import mdxComponents from '../mdxComponents';
 import RightSidebar from '../RightSidebar/RightSidebar';
 
 import AuthorBox from './AuthorBox';
-import PostDetailsBox from './PostDetailsBox';
 import BlogContent from './BlogContent';
 
 const Wrapper = styled('div')`
@@ -31,7 +30,7 @@ const PostContent = styled('div')`
     'sidebar';
   ${media.desktop`
   grid-row-gap: 0;
-  grid-column-gap: 3rem;
+  grid-column-gap: 6rem;
   grid-template-columns: 9fr 3fr;
    grid-template-areas:
     "body sidebar";
@@ -56,25 +55,28 @@ const Post = ({
   author,
   authorAvatar,
   tableOfContents,
+  timeToRead,
+  description,
 }) => {
   const localeDate = new Date(date).toLocaleDateString();
   return (
     <Wrapper>
       <BlogContent>
-        <PostHeader>
-          <PostDetailsBox>{localeDate}</PostDetailsBox>
-          <Heading as="h1" mb={3}>
-            {title}
-          </Heading>
-          <AuthorBox image={authorAvatar} name={author} />
-        </PostHeader>
         <PostContent>
           <PostBody>
+            <PostHeader>
+              <Heading as="h1" mb={3}>
+                {title}
+              </Heading>
+              <Heading as="h5" mb={3} mt={1} opacity={0.9}>
+                {description}
+              </Heading>
+              <AuthorBox image={authorAvatar} name={author} date={localeDate} timeToRead={timeToRead} />
+            </PostHeader>
             <MDXProvider components={mdxComponents}>
               <MDXRenderer>{body}</MDXRenderer>
             </MDXProvider>
           </PostBody>
-
           <RightSidebarWrapper>
             <RightSidebar
               relativePath={filePath}
@@ -94,6 +96,8 @@ Post.propTypes = {
   author: PropTypes.string.isRequired,
   authorAvatar: PropTypes.string.isRequired,
   filePath: PropTypes.string.isRequired,
+  timeToRead: PropTypes.number.isRequired,
+  description: PropTypes.string.isRequired,
   tableOfContents: PropTypes.shape({
     items: PropTypes.arrayOf(PropTypes.shape({})),
   }),
