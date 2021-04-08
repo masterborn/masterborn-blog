@@ -1,10 +1,14 @@
+const insertSubstringAtIndex = (string, substring, index) => {
+  return [string.slice(0, index), substring , string.slice(index)].join('');
+}
+
 const addCtaButton = node => {
   const CTA_BUTTON = '\n\n <CtaComponent /> \n\n'
 
   const middleIndex = parseInt(node.rawBody.length / 2, 10);
-  const headerIndex = node.rawBody.indexOf('\n## ', middleIndex);
+  const firstHeaderInSecondHalfIndex = node.rawBody.indexOf('\n## ', middleIndex);
   // eslint-disable-next-line no-param-reassign
-  node.rawBody = [node.rawBody.slice(0, headerIndex), CTA_BUTTON , node.rawBody.slice(headerIndex)].join('');
+  node.rawBody = insertSubstringAtIndex(node.rawBody, CTA_BUTTON, firstHeaderInSecondHalfIndex);
 }
 
 module.exports = addCtaButton;
