@@ -122,7 +122,7 @@ BlogTemplate.propTypes = {
           description: PropTypes.string,
           metaImage: PropTypes.shape({
             childImageSharp: PropTypes.shape({
-              fixed: PropTypes.shape({
+              fluid: PropTypes.shape({
                 src: PropTypes.string,
               }),
             }),
@@ -193,8 +193,8 @@ export const pageQuery = graphql`
           description
           metaImage {
             childImageSharp {
-              fixed {
-                ...GatsbyImageSharpFixed
+              fluid(cropFocus: CENTER, fit: COVER, maxHeight: 221, maxWidth: 368, quality: 100) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
