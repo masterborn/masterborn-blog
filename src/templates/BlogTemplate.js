@@ -56,7 +56,7 @@ export default function BlogTemplate(props) {
     ? authorAvatar.childImageSharp.fixed.src
     : defaultAvatar;
 
-  const metaImageSrc = get(metaImage, 'childImageSharp.fixed.src', null);
+  const metaImageSrc = get(metaImage, 'childImageSharp.fluid.src', null);
 
   return (
     <PageLayout location={location} themeName="blog">
@@ -166,8 +166,8 @@ export const pageQuery = graphql`
         metaDescription
         metaImage {
           childImageSharp {
-            fixed {
-              ...GatsbyImageSharpFixed
+            fluid(fit: COVER, cropFocus: CENTER, maxHeight: 314, maxWidth: 600, quality: 100) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
