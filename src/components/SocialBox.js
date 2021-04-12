@@ -1,12 +1,12 @@
 import React from 'react';
 import LinkedinShareButton from 'react-share/es/LinkedinShareButton';
-import LinkedinSquare from 'emotion-icons/fa-brands/Linkedin';
 import TwitterShareButton from 'react-share/es/TwitterShareButton';
-import Twitter from 'emotion-icons/fa-brands/Twitter';
 import FacebookShareButton from 'react-share/es/FacebookShareButton';
-import FacebookSquare from 'emotion-icons/fa-brands/FacebookSquare';
 import styled from '@emotion/styled';
 
+import { ReactComponent as Twitter } from '../assets/twitter-share-icon.svg';
+import { ReactComponent as LinkedinSquare } from '../assets/linkedin-share-icon.svg';
+import { ReactComponent as FacebookSquare } from '../assets/facebook-share-icon.svg';
 import useLocation from '../hooks/useLocation';
 
 import ShareButton from './blog/ShareButton';

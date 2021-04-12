@@ -80,6 +80,11 @@ const colors = {
     author: '#131313',
     authorDate: '#6B6B6B',
   },
+  footer: {
+    header: '#9F9C9C',
+    officeHeader: '#3F3F3F',
+    reviewScore: '#9F9F9F',
+  },
 };
 
 /* eslint-disable prefer-destructuring */

@@ -8,12 +8,13 @@ const ListItem = styled('li')`
   font-size: ${props => props.theme.fontSizes.bodySmall};
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  line-height: 2.4rem;
   border-color: ${props =>
     props.isActive ? props.theme.colors.primary : 'transparent'};
   color: ${props =>
     props.isActive ? props.theme.colors.tableOfContent.itemColorActive : props.theme.colors.tableOfContent.itemColor};
   font-weight: ${props => (props.isActive ? '600' : '300')};
-  padding-left: ${props => (props.level === 2 ? '3rem' : '2rem')} !important;
+  padding-left: ${props => (props.level === 2 ? '2.8rem' : '1.9rem')} !important;
   opacity: ${props => (props.isActive ? '1' : '0.9')};
 `;
 

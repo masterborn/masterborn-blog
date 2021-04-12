@@ -30,7 +30,7 @@ const List = styled(BaseList)`
   border-left: 1px solid
   ${props => props.theme.colors.tableOfContent.separatorBorder};
   ${TableOfContentItem} {
-    margin: 1rem 0;
+    margin: 0.5rem 0;
   }
 `;
 
