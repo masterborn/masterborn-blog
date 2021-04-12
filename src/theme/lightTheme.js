@@ -7,7 +7,7 @@ const colors = {
   background: '#fff',
   accentBackground: '#E6ECF1',
   icon: '#9DAAB6',
-  heading: '#222222',
+  heading: '#131313',
   text: '#616161',
   menuText: '#7A8895',
   menuTextActive: '#242A31',
@@ -83,7 +83,11 @@ const colors = {
   footer: {
     header: '#9F9C9C',
     officeHeader: '#3F3F3F',
+    officeText: '#222222',
     reviewScore: '#9F9F9F',
+    border: '#F0F0F0',
+    copyright: '#A2A2A2',
+    rodo: '#F7F7F7',
   },
 };
 
@@ -92,8 +96,6 @@ const fontSizes = Object.assign(
   [...defaultTheme.fontSizes],
   defaultTheme.fontSizes
 );
-fontSizes.body = fontSizes[2];
-/* eslint-enable prefer-destructuring */
 
 const lightTheme = {
   ...defaultTheme,

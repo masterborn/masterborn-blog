@@ -11,6 +11,7 @@ const StyledContactButton = styled(Button)`
   background-color: ${props => props.theme.colors.primary};
   color: ${props => props.theme.colors.black};
   padding: .9rem 5rem;
+  font-weight: ${props => props.theme.fontWeights.buttonBig};
   border: 1px solid ${props => props.theme.colors.contactButton.borderColor};
 `
 

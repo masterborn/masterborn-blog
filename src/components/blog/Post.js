@@ -8,6 +8,8 @@ import { media } from '../../utils/emotion';
 import Heading from '../Heading';
 import mdxComponents from '../mdxComponents';
 import RightSidebar from '../RightSidebar/RightSidebar';
+import ArrowIcon from '../../assets/arrow-icon.svg';
+import Link from '../Link';
 
 import AuthorBox from './AuthorBox';
 import BlogContent from './BlogContent';
@@ -30,7 +32,7 @@ const PostContent = styled('div')`
     'sidebar';
   ${media.desktop`
   grid-row-gap: 0;
-  grid-column-gap: 6rem;
+  grid-column-gap: 8rem;
   grid-template-columns: 9fr 3fr;
    grid-template-areas:
     "body sidebar";
@@ -40,12 +42,19 @@ const PostContent = styled('div')`
 const PostBody = styled('div')`
   grid-area: body;
   min-width: 0;
+  position: relative;
 `;
 
 const RightSidebarWrapper = styled('div')`
   grid-area: sidebar;
   min-width: 0;
 `;
+
+const BackLink = styled(Link)`
+  position: absolute;
+  left: -6rem;
+  top: 2rem;
+`
 
 const Post = ({
   filePath,
@@ -65,6 +74,9 @@ const Post = ({
         <PostContent>
           <PostBody>
             <PostHeader>
+              <BackLink to="/blog" title="Back">
+                <img src={ArrowIcon} alt="Back" />
+              </BackLink>
               <Heading as="h1" mb={3}>
                 {title}
               </Heading>

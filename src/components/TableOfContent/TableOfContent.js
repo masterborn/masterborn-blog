@@ -20,7 +20,7 @@ const StickyContainer = styled('div')`
 
 const Heading = styled(BaseHeading)`
   font-weight: 500;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 `;
 
 const List = styled(BaseList)`

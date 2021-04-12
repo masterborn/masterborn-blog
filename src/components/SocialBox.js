@@ -32,7 +32,7 @@ const SocialBox = () => {
   const url = location.href || '';
   return (
     <Container>
-      <Text fontSize="bodySmall" mb="0">Share</Text>
+      <Text fontSize="bodySmall" fontWeight={1} mb="0">Share</Text>
       <ButtonsContainer>
         <ShareButton button={LinkedinShareButton} icon={LinkedinSquare} url={url} />
         <ShareButton button={TwitterShareButton} icon={Twitter} url={url} />

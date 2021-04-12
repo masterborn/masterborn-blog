@@ -49,7 +49,6 @@ export default function BlogTemplate(props) {
     : defaultAvatar;
 
   const metaImageSrc = get(metaImage, 'childImageSharp.fixed.src', null);
-  console.log(mdx);
   return (
     <PageLayout location={location} themeName="blog">
       <SEO

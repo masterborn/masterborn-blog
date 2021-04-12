@@ -31,7 +31,7 @@ const AuthorBox = ({ image, name, date, timeToRead }) => {
     <Container>
       <Avatar src={image} />
       <ContentContainer>
-        <Caption fontSize={0} color="authorHeader.author" opacity={0.9}>
+        <Caption fontSize={0} color="authorHeader.author" opacity={0.9} fontWeight={2}>
           {name}
         </Caption>
         <Caption fontSize={0} color="authorHeader.authorDate" mt={2} opacity={0.9}>
