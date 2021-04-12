@@ -4,6 +4,7 @@ const { createFilePath } = require(`gatsby-source-filesystem`);
 const { startCase } = require('lodash');
 
 const getMarkdownPages = require('./scripts/get-markdown-pages');
+const addCtaButton = require('./src/utils/addCtaButton');
 
 const mapReadmeSlug = slug => {
   return slug.replace(/\/readme/gi, '');
@@ -47,5 +48,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       node,
       value: node.frontmatter.title || startCase(parent.name),
     });
+    
+    addCtaButton(node);
   }
 };
