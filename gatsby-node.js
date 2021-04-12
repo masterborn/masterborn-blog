@@ -10,6 +10,8 @@ const mapReadmeSlug = slug => {
   return slug.replace(/\/readme/gi, '');
 };
 
+const relatedPosts = {};
+
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const mdxPages = await getMarkdownPages(graphql);
@@ -48,7 +50,17 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       node,
       value: node.frontmatter.title || startCase(parent.name),
     });
-    
+
+    createNodeField({
+      name: `relatedFileAbsolutePaths`,
+      node,
+      value: relatedPosts[node.fileAbsolutePath],
+    });
+
     addCtaButton(node);
+  }
+
+  if (node.internal.type === 'MarkdownRemark') {
+    relatedPosts[node.fileAbsolutePath] = node.fields.relatedFileAbsolutePaths;
   }
 };
