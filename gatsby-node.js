@@ -4,6 +4,7 @@ const { createFilePath } = require(`gatsby-source-filesystem`);
 const { startCase } = require('lodash');
 
 const getMarkdownPages = require('./scripts/get-markdown-pages');
+const addCtaButton = require('./src/utils/addCtaButton');
 
 const mapReadmeSlug = slug => {
   return slug.replace(/\/readme/gi, '');
@@ -55,6 +56,8 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
       node,
       value: relatedPosts[node.fileAbsolutePath],
     });
+
+    addCtaButton(node);
   }
 
   if (node.internal.type === 'MarkdownRemark') {
