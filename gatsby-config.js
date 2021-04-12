@@ -3,6 +3,7 @@ require('dotenv').config();
 const remarkSlug = require('remark-slug');
 
 const config = require('./config');
+const getAlgoliaQueries = require('./scripts/get-algolia-queries');
 
 const plugins = [
   'gatsby-plugin-sitemap',
@@ -107,6 +108,15 @@ const plugins = [
         `IBM Plex Mono\:500`,
       ],
       display: 'swap',
+    },
+  },
+  {
+    resolve: `gatsby-plugin-algolia`,
+    options: {
+      appId: config.algolia.appId,
+      apiKey: config.algolia.adminKey,
+      indexName: config.algolia.indexName,
+      queries: getAlgoliaQueries(),
     },
   },
 ];
