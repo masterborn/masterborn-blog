@@ -56,7 +56,7 @@ export default function BlogTemplate(props) {
     ? authorAvatar.childImageSharp.fixed.src
     : defaultAvatar;
 
-  const metaImageSrc = get(metaImage, 'childImageSharp.fixed.src', null);
+  const metaImageSrc = get(metaImage, 'childImageSharp.fluid.src', null);
 
   return (
     <PageLayout location={location} themeName="blog">
@@ -122,7 +122,7 @@ BlogTemplate.propTypes = {
           description: PropTypes.string,
           metaImage: PropTypes.shape({
             childImageSharp: PropTypes.shape({
-              fixed: PropTypes.shape({
+              fluid: PropTypes.shape({
                 src: PropTypes.string,
               }),
             }),
@@ -166,8 +166,8 @@ export const pageQuery = graphql`
         metaDescription
         metaImage {
           childImageSharp {
-            fixed {
-              ...GatsbyImageSharpFixed
+            fluid(fit: COVER, cropFocus: CENTER, maxHeight: 314, maxWidth: 600, quality: 100) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -193,8 +193,8 @@ export const pageQuery = graphql`
           description
           metaImage {
             childImageSharp {
-              fixed {
-                ...GatsbyImageSharpFixed
+              fluid(cropFocus: CENTER, fit: COVER, maxHeight: 221, maxWidth: 368, quality: 100) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
