@@ -115,7 +115,7 @@ const FooterLink = styled(Link)`
   padding: 1rem 0;
   :hover {
     color: ${props => props.theme.colors.primary};
-    font-weight: ${props => props.theme.fontWeights.heading};
+    text-shadow: 0 0 1px;
   }
 `
 
