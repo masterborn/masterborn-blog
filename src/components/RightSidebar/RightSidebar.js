@@ -7,7 +7,6 @@ import TableOfContent from '../TableOfContent';
 import SocialBox from '../SocialBox';
 import ConditionalWrapper from '../ConditionalWrapper';
 import useMatchBreakpoint from '../../hooks/useMatchBreakpoint';
-import { media } from '../../utils/emotion';
 
 const checkIsEmptyTableOfContent = items => {
   if (!items || items.length === 0) return true;
@@ -15,18 +14,14 @@ const checkIsEmptyTableOfContent = items => {
   return !items.some(lvl1 => lvl1.items && lvl1.items.length > 0);
 };
 
+// seems broken without position: sticky;
+
 const Container = styled('div')`
   padding-top: 0;
-  position: sticky;
-  top: 8rem;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
   height: auto;
-
-  ${media.desktop`
-    height: calc(100vh - 8rem);
-  `}
 `;
 
 const RightSidebar = ({ tableOfContents, relativePath }) => {
@@ -36,17 +31,13 @@ const RightSidebar = ({ tableOfContents, relativePath }) => {
   const isDesktop = useMatchBreakpoint('desktop');
   return (
     <Container>
-      <ConditionalWrapper
-        condition={isDesktop}
-        wrapper={children => <Scrollbar>{children}</Scrollbar>}
-      >
-        <>
-          {!isEmptyTableOfContent && (
-            <TableOfContent items={tableOfContents.items} />
+
+      <>
+        {!isEmptyTableOfContent && (
+        <TableOfContent items={tableOfContents.items} />
           )}
-          <SocialBox filePath={relativePath} />
-        </>
-      </ConditionalWrapper>
+        <SocialBox filePath={relativePath} />
+      </>
     </Container>
   );
 };

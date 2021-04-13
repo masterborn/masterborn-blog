@@ -1,13 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import LinkedinShareButton from 'react-share/es/LinkedinShareButton';
-import LinkedinSquare from 'emotion-icons/fa-brands/Linkedin';
 import TwitterShareButton from 'react-share/es/TwitterShareButton';
-import Twitter from 'emotion-icons/fa-brands/Twitter';
 import FacebookShareButton from 'react-share/es/FacebookShareButton';
-import FacebookSquare from 'emotion-icons/fa-brands/FacebookSquare';
 import styled from '@emotion/styled';
 
+import { ReactComponent as Twitter } from '../assets/twitter-share-icon.svg';
+import { ReactComponent as LinkedinSquare } from '../assets/linkedin-share-icon.svg';
+import { ReactComponent as FacebookSquare } from '../assets/facebook-share-icon.svg';
 import useLocation from '../hooks/useLocation';
 
 import ShareButton from './blog/ShareButton';
@@ -15,27 +14,31 @@ import Text from './Text';
 
 const Container = styled('div')`
   display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 0 0 2.2rem 1.8rem;
-    ${({ theme }) => theme.colors.accentBackground};
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0;
+  position: sticky;
 `;
+
+const ButtonsContainer = styled(`div`)`
+  width: auto;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+`
 
 const SocialBox = () => {
   const location = useLocation();
   const url = location.href || '';
   return (
     <Container>
-      <Text fontWeight="500">Share:</Text>
-      <ShareButton button={LinkedinShareButton} icon={LinkedinSquare} url={url}>
-        LinkedIn
-      </ShareButton>
-      <ShareButton button={TwitterShareButton} icon={Twitter} url={url}>
-        Twitter
-      </ShareButton>
-      <ShareButton button={FacebookShareButton} icon={FacebookSquare} url={url}>
-        Facebook
-      </ShareButton>
+      <Text fontSize="bodySmall" fontWeight={1} mb="0">Share</Text>
+      <ButtonsContainer>
+        <ShareButton button={LinkedinShareButton} icon={LinkedinSquare} url={url} />
+        <ShareButton button={TwitterShareButton} icon={Twitter} url={url} />
+        <ShareButton button={FacebookShareButton} icon={FacebookSquare} url={url} />
+      </ButtonsContainer>
+
     </Container>
   );
 };
