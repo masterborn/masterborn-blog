@@ -1,3 +1,5 @@
+const _ = require('lodash');
+
 const query = `{
   pages: allMdx{
     edges {
@@ -7,6 +9,17 @@ const query = `{
           title
           description
           author
+          metaImage {
+            childImageSharp {
+              fluid {
+                base64
+                aspectRatio
+                src
+                srcSet
+                sizes
+              }
+            }
+          }
         }
         fields {
           slug
@@ -17,10 +30,11 @@ const query = `{
   }
 }`
 
-function pageToAlgoliaRecord({ node: { id, frontmatter, fields, ...rest } }) {
+function pageToAlgoliaRecord({ node: { id, frontmatter: { metaImage, ...restOfFrontmatter }, fields, ...rest } }) {
   return {
     objectID: id,
-    ...frontmatter,
+    metaImage: _.get(metaImage, 'childImageSharp', {}),
+    ...restOfFrontmatter,
     ...fields,
     ...rest,
   }
@@ -35,7 +49,7 @@ const getAlgoliaQueries = () => [
       searchableAttributes: ['title', 'description', 'excerpt', 'author'],
       indexLanguages: ['en', 'pl'],
       queryLanguages: ['en', 'pl'],
-      attributesToRetrieve: ['title', 'author', 'slug'],
+      attributesToRetrieve: ['title', 'author', 'slug', 'description', 'metaImage'],
     },
   },
 ];
