@@ -23,7 +23,7 @@ const Content = styled.div`
 `;
 export default function BlogTemplate(props) {
   const {
-    data: { mdx },
+    data: { mdx, relatedPosts },
     location,
   } = props;
 
@@ -48,7 +48,7 @@ export default function BlogTemplate(props) {
     ? authorAvatar.childImageSharp.fixed.src
     : defaultAvatar;
 
-  const metaImageSrc = get(metaImage, 'childImageSharp.fixed.src', null);
+  const metaImageSrc = get(metaImage, 'childImageSharp.fluid.src', null);
   return (
     <PageLayout location={location} themeName="blog">
       <SEO
@@ -108,6 +108,22 @@ BlogTemplate.propTypes = {
       body: PropTypes.string,
       timeToRead: PropTypes.number,
     }),
+    relatedPosts: PropTypes.shape({
+      nodes: PropTypes.arrayOf(PropTypes.shape({
+        slug: PropTypes.string,
+        frontmatter: PropTypes.shape({
+          title: PropTypes.string,
+          description: PropTypes.string,
+          metaImage: PropTypes.shape({
+            childImageSharp: PropTypes.shape({
+              fluid: PropTypes.shape({
+                src: PropTypes.string,
+              }),
+            }),
+          }),
+        }),
+      })),
+    }),
   }),
   location: PropTypes.shape({
     pathname: PropTypes.string.isRequired,
@@ -125,7 +141,7 @@ BlogTemplate.defaultProps = {
 };
 
 export const pageQuery = graphql`
-  query($id: String!) {
+  query($id: String!, $relatedFileAbsolutePaths: [String!]!) {
     mdx(fields: { id: { eq: $id } }) {
       fields {
         id
@@ -145,8 +161,8 @@ export const pageQuery = graphql`
         description
         metaImage {
           childImageSharp {
-            fixed {
-              ...GatsbyImageSharpFixed
+            fluid(fit: COVER, cropFocus: CENTER, maxHeight: 314, maxWidth: 600, quality: 100) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -161,6 +177,25 @@ export const pageQuery = graphql`
         }
       }
       timeToRead
+    }
+    relatedPosts: allMdx(
+      filter: { fileAbsolutePath: { in: $relatedFileAbsolutePaths } }
+      limit: 3
+    ) {
+      nodes {
+        slug
+        frontmatter {
+          title
+          description
+          metaImage {
+            childImageSharp {
+              fluid(cropFocus: CENTER, fit: COVER, maxHeight: 221, maxWidth: 368, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+      }
     }
   }
 `;
