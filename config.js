@@ -19,6 +19,12 @@ const config = {
     description:
       "Let's start the journey of creating your software with Premium Professionals.",
   },
+  custom: {
+    localization: {
+      url: 'https://ipapi.co/json/',
+      countryCode: 'PL',
+    },
+  },
 };
 
 module.exports = config;

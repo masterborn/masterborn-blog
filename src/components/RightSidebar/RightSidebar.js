@@ -2,11 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
-import Scrollbar from '../Scrollbar';
 import TableOfContent from '../TableOfContent';
 import SocialBox from '../SocialBox';
-import ConditionalWrapper from '../ConditionalWrapper';
-import useMatchBreakpoint from '../../hooks/useMatchBreakpoint';
+
+import SidebarCta from './SidebarCta';
 
 const checkIsEmptyTableOfContent = items => {
   if (!items || items.length === 0) return true;
@@ -24,11 +23,10 @@ const Container = styled('div')`
   height: auto;
 `;
 
-const RightSidebar = ({ tableOfContents, relativePath }) => {
+const RightSidebar = ({ tableOfContents, relativePath, isInPoland }) => {
   const isEmptyTableOfContent = checkIsEmptyTableOfContent(
     tableOfContents.items
   );
-  const isDesktop = useMatchBreakpoint('desktop');
   return (
     <Container>
 
@@ -47,10 +45,12 @@ RightSidebar.propTypes = {
     items: PropTypes.arrayOf(PropTypes.shape({})),
   }),
   relativePath: PropTypes.string.isRequired,
+  isInPoland: PropTypes.bool,
 };
 
 RightSidebar.defaultProps = {
   tableOfContents: {},
+  isInPoland: null,
 };
 
 export default RightSidebar;

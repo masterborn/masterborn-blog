@@ -8,8 +8,10 @@ import { media } from '../../utils/emotion';
 import Heading from '../Heading';
 import mdxComponents from '../mdxComponents';
 import RightSidebar from '../RightSidebar/RightSidebar';
+import SidebarCta from '../RightSidebar/SidebarCta';
 import ArrowIcon from '../../assets/arrow-icon.svg';
 import Link from '../Link';
+import useIsInPoland from '../../hooks/useIsInPoland';
 
 import AuthorBox from './AuthorBox';
 import BlogContent from './BlogContent';
@@ -68,6 +70,7 @@ const Post = ({
   description,
 }) => {
   const localeDate = new Date(date).toLocaleDateString();
+  const isInPoland = useIsInPoland();
   return (
     <Wrapper>
       <BlogContent>
@@ -93,7 +96,10 @@ const Post = ({
             <RightSidebar
               relativePath={filePath}
               tableOfContents={tableOfContents}
+              isInPoland={isInPoland}
             />
+            <SidebarCta isInPoland={isInPoland} />
+
           </RightSidebarWrapper>
         </PostContent>
       </BlogContent>

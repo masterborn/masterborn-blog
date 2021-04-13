@@ -17,12 +17,12 @@ const Container = styled('div')`
   flex-direction: row;
   flex-wrap: wrap;
   padding: 0;
-  position: sticky;
 `;
 
 const ButtonsContainer = styled(`div`)`
   width: auto;
   margin-left: auto;
+  margin-right: -1rem;
   display: flex;
   align-items: center;
 `
