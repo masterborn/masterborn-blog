@@ -7,7 +7,7 @@ authorAvatar: ./assets/avatar_przemyslaw_k.jpg
 metaImage: ./assets/typescript-vs-javascript/210407_MB_blog_cover_TSvsJS.png
 metaTitle: 'TypeScript vs JavaScript: What’s the Difference?'
 metaDescription: 'What’s the difference between TypeScript and JavaScript? And when is it right to migrate to TypeScript, or maybe… the other way around?'
-isFeature: true
+isFeature: false
 
 ---
 
