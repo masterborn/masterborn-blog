@@ -35,6 +35,7 @@ const getAlgoliaQueries = () => [
       searchableAttributes: ['title', 'description', 'excerpt', 'author'],
       indexLanguages: ['en', 'pl'],
       queryLanguages: ['en', 'pl'],
+      attributesToRetrieve: ['title', 'author', 'slug'],
     },
   },
 ];
