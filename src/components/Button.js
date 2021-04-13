@@ -40,6 +40,11 @@ const statesForButtonVariant = {
     color: ${theme.colors.link.hover};
   }
   `,
+  cta: theme => `
+  &:hover {
+    color: ${theme.colors.link.hover};
+  }
+  `,
 };
 
 const statesForButtonOutline = {
@@ -95,6 +100,7 @@ const Button = styled('button')(
       cta: {
         color: 'dark',
         bg: 'primary',
+        borderRadius: '20px',
       },
     },
   }),
@@ -110,6 +116,10 @@ const Button = styled('button')(
         fontSize: 1,
         padding: '0.9rem 1.5rem',
         fontWeight: 'buttonSmall',
+      },
+      cta: {
+        padding: '0.7rem 1.5rem',
+        fontWeight: 600,
       },
     },
   }),

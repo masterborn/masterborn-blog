@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import PropTypes from 'prop-types';
 
-import Heading from '../Heading';
-import Text from '../Text';
+import Button from './Button';
+import Heading from './Heading';
 
 const Container = styled('div')`
   display: flex;
@@ -13,8 +14,8 @@ const Container = styled('div')`
   border-radius: 4px;
   text-align: left;
   box-shadow: 0 35px 42px -33px rgba(0,0,0,0.08);
-  padding: 3rem;
-  margin: 4rem 0;
+  padding: 4rem;
+  margin: 2rem 0;
   position: sticky;
   top: 14rem;
 `;
@@ -31,21 +32,28 @@ const StyledBorder = styled.div`
   background:  ${props => props.theme.colors.primary};
 `
 
-
-const SidebarCta = () => {
+const SidebarCta = ({ isInPoland }) => {
   return (
     <Container className="sticky">
       <StyledHeading as="h5">We build valuable products</StyledHeading>
       <StyledBorder />
-
-
-
+      <Button
+        variant="cta"
+        size="cta"
+        mt={3}
+        mb={3}
+        width="100%"
+      >{isInPoland ? 'Join us!' : 'Hire us!'}
+      </Button>
     </Container>
   );
 };
 
+SidebarCta.propTypes = {
+  isInPoland: PropTypes.bool,
+}
+
 SidebarCta.defaultProps = {
-  tableOfContents: {},
   isInPoland: null,
 };
 

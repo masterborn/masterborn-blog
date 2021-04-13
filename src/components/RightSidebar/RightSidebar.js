@@ -5,8 +5,6 @@ import styled from '@emotion/styled';
 import TableOfContent from '../TableOfContent';
 import SocialBox from '../SocialBox';
 
-import SidebarCta from './SidebarCta';
-
 const checkIsEmptyTableOfContent = items => {
   if (!items || items.length === 0) return true;
   if (items.length > 1) return false;
@@ -23,7 +21,7 @@ const Container = styled('div')`
   height: auto;
 `;
 
-const RightSidebar = ({ tableOfContents, relativePath, isInPoland }) => {
+const RightSidebar = ({ tableOfContents, relativePath }) => {
   const isEmptyTableOfContent = checkIsEmptyTableOfContent(
     tableOfContents.items
   );
@@ -45,12 +43,10 @@ RightSidebar.propTypes = {
     items: PropTypes.arrayOf(PropTypes.shape({})),
   }),
   relativePath: PropTypes.string.isRequired,
-  isInPoland: PropTypes.bool,
 };
 
 RightSidebar.defaultProps = {
   tableOfContents: {},
-  isInPoland: null,
 };
 
 export default RightSidebar;
