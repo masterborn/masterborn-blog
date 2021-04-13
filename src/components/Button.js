@@ -101,6 +101,8 @@ const Button = styled('button')(
         color: 'dark',
         bg: 'primary',
         borderRadius: '20px',
+        border: '1px solid',
+        borderColor: 'contactButton.borderColor',
       },
     },
   }),
@@ -118,6 +120,7 @@ const Button = styled('button')(
         fontWeight: 'buttonSmall',
       },
       cta: {
+        fontSize: 2,
         padding: '0.7rem 1.5rem',
         fontWeight: 600,
       },

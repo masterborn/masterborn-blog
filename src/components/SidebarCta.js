@@ -6,7 +6,7 @@ import Button from './Button';
 import Heading from './Heading';
 
 const Container = styled('div')`
-  display: flex;
+  display: grid;
   flex-direction: row;
   flex-wrap: wrap;
   padding: 0;
@@ -34,7 +34,7 @@ const StyledBorder = styled.div`
 
 const SidebarCta = ({ isInPoland }) => {
   return (
-    <Container className="sticky">
+    <Container>
       <StyledHeading as="h5">We build valuable products</StyledHeading>
       <StyledBorder />
       <Button

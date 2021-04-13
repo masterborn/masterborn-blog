@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
+import axios from 'axios';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 import { Global } from '@emotion/core';
 
+import { CountryContext } from '../contexts/CountryContext';
+import config from '../../config';
 import normalizeCss from '../theme/normalizeCss';
 import globalStyles from '../theme/globalStyles';
 import ThemeProvider from '../components/themeProvider';
@@ -40,6 +43,18 @@ const StickyMenuWrapper = styled(HeaderWrapper)`
 `;
 
 const PageLayout = ({ children, themeName, location }) => {
+  const { setCountry } = useContext(CountryContext);
+  const { url, countryCode } = config.custom.localization;
+
+  useEffect(() => {
+    axios.get(url)
+      .then((response) => {
+        const { country } = response.data;
+        const isSameCountry = country === countryCode;
+        setCountry(isSameCountry)
+      });
+  }, [])
+
   return (
     <ThemeProvider themeName={themeName}>
       <LocationContextProvider location={location}>

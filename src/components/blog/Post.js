@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import PropTypes from 'prop-types';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import styled from '@emotion/styled';
@@ -11,7 +11,7 @@ import RightSidebar from '../RightSidebar/RightSidebar';
 import SidebarCta from '../SidebarCta';
 import ArrowIcon from '../../assets/arrow-icon.svg';
 import Link from '../Link';
-import useIsInPoland from '../../hooks/useIsInPoland';
+import { CountryContext } from '../../contexts/CountryContext';
 
 import AuthorBox from './AuthorBox';
 import BlogContent from './BlogContent';
@@ -70,9 +70,8 @@ const Post = ({
   description,
 }) => {
   const localeDate = new Date(date).toLocaleDateString();
-  const isInPoland = useIsInPoland();
+  const {isInPoland} = useContext(CountryContext);
 
-  console.log(isInPoland)
   return (
     <Wrapper>
       <BlogContent>

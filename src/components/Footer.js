@@ -1,16 +1,19 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import styled from '@emotion/styled';
 
 import ClutchLogo from '../assets/footer/clutch-co-logo.png';
 import GoogleReviewsLogo from '../assets/footer/google-reviews-logo.png';
 import MBLogoGray from '../assets/footer/logo-gray.svg';
 import config from '../../config';
+import { CountryContext } from '../contexts/CountryContext';
 
 import PageSection from './pages/PageSection';
 import Content from './pages/Content';
 import StarRating from './StarRating';
 import Link from './Link';
 import Logo from './Logo';
+import Heading from './Heading';
+import Button from './Button';
 
 const OfficeHeader = styled.h5`
   color: ${props => props.theme.colors.footer.header};
@@ -131,10 +134,40 @@ const RodoBox = styled.div`
   padding: 1.5rem 0;
 `
 
+const FooterCta = styled.div`
+   background:  ${props => props.theme.colors.footer.ctaBackground};
+   padding: 10rem 0;
+`
+
+const StyledHeading = styled(Heading)`
+  text-align: center;
+`
+
+const StyledButton = styled(Button)`
+  margin: 5rem auto;
+  display: flex;
+  padding: 0.9rem 8.5rem;
+`
+
 const Footer = () => {
+  const { isInPoland } = useContext(CountryContext);
+
   return (
     <>
-      <PageSection mb={3} mt={4}>
+      <FooterCta>
+        <StyledHeading as="h2">
+          {isInPoland
+            ? 'Join our Team of world-class React & Node.js developers'
+            : 'We build valuable and successfull products for U.S. based startups'
+          }
+        </StyledHeading>
+        <StyledButton
+          variant="cta"
+          size="cta"
+        >{isInPoland ? 'See open positions!' : 'Hire us!'}
+        </StyledButton>
+      </FooterCta>
+      <PageSection>
         <FooterContainer>
           <OfficeHeader>Our offices are waiting for you in:</OfficeHeader>
           <OfficesContainer>
