@@ -7,7 +7,7 @@ authorAvatar: ./assets/avatar_przemyslaw_k.jpg
 metaImage: ./assets/Serverless_computing_pitfalls_to_avoid/210330_MB_blog_cover_serverless.jpg
 metaTitle: 'Serverless Computing - 5 pitfalls to avoid in your project'
 metaDescription: 'The top 5 pitfalls of Serverless Computing and how to overcome them. Learn how to avoid problems with Microservices, Timeouts, Vendor Lock, Cold start and Running dry database connections.'
-isFeature: true
+isFeature: false
 
 ---
 
