@@ -42,9 +42,9 @@ We know very well that this is not the final step. Publishing them on the websit
 
 Our core values are also living in the sense that we use them when recruiting and evaluating new team members.
 
-Finally our core values help us set clear expectations and honest, long-term relationships with our clients.
+Finally, our core values help us set clear expectations and honest, long-term relationships with our clients.
 
 This article is the beginning of a 4-part series in which I’d like to explain each value.  
 I’ll start with Clarity because only with clarity of purpose can people, teams, and organizations fully mobilize and achieve something truly excellent.
 
-In this article I will focus on a communication side and issues that might occur while working online, especially on my beloved&hated Slack.
+In this article I will focus on communication and issues that might occur while working online, especially on the loved and hated chat platform, Slack.
