@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from '@emotion/styled';
 
 import useAllBlogPosts from '../hooks/useAllBlogPosts';
@@ -8,6 +8,7 @@ import FeaturePost from '../components/blog/FeaturePost';
 import BlogContent from '../components/blog/BlogContent';
 import { media } from '../utils/emotion';
 import SEO from '../components/SEO';
+import Search from '../components/Search';
 
 const Wrapper = styled('div')`
   margin-top: 12rem;
@@ -23,6 +24,16 @@ const BlogFeatureArticleContent = styled(BlogContent)`
       max-width: 92rem;
   `}
 `;
+const SearchContainer = styled(BlogContent)`
+  padding-bottom: 6.5rem;
+  display: flex;
+  ${media.desktop`
+    padding-top: 8rem;
+    padding-right: 0;
+    width: 92rem;
+    max-width: 92rem;
+  `}
+`
 
 const BlogPostsContent = styled(BlogContent)`
   background-color: ${props => props.theme.colors.blogTextBackground};
@@ -35,6 +46,7 @@ const BlogPostsContent = styled(BlogContent)`
 `;
 
 const Index = () => {
+  const [searchKeyword, setSearchKeyword] = useState(null);
   const posts = useAllBlogPosts();
   const featurePosts = posts.filter(item => item.isFeature === true);
 
@@ -44,6 +56,9 @@ const Index = () => {
         title="MasterBorn | Blog"
         description="Let's start the journey of creating your software with Premium Professionals."
       />
+      <SearchContainer>
+        <Search keyword={searchKeyword} setKeyword={setSearchKeyword} />
+      </SearchContainer>
       <BlogFeatureArticleContent>
         {featurePosts.map(featurePost => (
           <FeaturePost key={featurePost.id} post={featurePost} />
