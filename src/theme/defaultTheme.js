@@ -33,6 +33,11 @@ const colors = {
   dropdownMenuItemHover: '#0A1A2B',
   dropdownMenuBorder: 'transparent',
   dropdownMenuShadow: 'rgba(0,0,0,0.2)',
+  featurePost:{
+    header: '#3F3F3F',
+    description:'#9F9F9F',
+    readMore:'#101010',
+  },
   button: {
     primaryShadow: 'rgba(82,199,234,0.4)',
     primaryActive: '#0A1A2B',

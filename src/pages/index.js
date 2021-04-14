@@ -14,13 +14,12 @@ const Wrapper = styled('div')`
 `;
 
 const BlogFeatureArticleContent = styled(BlogContent)`
-  background-color: ${props => props.theme.colors.accentBackground};
   padding-bottom: 6.5rem;
   padding-top: 0;
   ${media.desktop`
-     padding-top: 0;
-     width: 92rem;
-      max-width: 92rem;
+    padding-top: 0;
+    width: 129rem;
+    max-width: 129rem;
   `}
 `;
 
@@ -37,7 +36,7 @@ const BlogPostsContent = styled(BlogContent)`
 const Index = () => {
   const posts = useAllBlogPosts();
   const featurePosts = posts.filter(item => item.isFeature === true);
-
+  
   return (
     <Wrapper>
       <SEO
