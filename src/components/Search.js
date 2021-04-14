@@ -16,11 +16,18 @@ const StyledInput = styled.input`
 const StyledForm = styled.form`
   margin-left: auto;
 `;
+const StyledIcon = styled(SearchIcon)`
+  cursor: pointer;
+`;
 
 const Search = ({ refine, onFocus }) => {
   const [keyword, setKeyword] = useState(null);
+  const onSubmit = (event) => {
+    event.preventDefault();
+    refine(keyword);
+  };
   return (
-    <StyledForm>
+    <StyledForm onSubmit={onSubmit}>
       <StyledInput 
         type="text"
         value={keyword}
@@ -29,7 +36,7 @@ const Search = ({ refine, onFocus }) => {
         onChange={event => setKeyword(event.target.value)}
         onFocus={onFocus}
       />
-      <SearchIcon onClick={()=>refine(keyword)} />
+      <StyledIcon onClick={()=>refine(keyword)} />
     </StyledForm>
 );
 }
