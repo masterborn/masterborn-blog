@@ -6,6 +6,7 @@ const config = require('./config');
 const getAlgoliaQueries = require('./scripts/get-algolia-queries');
 
 const plugins = [
+  'gatsby-plugin-styled-components',
   'gatsby-plugin-sitemap',
   'gatsby-plugin-sharp',
   'gatsby-transformer-sharp',
