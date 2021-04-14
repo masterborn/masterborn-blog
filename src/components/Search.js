@@ -15,14 +15,14 @@ const StyledInput = styled.input`
 const StyledForm = styled.form`
   margin-left: auto;
   min-width: 19rem;
+  height: 3rem;
   display: grid;
   grid-auto-flow: column;
 `;
 
 const StyledIcon = styled(SearchIcon)`
   cursor: pointer;
-  margin-left: auto;
-  margin-right: 0;
+  margin: auto 0 auto auto;
 `;
 
 const Search = ({ refine, onFocus }) => {
