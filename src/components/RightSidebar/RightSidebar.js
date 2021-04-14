@@ -2,11 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
-import Scrollbar from '../Scrollbar';
 import TableOfContent from '../TableOfContent';
 import SocialBox from '../SocialBox';
-import ConditionalWrapper from '../ConditionalWrapper';
-import useMatchBreakpoint from '../../hooks/useMatchBreakpoint';
 
 const checkIsEmptyTableOfContent = items => {
   if (!items || items.length === 0) return true;
@@ -28,7 +25,6 @@ const RightSidebar = ({ tableOfContents, relativePath }) => {
   const isEmptyTableOfContent = checkIsEmptyTableOfContent(
     tableOfContents.items
   );
-  const isDesktop = useMatchBreakpoint('desktop');
   return (
     <Container>
 

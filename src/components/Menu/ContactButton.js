@@ -5,13 +5,9 @@ import styled from '@emotion/styled';
 import Button from '../Button';
 import Link from '../Link';
 
-
 const StyledContactButton = styled(Button)`
   margin-left: 5rem;
-  background-color: ${props => props.theme.colors.primary};
-  color: ${props => props.theme.colors.black};
-  padding: .9rem 5rem;
-  font-weight: ${props => props.theme.fontWeights.buttonBig};
+  padding: .7rem 5rem;
   border: 1px solid ${props => props.theme.colors.contactButton.borderColor};
 `
 
@@ -19,10 +15,10 @@ const ContactButton = ({ isCollapsedHeader, onClick, href, ...rest }) => {
   return (
     <StyledContactButton
       {...rest}
-      size={isCollapsedHeader ? 'big' : 'default'}
-      borderRadius="20px"
       as={Link}
       href={href}
+      variant="cta"
+      size="cta"
       onClick={onClick}
     >
       Contact us

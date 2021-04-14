@@ -88,6 +88,10 @@ const colors = {
     border: '#F0F0F0',
     copyright: '#A2A2A2',
     rodo: '#F7F7F7',
+    ctaBackground: '#F9F9F9',
+  },
+  ctaArticle: {
+    background: '#FAFAFA',
   },
 };
 

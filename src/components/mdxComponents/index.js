@@ -14,6 +14,7 @@ import List from './List';
 import ListOrdered from './ListOrdered';
 import Table from './Table';
 import Strong from './Strong';
+import CtaArticleComponent from './CtaArticleComponent';
 
 const generateHeading = size => props => (
   <Heading {...props} as={size} linked>
@@ -42,4 +43,5 @@ export default {
   table: props => <Table {...props} mb={4} />,
   blockquote: props => <Blockquote {...props} />,
   hr: props => <Hr {...props} />,
+  CtaComponent: props => <CtaArticleComponent {...props} />,
 };
