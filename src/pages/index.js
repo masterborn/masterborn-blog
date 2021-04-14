@@ -1,5 +1,13 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
+import { InstantSearch ,
+  connectStateResults,
+  Highlight,
+  Hits,
+  Snippet,
+  PoweredBy,
+} from "react-instantsearch-dom"
+import algoliasearch from "algoliasearch/lite"
 
 import useAllBlogPosts from '../hooks/useAllBlogPosts';
 import PostShort from '../components/blog/PostShort';
@@ -9,6 +17,9 @@ import BlogContent from '../components/blog/BlogContent';
 import { media } from '../utils/emotion';
 import SEO from '../components/SEO';
 import Search from '../components/Search';
+import config from '../../config';
+
+
 
 const Wrapper = styled('div')`
   margin-top: 12rem;
@@ -46,33 +57,42 @@ const BlogPostsContent = styled(BlogContent)`
 `;
 
 const Index = () => {
-  const [searchKeyword, setSearchKeyword] = useState(null);
+  const [query, setQuery] = useState();
+  const searchClient = algoliasearch(
+    config.algolia.appId,
+    config.algolia.searchKey
+  );
   const posts = useAllBlogPosts();
   const featurePosts = posts.filter(item => item.isFeature === true);
-
   return (
-    <Wrapper>
-      <SEO
-        title="MasterBorn | Blog"
-        description="Let's start the journey of creating your software with Premium Professionals."
-      />
-      <SearchContainer>
-        <Search keyword={searchKeyword} setKeyword={setSearchKeyword} />
-      </SearchContainer>
-      <BlogFeatureArticleContent>
-        {featurePosts.map(featurePost => (
-          <FeaturePost key={featurePost.id} post={featurePost} />
+    <InstantSearch
+      searchClient={searchClient}
+      indexName={config.algolia.indexName}
+      onSearchStateChange={(searchState) => setQuery(searchState.query)}
+    >
+      <Wrapper>
+        <SEO
+          title="MasterBorn | Blog"
+          description="Let's start the journey of creating your software with Premium Professionals."
+        />
+        <SearchContainer>
+          <Search />
+        </SearchContainer>
+        <BlogFeatureArticleContent>
+          {featurePosts.map(featurePost => (
+            <FeaturePost key={featurePost.id} post={featurePost} />
         ))}
-      </BlogFeatureArticleContent>
-      <BlogPostsContent>
-        <Heading as="h1" mb={5}>
-          All Posts
-        </Heading>
-        {posts.map(post => (
-          <PostShort key={post.id} post={post} />
+        </BlogFeatureArticleContent>
+        <BlogPostsContent>
+          <Heading as="h1" mb={5}>
+            All Posts
+          </Heading>
+          {posts.map(post => (
+            <PostShort key={post.id} post={post} />
         ))}
-      </BlogPostsContent>
-    </Wrapper>
+        </BlogPostsContent>
+      </Wrapper>
+    </InstantSearch>
   );
 };
 

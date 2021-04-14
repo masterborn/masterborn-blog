@@ -1,9 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
+import { connectSearchBox } from "react-instantsearch-dom"
 
 import { ReactComponent as SearchIcon } from '../assets/search.svg';
-
 
 
 
@@ -12,24 +12,31 @@ const StyledInput = styled.input`
   margin-left: auto;
   margin-right: 1rem;
   min-width: 19rem;
-`
-``
-const Search = ({ keyword, setKeyword }) => {
+`;
+const StyledForm = styled.form`
+  margin-left: auto;
+`;
+
+const Search = ({ refine, onFocus }) => {
+  const [keyword, setKeyword] = useState(null);
   return (
-    <>
+    <StyledForm>
       <StyledInput 
+        type="text"
         value={keyword}
         placeholder="|Search article by name..."
+        aria-label="Search"
         onChange={event => setKeyword(event.target.value)}
+        onFocus={onFocus}
       />
-      <SearchIcon />
-    </>
+      <SearchIcon onClick={()=>refine(keyword)} />
+    </StyledForm>
 );
 }
 
 Search.propTypes = {
-  keyword: PropTypes.string.isRequired,
-  setKeyword: PropTypes.func.isRequired,
+  refine: PropTypes.func.isRequired,
+  onFocus: PropTypes.func.isRequired,
 }
 
-export default Search;
+export default connectSearchBox(Search);
