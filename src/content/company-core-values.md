@@ -10,8 +10,6 @@ metaDescription: 'What are company core values? How to identify them and why are
 isFeature: true
 ---
 
-# Why Your Company Values (might) Stink
-
 ![Core values](assets/company-core-values/210412_MB_blog_cover_Values.jpg)
 
 A company’s values are not always what is written on the website. A team’s values are the behaviors modeled and communicated regularly (for better or worse) by the leaders of a company. I have worked in teams with vague or generic values as well as those without any. I often notice a gap between public facing values and how team members experience the culture within the organization. At MasterBorn, our goal is to eliminate this gap.
@@ -44,9 +42,9 @@ We know very well that this is not the final step. Publishing them on the websit
 
 Our core values are also living in the sense that we use them when recruiting and evaluating new team members.
 
-Finally our core values help us set clear expectations and honest, long-term relationships with our clients.
+Finally, our core values help us set clear expectations and honest, long-term relationships with our clients.
 
 This article is the beginning of a 4-part series in which I’d like to explain each value.  
 I’ll start with Clarity because only with clarity of purpose can people, teams, and organizations fully mobilize and achieve something truly excellent.
 
-In this article I will focus on a communication side and issues that might occur while working online, especially on my beloved&hated Slack.
+In this article I will focus on communication and issues that might occur while working online, especially on the loved and hated chat platform, Slack.
