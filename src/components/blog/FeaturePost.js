@@ -36,11 +36,18 @@ const ReadMoreText = styled(Text)`
   margin-right: 0.5rem;
 `;
 
+const LeftSide = styled.div`
+  margin: auto;
+`;
+const ImageLink = styled(Link)`
+  margin: auto 0;
+`;
+
 const FeaturePost = ({ post }) => {
   const { title, description, slug, metaImage } = post;
   return (
     <Container>
-      <div>
+      <LeftSide>
         <Heading color="featurePost.header" fontWeight={600} as="h1">{title}</Heading>
         <Description opacity="0.9" lineHeight="2.6rem" fontSize="1.6rem" color="featurePost.description">
           {description}
@@ -51,10 +58,10 @@ const FeaturePost = ({ post }) => {
           </ReadMoreText>
           <Arrow />
         </ReadMoreLink>
-      </div>
-      <Link to={slug}>
+      </LeftSide>
+      <ImageLink to={slug}>
         <StyledImage fluid={metaImage.fluid} />
-      </Link>
+      </ImageLink>
     </Container>
   );
 };
