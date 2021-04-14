@@ -8,6 +8,7 @@ const BaseLogo = styled.img(space, layout);
 
 BaseLogo.defaultProps = {
   height: '5.5rem',
+  src: null,
 };
 
 const Logo = props => {

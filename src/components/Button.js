@@ -92,6 +92,10 @@ const Button = styled('button')(
         justifyContent: 'flex-start',
         alignItems: 'center',
       },
+      cta: {
+        color: 'dark',
+        bg: 'primary',
+      },
     },
   }),
   variant({

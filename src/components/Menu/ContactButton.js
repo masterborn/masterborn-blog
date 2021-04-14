@@ -1,25 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from '@emotion/styled';
 
 import Button from '../Button';
 import Link from '../Link';
 
-const ContactButton = ({ isCollapsedHeader, onClick, href }) => {
+
+const StyledContactButton = styled(Button)`
+  margin-left: 5rem;
+  background-color: ${props => props.theme.colors.primary};
+  color: ${props => props.theme.colors.black};
+  padding: .9rem 5rem;
+  font-weight: ${props => props.theme.fontWeights.buttonBig};
+  border: 1px solid ${props => props.theme.colors.contactButton.borderColor};
+`
+
+const ContactButton = ({ isCollapsedHeader, onClick, href, ...rest }) => {
   return (
-    <Button
-      variant="primary"
-      outline="primary"
-      size={isCollapsedHeader ? 'small' : 'default'}
+    <StyledContactButton
+      {...rest}
+      size={isCollapsedHeader ? 'big' : 'default'}
+      borderRadius="20px"
       as={Link}
       href={href}
-      ml={{
-        _: 0,
-        lg: 3,
-      }}
       onClick={onClick}
     >
       Contact us
-    </Button>
+    </StyledContactButton>
   );
 };
 

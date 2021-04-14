@@ -10,14 +10,14 @@ import { media } from '../utils/emotion';
 import SEO from '../components/SEO';
 
 const Wrapper = styled('div')`
-  margin-top: 7rem;
+  margin-top: 12rem;
 `;
 
 const BlogFeatureArticleContent = styled(BlogContent)`
   padding-bottom: 6.5rem;
   padding-top: 0;
   ${media.desktop`
-    padding-top: 0;
+    padding-top: 8rem;
     width: 129rem;
     max-width: 129rem;
   `}

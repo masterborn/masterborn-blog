@@ -5,6 +5,7 @@ import { BREAKPOINTS } from '../utils/rwd';
 const colors = {
   dark: '#242A31',
   white: '#fff',
+  black: '#000',
   dirtyWhite: '#D0DEFF',
   background: '#0A1A2B',
   accentBackground: '#162535',
@@ -99,16 +100,17 @@ fontSizes.h4 = fontSizes[5];
 fontSizes.h5 = fontSizes[4];
 fontSizes.h6 = fontSizes[3];
 
-const fonts = ['IBM Plex Sans', 'IBM Plex Mono'];
+const fonts = ['Inter, sans-serif'];
 fonts.heading = fonts[0];
 fonts.body = fonts[0];
-fonts.special = fonts[1];
+fonts.special = fonts[0];
 
-const fontWeights = [300, 400, 500, 600, 700];
-fontWeights.body = fontWeights[1];
+const fontWeights = [300, 400, 600];
+fontWeights.body = fontWeights[0];
 fontWeights.heading = fontWeights[2];
-fontWeights.button = fontWeights[2];
+fontWeights.button = fontWeights[1];
 fontWeights.buttonSmall = fontWeights[1];
+fontWeights.buttonBig = fontWeights[2];
 
 const lineHeights = ['1.2', '1.5'];
 lineHeights.small = lineHeights[0];

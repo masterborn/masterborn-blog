@@ -1,15 +1,13 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 import { Global } from '@emotion/core';
-import { animated, useTransition } from 'react-spring';
 
 import normalizeCss from '../theme/normalizeCss';
 import globalStyles from '../theme/globalStyles';
 import ThemeProvider from '../components/themeProvider';
 import Header from '../components/header/Header';
 import Content from '../components/pages/Content';
-import useUnderViewport from '../hooks/useUnderViewport';
 import Footer from '../components/Footer';
 import { LocationContextProvider } from '../contexts/LocationContext';
 
@@ -36,42 +34,23 @@ const HeaderWrapper = styled.div`
 const StickyMenuWrapper = styled(HeaderWrapper)`
   position: fixed;
   top: 0;
-  background-color: ${props => props.theme.colors.accentBackground};
+  background-color: ${props => props.theme.colors.white};
+  border: 1px solid  ${props => props.theme.colors.header.headerBorderColor};
+  padding: 1rem 0;
 `;
 
-const AnimatedStickyMenuWrapper = animated(StickyMenuWrapper);
-
 const PageLayout = ({ children, themeName, location }) => {
-  const ref = useRef();
-  const [isCollapsedHeader] = useUnderViewport(ref);
-
-  const transitions = useTransition(isCollapsedHeader, null, {
-    from: { transform: 'translate3d(0,-80px,0)' },
-    enter: { transform: 'translate3d(0,0px,0)' },
-    leave: { transform: 'translate3d(0,-80px,0)' },
-  });
-
   return (
     <ThemeProvider themeName={themeName}>
       <LocationContextProvider location={location}>
         <PageWrapper>
           <Global styles={normalizeCss} />
           <Global styles={globalStyles} />
-          <HeaderWrapper ref={ref}>
+          <StickyMenuWrapper>
             <Content>
-              <Header />
+              <Header isCollapsedHeader />
             </Content>
-          </HeaderWrapper>
-          {transitions.map(
-            ({ item, props, key }) =>
-              item && (
-                <AnimatedStickyMenuWrapper key={key} style={props}>
-                  <Content>
-                    <Header isCollapsedHeader />
-                  </Content>
-                </AnimatedStickyMenuWrapper>
-              )
-          )}
+          </StickyMenuWrapper>
           {children}
           <Footer />
         </PageWrapper>

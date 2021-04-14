@@ -16,6 +16,7 @@ const ActionLink = styled('a')`
   cursor: pointer;
 `;
 
+// eslint-disable-next-line complexity
 const BaseLink = forwardRef(({ to, children, ...rest }, ref) => {
   const isAnchor = to ? false : to.charAt(0) === '#';
   if (isAnchor || isAbsoluteUrl(to)) {

@@ -9,16 +9,6 @@ import PageLayout from '../layouts/PageLayout';
 import Post from '../components/blog/Post';
 import defaultAvatar from '../assets/default_avatar.png';
 
-const GreyWrapper = styled.div`
-  position: absolute;
-  top: -8.8rem;
-  left: 0;
-  width: 100%;
-  height: 62.5rem;
-  background-color: ${props => props.theme.colors.accentBackground};
-  z-index: 1;
-`;
-
 const Wrapper = styled.div`
   position: relative;
   background-color: ${props => props.theme.colors.background};
@@ -41,6 +31,7 @@ export default function BlogTemplate(props) {
     frontmatter: {
       metaTitle,
       metaDescription,
+      description,
       metaImage,
       date,
       author,
@@ -50,14 +41,14 @@ export default function BlogTemplate(props) {
     parent: { relativePath },
     body,
     tableOfContents,
+    timeToRead,
   } = mdx;
 
   const imageAvatar = authorAvatar
     ? authorAvatar.childImageSharp.fixed.src
     : defaultAvatar;
 
-  const metaImageSrc = get(metaImage, 'childImageSharp.fixed.src', null);
-
+  const metaImageSrc = get(metaImage, 'childImageSharp.fluid.src', null);
   return (
     <PageLayout location={location} themeName="blog">
       <SEO
@@ -67,7 +58,6 @@ export default function BlogTemplate(props) {
         slug={slug}
       />
       <Wrapper>
-        <GreyWrapper />
         <Content>
           <Post
             body={body}
@@ -78,6 +68,8 @@ export default function BlogTemplate(props) {
             location={location}
             filePath={relativePath}
             tableOfContents={tableOfContents}
+            description={description}
+            timeToRead={timeToRead}
           />
         </Content>
       </Wrapper>
@@ -99,6 +91,7 @@ BlogTemplate.propTypes = {
       frontmatter: PropTypes.shape({
         metaTitle: PropTypes.string,
         metaDescription: PropTypes.string,
+        description: PropTypes.string,
         date: PropTypes.string,
         author: PropTypes.string,
         authorAvatar: PropTypes.shape({
@@ -113,6 +106,7 @@ BlogTemplate.propTypes = {
         items: PropTypes.arrayOf(PropTypes.shape({})),
       }),
       body: PropTypes.string,
+      timeToRead: PropTypes.number,
     }),
     relatedPosts: PropTypes.shape({
       nodes: PropTypes.arrayOf(PropTypes.shape({
@@ -122,7 +116,7 @@ BlogTemplate.propTypes = {
           description: PropTypes.string,
           metaImage: PropTypes.shape({
             childImageSharp: PropTypes.shape({
-              fixed: PropTypes.shape({
+              fluid: PropTypes.shape({
                 src: PropTypes.string,
               }),
             }),
@@ -164,10 +158,11 @@ export const pageQuery = graphql`
       frontmatter {
         metaTitle
         metaDescription
+        description
         metaImage {
           childImageSharp {
-            fixed {
-              ...GatsbyImageSharpFixed
+            fluid(fit: COVER, cropFocus: CENTER, maxHeight: 314, maxWidth: 600, quality: 100) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -181,6 +176,7 @@ export const pageQuery = graphql`
           }
         }
       }
+      timeToRead
     }
     relatedPosts: allMdx(
       filter: { fileAbsolutePath: { in: $relatedFileAbsolutePaths } }
@@ -193,8 +189,8 @@ export const pageQuery = graphql`
           description
           metaImage {
             childImageSharp {
-              fixed {
-                ...GatsbyImageSharpFixed
+              fluid(cropFocus: CENTER, fit: COVER, maxHeight: 221, maxWidth: 368, quality: 100) {
+                ...GatsbyImageSharpFluid
               }
             }
           }
