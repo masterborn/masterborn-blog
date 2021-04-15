@@ -24,7 +24,7 @@ const OfficeHeader = styled.h5`
 `
 
 const FooterContainer = styled.footer`
-  padding: 1rem 0;
+  padding: 3rem 0 0;
 `
 
 const OfficesContainer = styled.div`
@@ -135,8 +135,8 @@ const RodoBox = styled.div`
 `
 
 const FooterCta = styled.div`
-   background:  ${props => props.theme.colors.footer.ctaBackground};
-   padding: 10rem 0;
+  background:  ${props => props.theme.colors.footer.ctaBackground};
+  padding: 10rem 0;
 `
 
 const StyledHeading = styled(Heading)`

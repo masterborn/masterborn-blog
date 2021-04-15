@@ -15,6 +15,7 @@ import { CountryContext } from '../../contexts/CountryContext';
 
 import AuthorBox from './AuthorBox';
 import BlogContent from './BlogContent';
+import RelatedArticles from './RelatedArticles';
 
 const Wrapper = styled('div')`
   ${media.desktop`
@@ -68,6 +69,7 @@ const Post = ({
   tableOfContents,
   timeToRead,
   description,
+  relatedPosts,
 }) => {
   const localeDate = new Date(date).toLocaleDateString();
   const {isInPoland} = useContext(CountryContext);
@@ -78,7 +80,7 @@ const Post = ({
         <PostContent>
           <PostBody>
             <PostHeader>
-              <BackLink to="/blog" title="Back">
+              <BackLink to="/" title="Back">
                 <img src={ArrowIcon} alt="Back" />
               </BackLink>
               <Heading as="h1" mb={3}>
@@ -102,6 +104,7 @@ const Post = ({
           </RightSidebarWrapper>
         </PostContent>
       </BlogContent>
+      <RelatedArticles relatedPosts={relatedPosts} />
     </Wrapper>
   );
 };
@@ -115,12 +118,14 @@ Post.propTypes = {
   filePath: PropTypes.string.isRequired,
   timeToRead: PropTypes.number.isRequired,
   description: PropTypes.string.isRequired,
+  relatedPosts: PropTypes.arrayOf(PropTypes.shape({})),
   tableOfContents: PropTypes.shape({
     items: PropTypes.arrayOf(PropTypes.shape({})),
   }),
 };
 
 Post.defaultProps = {
+  relatedPosts: [],
   tableOfContents: { items: [] },
 };
 

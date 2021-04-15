@@ -70,6 +70,7 @@ export default function BlogTemplate(props) {
             tableOfContents={tableOfContents}
             description={description}
             timeToRead={timeToRead}
+            relatedPosts={relatedPosts.nodes}
           />
         </Content>
       </Wrapper>
@@ -184,6 +185,7 @@ export const pageQuery = graphql`
     ) {
       nodes {
         slug
+        excerpt
         frontmatter {
           title
           description

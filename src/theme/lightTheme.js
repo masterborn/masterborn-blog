@@ -98,6 +98,10 @@ const colors = {
   ctaArticle: {
     background: '#FAFAFA',
   },
+  relatedArticles: {
+    border: '#979797',
+    link: '#101010',
+  },
 };
 
 /* eslint-disable prefer-destructuring */
