@@ -24,6 +24,7 @@ const config = {
     searchKey: process.env.ALGOLIA_SEARCH_KEY,
     adminKey: process.env.ALGOLIA_ADMIN_KEY,
     indexName: process.env.ALGOLIA_INDEX_NAME || 'local_BLOG',
+  },
   custom: {
     localization: {
       url: 'https://ipapi.co/json/',
