@@ -37,6 +37,10 @@ jobs:
         env:
           NODE_ENV: production
           GATSBY_ROOT_URL: http://stage.masterborn.com
+          ALGOLIA_APP_ID: ${{ secrets.STAGE_ALGOLIA_APP_ID }}
+          ALGOLIA_SEARCH_KEY: ${{ secrets.STAGE_ALGOLIA_SEARCH_KEY }}
+          ALGOLIA_ADMIN_KEY: ${{ secrets.STAGE_ALGOLIA_ADMIN_KEY }}
+          ALGOLIA_INDEX_NAME: ${{ secrets.STAGE_ALGOLIA_INDEX_NAME }}
 
       - name: Rename pathing
         run: |
