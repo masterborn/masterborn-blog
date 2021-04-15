@@ -19,23 +19,24 @@ const Wrapper = styled('div')`
 `;
 
 const BlogFeatureArticleContent = styled(BlogContent)`
-  background-color: ${props => props.theme.colors.accentBackground};
   padding-bottom: 6.5rem;
   padding-top: 0;
   ${media.desktop`
-     padding-top: 8rem;
-     width: 92rem;
-      max-width: 92rem;
+    padding-top: 5rem;
+    width: 129rem;
+    max-width: 129rem;
   `}
 `;
 const SearchContainer = styled(BlogContent)`
-  padding-bottom: 6.5rem;
+  padding-bottom: 0rem;
   display: flex;
+  width: 118rem;
   ${media.desktop`
-    padding-top: 8rem;
+    padding-bottom: 0rem;
+    padding-top: 3rem;
     padding-right: 0;
-    width: 92rem;
-    max-width: 92rem;
+    width: 118rem;
+    max-width: 118rem;
   `}
 `
 
@@ -53,6 +54,7 @@ const Index = () => {
   const { searchClient, setQuery, indexName } = useAlgoliaSearch();
   const posts = useAllBlogPosts();
   const featurePosts = posts.filter(item => item.isFeature === true);
+
   return (
     <InstantSearch
       searchClient={searchClient}

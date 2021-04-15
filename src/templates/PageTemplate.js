@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 
 import PageLayout from '../layouts/PageLayout';
 
+
 const Wrapper = styled.div`
   position: relative;
   background-color: ${props => props.theme.colors.background};

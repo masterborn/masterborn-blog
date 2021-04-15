@@ -34,6 +34,11 @@ const colors = {
   dropdownMenuItemHover: '#0A1A2B',
   dropdownMenuBorder: 'transparent',
   dropdownMenuShadow: 'rgba(0,0,0,0.2)',
+  featurePost:{
+    header: '#3F3F3F',
+    description:'#9F9F9F',
+    readMore:'#101010',
+  },
   button: {
     primaryShadow: 'rgba(82,199,234,0.4)',
     primaryActive: '#0A1A2B',
@@ -95,7 +100,7 @@ fontSizes.h4 = fontSizes[5];
 fontSizes.h5 = fontSizes[4];
 fontSizes.h6 = fontSizes[3];
 
-const fonts = ['Inter'];
+const fonts = ['Inter, sans-serif'];
 fonts.heading = fonts[0];
 fonts.body = fonts[0];
 fonts.special = fonts[0];
