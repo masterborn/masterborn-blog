@@ -1,14 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
-import { InstantSearch ,
-  connectStateResults,
-  Highlight,
-  Hits,
-  Snippet,
-  PoweredBy,
-} from "react-instantsearch-dom"
-import algoliasearch from "algoliasearch/lite"
+import { InstantSearch, connectStateResults } from "react-instantsearch-dom";
 
+import useAlgoliaSearch from '../hooks/useAlgoliaSearch';
 import useAllBlogPosts from '../hooks/useAllBlogPosts';
 import PostShort from '../components/blog/PostShort';
 import Heading from '../components/Heading';
@@ -17,7 +11,6 @@ import BlogContent from '../components/blog/BlogContent';
 import { media } from '../utils/emotion';
 import SEO from '../components/SEO';
 import Search from '../components/Search';
-import config from '../../config';
 
 
 
@@ -57,18 +50,14 @@ const BlogPostsContent = styled(BlogContent)`
 `;
 
 const Index = () => {
-  const [query, setQuery] = useState();
-  const searchClient = algoliasearch(
-    config.algolia.appId,
-    config.algolia.searchKey
-  );
+  const { searchClient, setQuery, indexName } = useAlgoliaSearch();
   const posts = useAllBlogPosts();
   const featurePosts = posts.filter(item => item.isFeature === true);
   return (
     <InstantSearch
       searchClient={searchClient}
-      indexName={config.algolia.indexName}
-      onSearchStateChange={(searchState) => setQuery(searchState.query)}
+      indexName={indexName}
+      onSearchStateChange={({ query }) => setQuery(query)}
     >
       <Wrapper>
         <SEO
@@ -81,7 +70,7 @@ const Index = () => {
         <BlogFeatureArticleContent>
           {featurePosts.map(featurePost => (
             <FeaturePost key={featurePost.id} post={featurePost} />
-        ))}
+          ))}
         </BlogFeatureArticleContent>
         <BlogPostsContent>
           <Heading as="h1" mb={5}>
@@ -89,7 +78,7 @@ const Index = () => {
           </Heading>
           {posts.map(post => (
             <PostShort key={post.id} post={post} />
-        ))}
+          ))}
         </BlogPostsContent>
       </Wrapper>
     </InstantSearch>
