@@ -9,7 +9,6 @@ import { ReactComponent as Arrow } from '../../assets/arrow.svg';
 import Link from '../Link';
 
 const Container = styled.div`
-  height: 500px;
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 1fr 1fr;
@@ -17,7 +16,7 @@ const Container = styled.div`
 `;
 
 const StyledImage = styled(Image)`
-  height: 374px;
+  height: 37rem;
 `;
 
 const Description = styled(Text)`
