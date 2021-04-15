@@ -7,7 +7,7 @@ const globalStyles = css`
   body {
     font-size: 1.6rem;
     text-rendering: optimizeLegibility;
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
   }
   * {
     box-sizing: border-box;
@@ -124,7 +124,7 @@ const globalStyles = css`
     font-weight: 400;
   }
   code {
-    font-family: 'IBM Plex Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
   }
 
   input {

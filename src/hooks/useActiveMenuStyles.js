@@ -16,6 +16,7 @@ const useActiveMenuStyles = () => {
         ? {
             color: theme.colors.menuTextActive,
             fontWeight: theme.fontWeights.heading,
+            borderBottom: `2px solid ${theme.colors.primary}`,
           }
         : {};
     },

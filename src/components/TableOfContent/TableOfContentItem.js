@@ -6,15 +6,16 @@ const ListItem = styled('li')`
   border-left-style: solid;
   border-left-width: 2px;
   font-size: ${props => props.theme.fontSizes.bodySmall};
-  padding-top: 0.6rem;
-  padding-bottom: 0.6rem;
-  padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  line-height: 2.4rem;
   border-color: ${props =>
     props.isActive ? props.theme.colors.primary : 'transparent'};
   color: ${props =>
-    props.isActive ? props.theme.colors.dark : props.theme.colors.caption};
-  font-weight: ${props => (props.isActive ? '500' : '400')};
-  padding-left: ${props => (props.level === 2 ? '3rem' : '1.5rem')} !important;
+    props.isActive ? props.theme.colors.tableOfContent.itemColorActive : props.theme.colors.tableOfContent.itemColor};
+  font-weight: ${props => (props.isActive ? '600' : '300')};
+  padding-left: ${props => (props.level === 2 ? '2.8rem' : '1.9rem')} !important;
+  opacity: ${props => (props.isActive ? '1' : '0.9')};
 `;
 
 const TableOfContentItem = styled(ListItem)(space, typography, color);

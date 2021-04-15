@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Image from '../Image';
+
 import Heading from './Heading';
 import Text from './Text';
 import Code from './Code';
@@ -12,7 +14,7 @@ import List from './List';
 import ListOrdered from './ListOrdered';
 import Table from './Table';
 import Strong from './Strong';
-import Image from '../Image';
+import CtaArticleComponent from './CtaArticleComponent';
 
 const generateHeading = size => props => (
   <Heading {...props} as={size} linked>
@@ -27,7 +29,7 @@ export default {
   h4: generateHeading('h4'),
   h5: generateHeading('h5'),
   h6: generateHeading('h6'),
-  p: props => <Text {...props} mt={4} mb={4} />,
+  p: props => <Text {...props} mt={4} mb={4} opacity={0.9} fontSize={2} fontWeight={1} />,
   pre: Pre,
   code: CodeBlock,
   strong: Strong,
@@ -41,4 +43,5 @@ export default {
   table: props => <Table {...props} mb={4} />,
   blockquote: props => <Blockquote {...props} />,
   hr: props => <Hr {...props} />,
+  CtaComponent: props => <CtaArticleComponent {...props} />,
 };

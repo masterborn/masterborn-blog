@@ -1,117 +1,256 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import styled from '@emotion/styled';
-import { lighten } from 'polished';
 
-import { media } from '../utils/emotion';
+import ClutchLogo from '../assets/footer/clutch-co-logo.png';
+import GoogleReviewsLogo from '../assets/footer/google-reviews-logo.png';
+import MBLogoGray from '../assets/footer/logo-gray.svg';
+import config from '../../config';
+import { CountryContext } from '../contexts/CountryContext';
 
 import PageSection from './pages/PageSection';
+import Content from './pages/Content';
+import StarRating from './StarRating';
 import Link from './Link';
-import Caption from './Caption';
 import Logo from './Logo';
-import Text from './Text';
+import Heading from './Heading';
+import Button from './Button';
 
-const FooterGrid = styled.div`
-  padding-top: ${props => props.theme.space.xLarge};
-  border-top: 1px solid ${props => lighten(0.28, props.theme.colors.icon)};
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  grid-row-gap: 4rem;
-  grid-template-areas:
-    'logo'
-    'address'
-    'copyright'
-    'info';
-  ${media.tablet`
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas:
-    "logo address"
-    "copyright copyright"
-    "info info";
-  `};
-`;
+const OfficeHeader = styled.h5`
+  color: ${props => props.theme.colors.footer.header};
+  opacity: 0.9;
+  font-weight: ${props => props.theme.fontWeights[1]};
+  font-size: ${props => props.theme.fontSizes[2]};
+  margin: 0.5rem 0;
+`
 
-const InfoBox = styled.div`
-  grid-area: info;
-`;
+const FooterContainer = styled.footer`
+  padding: 1rem 0;
+`
 
-const LogoContainer = styled.div`
-  grid-area: logo;
-  text-align: center;
-  ${media.tablet`
-    text-align: left;
-  `};
-`;
-
-const AddressContainer = styled.div`
-  display: grid;
-  grid-column-gap: 2rem;
-  grid-template-columns: auto auto;
-  flex: 1;
-  align-items: flex-start;
-  justify-content: center;
-  grid-area: address;
-  ${media.tablet`
-    align-items: flex-start;
-    justify-content: flex-start;
-  `};
-`;
-
-const CopyrightContainer = styled.div`
-  grid-area: copyright;
+const OfficesContainer = styled.div`
   display: flex;
+  padding: 1rem 0;
+  align-items: center;
+  width: 100%;
+  padding: 0 0 4rem;
+  font-size: 1.6rem;
+  line-height: 2rem;
+`
+
+const OfficeItem = styled.div`
+  margin: 0 5rem 0 0;
+  h5 {
+    color: ${props => props.theme.colors.footer.officeHeader};
+    font-size: ${props => props.theme.fontSizes[2]};
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+  p {
+    color: ${props => props.theme.colors.footer.officeText};
+    font-size: ${props => props.theme.fontSizes[2]};
+    line-height: 3rem;
+    opacity: 0.9;
+  }
+`
+
+const ReviewsWrapper = styled.div`
+  display: flex;
+  margin-left: auto;
+  grid-gap: 4rem;
 `;
 
-const StyledCaption = styled(Caption)`
-  opacity: 0.5;
+const RatingWrapper = styled.div`
+  display: flex;
+  img {
+    width: 15px;
+    margin-right: 5px;
+  }
 `;
+
+const ReviewItem = styled.div`
+  color: ${props => props.theme.colors.footer.reviewScore};
+   a {
+     display: block;
+     height: 4.7rem;
+   }
+   p {
+    font-size: 1.4rem;
+    margin-left: auto;
+   }
+`;
+
+const FooterNavigationWrapepr = styled.div`
+   display: flex;
+   align-items: center;
+   border-top: 1px solid ${props => props.theme.colors.footer.border};
+`
+
+const ratings = [
+  {
+    title: 'Clutch.co',
+    logo: ClutchLogo,
+    url: 'https://clutch.co/profile/masterborn',
+    score: '4,9/5',
+  },
+  {
+    title: 'Google Reviews',
+    logo: GoogleReviewsLogo,
+    url: 'https://www.google.com/search?q=masterborn&rlz=1C5CHFA_enPL917PL917&oq=masterborn&aqs=chrome..69i57j46i175i199j0j69i60l2j69i61j69i65j69i60.3723j0j9&sourceid=chrome&ie=UTF-8',
+    score: '5.0',
+  },
+];
+
+const StyledLogo = styled(Logo)`
+  width: 9rem;
+  height: 3.8rem;
+`;
+
+const FooterNavigation = styled.ul`
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding: 0 2rem;
+`
+
+const FooterLink = styled(Link)`
+  color: ${props => props.theme.colors.header.color};
+  margin: 2rem;
+  padding: 1rem 0;
+  :hover {
+    color: ${props => props.theme.colors.primary};
+    text-shadow: 0 0 1px;
+  }
+`
+
+const CopyrightBox = styled.p`
+  margin-left: auto;
+  color: ${props => props.theme.colors.footer.copyright};
+`
+
+const RodoBox = styled.div`
+  background: ${props => props.theme.colors.footer.rodo};
+  color: ${props => props.theme.colors.footer.officeHeader};
+  font-size: 1.1rem;
+  padding: 1.5rem 0;
+`
+
+const FooterCta = styled.div`
+   background:  ${props => props.theme.colors.footer.ctaBackground};
+   padding: 10rem 0;
+`
+
+const StyledHeading = styled(Heading)`
+  text-align: center;
+`
+
+const StyledButton = styled(Button)`
+  margin: 5rem auto;
+  display: flex;
+  padding: 0.9rem 8.5rem;
+`
 
 const Footer = () => {
+  const { isInPoland } = useContext(CountryContext);
+
   return (
-    <PageSection mb={3} mt={4}>
-      <FooterGrid>
-        <LogoContainer>
-          <Logo height="4.8rem" alt="Ockam logo" />
-        </LogoContainer>
-        <AddressContainer>
-          <div>
-            <Text fontSize="small" fontWeight="bold">
-              Address
-            </Text>
-            <Text fontSize="small">
-              MasterBorn Sp. z o.o. <br />
-              ul. Krupnicza 13, <br />
-              50-075 Wrocław <br />
-              Tax ID: 8992816601
-            </Text>
-          </div>
-          <div>
-            <Text fontSize="small" fontWeight="bold">
-              Contact
-            </Text>
-            <Text fontSize="small">
-              <Link to="mailto:contact@masterborn.com">
-                contact@masterborn.com
-              </Link>
-            </Text>
-          </div>
-        </AddressContainer>
-        <CopyrightContainer>
-          <Caption>Copyright © MasterBorn 2016 -2020</Caption>
-          <Link fontSize="caption" ml="auto" href="/privacy">
-            Privacy Policy
+    <>
+      <FooterCta>
+        <StyledHeading as="h2">
+          {isInPoland
+            ? 'Join our Team of world-class React & Node.js developers'
+            : 'We build valuable and successfull products for U.S. based startups'
+          }
+        </StyledHeading>
+        <StyledButton
+          variant="cta"
+          size="cta"
+        >{isInPoland ? 'See open positions!' : 'Hire us!'}
+        </StyledButton>
+      </FooterCta>
+      <PageSection>
+        <FooterContainer>
+          <OfficeHeader>Our offices are waiting for you in:</OfficeHeader>
+          <OfficesContainer>
+            <OfficeItem>
+              <h5>Wrocław, PL (HQ)</h5>
+              <p>ul. Krupnicza 13,
+                <br />
+                50-075 Wrocław
+              </p>
+            </OfficeItem>
+            <OfficeItem>
+              <h5>Kielce, PL</h5>
+              <p>ul. Gabrieli Zapolskiej 45B
+                <br />
+                25-435 Kielce
+              </p>
+            </OfficeItem>
+            <OfficeItem>
+              <h5>Austin, U.S.</h5>
+              <p>Austin, TX
+                <br />
+                United States
+              </p>
+            </OfficeItem>
+            <ReviewsWrapper>
+              {ratings.map(rating => (
+                <ReviewItem key={rating.title}>
+                  <a
+                    href={rating.url}
+                    title={rating.title}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <img src={rating.logo} alt={rating.title} />
+                  </a>
+                  <RatingWrapper>
+                    <StarRating />
+                    <p>{rating.score}</p>
+                  </RatingWrapper>
+                </ReviewItem>
+            ))}
+            </ReviewsWrapper>
+          </OfficesContainer>
+        </FooterContainer>
+        <FooterNavigationWrapepr>
+          <Link to="/" href={config.env.masterbornWebsite} title="Masterborn.com">
+            <StyledLogo src={MBLogoGray} />
           </Link>
-        </CopyrightContainer>
-        <InfoBox>
-          <StyledCaption>
-            The Administrator of your data is MasterBorn, with its registered
-            office in Wroclaw, Krupnicza 13. If you want to withdraw, get an
-            insight or update information about you, then contact us:
-            contact@masterborn.com
-          </StyledCaption>
-        </InfoBox>
-      </FooterGrid>
-    </PageSection>
+          <FooterNavigation>
+            <FooterLink
+              title="Home"
+              href={config.env.masterbornWebsite}
+            >
+              Home
+            </FooterLink>
+            <FooterLink
+              title="About Us"
+              href="/about"
+            >
+              About Us
+            </FooterLink>
+            <FooterLink
+              title="Career"
+              href="/career"
+            >
+              Career
+            </FooterLink>
+            <FooterLink
+              title="Blog"
+              href="/blog"
+            >
+              Blog
+            </FooterLink>
+          </FooterNavigation>
+          <CopyrightBox>Copyright © MasterBorn 2016-2021</CopyrightBox>
+        </FooterNavigationWrapepr>
+      </PageSection>
+      <RodoBox>
+        <Content mb={0} mt={0}>
+          The Administrator of your data is MasterBorn, with its registered office in Wroclaw, Krupnicza 13, Wroclaw.  If you want to withdraw, get an insight or update information about you, then contact us: contact@masterborn.com
+        </Content>
+      </RodoBox>
+    </>
   );
 };
 

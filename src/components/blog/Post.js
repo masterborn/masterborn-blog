@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import PropTypes from 'prop-types';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import styled from '@emotion/styled';
@@ -8,14 +8,17 @@ import { media } from '../../utils/emotion';
 import Heading from '../Heading';
 import mdxComponents from '../mdxComponents';
 import RightSidebar from '../RightSidebar/RightSidebar';
+import SidebarCta from '../SidebarCta';
+import ArrowIcon from '../../assets/arrow-icon.svg';
+import Link from '../Link';
+import { CountryContext } from '../../contexts/CountryContext';
 
 import AuthorBox from './AuthorBox';
-import PostDetailsBox from './PostDetailsBox';
 import BlogContent from './BlogContent';
 
 const Wrapper = styled('div')`
   ${media.desktop`
-    padding-top: 7rem;
+    padding-top: 12rem;
   `}
 `;
 
@@ -31,8 +34,8 @@ const PostContent = styled('div')`
     'sidebar';
   ${media.desktop`
   grid-row-gap: 0;
-  grid-column-gap: 3rem;
-  grid-template-columns: 9fr 3fr;
+  grid-column-gap: 7rem;
+  grid-template-columns: 7fr 3fr;
    grid-template-areas:
     "body sidebar";
   `}
@@ -41,12 +44,19 @@ const PostContent = styled('div')`
 const PostBody = styled('div')`
   grid-area: body;
   min-width: 0;
+  position: relative;
 `;
 
 const RightSidebarWrapper = styled('div')`
   grid-area: sidebar;
   min-width: 0;
 `;
+
+const BackLink = styled(Link)`
+  position: absolute;
+  left: -6rem;
+  top: 2rem;
+`
 
 const Post = ({
   filePath,
@@ -56,30 +66,39 @@ const Post = ({
   author,
   authorAvatar,
   tableOfContents,
+  timeToRead,
+  description,
 }) => {
   const localeDate = new Date(date).toLocaleDateString();
+  const {isInPoland} = useContext(CountryContext);
+
   return (
     <Wrapper>
       <BlogContent>
-        <PostHeader>
-          <PostDetailsBox>{localeDate}</PostDetailsBox>
-          <Heading as="h1" mb={3}>
-            {title}
-          </Heading>
-          <AuthorBox image={authorAvatar} name={author} />
-        </PostHeader>
         <PostContent>
           <PostBody>
+            <PostHeader>
+              <BackLink to="/blog" title="Back">
+                <img src={ArrowIcon} alt="Back" />
+              </BackLink>
+              <Heading as="h1" mb={3}>
+                {title}
+              </Heading>
+              <Heading as="h5" mb={3} mt={1} opacity={0.9}>
+                {description}
+              </Heading>
+              <AuthorBox image={authorAvatar} name={author} date={localeDate} timeToRead={timeToRead} />
+            </PostHeader>
             <MDXProvider components={mdxComponents}>
               <MDXRenderer>{body}</MDXRenderer>
             </MDXProvider>
           </PostBody>
-
           <RightSidebarWrapper>
             <RightSidebar
               relativePath={filePath}
               tableOfContents={tableOfContents}
             />
+            <SidebarCta isInPoland={isInPoland} />
           </RightSidebarWrapper>
         </PostContent>
       </BlogContent>
@@ -94,6 +113,8 @@ Post.propTypes = {
   author: PropTypes.string.isRequired,
   authorAvatar: PropTypes.string.isRequired,
   filePath: PropTypes.string.isRequired,
+  timeToRead: PropTypes.number.isRequired,
+  description: PropTypes.string.isRequired,
   tableOfContents: PropTypes.shape({
     items: PropTypes.arrayOf(PropTypes.shape({})),
   }),
