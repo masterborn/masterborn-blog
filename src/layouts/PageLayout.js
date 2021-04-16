@@ -13,6 +13,8 @@ import Header from '../components/header/Header';
 import Content from '../components/pages/Content';
 import Footer from '../components/Footer';
 import { LocationContextProvider } from '../contexts/LocationContext';
+import { ModalContextProvider } from '../contexts/ModalContext';
+import InfoModal from '../components/InfoModal'
 
 const PageWrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.background};
@@ -28,7 +30,7 @@ const PageWrapper = styled.div`
 `;
 
 const HeaderWrapper = styled.div`
-  z-index: 11;
+  z-index: 10;
   position: relative;
   width: 100%;
   background-color: transparent;
@@ -57,19 +59,22 @@ const PageLayout = ({ children, themeName, location }) => {
 
   return (
     <ThemeProvider themeName={themeName}>
-      <LocationContextProvider location={location}>
-        <PageWrapper>
-          <Global styles={normalizeCss} />
-          <Global styles={globalStyles} />
-          <StickyMenuWrapper>
-            <Content>
-              <Header isCollapsedHeader />
-            </Content>
-          </StickyMenuWrapper>
-          {children}
-          <Footer />
-        </PageWrapper>
-      </LocationContextProvider>
+      <ModalContextProvider>
+        <LocationContextProvider location={location}>
+          <PageWrapper>
+            <Global styles={normalizeCss} />
+            <Global styles={globalStyles} />
+            <InfoModal />
+            <StickyMenuWrapper>
+              <Content>
+                <Header isCollapsedHeader />
+              </Content>
+            </StickyMenuWrapper>
+            {children}
+            <Footer />
+          </PageWrapper>
+        </LocationContextProvider>
+      </ModalContextProvider>
     </ThemeProvider>
   );
 };

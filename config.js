@@ -31,6 +31,7 @@ const config = {
       countryCode: 'PL',
     },
   },
+  apiUrl: process.env.API_HOST || 'https://website-api.masterborn.com',
 };
 
 module.exports = config;

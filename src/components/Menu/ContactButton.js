@@ -29,7 +29,6 @@ const ContactButton = ({ isCollapsedHeader, onClick, href, ...rest }) => {
 ContactButton.propTypes = {
   isCollapsedHeader: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
-  href: PropTypes.string.isRequired,
 };
 
 ContactButton.defaultProps = {

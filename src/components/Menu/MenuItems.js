@@ -1,10 +1,12 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
 import Link from '../Link';
 import useActiveMenuStyles from '../../hooks/useActiveMenuStyles';
 import config from '../../../config';
+import ContactModal from '../ContactModal';
+import useModal from '../../hooks/useModal';
 
 import ContactButton from './ContactButton';
 
@@ -27,6 +29,16 @@ const MenuLink = styled(Link)`
 const MenuItems = ({ isCollapsedHeader, onClickItem, contactAsButton }) => {
   const { getActiveStyleForPathname } = useActiveMenuStyles();
   const LinkFontSize = 3;
+
+  const [, showContactModal, hideContactModal] = useModal(ContactModal, { onSubmitContactForm });
+
+  function onSubmitContactForm() {
+    hideContactModal();
+  }
+
+    const openContactModal = () => {
+    showContactModal();
+  };
 
   return (
     <>
@@ -64,10 +76,9 @@ const MenuItems = ({ isCollapsedHeader, onClickItem, contactAsButton }) => {
         Blog
       </MenuLink>
       <ContactButton
-        href="/#contact"
         contactAsButton={contactAsButton}
         isCollapsedHeader={isCollapsedHeader}
-        onClick={onClickItem}
+        onClick={openContactModal}
         linkFontSize={LinkFontSize}
       />
     </>

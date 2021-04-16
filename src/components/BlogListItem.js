@@ -64,7 +64,7 @@ BlogListItem.propTypes = {
   title: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  image: PropTypes.shape().isRequired,
+  image: PropTypes.shape({}).isRequired,
 }
 
 export default BlogListItem;
