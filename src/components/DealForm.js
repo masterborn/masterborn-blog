@@ -32,12 +32,10 @@ const Submit = styled(Button)`
 `;
 function DealForm({ headerComponent: HeaderComponent, onSubmitComplete }) {
   const onSuccess = () => {
-    console.log('success');
     onSubmitComplete();
   };
 
   const onError = () => {
-    console.log('error')
     onSubmitComplete();
   };
 

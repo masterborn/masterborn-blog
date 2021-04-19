@@ -25,9 +25,6 @@ const useForm = (submit, options = {}) => {
     if (!validate) return true;
 
     const { isValid, errors: validationErrors } = validate(values);
-
-    console.log(validationErrors)
-
     if (!isValid) setErrors(validationErrors);
 
     return isValid;
