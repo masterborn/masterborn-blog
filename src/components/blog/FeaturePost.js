@@ -53,7 +53,7 @@ const Overlay = styled.div`
   width: 100%;
   opacity: 0;
   transition: .5s ease;
-  background-color: #FFCC02;
+  background-color: ${({ theme }) => theme.colors.primary};
   display: grid;
   
   &:hover {
@@ -62,7 +62,7 @@ const Overlay = styled.div`
 `;
 
 const YellowArrow = styled.span`
-  color: #FFCC02;
+  color: ${({ theme }) => theme.colors.primary};
   font-size: 15pt;
   font-family: sans-serif;
 `;
@@ -70,7 +70,7 @@ const YellowArrow = styled.span`
 const BlackArrow = styled.span`
   font-size: 20pt;
   font-family: sans-serif;
-  color: #000;
+  color: ${({ theme }) => theme.colors.black};
   margin: auto;
 `;
 
