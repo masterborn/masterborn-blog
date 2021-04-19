@@ -52,8 +52,8 @@ export default function BlogTemplate(props) {
   return (
     <PageLayout location={location} themeName="blog">
       <SEO
-        title={metaTitle}
-        description={metaDescription}
+        title={metaTitle || title}
+        description={metaDescription || description}
         image={metaImageSrc}
         slug={slug}
       />
