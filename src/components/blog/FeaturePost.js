@@ -6,6 +6,7 @@ import Image from 'gatsby-image';
 import Heading from '../Heading';
 import Text from '../Text';
 import Link from '../Link';
+import ReadMoreLink from '../ReadMoreLink';
 
 const Container = styled.div`
   display: grid;
@@ -20,18 +21,6 @@ const StyledImage = styled(Image)`
 
 const Description = styled(Text)`
   opacity: 0.9;
-`;
-
-const ReadMoreLink = styled(Link)`
-  display: flex;
-  grid-auto-flow: column;
-`;
-
-const ReadMoreText = styled(Text)`
-  opacity: 0.9;
-  font-weight: 600;
-  font-size: 1.4rem;
-  margin-right: 0.5rem;
 `;
 
 const LeftSide = styled.div`
@@ -61,11 +50,6 @@ const Overlay = styled.div`
   }
 `;
 
-const YellowArrow = styled.span`
-  color: ${({ theme }) => theme.colors.primary};
-  font-size: 15pt;
-  font-family: sans-serif;
-`;
 
 const BlackArrow = styled.span`
   font-size: 20pt;
@@ -83,12 +67,7 @@ const FeaturePost = ({ post }) => {
         <Description opacity="0.9" lineHeight="2.6rem" fontSize="1.6rem" color="featurePost.description">
           {description}
         </Description>
-        <ReadMoreLink to={slug}>
-          <ReadMoreText color="featurePost.readMore">
-            Read more
-          </ReadMoreText>
-          <YellowArrow>&#8594;</YellowArrow>
-        </ReadMoreLink>
+        <ReadMoreLink slug={slug} />
       </LeftSide>
       <ImageLink to={slug}>
         <StyledImage fluid={metaImage.fluid} />

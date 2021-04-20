@@ -1,16 +1,16 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { InstantSearch, connectStateResults } from "react-instantsearch-dom";
+import { InstantSearch } from "react-instantsearch-dom";
+import partition from 'lodash/partition';
 
 import useAlgoliaSearch from '../hooks/useAlgoliaSearch';
 import useAllBlogPosts from '../hooks/useAllBlogPosts';
-import PostShort from '../components/blog/PostShort';
-import Heading from '../components/Heading';
 import FeaturePost from '../components/blog/FeaturePost';
 import BlogContent from '../components/blog/BlogContent';
 import { media } from '../utils/emotion';
 import SEO from '../components/SEO';
 import Search from '../components/Search';
+import PostsTiles from '../components/blog/PostsTiles';
 
 
 
@@ -45,15 +45,18 @@ const BlogPostsContent = styled(BlogContent)`
   padding-bottom: 0;
   ${media.desktop`
     padding-bottom: 0;
-    width: 92rem;
-    max-width: 92rem;
+    padding-top: 10rem;
+    width: 129rem;
+    max-width: 129rem;
   `};
 `;
+
+
 
 const Index = () => {
   const { searchClient, setQuery, indexName } = useAlgoliaSearch();
   const posts = useAllBlogPosts();
-  const featurePosts = posts.filter(item => item.isFeature === true);
+  const [featurePosts, restPosts] = partition(posts, ({ isFeature }) => !!isFeature);
 
   return (
     <InstantSearch
@@ -75,12 +78,7 @@ const Index = () => {
           ))}
         </BlogFeatureArticleContent>
         <BlogPostsContent>
-          <Heading as="h1" mb={5}>
-            All Posts
-          </Heading>
-          {posts.map(post => (
-            <PostShort key={post.id} post={post} />
-          ))}
+          <PostsTiles posts={restPosts} />
         </BlogPostsContent>
       </Wrapper>
     </InstantSearch>

@@ -1,36 +1,42 @@
 import styled from '@emotion/styled';
 import React from 'react';
 import PropTypes from 'prop-types';
+import Image from 'gatsby-image'
 
 import Heading from '../Heading';
 import Text from '../Text';
 import Hr from '../Hr';
+import ReadMoreLink from '../ReadMoreLink';
 
-import AuthorBox from './AuthorBox';
-import PostDetailsBox from './PostDetailsBox';
 import PostLink from './PostLink';
-import Image from 'gatsby-image'
 
 const Container = styled.div`
   margin-bottom: ${props => props.theme.space.large};
+  width: 37rem;
 `;
 
+const StyledImage = styled(Image)`
+  width: 37rem;
+  height: 20rem;
+`;
+
+const StyledText = styled(Text)`
+  opacity: 0.9;
+`;
 
 const PostShort = ({
-  post: { date, slug, title, description, authorAvatar, author, metaImage },
+  post: { slug, title, description, metaImage },
 }) => {
-  const localeDate = new Date(date).toLocaleDateString();
   return (
     <Container>
-      <PostDetailsBox>Published at: {localeDate}</PostDetailsBox>
       <PostLink to={slug}>
-        <Image fluid={metaImage.fluid} />
+        <StyledImage fluid={metaImage.fluid} />
         <Heading as="h4" mb={2} mt={3}>
           {title}
         </Heading>
       </PostLink>
-      <Text>{description}</Text>
-      <AuthorBox image={authorAvatar} name={author} />
+      <StyledText>{description}</StyledText>
+      <ReadMoreLink slug={slug} />
       <Hr mt={5} mb={5} />
     </Container>
   );
@@ -44,6 +50,9 @@ PostShort.propTypes = {
     date: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
     authorAvatar: PropTypes.string,
+    metaImage:PropTypes.shape({
+      fluid: PropTypes.shape().isRequired,
+    }).isRequired,
   }).isRequired,
 };
 
