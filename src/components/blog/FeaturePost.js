@@ -47,7 +47,7 @@ const FeaturePost = ({ post }) => {
   return (
     <Container>
       <LeftSide>
-        <Heading color="featurePost.header" fontWeight={600} as="h1">{title}</Heading>
+        <Heading color="featurePost.header" fontWeight={600} as="h2">{title}</Heading>
         <Description opacity="0.9" lineHeight="2.6rem" fontSize="1.6rem" color="featurePost.description">
           {description}
         </Description>

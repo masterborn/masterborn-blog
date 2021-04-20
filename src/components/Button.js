@@ -120,7 +120,7 @@ const Button = styled('button')(
         fontWeight: 'buttonSmall',
       },
       cta: {
-        fontSize: 2,
+        fontSize: 3,
         padding: '0.7rem 1.5rem',
         fontWeight: 600,
       },

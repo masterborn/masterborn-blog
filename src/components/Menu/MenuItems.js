@@ -22,11 +22,11 @@ const MenuLink = styled(Link)`
       color: ${props => props.theme.colors.link.hover};
     }
   }
-`
+`;
 
 const MenuItems = ({ isCollapsedHeader, onClickItem, contactAsButton }) => {
   const { getActiveStyleForPathname } = useActiveMenuStyles();
-  const LinkFontSize = 2;
+  const LinkFontSize = 3;
 
   return (
     <>
