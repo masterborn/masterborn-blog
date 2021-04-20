@@ -5,7 +5,6 @@ import Image from 'gatsby-image';
 
 import Heading from '../Heading';
 import Text from '../Text';
-import { ReactComponent as Arrow } from '../../assets/arrow.svg';
 import Link from '../Link';
 
 const Container = styled.div`
@@ -38,8 +37,41 @@ const ReadMoreText = styled(Text)`
 const LeftSide = styled.div`
   margin: auto;
 `;
+
 const ImageLink = styled(Link)`
   margin: auto 0;
+  position: relative;
+`;
+
+const Overlay = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: ${({ theme }) => theme.colors.primary};
+  display: grid;
+  
+  &:hover {
+    opacity: 0.85;
+  }
+`;
+
+const YellowArrow = styled.span`
+  color: ${({ theme }) => theme.colors.primary};
+  font-size: 15pt;
+  font-family: sans-serif;
+`;
+
+const BlackArrow = styled.span`
+  font-size: 20pt;
+  font-family: sans-serif;
+  color: ${({ theme }) => theme.colors.black};
+  margin: auto;
 `;
 
 const FeaturePost = ({ post }) => {
@@ -55,11 +87,14 @@ const FeaturePost = ({ post }) => {
           <ReadMoreText color="featurePost.readMore">
             Read more
           </ReadMoreText>
-          <Arrow />
+          <YellowArrow>&#8594;</YellowArrow>
         </ReadMoreLink>
       </LeftSide>
       <ImageLink to={slug}>
         <StyledImage fluid={metaImage.fluid} />
+        <Overlay>
+          <BlackArrow>&#8594;</BlackArrow>
+        </Overlay>
       </ImageLink>
     </Container>
   );
