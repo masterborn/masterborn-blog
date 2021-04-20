@@ -17,6 +17,7 @@ const colors = {
   accent: '#EC432D',
   accentHover: '#FF2D11',
   accentActive: '#BF3B2C',
+  alizarinCrimson: '#E61C1C',
   secondary: '#e9f7fc',
   caption: '#7A8895',
   white: '#fff',
@@ -101,6 +102,9 @@ const colors = {
   relatedArticles: {
     border: '#979797',
     link: '#101010',
+  },
+  input: {
+    border: '#9F9F9F',
   },
 };
 
