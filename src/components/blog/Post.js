@@ -12,6 +12,7 @@ import SidebarCta from '../SidebarCta';
 import ArrowIcon from '../../assets/arrow-icon.svg';
 import Link from '../Link';
 import { CountryContext } from '../../contexts/CountryContext';
+import BackToTop from '../BackToTop';
 
 import AuthorBox from './AuthorBox';
 import BlogContent from './BlogContent';
@@ -103,6 +104,7 @@ const Post = ({
             <SidebarCta isInPoland={isInPoland} />
           </RightSidebarWrapper>
         </PostContent>
+        <BackToTop />
       </BlogContent>
       <RelatedArticles relatedPosts={relatedPosts} />
     </Wrapper>
