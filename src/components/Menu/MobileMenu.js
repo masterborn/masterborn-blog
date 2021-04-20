@@ -16,6 +16,7 @@ const Wrapper = styled(animated.div)`
   width: 100%;
   overflow: auto;
   grid-column: 1 / 4;
+  overflow: hidden;
   left: 0;
   ${media.desktop`
     display: none;
@@ -23,7 +24,7 @@ const Wrapper = styled(animated.div)`
 
   a {
     width: 100%;
-    text-align: left;
+    text-align: center;
     padding: 2rem 0;
   }
 `;

@@ -2,13 +2,18 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
+import { media } from '../../utils/emotion';
 import Button from '../Button';
 import Link from '../Link';
 
 const StyledContactButton = styled(Button)`
-  margin-left: 5rem;
+  margin-left: 0;
   padding: .7rem 5rem;
   border: 1px solid ${props => props.theme.colors.contactButton.borderColor};
+  ${media.desktop`
+    margin-left: 5rem;
+  `}
+
 `
 
 const ContactButton = ({ isCollapsedHeader, onClick, href, ...rest }) => {

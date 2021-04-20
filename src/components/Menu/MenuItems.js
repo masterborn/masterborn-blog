@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
@@ -7,12 +7,13 @@ import useActiveMenuStyles from '../../hooks/useActiveMenuStyles';
 import config from '../../../config';
 import ContactModal from '../ContactModal';
 import useModal from '../../hooks/useModal';
+import { media } from '../../utils/emotion';
 
 import ContactButton from './ContactButton';
 
 const MenuLink = styled(Link)`
   color: ${props => props.theme.colors.header.color};
-  margin: 2rem;
+  margin: 2rem 0;
   padding: 1rem 0;
   transition: all .3s;
   border-bottom: 2px solid transparent;
@@ -24,6 +25,9 @@ const MenuLink = styled(Link)`
       color: ${props => props.theme.colors.link.hover};
     }
   }
+  ${media.desktop`
+    margin: 2rem;
+  `}
 `;
 
 const MenuItems = ({ isCollapsedHeader, onClickItem, contactAsButton }) => {

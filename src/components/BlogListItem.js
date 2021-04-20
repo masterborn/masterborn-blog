@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 import Image from 'gatsby-image'
 
 import {ReactComponent as ArrowIcon} from '../assets/arrow-yellow.svg';
+import { media } from '../utils/emotion';
 
 import Icon from './Icon';
 import Heading from './Heading';
@@ -11,6 +12,13 @@ import Text from "./Text"
 import Link from './Link';
 
 const BlogItemWrapper = styled.div`
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  ${media.desktop`
+    margin: 0;
+    padding: 0;
+  `}
   &:hover {
     .image-wrapper {
       background: ${props => props.theme.colors.primary};
@@ -27,19 +35,38 @@ const BlogImage = styled(Image)`
   margin-bottom: 2rem;
   height: 223px;
   transition: opacity .3s;
-}
 `
 // some articles are missing images, lets enforce height to keep layout consistent
 const ImageWrapper = styled.div`
   background: transparent;
   transition: background .3s;
+  margin-bottom: 3rem;
   height: 223px;
+  order: 2;
+  ${media.desktop`
+    margin: 0;
+    order: 1;
+  `}
+`
+
+const PostHeader = styled(Link)`
+  order: 1;
+  ${media.desktop`
+    order: 2;
+  `}
+`
+
+const PostDescription = styled.div`
+  order: 3;
+  ${media.desktop`
+    order: 3;
+  `}
 `
 
 const BlogLink = styled(Link)`
   font-weight: ${props => props.theme.fontWeights[2]};
   font-size: ${props => props.theme.fontSizes.small};
-  color: ${props => props.theme.colors.relatedArticles.link}
+  color: ${props => props.theme.colors.relatedArticles.link};
 `
 const BlogListItem = ({title, slug, image, description}) => {
   return (
@@ -49,13 +76,16 @@ const BlogListItem = ({title, slug, image, description}) => {
           <BlogImage fluid={image.fluid} alt={title} />
         </Link>
       </ImageWrapper>
-      <Link to={`/${slug}`} title={title}>
+      <PostHeader to={`/${slug}`} title={title}>
         <Heading as="h5" mt={3} mb={3}>{title}</Heading>
-      </Link>
-      <Text fontSize={2}>{description}</Text>
-      <BlogLink to={`/${slug}`} title={title}>
-        Read more <Icon icon={ArrowIcon} color="primary" width="24px" height="16px" ml={2} />
-      </BlogLink>
+      </PostHeader>
+      <PostDescription>
+        <Text fontSize={2}>{description}</Text>
+        <BlogLink to={`/${slug}`} title={title}>
+          Read more <Icon icon={ArrowIcon} color="primary" width="24px" height="16px" ml={2} />
+        </BlogLink>
+      </PostDescription>
+
     </BlogItemWrapper>
   );
 };

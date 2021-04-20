@@ -6,6 +6,7 @@ import GoogleReviewsLogo from '../assets/footer/google-reviews-logo.png';
 import MBLogoGray from '../assets/footer/logo-gray.svg';
 import config from '../../config';
 import { CountryContext } from '../contexts/CountryContext';
+import { media } from '../utils/emotion';
 
 import PageSection from './pages/PageSection';
 import Content from './pages/Content';
@@ -24,21 +25,30 @@ const OfficeHeader = styled.h5`
 `
 
 const FooterContainer = styled.footer`
-  padding: 3rem 0 0;
+  padding: 3rem 3rem 0;
+  ${media.desktop`
+    padding: 3rem 0 0;
+  `}
 `
 
 const OfficesContainer = styled.div`
   display: flex;
-  padding: 1rem 0;
+  padding: 1rem 3rem;
   align-items: center;
   width: 100%;
-  padding: 0 0 4rem;
+  padding: 0;
   font-size: 1.6rem;
   line-height: 2rem;
+  flex-direction: column;
+  ${media.desktop`
+    padding: 1rem 0;
+    flex-direction: initial;
+  `}
 `
 
 const OfficeItem = styled.div`
-  margin: 0 5rem 0 0;
+  margin: 0;
+  width: 100%;
   h5 {
     color: ${props => props.theme.colors.footer.officeHeader};
     font-size: ${props => props.theme.fontSizes[2]};
@@ -51,12 +61,21 @@ const OfficeItem = styled.div`
     line-height: 3rem;
     opacity: 0.9;
   }
+  ${media.desktop`
+    margin: 0 5rem 0 0;
+    width: 100%;
+  `}
 `
 
 const ReviewsWrapper = styled.div`
-  display: flex;
-  margin-left: auto;
+  display: grid;
+  margin: 4rem 0px;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 4rem;
+  ${media.desktop`
+    display: flex;
+    margin-left: auto;
+  `}
 `;
 
 const RatingWrapper = styled.div`
@@ -79,10 +98,16 @@ const ReviewItem = styled.div`
    }
 `;
 
-const FooterNavigationWrapepr = styled.div`
+const FooterNavigationWrapper = styled.div`
    display: flex;
    align-items: center;
    border-top: 1px solid ${props => props.theme.colors.footer.border};
+   flex-direction: column;
+   padding: 4rem 0px;
+   ${media.desktop`
+    padding: 0;
+    flex-direction: initial;
+  `}
 `
 
 const ratings = [
@@ -114,7 +139,7 @@ const FooterNavigation = styled.ul`
 
 const FooterLink = styled(Link)`
   color: ${props => props.theme.colors.header.color};
-  margin: 2rem;
+  margin: 1.5rem;
   padding: 1rem 0;
   :hover {
     color: ${props => props.theme.colors.primary};
@@ -123,24 +148,38 @@ const FooterLink = styled(Link)`
 `
 
 const CopyrightBox = styled.p`
-  margin-left: auto;
+  margin: 0;
   color: ${props => props.theme.colors.footer.copyright};
+  ${media.desktop`
+    margin-left: auto;
+  `}
 `
 
 const RodoBox = styled.div`
   background: ${props => props.theme.colors.footer.rodo};
   color: ${props => props.theme.colors.footer.officeHeader};
-  font-size: 1.1rem;
-  padding: 1.5rem 0;
+  font-size: 1.2rem;
+  padding: 2rem;
+  ${media.desktop`
+    font-size: 1.1rem;
+    padding: 1.5rem 0;
+  `}
 `
 
 const FooterCta = styled.div`
   background:  ${props => props.theme.colors.footer.ctaBackground};
-  padding: 10rem 0;
+  padding: 3rem 2rem;
+  ${media.desktop`
+    padding: 8rem 0;
+  `}
 `
 
 const StyledHeading = styled(Heading)`
   text-align: center;
+  font-size: 2rem;
+  ${media.desktop`
+    font-size: 3.2rem;
+  `}
 `
 
 const StyledButton = styled(Button)`
@@ -155,7 +194,7 @@ const Footer = () => {
   return (
     <>
       <FooterCta>
-        <StyledHeading as="h2">
+        <StyledHeading as="h3">
           {isInPoland
             ? 'Join our Team of world-class React & Node.js developers'
             : 'We build valuable and successfull products for U.S. based startups'
@@ -167,7 +206,7 @@ const Footer = () => {
         >{isInPoland ? 'See open positions!' : 'Hire us!'}
         </StyledButton>
       </FooterCta>
-      <PageSection>
+      <PageSection marginBottom="5rem">
         <FooterContainer>
           <OfficeHeader>Our offices are waiting for you in:</OfficeHeader>
           <OfficesContainer>
@@ -212,7 +251,7 @@ const Footer = () => {
             </ReviewsWrapper>
           </OfficesContainer>
         </FooterContainer>
-        <FooterNavigationWrapepr>
+        <FooterNavigationWrapper>
           <Link to="/" href={config.env.masterbornWebsite} title="Masterborn.com">
             <StyledLogo src={MBLogoGray} />
           </Link>
@@ -243,7 +282,7 @@ const Footer = () => {
             </FooterLink>
           </FooterNavigation>
           <CopyrightBox>Copyright © MasterBorn 2016-2021</CopyrightBox>
-        </FooterNavigationWrapepr>
+        </FooterNavigationWrapper>
       </PageSection>
       <RodoBox>
         <Content mb={0} mt={0}>

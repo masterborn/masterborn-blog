@@ -2,13 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
+import { media } from '../../utils/emotion';
 import PageSection from '../pages/PageSection';
 import Heading from '../Heading';
 import BlogListItem from '../BlogListItem';
 
 const RelatedArticlesWrapper = styled.div`
   position: relative;
-  padding: 4rem 0;
+  padding: 2rem 0;
   &:before {
     content: ' ';
     width: 100%;
@@ -24,19 +25,30 @@ const RelatedArticlesWrapper = styled.div`
 
 const RelatedArticlesHeading = styled(Heading)`
   text-align: center;
+  margin: 2rem 0;
+  ${media.desktop`
+    margin: 4rem 0;
+  `}
 `
 
 const RelatedArticlesContainer = styled.div`
   display: grid;
   grid-column-gap: 2rem;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
+  ${media.desktop`
+    grid-template-columns: repeat(3, 1fr);
+  `}
+`
+
+const StyledPageSection = styled(PageSection)`
+  padding: 0 3rem;
 `
 
 const RelatedArticles = ({relatedPosts}) => {
   return (
-    <PageSection marginBottom="10rem">
+    <StyledPageSection marginBottom="10rem">
       <RelatedArticlesWrapper>
-        <RelatedArticlesHeading as="h6" mt={3} mb={5}>Related articles:</RelatedArticlesHeading>
+        <RelatedArticlesHeading as="h6">Related articles:</RelatedArticlesHeading>
         <RelatedArticlesContainer>
           {relatedPosts.map(({ slug, frontmatter, excerpt }) => (
             <BlogListItem
@@ -51,7 +63,7 @@ const RelatedArticles = ({relatedPosts}) => {
 
         </RelatedArticlesContainer>
       </RelatedArticlesWrapper>
-    </PageSection>
+    </StyledPageSection>
 
 
 

@@ -25,7 +25,10 @@ const Wrapper = styled('div')`
 `;
 
 const PostHeader = styled('div')`
-  margin-bottom: 5.5rem;
+  margin-bottom: 2.5rem;
+  ${media.desktop`
+    margin-bottom: 5.5rem;
+  `}
 `;
 
 const PostContent = styled('div')`
@@ -52,12 +55,23 @@ const PostBody = styled('div')`
 const RightSidebarWrapper = styled('div')`
   grid-area: sidebar;
   min-width: 0;
+  display: none;
+  ${media.desktop`
+    display: block;
+  `}
 `;
 
 const BackLink = styled(Link)`
   position: absolute;
   left: -6rem;
   top: 2rem;
+`
+
+const PostHeading = styled(Heading)`
+  font-size: 2.9rem;
+  ${media.desktop`
+    font-size: 4.3rem
+  `}
 `
 
 const Post = ({
@@ -84,9 +98,9 @@ const Post = ({
               <BackLink to="/" title="Back">
                 <img src={ArrowIcon} alt="Back" />
               </BackLink>
-              <Heading as="h1" mb={3}>
+              <PostHeading as="h1" mb={3}>
                 {title}
-              </Heading>
+              </PostHeading>
               <Heading as="h5" mb={3} mt={1} opacity={0.9}>
                 {description}
               </Heading>

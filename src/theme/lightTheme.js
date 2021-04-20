@@ -78,6 +78,7 @@ const colors = {
   header: {
     headerBorderColor: '#F0F0F0',
     color: '#222222',
+    burgerMenuIcon: '#3F3F3F',
   },
   contactButton: {
     borderColor: '#F7CA18',
