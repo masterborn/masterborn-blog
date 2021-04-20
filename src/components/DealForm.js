@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
 import useDealForm from '../hooks/useDealForm';
+import { media } from '../utils/emotion';
 
 import TextField from './forms/TextField';
 import TextAreaField from './forms/TextAreaField';
@@ -14,10 +15,12 @@ const Form = styled.form`
   display: grid;
   grid-gap: 2rem;
   max-width: 100%;
-  grid-template-columns: 50%;
-  grid-template-rows: 6rem 6rem auto auto 6rem 6rem;
-
-
+  grid-template-columns: initial;
+  grid-template-rows: 6rem 6rem 6rem 6rem auto auto auto auto;
+  ${media.desktop`
+    grid-template-rows: 6rem 6rem auto auto 6rem 6rem;
+    grid-template-columns: 50%;
+  `}
 `;
 
 
@@ -25,9 +28,12 @@ const Submit = styled(Button)`
   grid-column: 1 / end;
   justify-self: center;
   align-self: center;
-  width: 18rem;
   font-size: 1.8rem;
-  margin-left: auto;
+  width: 100%;
+  ${media.desktop`
+    width: 18rem;
+    margin-left: auto;
+  `}
 
 `;
 function DealForm({ headerComponent: HeaderComponent, onSubmitComplete }) {
@@ -46,7 +52,7 @@ function DealForm({ headerComponent: HeaderComponent, onSubmitComplete }) {
   }, onChange, onSubmit] = useDealForm(onSuccess, onError);
 
   return (
-    <div cols={8}>
+    <div>
       <section id="contact-form">
         <HeaderComponent />
         <Form onSubmit={onSubmit}>

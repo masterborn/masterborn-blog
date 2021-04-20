@@ -1,5 +1,7 @@
 import styled from '@emotion/styled';
 
+import { media } from '../../utils/emotion';
+
 const ModalWrapper = styled.div`
   display: grid;
   overflow-y:auto;
@@ -10,10 +12,13 @@ const ModalWrapper = styled.div`
   right: 0;
   left: 0;
   bottom: 0;
-  z-index: 10;
+  z-index: 99;
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.6);
+  background-color: ${props => props.theme.colors.white};
+  ${media.desktop`
+    background-color: rgba(0,0,0,0.6);
+  `}
 `;
 
 export default ModalWrapper;

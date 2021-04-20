@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 import { useTransition, animated } from 'react-spring';
 
+import { media } from '../../utils/emotion';
+
 import ModalClose from './ModalClose';
 import ModalWrapper from './ModalWrapper';
 
@@ -15,10 +17,14 @@ const ModalContainer = styled.div`
   align-items: center;
   justify-content: center;
   max-width: 67rem;
-  border-radius: 4px;
+  border-radius: 0;
   padding: 3rem;
   position: relative;
   background: ${props => props.theme.colors.white};
+  ${media.desktop`
+    border-radius: 4px;
+    font-size: 2.6rem;
+  `}
 `;
 
 const AnimatedModalContainer = animated(ModalContainer);
