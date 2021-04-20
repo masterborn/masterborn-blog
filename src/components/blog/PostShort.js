@@ -7,6 +7,7 @@ import Heading from '../Heading';
 import Text from '../Text';
 import Hr from '../Hr';
 import ReadMoreLink from '../ReadMoreLink';
+import HoveredImageLink from '../HoveredImageLink';
 
 import PostLink from './PostLink';
 
@@ -15,7 +16,7 @@ const Container = styled.div`
   width: 37rem;
 `;
 
-const StyledImage = styled(Image)`
+const StyledImage = styled(HoveredImageLink)`
   width: 37rem;
   height: 20rem;
 `;
@@ -30,7 +31,7 @@ const PostShort = ({
   return (
     <Container>
       <PostLink to={slug}>
-        <StyledImage fluid={metaImage.fluid} />
+        <StyledImage metaImage={metaImage} slug={slug} />
         <Heading as="h4" mb={2} mt={3}>
           {title}
         </Heading>

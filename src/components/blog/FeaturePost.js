@@ -1,22 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
-import Image from 'gatsby-image';
 
 import Heading from '../Heading';
 import Text from '../Text';
-import Link from '../Link';
 import ReadMoreLink from '../ReadMoreLink';
+import HoveredImageLink from '../HoveredImageLink';
 
 const Container = styled.div`
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 1fr 1fr;
   grid-gap: 5rem;
-`;
-
-const StyledImage = styled(Image)`
-  height: 37rem;
 `;
 
 const Description = styled(Text)`
@@ -27,35 +22,9 @@ const LeftSide = styled.div`
   margin: auto;
 `;
 
-const ImageLink = styled(Link)`
-  margin: auto 0;
-  position: relative;
-`;
 
-const Overlay = styled.div`
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: ${({ theme }) => theme.colors.primary};
-  display: grid;
-  
-  &:hover {
-    opacity: 0.85;
-  }
-`;
-
-
-const BlackArrow = styled.span`
-  font-size: 20pt;
-  font-family: sans-serif;
-  color: ${({ theme }) => theme.colors.black};
-  margin: auto;
+const StyledImage = styled(HoveredImageLink)`
+  height: 37rem;
 `;
 
 const FeaturePost = ({ post }) => {
@@ -69,12 +38,7 @@ const FeaturePost = ({ post }) => {
         </Description>
         <ReadMoreLink slug={slug} />
       </LeftSide>
-      <ImageLink to={slug}>
-        <StyledImage fluid={metaImage.fluid} />
-        <Overlay>
-          <BlackArrow>&#8594;</BlackArrow>
-        </Overlay>
-      </ImageLink>
+      <StyledImage slug={slug} metaImage={metaImage} />
     </Container>
   );
 };
