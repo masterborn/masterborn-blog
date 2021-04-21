@@ -63,7 +63,7 @@ const Index = () => {
           description="Let's start the journey of creating your software with Premium Professionals."
         />
         <SearchContainer>
-          <Search />
+          {/* <Search /> */}
         </SearchContainer>
         <BlogFeatureArticleContent>
           {featurePosts.map(featurePost => (
