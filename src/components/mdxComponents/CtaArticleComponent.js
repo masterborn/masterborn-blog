@@ -2,7 +2,10 @@ import React, {useContext} from 'react';
 import styled from '@emotion/styled';
 
 import { media } from '../../utils/emotion';
+import useModal from '../../hooks/useModal';
+import navigateToWebsite from '../../utils/navigateToWebsite';
 import { CountryContext } from '../../contexts/CountryContext';
+import ContactModal from '../ContactModal';
 import Button from '../Button';
 
 import Heading from './Heading';
@@ -45,6 +48,18 @@ const StyledButton = styled(Button)`
 
 const CtaArticleComponent = () => {
   const { isInPoland } = useContext(CountryContext);
+  // eslint-disable-next-line no-use-before-define
+  const [, showContactModal, hideContactModal] = useModal(ContactModal, { onSubmitContactForm });
+
+  const onSubmitContactForm =() => {
+    hideContactModal();
+  }
+
+  const openContactModal = () => {
+    showContactModal();
+  };
+
+  const contactButtonAction = isInPoland ? navigateToWebsite : openContactModal;
   return (
     <Container>
       <StyledHeading as="h5" mb={0}>{
@@ -54,6 +69,7 @@ const CtaArticleComponent = () => {
       <StyledButton
         variant="cta"
         size="cta"
+        onClick={contactButtonAction}
       >{isInPoland ? 'Join our Team!' : "Let's talk!"}
       </StyledButton>
     </Container>

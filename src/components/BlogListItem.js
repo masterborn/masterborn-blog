@@ -11,6 +11,17 @@ import Heading from './Heading';
 import Text from "./Text"
 import Link from './Link';
 
+const OverlayArrow = styled.span`
+  color: ${({ theme }) => theme.colors.black};
+  font-size: 20pt;
+  font-family: sans-serif;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transition: transform .3s;
+  transform: translateX(10vh);
+`
+
 const BlogItemWrapper = styled.div`
   padding-bottom: 3rem;
   display: flex;
@@ -25,6 +36,9 @@ const BlogItemWrapper = styled.div`
     }
     .gatsby-image-wrapper {
       opacity: 0.15;
+    }
+    .overlay-arrow {
+      transform: translateX(0);
     }
   }
 `
@@ -42,6 +56,7 @@ const ImageWrapper = styled.div`
   transition: background .3s;
   margin-bottom: 3rem;
   height: 223px;
+  position: relative;
   order: 2;
   ${media.desktop`
     margin: 0;
@@ -72,6 +87,7 @@ const BlogListItem = ({title, slug, image, description}) => {
   return (
     <BlogItemWrapper>
       <ImageWrapper className="image-wrapper">
+        <OverlayArrow className="overlay-arrow">&#8594;</OverlayArrow>
         <Link to={`/${slug}`} title={title}>
           <BlogImage fluid={image.fluid} alt={title} />
         </Link>

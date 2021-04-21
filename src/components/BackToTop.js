@@ -5,10 +5,12 @@ import throttle from 'lodash/throttle';
 import { ChevronUp } from '@styled-icons/fa-solid';
 import { useTransition, animated } from 'react-spring';
 
+import { media } from '../utils/emotion';
+
 const BackTopContainer = styled.div`
   position: fixed;
-  bottom: 1rem;
-  right: 1rem;
+  bottom: 2rem;
+  right: 2rem;
   animation: fadeIn 700ms ease-in-out 1s both;
   cursor: pointer;
   z-index: 12;
@@ -19,12 +21,17 @@ const BackTopContainer = styled.div`
   align-items: center;
   display: flex;
   background: ${props => props.theme.colors.primary};
+  ${media.desktop`
+    bottom: 4rem;
+    right: 4rem;
+  `}
 `
 
 const AnimatedWrapper = animated(BackTopContainer);
 
 const StyledIcon = styled(ChevronUp)`
   fill: ${props => props.theme.colors.black};
+  margin-left: -1px;
 `
 
 const BackToTop = () =>{

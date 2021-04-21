@@ -6,8 +6,11 @@ import GoogleReviewsLogo from '../assets/footer/google-reviews-logo.png';
 import MBLogoGray from '../assets/footer/logo-gray.svg';
 import config from '../../config';
 import { CountryContext } from '../contexts/CountryContext';
+import useModal from '../hooks/useModal';
 import { media } from '../utils/emotion';
+import navigateToWebsite from '../utils/navigateToWebsite';
 
+import ContactModal from './ContactModal';
 import PageSection from './pages/PageSection';
 import Content from './pages/Content';
 import StarRating from './StarRating';
@@ -168,9 +171,10 @@ const RodoBox = styled.div`
 
 const FooterCta = styled.div`
   background:  ${props => props.theme.colors.footer.ctaBackground};
-  padding: 3rem 2rem;
+  clip-path: ellipse(129% 106% at 50% 110%);
+  padding: 7rem 2rem 2rem;
   ${media.desktop`
-    padding: 8rem 0;
+    padding: 10rem 0;
   `}
 `
 
@@ -190,6 +194,18 @@ const StyledButton = styled(Button)`
 
 const Footer = () => {
   const { isInPoland } = useContext(CountryContext);
+  // eslint-disable-next-line no-use-before-define
+  const [, showContactModal, hideContactModal] = useModal(ContactModal, { onSubmitContactForm });
+
+  const onSubmitContactForm =() => {
+    hideContactModal();
+  }
+
+  const openContactModal = () => {
+    showContactModal();
+  };
+
+  const contactButtonAction = isInPoland ? navigateToWebsite : openContactModal;
 
   return (
     <>
@@ -203,6 +219,7 @@ const Footer = () => {
         <StyledButton
           variant="cta"
           size="cta"
+          onClick={contactButtonAction}
         >{isInPoland ? 'See open positions!' : 'Hire us!'}
         </StyledButton>
       </FooterCta>

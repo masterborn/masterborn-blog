@@ -63,8 +63,12 @@ const RightSidebarWrapper = styled('div')`
 
 const BackLink = styled(Link)`
   position: absolute;
-  left: -6rem;
+  display: none;
   top: 2rem;
+  ${media.desktop`
+    left: -4rem;
+    display: block;
+  `}
 `
 
 const PostHeading = styled(Heading)`

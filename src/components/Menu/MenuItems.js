@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
 import Link from '../Link';
 import useActiveMenuStyles from '../../hooks/useActiveMenuStyles';
 import config from '../../../config';
+import navigateToWebsite from '../../utils/navigateToWebsite';
 import ContactModal from '../ContactModal';
 import useModal from '../../hooks/useModal';
 import { media } from '../../utils/emotion';
+import { CountryContext } from '../../contexts/CountryContext';
 
 import ContactButton from './ContactButton';
 
@@ -32,17 +34,20 @@ const MenuLink = styled(Link)`
 
 const MenuItems = ({ isCollapsedHeader, onClickItem, contactAsButton }) => {
   const { getActiveStyleForPathname } = useActiveMenuStyles();
+   const { isInPoland } = useContext(CountryContext);
   const LinkFontSize = 3;
-
+  const contactButtonText = isInPoland ? 'Join us' : 'Contact us';
   const [, showContactModal, hideContactModal] = useModal(ContactModal, { onSubmitContactForm });
 
-  function onSubmitContactForm() {
+  const  onSubmitContactForm =() => {
     hideContactModal();
   }
 
-    const openContactModal = () => {
+  const openContactModal = () => {
     showContactModal();
   };
+
+  const contactButtonAction = isInPoland ? navigateToWebsite : openContactModal;
 
   return (
     <>
@@ -82,9 +87,10 @@ const MenuItems = ({ isCollapsedHeader, onClickItem, contactAsButton }) => {
       <ContactButton
         contactAsButton={contactAsButton}
         isCollapsedHeader={isCollapsedHeader}
-        onClick={openContactModal}
+        onClick={contactButtonAction}
         linkFontSize={LinkFontSize}
-      />
+      >{contactButtonText}
+      </ContactButton>
     </>
   );
 };

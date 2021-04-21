@@ -16,7 +16,7 @@ const StyledContactButton = styled(Button)`
 
 `
 
-const ContactButton = ({ isCollapsedHeader, onClick, href, ...rest }) => {
+const ContactButton = ({ isCollapsedHeader, children, onClick, href, ...rest }) => {
   return (
     <StyledContactButton
       {...rest}
@@ -26,7 +26,7 @@ const ContactButton = ({ isCollapsedHeader, onClick, href, ...rest }) => {
       size="cta"
       onClick={onClick}
     >
-      Contact us
+      {children}
     </StyledContactButton>
   );
 };
@@ -34,6 +34,10 @@ const ContactButton = ({ isCollapsedHeader, onClick, href, ...rest }) => {
 ContactButton.propTypes = {
   isCollapsedHeader: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node),
+  ]).isRequired,
 };
 
 ContactButton.defaultProps = {
