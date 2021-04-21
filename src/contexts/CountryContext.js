@@ -6,10 +6,8 @@ import {countryReducer, SET_COUNTRY} from '../reducers/countryReducer';
 export const CountryContext = React.createContext();
 const initialState = null;
 
-
 export const CountryContextProvider = (props) => {
   const [state, dispatch] = useReducer(countryReducer, initialState);
-
   const setCountry = (results) => {
     dispatch({ type: SET_COUNTRY, payload: results });
   };
