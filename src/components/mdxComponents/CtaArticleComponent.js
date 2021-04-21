@@ -1,5 +1,6 @@
 import React, {useContext} from 'react';
 import styled from '@emotion/styled';
+import PropTypes from 'prop-types';
 
 import { CountryContext } from '../../contexts/CountryContext';
 import Button from '../Button';
@@ -34,21 +35,34 @@ const StyledButton = styled(Button)`
   margin: 1.2rem auto;
 `
 
-const CtaArticleComponent = () => {
+const CtaArticleComponent = ({ heading, buttonText, onClick }) => {
   const { isInPoland } = useContext(CountryContext);
+
   return (
     <Container>
-      <StyledHeading as="h5" mb={0}>{
-        isInPoland ? "Let’s build disruptive JavaScript products together"
-          : 'Build your modern Web App with top React & Node.js Engineers'}
+      <StyledHeading as="h5" mb={0}>{isInPoland ? heading[0] : heading[1]}
       </StyledHeading>
       <StyledButton
         variant="cta"
         size="cta"
-      >{isInPoland ? 'Join our Team!' : "Let's talk!"}
+        onClick={onClick}
+      >{isInPoland ? buttonText[0] : buttonText[1]}
       </StyledButton>
     </Container>
   );
 };
 
+CtaArticleComponent.propTypes = {
+  heading: PropTypes.arrayOf(PropTypes.string),
+  buttonText: PropTypes.arrayOf(PropTypes.string),
+  onClick:PropTypes.func,
+};
+CtaArticleComponent.defaultProps = {
+  heading: [
+    "Let’s build disruptive JavaScript products together",
+    'Build your modern Web App with top React & Node.js Engineers',
+  ],
+  buttonText: ['Join our Team!', "Let's talk!"],
+  onClick:() => undefined,
+}
 export default CtaArticleComponent;
