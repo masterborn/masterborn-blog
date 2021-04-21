@@ -38,7 +38,6 @@ const PostShort = ({
       </PostLink>
       <StyledText>{description}</StyledText>
       <ReadMoreLink slug={slug} />
-      <Hr mt={5} mb={5} />
     </Container>
   );
 };
