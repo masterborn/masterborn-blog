@@ -5,7 +5,6 @@ import Image from 'gatsby-image';
 
 import Link from './Link';
 
-
 const StyledImage = styled(Image)`
   height: 100%;
 `;
@@ -41,8 +40,7 @@ const Container = styled.div`
 `;
 
 
-const HoveredImageLink = ({ slug, metaImage, className }) => {
-return (
+const HoveredImageLink = ({ slug, metaImage, className }) => (
   <Container className={className}>
     <Link to={slug}>
       <StyledImage fluid={metaImage.fluid} />
@@ -51,8 +49,7 @@ return (
       </Overlay>
     </Link>
   </Container>
-)
-}
+);
 
 HoveredImageLink.propTypes = {
   className: PropTypes.string.isRequired,
