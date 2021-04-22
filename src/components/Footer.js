@@ -193,11 +193,12 @@ const StyledButton = styled(Button)`
 `
 
 const Footer = () => {
+  let onSubmitContactForm;
   const { isInPoland } = useContext(CountryContext);
   // eslint-disable-next-line no-use-before-define
   const [, showContactModal, hideContactModal] = useModal(ContactModal, { onSubmitContactForm });
 
-  const onSubmitContactForm =() => {
+  onSubmitContactForm =() => {
     hideContactModal();
   }
 

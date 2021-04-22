@@ -34,12 +34,14 @@ const MenuLink = styled(Link)`
 
 const MenuItems = ({ isCollapsedHeader, onClickItem, contactAsButton }) => {
   const { getActiveStyleForPathname } = useActiveMenuStyles();
-   const { isInPoland } = useContext(CountryContext);
+  const { isInPoland } = useContext(CountryContext);
+
   const LinkFontSize = 3;
+  let onSubmitContactForm;
   const contactButtonText = isInPoland ? 'Join us' : 'Contact us';
   const [, showContactModal, hideContactModal] = useModal(ContactModal, { onSubmitContactForm });
 
-  const  onSubmitContactForm =() => {
+  onSubmitContactForm =() => {
     hideContactModal();
   }
 

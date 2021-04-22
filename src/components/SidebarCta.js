@@ -37,10 +37,10 @@ const StyledBorder = styled.div`
 `
 
 const SidebarCta = ({ isInPoland }) => {
-  // eslint-disable-next-line no-use-before-define
+  let onSubmitContactForm;
   const [, showContactModal, hideContactModal] = useModal(ContactModal, { onSubmitContactForm });
 
-  const onSubmitContactForm =() => {
+  onSubmitContactForm = () => {
     hideContactModal();
   }
 

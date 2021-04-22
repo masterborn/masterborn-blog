@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
+import axios from 'axios';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 import { Global } from '@emotion/core';
@@ -11,6 +12,8 @@ import Header from '../components/header/Header';
 import Content from '../components/pages/Content';
 import Footer from '../components/Footer';
 import { LocationContextProvider } from '../contexts/LocationContext';
+import { CountryContext } from '../contexts/CountryContext';
+import config from '../../config';
 import { ModalContextProvider } from '../contexts/ModalContext';
 import InfoModal from '../components/InfoModal'
 
@@ -46,6 +49,19 @@ const StickyMenuWrapper = styled(HeaderWrapper)`
 `;
 
 const PageLayout = ({ children, themeName, location }) => {
+
+  const { setCountry } = useContext(CountryContext);
+  const { url, countryCode } = config.custom.localization;
+
+  useEffect(() => {
+    axios.get(url)
+      .then((response) => {
+        const { country } = response.data;
+        const isSameCountry = country === countryCode;
+        setCountry(isSameCountry)
+      });
+  }, [])
+
   return (
     <ThemeProvider themeName={themeName}>
       <ModalContextProvider>
