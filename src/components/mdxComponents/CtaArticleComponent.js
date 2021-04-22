@@ -1,11 +1,9 @@
 import React, {useContext} from 'react';
 import styled from '@emotion/styled';
+import PropTypes from 'prop-types';
 
 import { media } from '../../utils/emotion';
-import useModal from '../../hooks/useModal';
-import navigateToWebsite from '../../utils/navigateToWebsite';
 import { CountryContext } from '../../contexts/CountryContext';
-import ContactModal from '../ContactModal';
 import Button from '../Button';
 
 import Heading from './Heading';
@@ -46,34 +44,35 @@ const StyledButton = styled(Button)`
   `}
 `
 
-const CtaArticleComponent = () => {
+const CtaArticleComponent = ({ heading, buttonText, onClick }) => {
   const { isInPoland } = useContext(CountryContext);
-  // eslint-disable-next-line no-use-before-define
-  const [, showContactModal, hideContactModal] = useModal(ContactModal, { onSubmitContactForm });
 
-  const onSubmitContactForm =() => {
-    hideContactModal();
-  }
-
-  const openContactModal = () => {
-    showContactModal();
-  };
-
-  const contactButtonAction = isInPoland ? navigateToWebsite : openContactModal;
   return (
     <Container>
-      <StyledHeading as="h5" mb={0}>{
-        isInPoland ? "Let’s build disruptive JavaScript products together"
-          : 'Build your modern Web App with top React & Node.js Engineers'}
+      <StyledHeading as="h5" mb={0}>{isInPoland ? heading[0] : heading[1]}
       </StyledHeading>
       <StyledButton
         variant="cta"
         size="cta"
-        onClick={contactButtonAction}
-      >{isInPoland ? 'Join our Team!' : "Let's talk!"}
+        onClick={onClick}
+      >{isInPoland ? buttonText[0] : buttonText[1]}
       </StyledButton>
     </Container>
   );
 };
 
+CtaArticleComponent.propTypes = {
+  heading: PropTypes.arrayOf(PropTypes.string),
+  buttonText: PropTypes.arrayOf(PropTypes.string),
+  onClick:PropTypes.func,
+};
+
+CtaArticleComponent.defaultProps = {
+  heading: [
+    "Let’s build disruptive JavaScript products together",
+    'Build your modern Web App with top React & Node.js Engineers',
+  ],
+  buttonText: ['Join our Team!', "Let's talk!"],
+  onClick:() => undefined,
+}
 export default CtaArticleComponent;

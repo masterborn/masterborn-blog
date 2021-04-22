@@ -32,7 +32,12 @@ const colors = {
   dropdownMenuItemHover: '#F5F7F9',
   dropdownMenuBorder: '#E6ECF1',
   dropdownMenuShadow: 'rgba(116,129,141,0.1)',
-  featurePost:{
+  pagination: {
+    active: '#9F9F9F',
+    disabled: '#9F9F9F',
+    available: '#3F3F3F',
+  },
+  featurePost: {
     header: '#131313',
     description:'#616161',
     readMore:'#101010',

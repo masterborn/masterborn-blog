@@ -19,6 +19,7 @@ const OverlayArrow = styled.span`
   left: 50%;
   top: 50%;
   transition: transform .3s;
+  opacity: 0;
   transform: translateX(10vh);
 `
 
@@ -38,6 +39,7 @@ const BlogItemWrapper = styled.div`
       opacity: 0.15;
     }
     .overlay-arrow {
+      opacity: 1;
       transform: translateX(0);
     }
   }

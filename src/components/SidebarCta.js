@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
 import useModal from '../hooks/useModal';
-import navigateToWebsite from '../utils/navigateToWebsite';
+import navigateToWebsiteCarrier from '../utils/navigateToWebsiteCarrier';
 
 import ContactModal from './ContactModal';
 import Heading from './Heading';
@@ -47,7 +47,7 @@ const SidebarCta = ({ isInPoland }) => {
   const openContactModal = () => {
     showContactModal();
   };
-  const contactButtonAction = isInPoland ? navigateToWebsite : openContactModal;
+  const contactButtonAction = isInPoland ? navigateToWebsiteCarrier : openContactModal;
   return (
     <Container>
       <StyledHeading as="h5">
