@@ -1,17 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from '@emotion/styled';
-import { InstantSearch, connectStateResults } from "react-instantsearch-dom";
+import { InstantSearch } from "react-instantsearch-dom";
+import partition from 'lodash/partition';
 
 import useAlgoliaSearch from '../hooks/useAlgoliaSearch';
 import useAllBlogPosts from '../hooks/useAllBlogPosts';
-import PostShort from '../components/blog/PostShort';
-import Heading from '../components/Heading';
 import FeaturePost from '../components/blog/FeaturePost';
 import BlogContent from '../components/blog/BlogContent';
 import { media } from '../utils/emotion';
 import SEO from '../components/SEO';
 import Search from '../components/Search';
-
+import BlogPostsContent from '../components/blog/BlogPostsContent';
 
 
 const Wrapper = styled('div')`
@@ -40,21 +39,18 @@ const SearchContainer = styled(BlogContent)`
   `}
 `
 
-const BlogPostsContent = styled(BlogContent)`
-  background-color: ${props => props.theme.colors.blogTextBackground};
-  padding-bottom: 0;
-  ${media.desktop`
-    padding-bottom: 0;
-    width: 92rem;
-    max-width: 92rem;
-  `};
-`;
+
+
+
 
 const Index = () => {
   const { searchClient, setQuery, indexName } = useAlgoliaSearch();
   const posts = useAllBlogPosts();
-  const featurePosts = posts.filter(item => item.isFeature === true);
-
+  const postsPerPage = 12;
+  const [offset, setOffset] = useState(0);
+  
+  const [featurePosts, restPosts] = partition(posts, ({ isFeature }) => !!isFeature);
+  
   return (
     <InstantSearch
       searchClient={searchClient}
@@ -67,21 +63,19 @@ const Index = () => {
           description="Let's start the journey of creating your software with Premium Professionals."
         />
         <SearchContainer>
-          <Search />
+          {/* <Search /> */}
         </SearchContainer>
         <BlogFeatureArticleContent>
           {featurePosts.map(featurePost => (
             <FeaturePost key={featurePost.id} post={featurePost} />
           ))}
         </BlogFeatureArticleContent>
-        <BlogPostsContent>
-          <Heading as="h1" mb={5}>
-            All Posts
-          </Heading>
-          {posts.map(post => (
-            <PostShort key={post.id} post={post} />
-          ))}
-        </BlogPostsContent>
+        <BlogPostsContent 
+          postsPerPage={postsPerPage} 
+          offset={offset} 
+          setOffset={setOffset} 
+          posts={restPosts}
+        />
       </Wrapper>
     </InstantSearch>
   );
