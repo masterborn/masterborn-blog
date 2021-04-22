@@ -2,8 +2,12 @@ import React from 'react';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
-import Button from './Button';
+import useModal from '../hooks/useModal';
+import navigateToWebsiteCarrier from '../utils/navigateToWebsiteCarrier';
+
+import ContactModal from './ContactModal';
 import Heading from './Heading';
+import Button from './Button';
 
 const Container = styled('div')`
   display: grid;
@@ -33,9 +37,22 @@ const StyledBorder = styled.div`
 `
 
 const SidebarCta = ({ isInPoland }) => {
+  // eslint-disable-next-line no-use-before-define
+  const [, showContactModal, hideContactModal] = useModal(ContactModal, { onSubmitContactForm });
+
+  const onSubmitContactForm =() => {
+    hideContactModal();
+  }
+
+  const openContactModal = () => {
+    showContactModal();
+  };
+  const contactButtonAction = isInPoland ? navigateToWebsiteCarrier : openContactModal;
   return (
     <Container>
-      <StyledHeading as="h5">We build valuable products</StyledHeading>
+      <StyledHeading as="h5">
+        {isInPoland ? 'World-class React & Node.js experts' : 'We build valuable products'}
+      </StyledHeading>
       <StyledBorder />
       <Button
         variant="cta"
@@ -43,6 +60,7 @@ const SidebarCta = ({ isInPoland }) => {
         mt={3}
         mb={3}
         width="100%"
+        onClick={contactButtonAction}
       >{isInPoland ? 'Join us!' : 'Hire us!'}
       </Button>
     </Container>

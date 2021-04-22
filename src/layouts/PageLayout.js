@@ -1,11 +1,9 @@
-import React, { useContext, useEffect } from 'react';
-import axios from 'axios';
+import React from 'react';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 import { Global } from '@emotion/core';
 
-import { CountryContext } from '../contexts/CountryContext';
-import config from '../../config';
+import { media } from '../utils/emotion';
 import normalizeCss from '../theme/normalizeCss';
 import globalStyles from '../theme/globalStyles';
 import ThemeProvider from '../components/themeProvider';
@@ -41,22 +39,13 @@ const StickyMenuWrapper = styled(HeaderWrapper)`
   top: 0;
   background-color: ${props => props.theme.colors.white};
   border: 1px solid  ${props => props.theme.colors.header.headerBorderColor};
-  padding: 1rem 0;
+  padding: 2rem 0;
+  ${media.desktop`
+    padding: 1rem 0;
+  `}
 `;
 
 const PageLayout = ({ children, themeName, location }) => {
-  const { setCountry } = useContext(CountryContext);
-  const { url, countryCode } = config.custom.localization;
-
-  useEffect(() => {
-    axios.get(url)
-      .then((response) => {
-        const { country } = response.data;
-        const isSameCountry = country === countryCode;
-        setCountry(isSameCountry)
-      });
-  }, [])
-
   return (
     <ThemeProvider themeName={themeName}>
       <ModalContextProvider>

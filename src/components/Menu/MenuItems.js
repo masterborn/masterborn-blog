@@ -1,18 +1,21 @@
-import React, {useEffect} from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 
 import Link from '../Link';
 import useActiveMenuStyles from '../../hooks/useActiveMenuStyles';
 import config from '../../../config';
+import navigateToWebsiteCarrier from '../../utils/navigateToWebsiteCarrier';
 import ContactModal from '../ContactModal';
 import useModal from '../../hooks/useModal';
+import { media } from '../../utils/emotion';
+import { CountryContext } from '../../contexts/CountryContext';
 
 import ContactButton from './ContactButton';
 
 const MenuLink = styled(Link)`
   color: ${props => props.theme.colors.header.color};
-  margin: 2rem;
+  margin: 2rem 0;
   padding: 1rem 0;
   transition: all .3s;
   border-bottom: 2px solid transparent;
@@ -24,21 +27,27 @@ const MenuLink = styled(Link)`
       color: ${props => props.theme.colors.link.hover};
     }
   }
+  ${media.desktop`
+    margin: 2rem;
+  `}
 `;
 
 const MenuItems = ({ isCollapsedHeader, onClickItem, contactAsButton }) => {
   const { getActiveStyleForPathname } = useActiveMenuStyles();
+   const { isInPoland } = useContext(CountryContext);
   const LinkFontSize = 3;
-
+  const contactButtonText = isInPoland ? 'Join us' : 'Contact us';
   const [, showContactModal, hideContactModal] = useModal(ContactModal, { onSubmitContactForm });
 
-  function onSubmitContactForm() {
+  const  onSubmitContactForm =() => {
     hideContactModal();
   }
 
-    const openContactModal = () => {
+  const openContactModal = () => {
     showContactModal();
   };
+
+  const contactButtonAction = isInPoland ? navigateToWebsiteCarrier : openContactModal;
 
   return (
     <>
@@ -78,9 +87,10 @@ const MenuItems = ({ isCollapsedHeader, onClickItem, contactAsButton }) => {
       <ContactButton
         contactAsButton={contactAsButton}
         isCollapsedHeader={isCollapsedHeader}
-        onClick={openContactModal}
+        onClick={contactButtonAction}
         linkFontSize={LinkFontSize}
-      />
+      >{contactButtonText}
+      </ContactButton>
     </>
   );
 };

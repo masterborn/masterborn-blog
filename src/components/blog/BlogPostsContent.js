@@ -2,11 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import ReactPaginate from 'react-paginate';
-import { navigate } from "gatsby"
 
 import { media } from '../../utils/emotion';
 import CtaArticleComponent from '../mdxComponents/CtaArticleComponent';
-import config from '../../../config';
+import navigateToWebsiteCarrier from '../../utils/navigateToWebsiteCarrier';
 
 import BlogContent from './BlogContent';
 import PostsTiles from './PostsTiles';
@@ -34,7 +33,7 @@ const Container = styled(BlogContent)`
       cursor: pointer;
       color: ${({ theme }) => theme.colors.pagination.available};
     }
-    .active { 
+    .active {
       color: ${({ theme }) => theme.colors.pagination.active};
     }
     .disabled {
@@ -62,14 +61,12 @@ const BlogPostsContent = ({postsPerPage, offset, posts, setOffset })=> {
   const paginatedPosts = posts.slice(offset, offset + postsPerPage);
   const ctaHeading = ['Be bold and create your future','Be bold and create your future'];
   const ctaButtonText = ['See open positions!', 'See open positions!'];
-  const onCtaClick = () => navigate(`${config.env.masterbornWebsite}career`);
-  
   return (
     <Container>
       <PostsTiles posts={paginatedPosts}>
         <CtaContainer>
           <CtaArticleComponent
-            onClick={onCtaClick}
+            onClick={navigateToWebsiteCarrier}
             heading={ctaHeading}
             buttonText={ctaButtonText}
           />

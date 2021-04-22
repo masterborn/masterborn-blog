@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { CountryContextProvider } from '../contexts/CountryContext';
-
 import BlogTemplate from './BlogTemplate';
 import PageTemplate from './PageTemplate';
 
@@ -10,20 +8,16 @@ const Index = ({ children, pageContext, location, ...rest }) => {
   const isBlogPage = pageContext.pageType === 'BLOG_POST';
   if (isBlogPage) {
     return (
-      <CountryContextProvider>
-        <BlogTemplate location={location} {...rest}>
-          {children}
-        </BlogTemplate>
-      </CountryContextProvider>
+      <BlogTemplate location={location} {...rest}>
+        {children}
+      </BlogTemplate>
     );
   }
 
   return (
-    <CountryContextProvider>
-      <PageTemplate location={location} {...rest}>
-        {children}
-      </PageTemplate>
-    </CountryContextProvider>
+    <PageTemplate location={location} {...rest}>
+      {children}
+    </PageTemplate>
   );
 };
 

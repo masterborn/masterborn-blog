@@ -1,5 +1,7 @@
 import styled from '@emotion/styled';
 
+import { media } from '../../utils/emotion';
+
 const Container = styled.nav`
   display: flex;
   max-width: 100%;
@@ -9,7 +11,11 @@ const Container = styled.nav`
   padding: ${props => (props.isCollapsedHeader ? '0.8rem 0' : '1.5rem 0')};
   position: relative;
   width: inherit;
+  padding: 0 3rem;
   color: ${props => props.theme.colors.menuText};
+  ${media.desktop`
+    padding: 0;
+  `}
 `;
 
 export default Container;
