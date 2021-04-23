@@ -59,17 +59,11 @@ const BlogPostsContent = ({postsPerPage, offset, posts, setOffset })=> {
   const pageCount = Math.ceil(posts.length / postsPerPage);
   const onPageChange = ({ selected }) => setOffset(Math.ceil(selected * postsPerPage));
   const paginatedPosts = posts.slice(offset, offset + postsPerPage);
-  const ctaHeading = ['Be bold and create your future','Be bold and create your future'];
-  const ctaButtonText = ['See open positions!', 'See open positions!'];
   return (
     <Container>
       <PostsTiles posts={paginatedPosts}>
         <CtaContainer>
-          <CtaArticleComponent
-            onClick={navigateToWebsiteCarrier}
-            heading={ctaHeading}
-            buttonText={ctaButtonText}
-          />
+          <CtaArticleComponent />
         </CtaContainer>
       </PostsTiles>
       <ReactPaginate
