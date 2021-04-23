@@ -29,11 +29,20 @@ const Container = styled('div')`
   `}
 `;
 
+const Underline = styled.div`
+  width: 8rem;
+  height: 0.2rem;
+  position: absolute;
+  background: ${props => props.theme.colors.primary};
+  bottom: -2.5rem;
+`;
+
 const StyledHeading = styled(Heading)`
   letter-spacing: 0;
   line-height: 26px;
   font-size: 2.2rem;
   align-self: center;
+  position: relative;
 `
 
 const StyledButton = styled(Button)`
@@ -44,12 +53,14 @@ const StyledButton = styled(Button)`
   `}
 `
 
-const CtaArticleComponent = ({ heading, buttonText, onClick }) => {
+const CtaArticleComponent = ({ heading, buttonText, onClick, showYellowUnderline }) => {
   const { isInPoland } = useContext(CountryContext);
 
   return (
     <Container>
-      <StyledHeading as="h5" mb={0}>{isInPoland ? heading[0] : heading[1]}
+      <StyledHeading as="h5" mb={0}>
+        {isInPoland ? heading[0] : heading[1]}
+        {showYellowUnderline && <Underline />}
       </StyledHeading>
       <StyledButton
         variant="cta"
@@ -65,6 +76,7 @@ CtaArticleComponent.propTypes = {
   heading: PropTypes.arrayOf(PropTypes.string),
   buttonText: PropTypes.arrayOf(PropTypes.string),
   onClick:PropTypes.func,
+  showYellowUnderline: PropTypes.bool,
 };
 
 CtaArticleComponent.defaultProps = {
@@ -74,5 +86,6 @@ CtaArticleComponent.defaultProps = {
   ],
   buttonText: ['Join our Team!', "Let's talk!"],
   onClick:() => undefined,
+  showYellowUnderline: false,
 }
 export default CtaArticleComponent;

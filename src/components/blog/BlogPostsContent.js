@@ -78,6 +78,7 @@ const BlogPostsContent = ({postsPerPage, offset, posts, setOffset })=> {
         <CtaContainer>
           <CtaArticleComponent
             onClick={contactButtonAction}
+            showYellowUnderline
             heading={ctaHeading}
             buttonText={ctaButtonText}
           />
