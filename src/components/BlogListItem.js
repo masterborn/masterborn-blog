@@ -42,6 +42,10 @@ const BlogItemWrapper = styled.div`
       opacity: 1;
       transform: translateX(0);
     }
+    h5 {
+      text-decoration: underline;
+      color: ${props => props.theme.colors.primary};
+    }
   }
 `
 
