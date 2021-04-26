@@ -39,26 +39,24 @@ const MouseOverHandler = ({ children, setHovered }) => (
 const FeaturePost = ({ post }) => {
   const [isHovered, setHovered] = useState(false);
   const { title, description, slug, metaImage } = post;
-
+  const colorsCategory = isHovered ? 'featurePostHover' : 'featurePost';
   return (
     <Container>
       <LeftSide>
         <MouseOverHandler setHovered={setHovered}>
           <Link to={slug}>
             <Heading
-              isHovered={isHovered}
-              color="featurePost.header"
+              color={`${colorsCategory}.header`}
               fontWeight={600}
               as="h2"
             >{title}
             </Heading>
           </Link>
           <Description
-            isHovered={isHovered}
             opacity="0.9"
             lineHeight="2.6rem"
             fontSize="1.6rem"
-            color="featurePost.description"
+            color={`${colorsCategory}.description`}
           >
             {description}
           </Description>

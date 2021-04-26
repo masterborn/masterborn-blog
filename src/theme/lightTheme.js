@@ -42,6 +42,11 @@ const colors = {
     description:'#616161',
     readMore:'#101010',
   },
+  featurePostHover: {
+    header: '#4B4A4A',
+    description:'#8D8D8D',
+    readMore: '#101010',
+  },
   button: {
     primaryShadow: 'rgba(255,204,2,0.4)',
     primaryOutlineHover: '#e2b500',
