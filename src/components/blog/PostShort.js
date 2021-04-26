@@ -1,11 +1,9 @@
 import styled from '@emotion/styled';
 import React from 'react';
 import PropTypes from 'prop-types';
-import Image from 'gatsby-image'
+import LinesEllipsis from 'react-lines-ellipsis'
 
 import Heading from '../Heading';
-import Text from '../Text';
-import Hr from '../Hr';
 import ReadMoreLink from '../ReadMoreLink';
 import HoveredImageLink from '../HoveredImageLink';
 
@@ -21,8 +19,13 @@ const StyledImage = styled(HoveredImageLink)`
   height: 20rem;
 `;
 
-const StyledText = styled(Text)`
-  opacity: 0.9;
+const StyledDescription = styled(LinesEllipsis)`
+  margin-top: 0;
+  margin-bottom: 1.6rem;
+  color: ${({ theme }) => theme.colors.text};
+  line-height: 1.5;
+  font-weight: 300;
+  font-size: 1.6rem;
 `;
 
 const PostShort = ({
@@ -36,7 +39,13 @@ const PostShort = ({
           {title}
         </Heading>
       </PostLink>
-      <StyledText>{description}</StyledText>
+      <StyledDescription
+        text={description}
+        maxLine='3'
+        ellipsis='...'
+        trimRight
+        basedOn='words'
+      />
       <ReadMoreLink slug={slug} />
     </Container>
   );
