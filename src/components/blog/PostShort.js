@@ -33,12 +33,10 @@ const PostShort = ({
 }) => {
   return (
     <Container>
-      <PostLink to={slug}>
-        <StyledImage metaImage={metaImage} slug={slug} />
-        <Heading as="h4" mb={2} mt={3}>
-          {title}
-        </Heading>
-      </PostLink>
+      <StyledImage withShadow metaImage={metaImage} slug={slug} />
+      <Heading lineHeight="3.2rem" as="h4" mb={2} mt={3}>
+        {title}
+      </Heading>
       <StyledDescription
         text={description}
         maxLine='3'
