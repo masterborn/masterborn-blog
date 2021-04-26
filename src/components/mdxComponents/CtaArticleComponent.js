@@ -1,5 +1,6 @@
 import React, {useContext} from 'react';
 import styled from '@emotion/styled';
+import PropTypes from 'prop-types';
 
 import { media } from '../../utils/emotion';
 import { CountryContext } from '../../contexts/CountryContext';
@@ -31,11 +32,20 @@ const Container = styled('div')`
   `}
 `;
 
+const Underline = styled.div`
+  width: 8rem;
+  height: 0.2rem;
+  position: absolute;
+  background: ${props => props.theme.colors.primary};
+  bottom: -2.5rem;
+`;
+
 const StyledHeading = styled(Heading)`
   letter-spacing: 0;
   line-height: 26px;
   font-size: 2.2rem;
   align-self: center;
+  position: relative;
 `
 
 const StyledButton = styled(Button)`
@@ -46,13 +56,8 @@ const StyledButton = styled(Button)`
   `}
 `
 
-const headings = [
-  "Let’s build disruptive JavaScript products together",
-  'Build your modern Web App with top React & Node.js Engineers',
-  ]
-const buttonTexts = ['Join our Team!', "Let's talk!"];
-
-const CtaArticleComponent = () => {
+// eslint-disable-next-line complexity
+const CtaArticleComponent = ({ headings, buttonTexts, showYellowUnderline }) => {
   const { isInPoland } = useContext(CountryContext);
   const [, showContactModal, hideContactModal] = useModal(ContactModal, { onSubmitContactForm });
 
@@ -67,7 +72,9 @@ const CtaArticleComponent = () => {
   const buttonAction = isInPoland ? navigateToWebsiteCarrier : openContactModal;
   return (
     <Container>
-      <StyledHeading as="h5" mb={0}>{isInPoland ? headings[0] : headings[1]}
+      <StyledHeading as="h5" mb={0}>
+        {isInPoland ? headings[0] : headings[1]} 
+        {showYellowUnderline && <Underline />}
       </StyledHeading>
       <StyledButton
         variant="cta"
@@ -79,4 +86,18 @@ const CtaArticleComponent = () => {
   );
 };
 
+CtaArticleComponent.propTypes = {
+  headings: PropTypes.arrayOf(PropTypes.string),
+  buttonTexts: PropTypes.arrayOf(PropTypes.string),
+  showYellowUnderline: PropTypes.bool,
+};
+
+CtaArticleComponent.defaultProps = {
+  headings: [
+    "Let’s build disruptive JavaScript products together",
+    'Build your modern Web App with top React & Node.js Engineers',
+  ],
+  buttonTexts: ['Join our Team!', "Let's talk!"],
+  showYellowUnderline: false,
+}
 export default CtaArticleComponent;

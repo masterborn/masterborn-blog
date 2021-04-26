@@ -7,6 +7,7 @@ import Link from './Link';
 
 const StyledImage = styled(Image)`
   height: 100%;
+  border-radius: 4px;
 `;
 
 const Overlay = styled.div`
