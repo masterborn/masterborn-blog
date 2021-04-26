@@ -20,7 +20,6 @@ Image.defaultProps = {
 
 const StyledImage = styled(Image)`
   border-radius: 4px;
-  box-shadow: 0 35px 30px -37px rgba(0,0,0,0.2) !important;
 }
 `
 

@@ -1,14 +1,10 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import ReactPaginate from 'react-paginate';
 
 import { media } from '../../utils/emotion';
 import CtaArticleComponent from '../mdxComponents/CtaArticleComponent';
-import navigateToWebsiteCarrier from '../../utils/navigateToWebsiteCarrier';
-import { CountryContext } from '../../contexts/CountryContext';
-import ContactModal from '../ContactModal';
-import useModal from '../../hooks/useModal';
 
 import BlogContent from './BlogContent';
 import PostsTiles from './PostsTiles';
@@ -59,28 +55,23 @@ const CtaContainer = styled.div`
 `;
 
 const BlogPostsContent = ({postsPerPage, offset, posts, setOffset })=> {
-  const { isInPoland } = useContext(CountryContext);
   const pageCount = Math.ceil(posts.length / postsPerPage);
   const onPageChange = ({ selected }) => setOffset(Math.ceil(selected * postsPerPage));
   const paginatedPosts = posts.slice(offset, offset + postsPerPage);
-  const ctaHeading = ['Be bold and create your future','Your React & Node.js trusted partners'];
-  const ctaButtonText = ['See open positions!', 'Contact us!'];
-  const [, showContactModal, hideContactModal] = useModal(ContactModal, { onSubmitContactForm });
-  const contactButtonAction = isInPoland ? navigateToWebsiteCarrier : showContactModal;
-
-  function onSubmitContactForm(){
-    hideContactModal();
-  }
+  const ctaHeadings = [
+    'Be bold and create your future',
+    'Your React & Node.js trusted partners',
+  ];
+  const ctaButtonTexts = ['See open positions!', 'Contact us!'];
 
   return (
     <Container>
       <PostsTiles posts={paginatedPosts}>
         <CtaContainer>
           <CtaArticleComponent
-            onClick={contactButtonAction}
+            headings={ctaHeadings}
             showYellowUnderline
-            heading={ctaHeading}
-            buttonText={ctaButtonText}
+            buttonTexts={ctaButtonTexts}
           />
         </CtaContainer>
       </PostsTiles>

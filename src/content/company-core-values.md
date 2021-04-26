@@ -7,7 +7,7 @@ authorAvatar: ./assets/avatar_gray_skinner.jpeg
 metaImage: assets/company-core-values/210412_MB_blog_cover_Values.jpg
 metaTitle: 'Why Your Company Values (might) Stink'
 metaDescription: 'What are company core values? How to identify them and why are they so incredibly important?'
-isFeature: true
+isFeature: false
 ---
 
 ![Core values](assets/company-core-values/210412_MB_blog_cover_Values.jpg)

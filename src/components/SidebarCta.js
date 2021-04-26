@@ -37,16 +37,16 @@ const StyledBorder = styled.div`
 `
 
 const SidebarCta = ({ isInPoland }) => {
-  let onSubmitContactForm;
   const [, showContactModal, hideContactModal] = useModal(ContactModal, { onSubmitContactForm });
 
-  onSubmitContactForm = () => {
+  function onSubmitContactForm () {
     hideContactModal();
   }
 
-  const openContactModal = () => {
+  function openContactModal () {
     showContactModal();
   };
+
   const contactButtonAction = isInPoland ? navigateToWebsiteCarrier : openContactModal;
   return (
     <Container>

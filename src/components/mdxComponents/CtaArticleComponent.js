@@ -4,6 +4,9 @@ import PropTypes from 'prop-types';
 
 import { media } from '../../utils/emotion';
 import { CountryContext } from '../../contexts/CountryContext';
+import useModal from '../../hooks/useModal';
+import ContactModal from '../ContactModal';
+import navigateToWebsiteCarrier from '../../utils/navigateToWebsiteCarrier';
 import Button from '../Button';
 
 import Heading from './Heading';
@@ -53,39 +56,48 @@ const StyledButton = styled(Button)`
   `}
 `
 
-const CtaArticleComponent = ({ heading, buttonText, onClick, showYellowUnderline }) => {
+// eslint-disable-next-line complexity
+const CtaArticleComponent = ({ headings, buttonTexts, showYellowUnderline }) => {
   const { isInPoland } = useContext(CountryContext);
+  const [, showContactModal, hideContactModal] = useModal(ContactModal, { onSubmitContactForm });
 
+  function onSubmitContactForm () {
+    hideContactModal();
+  }
+
+  function openContactModal () {
+    showContactModal();
+  };
+
+  const buttonAction = isInPoland ? navigateToWebsiteCarrier : openContactModal;
   return (
     <Container>
       <StyledHeading as="h5" mb={0}>
-        {isInPoland ? heading[0] : heading[1]}
+        {isInPoland ? headings[0] : headings[1]} 
         {showYellowUnderline && <Underline />}
       </StyledHeading>
       <StyledButton
         variant="cta"
         size="cta"
-        onClick={onClick}
-      >{isInPoland ? buttonText[0] : buttonText[1]}
+        onClick={buttonAction}
+      >{isInPoland ? buttonTexts[0] : buttonTexts[1]}
       </StyledButton>
     </Container>
   );
 };
 
 CtaArticleComponent.propTypes = {
-  heading: PropTypes.arrayOf(PropTypes.string),
-  buttonText: PropTypes.arrayOf(PropTypes.string),
-  onClick:PropTypes.func,
+  headings: PropTypes.arrayOf(PropTypes.string),
+  buttonTexts: PropTypes.arrayOf(PropTypes.string),
   showYellowUnderline: PropTypes.bool,
 };
 
 CtaArticleComponent.defaultProps = {
-  heading: [
+  headings: [
     "Let’s build disruptive JavaScript products together",
     'Build your modern Web App with top React & Node.js Engineers',
   ],
-  buttonText: ['Join our Team!', "Let's talk!"],
-  onClick:() => undefined,
+  buttonTexts: ['Join our Team!', "Let's talk!"],
   showYellowUnderline: false,
 }
 export default CtaArticleComponent;
