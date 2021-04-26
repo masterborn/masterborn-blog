@@ -30,6 +30,8 @@ Imagine that you have a project in front of you and you can develop it in two po
 
 In software development, releasing code in the former quick and easy approach is like incurring debt - it comes with the obligation of interest while technical debt comes in the form of extra work and money spent on it in the future. Taking the time to refactor is equivalent to paying down the principal. While this takes time in the short run, it also decreases future interest payments.
 
+![Happy developer](assets/technical-debt-6-things-business-should-know/happy_developer.jpeg)
+
 ### Ward Cunningham and the concept of technical debt
 
 Ward Cunningham describes this concept in 1992 as follows:
