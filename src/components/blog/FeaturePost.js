@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import LinesEllipsis from 'react-lines-ellipsis'
+import get from 'lodash/get';
 
 import Heading from '../Heading';
 import ReadMoreLink from '../ReadMoreLink';
 import HoveredImageLink from '../HoveredImageLink';
+import Link from '../Link';
 
 const Container = styled.div`
   display: grid;
@@ -20,7 +22,7 @@ const Description = styled(LinesEllipsis)`
   opacity: 0.9;
   line-height: 2.6rem;
   font-size: 1.6rem;
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme, color }) => get(theme.colors, color)};
   font-weight: 300;
 `;
 
@@ -31,27 +33,65 @@ const LeftSide = styled.div`
 const StyledImage = styled(HoveredImageLink)`
   height: 37rem;
 `;
+const MouseOverHandler = ({ children, setHovered }) => (
+  <div
+    onMouseEnter={() => setHovered(true)}
+    onMouseLeave={() => setHovered(false)}
+  >
+    {children}
+  </div>
+);
 
 const FeaturePost = ({ post }) => {
+  const [isHovered, setHovered] = useState(false);
   const { title, description, slug, metaImage } = post;
+  const colorsCategory = isHovered ? 'featurePostHover' : 'featurePost';
   return (
     <Container>
       <LeftSide>
-        <Heading color="featurePost.header" fontWeight={600} as="h2">{title}</Heading>
-        <Description
-          text={description}
-          maxLine='3'
-          ellipsis='...'
-          trimRight
-          basedOn='words'
-        />
-        <ReadMoreLink slug={slug} />
+        <MouseOverHandler setHovered={setHovered}>
+          <Link to={slug}>
+            <Heading
+              color={`${colorsCategory}.header`}
+              fontWeight={600}
+              as="h2"
+            >{title}
+            </Heading>
+          </Link>
+          <Description
+            color={`${colorsCategory}.description`}
+            text={description}
+            maxLine='3'
+            ellipsis='...'
+            trimRight
+            basedOn='words'
+          >
+            {description}
+          </Description>
+          <ReadMoreLink
+            isHovered={isHovered}
+            slug={slug}
+          />
+        </MouseOverHandler>
       </LeftSide>
-      <StyledImage slug={slug} metaImage={metaImage} />
+      <MouseOverHandler setHovered={setHovered}>
+        <StyledImage
+          slug={slug}
+          metaImage={metaImage}
+          isHovered={isHovered}
+        />
+      </MouseOverHandler>
     </Container>
   );
 };
 
+MouseOverHandler.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node),
+  ]).isRequired,
+  setHovered: PropTypes.func.isRequired,
+};
 
 FeaturePost.propTypes = {
   post: PropTypes.shape({
