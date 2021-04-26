@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
+import LinesEllipsis from 'react-lines-ellipsis'
 
 import Heading from '../Heading';
-import Text from '../Text';
 import ReadMoreLink from '../ReadMoreLink';
 import HoveredImageLink from '../HoveredImageLink';
 
@@ -14,14 +14,19 @@ const Container = styled.div`
   grid-gap: 5rem;
 `;
 
-const Description = styled(Text)`
+const Description = styled(LinesEllipsis)`
+  margin-top: 0;
+  margin-bottom: 1.6rem;
   opacity: 0.9;
+  line-height: 2.6rem;
+  font-size: 1.6rem;
+  color: ${({ theme }) => theme.colors.text};
+  font-weight: 300;
 `;
 
 const LeftSide = styled.div`
   margin: auto;
 `;
-
 
 const StyledImage = styled(HoveredImageLink)`
   height: 37rem;
@@ -33,9 +38,13 @@ const FeaturePost = ({ post }) => {
     <Container>
       <LeftSide>
         <Heading color="featurePost.header" fontWeight={600} as="h2">{title}</Heading>
-        <Description opacity="0.9" lineHeight="2.6rem" fontSize="1.6rem" color="featurePost.description">
-          {description}
-        </Description>
+        <Description
+          text={description}
+          maxLine='3'
+          ellipsis='...'
+          trimRight
+          basedOn='words'
+        />
         <ReadMoreLink slug={slug} />
       </LeftSide>
       <StyledImage slug={slug} metaImage={metaImage} />
