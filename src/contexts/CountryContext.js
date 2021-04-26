@@ -15,7 +15,7 @@ export const CountryContextProvider = (props) => {
   return (
     <CountryContext.Provider
       value={{
-        isInPoland: state,
+        isInPoland: false,
         setCountry,
       }}
     >

@@ -22,9 +22,9 @@ const Overlay = styled.div`
   background-color: ${({ theme }) => theme.colors.primary};
   display: grid;
   
-  &:hover {
+  ${({ isHovered })=> isHovered && `
     opacity: 0.85;
-  }
+  `}
 `;
 
 const BlackArrow = styled.span`
@@ -40,11 +40,11 @@ const Container = styled.div`
 `;
 
 
-const HoveredImageLink = ({ slug, metaImage, className }) => (
+const HoveredImageLink = ({ slug, metaImage, className, isHovered }) => (
   <Container className={className}>
     <Link to={slug}>
       <StyledImage fluid={metaImage.fluid} />
-      <Overlay>
+      <Overlay isHovered={isHovered}>
         <BlackArrow>&#8594;</BlackArrow>
       </Overlay>
     </Link>
@@ -59,6 +59,11 @@ HoveredImageLink.propTypes = {
       src: PropTypes.string,
     }),
   }).isRequired,
+  isHovered: PropTypes.bool,
 };
+
+HoveredImageLink.defaultProps = {
+  isHovered:false,
+}
 
 export default HoveredImageLink;
