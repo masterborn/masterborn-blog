@@ -56,7 +56,10 @@ const CtaContainer = styled.div`
 
 const BlogPostsContent = ({postsPerPage, offset, posts, setOffset })=> {
   const pageCount = Math.ceil(posts.length / postsPerPage);
-  const onPageChange = ({ selected }) => setOffset(Math.ceil(selected * postsPerPage));
+  const onPageChange = ({ selected }) => {
+    setOffset(Math.ceil(selected * postsPerPage));
+    window.scrollTo(0, 0);
+  };
   const paginatedPosts = posts.slice(offset, offset + postsPerPage);
   const ctaHeadings = [
     'Be bold and create your future',
