@@ -37,15 +37,14 @@ const MenuItems = ({ isCollapsedHeader, onClickItem, contactAsButton }) => {
   const { isInPoland } = useContext(CountryContext);
 
   const LinkFontSize = 3;
-  let onSubmitContactForm;
   const contactButtonText = isInPoland ? 'Join us' : 'Contact us';
   const [, showContactModal, hideContactModal] = useModal(ContactModal, { onSubmitContactForm });
 
-  onSubmitContactForm =() => {
+  function onSubmitContactForm () {
     hideContactModal();
   }
 
-  const openContactModal = () => {
+  function openContactModal () {
     showContactModal();
   };
 

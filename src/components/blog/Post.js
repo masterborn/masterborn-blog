@@ -90,7 +90,11 @@ const Post = ({
   description,
   relatedPosts,
 }) => {
-  const localeDate = new Date(date).toLocaleDateString();
+  const localeDate = new Intl.DateTimeFormat('en-US', {
+    day: 'numeric',
+    year: 'numeric',
+    month: 'short',
+  }).format(new Date(date))
   const {isInPoland} = useContext(CountryContext);
 
   return (
