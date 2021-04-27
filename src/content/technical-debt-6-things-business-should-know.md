@@ -1,18 +1,18 @@
 ---
-title: 'Technical debt - 6 things business should know about it'
+title: 'Technical debt - 6 things a business should know about it'
 date: 2021-04-26
 description: 'Technical debt is not totally bad by definition. In fact, you could argue that technical debt is absolutely essential for business growth.'
 author: 'Łukasz Miedziński'
 authorAvatar: ./assets/avatar_lukasz_miedzinski.jpg
 metaImage: assets/technical-debt-6-things-business-should-know/210410_MB_blog_cover_technical_debts.jpg
-metaTitle: 'Technical debt - 6 things business should know about it'
+metaTitle: 'Technical debt - 6 things a business should know about it'
 metaDescription: 'Technical debt is not totally bad by definition. In fact, you could argue that technical debt is absolutely essential for business growth.'
 isFeature: true
 ---
 
 ![Cover photo](assets/technical-debt-6-things-business-should-know/210410_MB_blog_cover_technical_debts.jpg)
 
-# Technical debt - 6 things business should know about it
+# Technical debt - 6 things a business should know about it
 
 
 
@@ -89,7 +89,7 @@ Try to think about technical debt in terms of an airplane’s lifecycle in an av
 
 This is just what happens in software development. You might have to carry out repetitive code refactoring to keep it well-maintained. It’s a normal thing, you can’t escape it.
 
-## Technical debt - 6 things business should know about it
+## Technical debt - 6 things a business should know about it
 
 Based on my experience as a software developer, I encourage you to look at the tips I share below and take them really seriously next time you launch a development project.
 
