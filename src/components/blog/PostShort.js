@@ -1,13 +1,12 @@
 import styled from '@emotion/styled';
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import LinesEllipsis from 'react-lines-ellipsis'
 
 import Heading from '../Heading';
 import ReadMoreLink from '../ReadMoreLink';
 import HoveredImageLink from '../HoveredImageLink';
-
-import PostLink from './PostLink';
+import Link from '../Link';
 
 const Container = styled.div`
   margin-bottom: ${props => props.theme.space.large};
@@ -31,14 +30,18 @@ const StyledDescription = styled(LinesEllipsis)`
 const PostShort = ({
   post: { slug, title, description, metaImage },
 }) => {
+  const [hover, setHover] = useState(false);
   return (
-    <Container>
-      <PostLink to={slug}>
-        <StyledImage metaImage={metaImage} slug={slug} />
-        <Heading as="h4" mb={2} mt={3}>
+    <Container
+      onMouseEnter={() => setHover(true)}
+      onMouseLeave={() => setHover(false)}
+    >
+      <StyledImage isHovered={hover} withShadow metaImage={metaImage} slug={slug} />
+      <Link to={slug}>
+        <Heading lineHeight="3.2rem" as="h4" mb={2} mt={3}>
           {title}
         </Heading>
-      </PostLink>
+      </Link>
       <StyledDescription
         text={description}
         maxLine='3'

@@ -27,12 +27,18 @@ const Description = styled(LinesEllipsis)`
 `;
 
 const LeftSide = styled.div`
-  margin: auto;
+  margin: auto auto auto 0;
+  max-width: 47rem;
 `;
 
 const StyledImage = styled(HoveredImageLink)`
   height: 37rem;
 `;
+
+const StyledHeading = styled(Heading)`
+  line-height: 4.8rem;
+`;
+
 const MouseOverHandler = ({ children, setHovered }) => (
   <div
     onMouseEnter={() => setHovered(true)}
@@ -51,12 +57,12 @@ const FeaturePost = ({ post }) => {
       <LeftSide>
         <MouseOverHandler setHovered={setHovered}>
           <Link to={slug}>
-            <Heading
+            <StyledHeading
               color={`${colorsCategory}.header`}
               fontWeight={600}
               as="h2"
             >{title}
-            </Heading>
+            </StyledHeading>
           </Link>
           <Description
             color={`${colorsCategory}.description`}
@@ -79,6 +85,7 @@ const FeaturePost = ({ post }) => {
           slug={slug}
           metaImage={metaImage}
           isHovered={isHovered}
+          withShadow
         />
       </MouseOverHandler>
     </Container>

@@ -48,9 +48,9 @@ const Index = () => {
   const posts = useAllBlogPosts();
   const postsPerPage = 12;
   const [offset, setOffset] = useState(0);
-  
+
   const [featurePosts, restPosts] = partition(posts, ({ isFeature }) => !!isFeature);
-  
+
   return (
     <InstantSearch
       searchClient={searchClient}
@@ -65,11 +65,13 @@ const Index = () => {
         <SearchContainer>
           {/* <Search /> */}
         </SearchContainer>
-        <BlogFeatureArticleContent>
-          {featurePosts.map(featurePost => (
-            <FeaturePost key={featurePost.id} post={featurePost} />
+        {offset === 0 && (
+          <BlogFeatureArticleContent>
+            {featurePosts.map(featurePost => (
+              <FeaturePost key={featurePost.id} post={featurePost} />
           ))}
-        </BlogFeatureArticleContent>
+          </BlogFeatureArticleContent>
+        )}
         <BlogPostsContent 
           postsPerPage={postsPerPage} 
           offset={offset} 

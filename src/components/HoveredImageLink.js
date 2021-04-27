@@ -8,6 +8,9 @@ import Link from './Link';
 const StyledImage = styled(Image)`
   height: 100%;
   border-radius: 4px;
+  ${({ withShadow })=> withShadow && 
+    'box-shadow: 0 35px 30px -37px rgba(0,0,0,0.2);'
+  };
 `;
 
 const Overlay = styled.div`
@@ -22,6 +25,10 @@ const Overlay = styled.div`
   transition: .5s ease;
   background-color: ${({ theme }) => theme.colors.primary};
   display: grid;
+  
+  &:hover {
+    opacity: 0.85;
+  }
   
   ${({ isHovered })=> isHovered && `
     opacity: 0.85;
@@ -41,10 +48,10 @@ const Container = styled.div`
 `;
 
 
-const HoveredImageLink = ({ slug, metaImage, className, isHovered }) => (
+const HoveredImageLink = ({ slug, metaImage, className, isHovered, withShadow }) => (
   <Container className={className}>
     <Link to={slug}>
-      <StyledImage fluid={metaImage.fluid} />
+      <StyledImage withShadow={withShadow} fluid={metaImage.fluid} />
       <Overlay isHovered={isHovered}>
         <BlackArrow>&#8594;</BlackArrow>
       </Overlay>
@@ -61,10 +68,12 @@ HoveredImageLink.propTypes = {
     }),
   }).isRequired,
   isHovered: PropTypes.bool,
+  withShadow: PropTypes.bool,
 };
 
 HoveredImageLink.defaultProps = {
-  isHovered:false,
+  isHovered: false,
+  withShadow: false,
 }
 
 export default HoveredImageLink;
