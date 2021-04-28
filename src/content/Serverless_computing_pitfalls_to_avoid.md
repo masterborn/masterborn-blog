@@ -5,15 +5,9 @@ description: 'The top 5 pitfalls of Serverless Computing and how to overcome the
 author: 'Przemysław Królik'
 authorAvatar: ./assets/avatar_przemyslaw_k.jpg
 metaImage: ./assets/Serverless_computing_pitfalls_to_avoid/210330_MB_blog_cover_serverless.jpg
-metaTitle: 'Serverless Computing - 5 pitfalls to avoid in your project'
-metaDescription: 'The top 5 pitfalls of Serverless Computing and how to overcome them. Learn how to avoid problems with Microservices, Timeouts, Vendor Lock, Cold start and Running dry database connections.'
 isFeature: false
 
 ---
-
-![Cover-photo](/assets/Serverless_computing_pitfalls_to_avoid/210330_MB_blog_cover_serverless.jpg)
-  
-# Serverless Computing - 5 pitfalls to avoid in your project
 
 With more and more popularity within the serverless computing and FaaS models (which stands from Function as a Service), we are more than eager to try it out, assess its possibilities and run things on this architecture, which may result in many "unpredictable" pitfalls of the serverless architecture.
 
@@ -27,7 +21,7 @@ We at MasterBorn love to create serverless architectures based on FaaS (AWS Lamb
 2.  FaaS significantly cuts server costs - from my experience - by at least 20% depending on the service (for functions it may be even more depending on the application's use).
 3.  FaaS reduces server maintenance - to almost zero - and requires people with less specific expertise to manage it.
 
-  
+
 
 It gives us loads of possibilities in terms of quick development and is backed up by the flexibility of the cloud infrastructure. Serverless architecture brings many advantages of "the old ways" of running services.
 
@@ -37,7 +31,7 @@ Now let me take you on a bumpy ride through the experiences and know-how I gaine
 
 Sometimes it wasn't easy. Sometimes I needed the support from my Team. And, sometimes I considered moving to Africa - to plant nut trees in Gambia. But, since I'm not a farmer, I decided to stay, overcome all the issues and now I can share my 5 biggest pitfalls - and solutions - with you.
 
-  
+
 
 ## Serverless Computing Pitfall No 1: Microservices everywhere
 ![Microservices_everywhere](/assets/Serverless_computing_pitfalls_to_avoid/Microservices_everywhere.png)
@@ -112,7 +106,7 @@ This is a universal factor that you need to have in mind. If you vendor lock you
 
 As mentioned previously, here in MasterBorn, we love to use a Serverless framework that gives us some level of abstraction above the FaaS provider. It's probably one of many open-source initiatives around there but specific providers have their own frameworks with which they will try to "seduce" you (like AWS SAM i.e.). Keep in mind that as using these seems really nice, intuitive, and easy, it will just keep you more and more in a vendor lock state (SAM heavily utilises AWS native Cloud Formation where Serverless hides it behind the scenes and gives you plenty of open-source/community-driven plugins to use).
 
-  
+
 
 ## When to use a serverless architecture?
 
@@ -123,14 +117,14 @@ And while creating your first serverless architecture, don't forget to pick the 
 
 By the way - did you know that what when I came into Droplr, it was based on many different languages and frameworks? With the lead of our Solution Architect (thanks for that if you are reading this!), we evolved it around a Serverless framework based on Node.js (with old good Express.js) which resulted in giant savings and a performance boost at the end. From those time, the Serverless framework has evolved so much and I would highly recommend you trying it out.
 
-  
+
 
 ## Serverless for Startups
 
 FaaS is a great solution for PoC / MVP and even teams for a quick and highly scalable solution that you won't need to worry about.
 Most of today’s startups and companies choose to go serverless e.g. Figma, Nordstrom, Netflix and even Coca-Cola.
 
-If you wonder why that is - then let me give you a small analogy. You see - serverless architecture is like a huge Lego construction - you can add new pieces, and create a product really fast. 
+If you wonder why that is - then let me give you a small analogy. You see - serverless architecture is like a huge Lego construction - you can add new pieces, and create a product really fast.
 
 ![Lego_architecture](/assets/Serverless_computing_pitfalls_to_avoid/Lego_architecture.jpg)
 

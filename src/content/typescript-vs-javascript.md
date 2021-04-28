@@ -4,15 +4,10 @@ date: 2021-04-12
 description: 'What’s the difference between TypeScript and JavaScript? And when is it right to migrate to TypeScript, or maybe… the other way around?'
 author: 'Przemysław Królik'
 authorAvatar: ./assets/avatar_przemyslaw_k.jpg
-metaImage: ./assets/typescript-vs-javascript/210407_MB_blog_cover_TSvsJS.png
-metaTitle: 'TypeScript vs JavaScript: What’s the Difference?'
-metaDescription: 'What’s the difference between TypeScript and JavaScript? And when is it right to migrate to TypeScript, or maybe… the other way around?'
+metaImage: ./assets/typescript-vs-javascript/210407_MB_blog_cover_TSvsJS.jpg
 isFeature: false
 
 ---
-
-![Cover-photo](assets/typescript-vs-javascript/210407_MB_blog_cover_TSvsJS.png)
-
 
 # TypeScript vs JavaScript: What's the Difference?
 

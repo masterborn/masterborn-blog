@@ -38,8 +38,6 @@ export default {
   ul: props => <List {...props} />,
   ol: props => <ListOrdered {...props} />,
   img: props => <Image {...props} />,
-  // TODO add `blockquote`
-  // TODO add `li`
   table: props => <Table {...props} mb={4} />,
   blockquote: props => <Blockquote {...props} />,
   hr: props => <Hr {...props} />,

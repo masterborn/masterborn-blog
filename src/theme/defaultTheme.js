@@ -99,6 +99,7 @@ fontSizes.h3 = fontSizes[6];
 fontSizes.h4 = fontSizes[5];
 fontSizes.h5 = fontSizes[4];
 fontSizes.h6 = fontSizes[3];
+fontSizes.listItem = fontSizes[4];
 
 const fonts = ['Inter, sans-serif'];
 fonts.heading = fonts[0];

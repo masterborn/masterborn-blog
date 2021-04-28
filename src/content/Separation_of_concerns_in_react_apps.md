@@ -4,17 +4,13 @@ date: 2021-02-22
 description: 'Building React apps, ever wondered where to put that "thing", and how to name it?'
 author: 'Rafał Świętek'
 authorAvatar: ./assets/avatar_rafal_swietek.png
-metaImage: ./assets/Separation_of_concerns_in_react_apps/meta_image.png
-metaTitle: 'Separation of concerns in modern React apps - key principles and examples'
-metaDescription: 'Building React apps, ever wondered where to put that "thing", and how to name it?'
+metaImage: ./assets/Separation_of_concerns_in_react_apps/meta_image.jpg
 isFeature: false
 ---
 
 A few years ago, when React started becoming popular, one of the things that made developers love it was its flexibility in implementation. Everyone pointed out that it’s not a framework, but a library and anyone can implement it as one likes.
 
 Well, that hasn’t changed yet, but React mutated so much that if you take a look at the app’s code written using their technology in 2016 and compare it to what we write today, you would probably think that these are 2 completely different things.
-
-![hero](./assets/Separation_of_concerns_in_react_apps/meta_image.png)
 
 In 2019, hooks were introduced and that significantly changed the way we create and structure our components and logic. Hooks began to gradually push class components out and it feels like we finally have a clean and dedicated solution for separating logic from the visual layer.
 
