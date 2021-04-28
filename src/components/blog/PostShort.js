@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import LinesEllipsis from 'react-lines-ellipsis'
+import get from 'lodash/get';
 
 import Heading from '../Heading';
 import ReadMoreLink from '../ReadMoreLink';
@@ -21,28 +22,35 @@ const StyledImage = styled(HoveredImageLink)`
 const StyledDescription = styled(LinesEllipsis)`
   margin-top: 0;
   margin-bottom: 1.6rem;
-  color: ${({ theme }) => theme.colors.text};
+  color: ${({ theme, color }) => get(theme.colors, color)};
   line-height: 1.5;
   font-weight: 300;
   font-size: 1.6rem;
 `;
 
-const PostShort = ({
-  post: { slug, title, description, metaImage },
-}) => {
+const PostShort = ({ slug, title, description, image }) => {
   const [hover, setHover] = useState(false);
+  const colorsCategory = hover ? 'featurePostHover' : 'featurePost';
+
   return (
     <Container
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
     >
-      <StyledImage isHovered={hover} withShadow metaImage={metaImage} slug={slug} />
+      <StyledImage isHovered={hover} withShadow metaImage={image} slug={slug} />
       <Link to={slug}>
-        <Heading lineHeight="3.2rem" as="h4" mb={2} mt={3}>
+        <Heading
+          color={`${colorsCategory}.header`}
+          lineHeight="3.2rem"
+          as="h4"
+          mb={2}
+          mt={3}
+        >
           {title}
         </Heading>
       </Link>
       <StyledDescription
+        color={`${colorsCategory}.description`}
         text={description}
         maxLine='3'
         ellipsis='...'
@@ -55,16 +63,11 @@ const PostShort = ({
 };
 
 PostShort.propTypes = {
-  post: PropTypes.shape({
-    slug: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    date: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
-    authorAvatar: PropTypes.string,
-    metaImage:PropTypes.shape({
-      fluid: PropTypes.shape().isRequired,
-    }).isRequired,
+  title: PropTypes.string.isRequired,
+  slug: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  image: PropTypes.shape({
+    fluid: PropTypes.shape().isRequired,
   }).isRequired,
 };
 

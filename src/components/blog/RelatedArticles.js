@@ -5,7 +5,8 @@ import styled from '@emotion/styled';
 import { media } from '../../utils/emotion';
 import PageSection from '../pages/PageSection';
 import Heading from '../Heading';
-import BlogListItem from '../BlogListItem';
+
+import PostShort from './PostShort';
 
 const RelatedArticlesWrapper = styled.div`
   position: relative;
@@ -51,7 +52,7 @@ const RelatedArticles = ({relatedPosts}) => {
         <RelatedArticlesHeading as="h6">Related articles:</RelatedArticlesHeading>
         <RelatedArticlesContainer>
           {relatedPosts.map(({ slug, frontmatter, excerpt }) => (
-            <BlogListItem
+            <PostShort
               key={slug}
               slug={slug}
               title={frontmatter.title}

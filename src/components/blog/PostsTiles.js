@@ -23,11 +23,23 @@ const PostsTiles = connectStateResults(({ searchResults = {}, posts, children })
   return (
     <Container>
       {firstHalf.map(post => (
-        <PostShort key={post.id} post={post} />
+        <PostShort 
+          key={post.id}
+          slug={post.slug}
+          title={post.title}
+          description={post.description}
+          image={post.metaImage}
+        />
       ))}
       {children}
       {secondHalf.map(post => (
-        <PostShort key={post.id} post={post} />
+        <PostShort
+          key={post.id}
+          slug={post.slug}
+          title={post.title}
+          description={post.description}
+          image={post.metaImage}
+        />
       ))}
     </Container>
   )
