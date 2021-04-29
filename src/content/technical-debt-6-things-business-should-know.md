@@ -5,7 +5,7 @@ description: 'Technical debt is not totally bad by definition. In fact, you coul
 author: 'Łukasz Miedziński'
 authorAvatar: ./assets/avatar_lukasz_miedzinski.jpg
 metaImage: assets/technical-debt-6-things-business-should-know/210410_MB_blog_cover_technical_debts_16_9.jpg
-isFeature: true
+isFeature: false
 ---
 
 # Technical debt - 6 things business should know about it
