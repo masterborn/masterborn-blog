@@ -211,7 +211,7 @@ const Footer = () => {
         <StyledHeading as="h3">
           {isInPoland
             ? 'Join our Team of world-class React & Node.js developers'
-            : 'We build valuable and successfull products for U.S. based startups'
+            : 'We build success with U.S. based startups'
           }
         </StyledHeading>
         <StyledButton
