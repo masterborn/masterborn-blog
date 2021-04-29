@@ -73,7 +73,7 @@ const CtaArticleComponent = ({ headings, buttonTexts, showYellowUnderline }) => 
   return (
     <Container>
       <StyledHeading as="h5" mb={0}>
-        {isInPoland ? headings[0] : headings[1]} 
+        {isInPoland ? headings[0] : headings[1]}
         {showYellowUnderline && <Underline />}
       </StyledHeading>
       <StyledButton
@@ -95,7 +95,7 @@ CtaArticleComponent.propTypes = {
 CtaArticleComponent.defaultProps = {
   headings: [
     "Let’s build disruptive JavaScript products together",
-    'Build your modern Web App with top React & Node.js Engineers',
+    'Build your modern Web App with top React & Node.js engineers',
   ],
   buttonTexts: ['Join our Team!', "Let's talk!"],
   showYellowUnderline: false,
