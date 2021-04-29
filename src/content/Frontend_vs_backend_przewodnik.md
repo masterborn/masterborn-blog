@@ -6,13 +6,7 @@ description: 'Piętnaście, dwadzieścia lat temu do polskich firm nagminnie zat
 author: 'Małgorzata Galińska'
 authorAvatar: ./assets/avatar_malgorzata_g.jpeg
 metaImage: ./assets/Frontend_vs_backend_guide/hero_image.jpg
-metaTitle: Front-end, Back-end, DevOps vs Full-stack – krótki przewodnik dla założycieli i CEO'
-metaDescription: 'Piętnaście, dwadzieścia lat temu do polskich firm nagminnie zatrudniano Informatyków, czyli speców "od wszystkiego". Pięć, dziesięć lat temu poszukiwani byli Programiści danej technologii, a słowo Informatyk stało się symbolem minionej ery (i synonimem lekkiego obciachu). Obecnie branża IT stała się bardzo złożona, a Developerzy coraz częściej specjalizują się w dość wąskich dziedzinach, przez co nazwy ich stanowisk bywają często niezrozumiałe dla managementu i biznesu.'
 ---
-
-Piętnaście, dwadzieścia lat temu do polskich firm nagminnie zatrudniano Informatyków, czyli speców "od wszystkiego". Pięć, dziesięć lat temu poszukiwani byli Programiści danej technologii, a słowo Informatyk stało się symbolem minionej ery (i synonimem lekkiego obciachu). Obecnie branża IT stała się bardzo złożona, a Developerzy coraz częściej specjalizują się w dość wąskich dziedzinach, przez co nazwy ich stanowisk bywają często niezrozumiałe dla managementu i biznesu.
-
-![developer_hero_image](./assets/Frontend_vs_backend_guide/hero_image.jpg)
 
 Wśród najczęściej spotykanych stanowisk warto wymienić Programistów:
 

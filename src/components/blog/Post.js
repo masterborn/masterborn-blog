@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import styled from '@emotion/styled';
 import { MDXProvider } from '@mdx-js/react';
+import Image from 'gatsby-image';
+import get from 'lodash/get';
 
 import { media } from '../../utils/emotion';
 import Heading from '../Heading';
@@ -27,7 +29,7 @@ const Wrapper = styled('div')`
 const PostHeader = styled('div')`
   margin-bottom: 2.5rem;
   ${media.desktop`
-    margin-bottom: 5.5rem;
+    margin-bottom: 3.5rem;
   `}
 `;
 
@@ -78,6 +80,19 @@ const PostHeading = styled(Heading)`
   `}
 `
 
+const PostDescription = styled(Heading)`
+  width: 100%;
+  ${media.desktop`
+    max-width: 80%;
+  `}
+`
+
+const PostHeroImage = styled(Image)`
+  border-radius: 4px;
+  margin-bottom: 4rem;
+  box-shadow: 0 35px 30px -37px rgba(0,0,0,0.2);
+`
+
 const Post = ({
   filePath,
   title,
@@ -89,6 +104,7 @@ const Post = ({
   timeToRead,
   description,
   relatedPosts,
+  metaImage,
 }) => {
   const localeDate = new Intl.DateTimeFormat('en-US', {
     day: 'numeric',
@@ -96,6 +112,7 @@ const Post = ({
     month: 'short',
   }).format(new Date(date))
   const {isInPoland} = useContext(CountryContext);
+  const metaImageSrc = get(metaImage, 'childImageSharp.fluid', null);
 
   return (
     <Wrapper>
@@ -109,11 +126,12 @@ const Post = ({
               <PostHeading lineHeight="4.8rem" as="h1" mb={3}>
                 {title}
               </PostHeading>
-              <Heading color="header.color" lineHeight="2.6rem" as="h5" mb={3} mt={1} opacity={0.9}>
+              <PostDescription color="header.color" lineHeight="2.6rem" as="h5" mb={3} mt={1} opacity={0.9}>
                 {description}
-              </Heading>
+              </PostDescription>
               <AuthorBox image={authorAvatar} name={author} date={localeDate} timeToRead={timeToRead} />
             </PostHeader>
+            <PostHeroImage fluid={metaImageSrc} alt={title} />
             <MDXProvider components={mdxComponents}>
               <MDXRenderer>{body}</MDXRenderer>
             </MDXProvider>
@@ -142,6 +160,7 @@ Post.propTypes = {
   filePath: PropTypes.string.isRequired,
   timeToRead: PropTypes.number.isRequired,
   description: PropTypes.string.isRequired,
+  metaImage: PropTypes.string.isRequired,
   relatedPosts: PropTypes.arrayOf(PropTypes.shape({})),
   tableOfContents: PropTypes.shape({
     items: PropTypes.arrayOf(PropTypes.shape({})),

@@ -29,8 +29,6 @@ export default function BlogTemplate(props) {
 
   const {
     frontmatter: {
-      metaTitle,
-      metaDescription,
       description,
       metaImage,
       date,
@@ -52,14 +50,15 @@ export default function BlogTemplate(props) {
   return (
     <PageLayout location={location} themeName="blog">
       <SEO
-        title={metaTitle || title}
-        description={metaDescription || description}
+        title={title}
+        description={description}
         image={metaImageSrc}
         slug={slug}
       />
       <Wrapper>
         <Content>
           <Post
+            metaImage={metaImage}
             body={body}
             title={title}
             authorAvatar={imageAvatar}
@@ -90,11 +89,16 @@ BlogTemplate.propTypes = {
         relativePath: PropTypes.string,
       }),
       frontmatter: PropTypes.shape({
-        metaTitle: PropTypes.string,
-        metaDescription: PropTypes.string,
         description: PropTypes.string,
         date: PropTypes.string,
         author: PropTypes.string,
+        metaImage: PropTypes.shape({
+          childImageSharp: PropTypes.shape({
+            fluid: PropTypes.shape({
+              src: PropTypes.string,
+            }),
+          }),
+        }),
         authorAvatar: PropTypes.shape({
           childImageSharp: PropTypes.shape({
             fixed: PropTypes.shape({
