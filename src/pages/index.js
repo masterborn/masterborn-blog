@@ -12,18 +12,18 @@ import SEO from '../components/SEO';
 import Search from '../components/Search';
 import BlogPostsContent from '../components/blog/BlogPostsContent';
 
-
 const Wrapper = styled('div')`
   margin-top: 12rem;
 `;
 
 const BlogFeatureArticleContent = styled(BlogContent)`
-  padding-bottom: 6.5rem;
+  padding-bottom: 0;
   padding-top: 0;
   ${media.desktop`
     padding-top: 5rem;
     width: 129rem;
     max-width: 129rem;
+    adding-bottom: 6.5rem;
   `}
 `;
 const SearchContainer = styled(BlogContent)`
@@ -38,10 +38,6 @@ const SearchContainer = styled(BlogContent)`
     max-width: 118rem;
   `}
 `
-
-
-
-
 
 const Index = () => {
   const { searchClient, setQuery, indexName } = useAlgoliaSearch();
@@ -62,9 +58,9 @@ const Index = () => {
           title="MasterBorn | Blog"
           description="Let's start the journey of creating your software with Premium Professionals."
         />
-        <SearchContainer>
-          {/* <Search /> */}
-        </SearchContainer>
+        {/* <SearchContainer> */}
+        {/* <Search /> */}
+        {/* </SearchContainer> */}
         {offset === 0 && (
           <BlogFeatureArticleContent>
             {featurePosts.map(featurePost => (
@@ -72,10 +68,10 @@ const Index = () => {
           ))}
           </BlogFeatureArticleContent>
         )}
-        <BlogPostsContent 
-          postsPerPage={postsPerPage} 
-          offset={offset} 
-          setOffset={setOffset} 
+        <BlogPostsContent
+          postsPerPage={postsPerPage}
+          offset={offset}
+          setOffset={setOffset}
           posts={restPosts}
         />
       </Wrapper>
