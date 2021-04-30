@@ -8,14 +8,25 @@ import Heading from '../Heading';
 import ReadMoreLink from '../ReadMoreLink';
 import HoveredImageLink from '../HoveredImageLink';
 import Link from '../Link';
+import { media } from '../../utils/emotion';
 
 const Container = styled.div`
-  margin-bottom: ${props => props.theme.space.large};
-  width: 37rem;
+  margin-bottom: ${props => props.theme.space.small};
+  flex-direction: column;
+  display: flex;
+  ${media.desktop`
+    margin-bottom: ${props => props.theme.space.large};
+    width: 37rem;
+  `}
 `;
 
 const StyledImage = styled(HoveredImageLink)`
-  width: 37rem;
+  ${media.desktop`
+    order: 1;
+    width: 37rem;
+  `}
+  order: 2;
+  margin: 2rem 0;
   height: 20rem;
 `;
 
@@ -26,7 +37,24 @@ const StyledDescription = styled(LinesEllipsis)`
   line-height: 1.5;
   font-weight: 300;
   font-size: 1.6rem;
+  order: 3;
+  ${media.desktop`
+    width: 37rem;
+    order: 3;
+  `}
 `;
+
+const StyledReadMoreLink = styled(ReadMoreLink)`
+  order: 4;
+`
+
+const StyledHeader = styled(Link)`
+  order: 1;
+  ${media.desktop`
+    width: 37rem;
+    order: 2;
+  `}
+`
 
 const PostShort = ({ slug, title, description, image }) => {
   const [hover, setHover] = useState(false);
@@ -38,7 +66,7 @@ const PostShort = ({ slug, title, description, image }) => {
       onMouseLeave={() => setHover(false)}
     >
       <StyledImage isHovered={hover} withShadow metaImage={image} slug={slug} />
-      <Link to={slug}>
+      <StyledHeader to={slug}>
         <Heading
           color={`${colorsCategory}.header`}
           lineHeight="3.2rem"
@@ -48,7 +76,7 @@ const PostShort = ({ slug, title, description, image }) => {
         >
           {title}
         </Heading>
-      </Link>
+      </StyledHeader>
       <StyledDescription
         color={`${colorsCategory}.description`}
         text={description}
@@ -57,7 +85,7 @@ const PostShort = ({ slug, title, description, image }) => {
         trimRight
         basedOn='words'
       />
-      <ReadMoreLink slug={slug} />
+      <StyledReadMoreLink slug={slug} />
     </Container>
   );
 };

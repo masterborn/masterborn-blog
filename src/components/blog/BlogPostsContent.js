@@ -23,10 +23,10 @@ const Container = styled(BlogContent)`
     display: grid;
     grid-auto-flow: column;
     width: max-content;
-    margin: auto;
+    margin: 4rem auto 0;
     opacity: 0.9;
     font-family: sans-serif;
-    margin-bottom: 9rem;
+    margin-bottom: 8rem;
     li {
       width: 3rem;
       cursor: pointer;
@@ -50,8 +50,11 @@ const CtaContainer = styled.div`
   margin-top: 5rem;
   margin-bottom: 5rem;
   display: grid;
-  grid-template-columns: 600pt;
   justify-content: center;
+  ${media.desktop`
+    grid-template-columns: 600pt;
+  `}
+
 `;
 
 const BlogPostsContent = ({postsPerPage, offset, posts, setOffset })=> {

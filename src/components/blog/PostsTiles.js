@@ -3,13 +3,17 @@ import styled from '@emotion/styled';
 import { connectStateResults } from "react-instantsearch-dom";
 import chunk from 'lodash/chunk';
 
+import { media } from '../../utils/emotion';
+
 import PostShort from './PostShort';
 
 const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: start;
-  gap: 0px 35px;
+  ${media.desktop`
+    gap: 0px 35px;
+  `}
 `;
 
 const PostsTiles = connectStateResults(({ searchResults = {}, posts, children }) => {
@@ -23,7 +27,7 @@ const PostsTiles = connectStateResults(({ searchResults = {}, posts, children })
   return (
     <Container>
       {firstHalf.map(post => (
-        <PostShort 
+        <PostShort
           key={post.id}
           slug={post.slug}
           title={post.title}

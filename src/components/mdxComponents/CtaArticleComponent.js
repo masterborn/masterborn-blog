@@ -37,20 +37,26 @@ const Underline = styled.div`
   height: 0.2rem;
   position: absolute;
   background: ${props => props.theme.colors.primary};
-  bottom: -2.5rem;
+  bottom: -1.5rem;
+  ${media.desktop`
+    bottom: -2.5rem;
+  `}
 `;
 
 const StyledHeading = styled(Heading)`
   letter-spacing: 0;
   line-height: 26px;
-  font-size: 2.2rem;
   align-self: center;
   position: relative;
+  font-size: 1.7rem;
+  ${media.desktop`
+    font-size: 2.2rem;
+  `}
 `
 
 const StyledButton = styled(Button)`
   padding: 0.6rem 3.5rem;
-  margin: 3rem 0;
+  margin: 5rem 0 0;
   ${media.desktop`
    margin: 1.2rem auto;
   `}
@@ -73,7 +79,7 @@ const CtaArticleComponent = ({ headings, buttonTexts, showYellowUnderline }) => 
   return (
     <Container>
       <StyledHeading as="h5" mb={0}>
-        {isInPoland ? headings[0] : headings[1]} 
+        {isInPoland ? headings[0] : headings[1]}
         {showYellowUnderline && <Underline />}
       </StyledHeading>
       <StyledButton

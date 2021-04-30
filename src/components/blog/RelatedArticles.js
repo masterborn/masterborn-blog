@@ -43,11 +43,15 @@ const RelatedArticlesContainer = styled.div`
 
 const StyledPageSection = styled(PageSection)`
   padding: 0 3rem;
+  margin-bottom: 3rem;
+  ${media.desktop`
+    margin-bottom: 10rem;
+  `}
 `
 
 const RelatedArticles = ({relatedPosts}) => {
   return (
-    <StyledPageSection marginBottom="10rem">
+    <StyledPageSection>
       <RelatedArticlesWrapper>
         <RelatedArticlesHeading as="h6">Related articles:</RelatedArticlesHeading>
         <RelatedArticlesContainer>
