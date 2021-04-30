@@ -48,7 +48,7 @@ const StickyMenuWrapper = styled(HeaderWrapper)`
   `}
 `;
 
-const PageLayout = ({ children, themeName, location }) => {
+const PageLayout = ({ children, themeName, location, footerCta }) => {
 
   const { setCountry } = useContext(CountryContext);
   const { url, countryCode } = config.custom.localization;
@@ -76,7 +76,10 @@ const PageLayout = ({ children, themeName, location }) => {
               </Content>
             </StickyMenuWrapper>
             {children}
-            <Footer />
+            <Footer 
+              headings={footerCta.headings}
+              buttonTexts={footerCta.buttonTexts}
+            />
           </PageWrapper>
         </LocationContextProvider>
       </ModalContextProvider>
@@ -91,6 +94,10 @@ PageLayout.propTypes = {
   ]).isRequired,
   location: PropTypes.shape({}).isRequired,
   themeName: PropTypes.string,
+  footerCta: PropTypes.shape({
+    headings: PropTypes.arrayOf(PropTypes.string).isRequired,
+    buttonTexts: PropTypes.arrayOf(PropTypes.string).isRequired,
+  }).isRequired,
 };
 
 PageLayout.defaultProps = {

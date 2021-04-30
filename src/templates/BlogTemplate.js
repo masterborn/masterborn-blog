@@ -47,8 +47,15 @@ export default function BlogTemplate(props) {
     : defaultAvatar;
 
   const metaImageSrc = get(metaImage, 'childImageSharp.fluid.src', null);
+  const footerCta = {
+    headings:[
+      'Join our Team of world-class React & Node.js developers',
+      'We build valuable and successful products for U.S. based startups',
+  ],
+    buttonTexts:['See open positions!', 'Hire us!'],
+  };
   return (
-    <PageLayout location={location} themeName="blog">
+    <PageLayout location={location} themeName="blog" footerCta={footerCta}>
       <SEO
         title={title}
         description={description}
