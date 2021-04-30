@@ -1,5 +1,6 @@
 import React, {useContext} from 'react';
 import styled from '@emotion/styled';
+import PropTypes from 'prop-types';
 
 import ClutchLogo from '../assets/footer/clutch-co-logo.png';
 import GoogleReviewsLogo from '../assets/footer/google-reviews-logo.png';
@@ -192,7 +193,7 @@ const StyledButton = styled(Button)`
   padding: 0.9rem 8.5rem;
 `
 
-const Footer = () => {
+const Footer = ({ headings, buttonTexts }) => {
   const { isInPoland } = useContext(CountryContext);
   const [, showContactModal, hideContactModal] = useModal(ContactModal, { onSubmitContactForm });
 
@@ -209,16 +210,13 @@ const Footer = () => {
     <>
       <FooterCta>
         <StyledHeading as="h3">
-          {isInPoland
-            ? 'Join our Team of world-class React & Node.js developers'
-            : 'We build success with U.S. based startups'
-          }
+          {isInPoland ? headings[0] : headings[1]}
         </StyledHeading>
         <StyledButton
           variant="cta"
           size="cta"
           onClick={contactButtonAction}
-        >{isInPoland ? 'See open positions!' : 'Hire us!'}
+        >{isInPoland ? buttonTexts[0] : buttonTexts[1]}
         </StyledButton>
       </FooterCta>
       <PageSection marginBottom="5rem">
@@ -307,5 +305,18 @@ const Footer = () => {
     </>
   );
 };
+
+Footer.propTypes = {
+  headings: PropTypes.arrayOf(PropTypes.string),
+  buttonTexts: PropTypes.arrayOf(PropTypes.string),
+};
+
+Footer.defaultProps = {
+  headings: [
+    'We build valuable, JavaScript products for U.S. based companies',
+    'Build your next innovative JavaScript product with us',
+  ],
+  buttonTexts: ['Join us!', 'Let\'s talk!'],
+}
 
 export default Footer;

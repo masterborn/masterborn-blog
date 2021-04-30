@@ -19,8 +19,15 @@ const Content = styled.div`
 `;
 
 const PageTemplate = ({ children, location }) => {
+  const footerCta = {
+    headings:[
+      'We build valuable, JavaScript products for U.S. based companies',
+      'Build your next innovative JavaScript product with us',
+    ],
+    buttonTexts:['Join us!','Let\'s talk!'],
+  };
   return (
-    <PageLayout location={location}>
+    <PageLayout location={location} footerCta={footerCta}>
       <Wrapper>
         <Content>{children}</Content>
       </Wrapper>

@@ -95,7 +95,7 @@ CtaArticleComponent.propTypes = {
 CtaArticleComponent.defaultProps = {
   headings: [
     "Let’s build disruptive JavaScript products together",
-    'Build your modern Web App with top React & Node.js Engineers',
+    'Build your modern Web App with top React & Node.js engineers',
   ],
   buttonTexts: ['Join our Team!', "Let's talk!"],
   showYellowUnderline: false,

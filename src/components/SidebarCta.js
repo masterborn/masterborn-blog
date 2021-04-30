@@ -51,7 +51,7 @@ const SidebarCta = ({ isInPoland }) => {
   return (
     <Container>
       <StyledHeading as="h5">
-        {isInPoland ? 'World-class React & Node.js experts' : 'We build valuable products'}
+        {isInPoland ? 'World-class React & Node.js experts' : 'We build success with U.S. based startups'}
       </StyledHeading>
       <StyledBorder />
       <Button
