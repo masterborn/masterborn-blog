@@ -11,13 +11,7 @@ const query = `{
           author
           metaImage {
             childImageSharp {
-              fluid {
-                base64
-                aspectRatio
-                src
-                srcSet
-                sizes
-              }
+              gatsbyImageData(layout: FULL_WIDTH placeholder: BLURRED)
             }
           }
         }

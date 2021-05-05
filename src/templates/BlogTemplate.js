@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import get from 'lodash/get';
+import { getSrc } from "gatsby-plugin-image"
 
 import SEO from '../components/SEO';
 import PageLayout from '../layouts/PageLayout';
@@ -42,11 +43,10 @@ export default function BlogTemplate(props) {
     timeToRead,
   } = mdx;
 
-  const imageAvatar = authorAvatar
-    ? authorAvatar.childImageSharp.fixed.src
-    : defaultAvatar;
+  const imageAvatar = authorAvatar ? getSrc(authorAvatar) : defaultAvatar;
+  const metaImageSrc = getSrc(metaImage);
+  const heroImage = get(metaImage, 'childImageSharp.gatsbyImageData', null);
 
-  const metaImageSrc = get(metaImage, 'childImageSharp.fluid.src', null);
   const footerCta = {
     headings:[
       'Join our Team of world-class React & Node.js developers',
@@ -65,7 +65,7 @@ export default function BlogTemplate(props) {
       <Wrapper>
         <Content>
           <Post
-            metaImage={metaImage}
+            metaImage={heroImage}
             body={body}
             title={title}
             authorAvatar={imageAvatar}
@@ -173,18 +173,14 @@ export const pageQuery = graphql`
         description
         metaImage {
           childImageSharp {
-            fluid(fit: COVER, cropFocus: CENTER, maxHeight: 314, maxWidth: 600, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
+            gatsbyImageData(layout: FULL_WIDTH placeholder: BLURRED)
           }
         }
         date
         author
         authorAvatar {
           childImageSharp {
-            fixed {
-              ...GatsbyImageSharpFixed
-            }
+            gatsbyImageData(layout: FIXED)
           }
         }
       }
@@ -202,9 +198,7 @@ export const pageQuery = graphql`
           description
           metaImage {
             childImageSharp {
-              fluid(cropFocus: CENTER, fit: COVER, maxHeight: 221, maxWidth: 368, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
+              gatsbyImageData(layout: FULL_WIDTH placeholder: BLURRED)
             }
           }
         }

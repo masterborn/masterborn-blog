@@ -5,9 +5,7 @@ const useDefaultOgImage = () => {
     query {
       fileName: file(relativePath: { eq: "default-og-image.jpg" }) {
         childImageSharp {
-          fixed(width: 1200) {
-            src
-          }
+          gatsbyImageData(layout: FIXED)
         }
       }
     }

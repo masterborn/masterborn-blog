@@ -23,16 +23,12 @@ const useAllBlogPosts = () => {
               isFeature
               metaImage {
                 childImageSharp {
-                  fluid {
-                    ...GatsbyImageSharpFluid
-                  }
+                  gatsbyImageData(layout: FULL_WIDTH placeholder: BLURRED)
                 }
               }
               authorAvatar {
                 childImageSharp {
-                  fixed {
-                    ...GatsbyImageSharpFixed
-                  }
+                  gatsbyImageData(layout: FIXED)
                 }
               }
             }

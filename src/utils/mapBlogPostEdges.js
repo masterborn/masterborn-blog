@@ -15,7 +15,7 @@ const mapBlogPostEdges = postsEdges => {
       ? node.frontmatter.metaImage.childImageSharp
       : {},
     authorAvatar: node.frontmatter.authorAvatar
-      ? node.frontmatter.authorAvatar.childImageSharp.fixed.src
+      ? node.frontmatter.authorAvatar.childImageSharp
       : defaultAvatar,
   }));
 };
