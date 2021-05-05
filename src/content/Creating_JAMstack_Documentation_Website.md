@@ -5,7 +5,7 @@ description: 'In this article, we will guide you how you can take a use of open 
 metaTitle: 'Creating JAMstack website with dynamic generated content from remote markdown files'
 metaDescription: 'In this article, we will guide you how you can take a use of open source ockam-webiste repository, and create Gatsby JAMstack website with Terraform, Azure Cloud and Azure Pipelines'
 author: 'Piotr Sobieszczański & Łukasz Miedziński'
-authorAvatar: ./assets/default_avatar.png
+authorAvatar: ./assets/avatar_lukasz_miedzinski.jpg
 ---​
 
 ## What is all about?
