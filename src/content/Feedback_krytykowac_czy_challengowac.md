@@ -3,13 +3,13 @@ title: 'Feedback- krytykować czy challengować'
 date: 2020-05-20
 description: 'W ostatnim  czasie dużo można zauważyć artykułów, opinii, podcastów na temat prawdziwości i skuteczności informacji zwrotnej. Pada wiele pytań po co feedback, jaki on powinien być, w czym on nam tak naprawdę pomoże'
 author: 'Adrianna Wojewoda'
-authorAvatar: ./assets/default_avatar.png
+authorAvatar: ./assets/avatar_ada.jpg
 isFeature: false
 ---
 
 W ostatnim czasie dużo można zauważyć artykułów, opinii, podcastów na temat prawdziwości i skuteczności informacji zwrotnej. Pada wiele pytań po co feedback, jaki on powinien być, w czym on nam tak naprawdę pomoże. Odpowiedzi do tej pory były proste, feedback powinien być taki aby pokazał pracownikowi co źle robi, co powinien poprawić, na co zwrócić uwagę, a w skrócie podsumować jego pracę. Nie jest to jednak odpowiednie podejście do rozumienia kultury dawania informacji zwrotnej. Musimy zacząć od kilku bardzo ważnych zasadach udzielania feedbacku, które pomogą nam odpowiednio do niego się przygotować.
 
-## Feedback- jak powinien wyglądać
+## Feedback - jak powinien wyglądać
 
 Dobry feedback powinien być oparty na kilku bardzo ważnych zasadach aby był trafny i wywołał porządany efekt. Zaczynamy od rzeczy która w informacji zwrotnej jest najistotniejsza żeby dobrze zacząć, oceniamy przede wszystkim zachowanie danej osoby, nie oceniamy jej postawy oraz charakteru. Skupiamy się tylko i wyłącznie na analizie konkretnych zachowań w konkretnych sytuacjach, pamiętając przy tym o pokazaniu najlepszych obszarów do rozwoju. Nawet jeśli jest to negatywna informacja zwrotna, należy wypracować z osobą najlepsze rozwiązanie na przyszłość, czyli powrócić do podobnej sytuacji w przeszłości i wyciągnąć z niej najlepsze praktyki które pomogły w rozwiązaniu problemu, i powielać taką postawę na przyszłość. Tym samym podkreślaj doskonałość pracownika, utwierdzaj go w przekonaniu że zrobił coś bardzo dobrze z czego jesteśmy zadowoleni i że takie wzorce są mile widziane, tylko wtedy ponownie aktywujemy proces uczenia się prawidłowych zachowań.
 
