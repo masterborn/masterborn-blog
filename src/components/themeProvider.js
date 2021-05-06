@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ThemeProvider as EmotionThemeProvider } from 'emotion-theming';
+import { ThemeProvider as EmotionThemeProvider } from '@emotion/react';
 import PropTypes from 'prop-types';
 
 import defaultTheme from '../theme/defaultTheme';

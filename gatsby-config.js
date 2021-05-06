@@ -52,7 +52,6 @@ const plugins = [
       extensions: ['.mdx', '.md'],
     },
   },
-  'gatsby-plugin-emotion',
   'gatsby-plugin-remove-trailing-slashes',
   'gatsby-plugin-react-helmet',
   {
@@ -90,7 +89,7 @@ const plugins = [
     resolve: `gatsby-plugin-emotion`,
     options: {
       sourceMap: true,
-      autoLabel: process.env.NODE_ENV !== 'production',
+      autoLabel: "dev-only",
       labelFormat: '[local]',
       cssPropOptimization: true,
     },
