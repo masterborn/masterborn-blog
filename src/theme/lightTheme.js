@@ -7,8 +7,8 @@ const colors = {
   background: '#fff',
   accentBackground: '#E6ECF1',
   icon: '#9DAAB6',
-  heading: '#242A31',
-  text: '#3C454E',
+  heading: '#131313',
+  text: '#616161',
   menuText: '#7A8895',
   menuTextActive: '#242A31',
   code: '#3C454E',
@@ -17,6 +17,7 @@ const colors = {
   accent: '#EC432D',
   accentHover: '#FF2D11',
   accentActive: '#BF3B2C',
+  alizarinCrimson: '#E61C1C',
   secondary: '#e9f7fc',
   caption: '#7A8895',
   white: '#fff',
@@ -31,6 +32,21 @@ const colors = {
   dropdownMenuItemHover: '#F5F7F9',
   dropdownMenuBorder: '#E6ECF1',
   dropdownMenuShadow: 'rgba(116,129,141,0.1)',
+  pagination: {
+    active: '#9F9F9F',
+    disabled: '#9F9F9F',
+    available: '#3F3F3F',
+  },
+  featurePost: {
+    header: '#131313',
+    description:'#616161',
+    readMore:'#101010',
+  },
+  featurePostHover: {
+    header: '#4B4A4A',
+    description:'#8D8D8D',
+    readMore: '#101010',
+  },
   button: {
     primaryShadow: 'rgba(255,204,2,0.4)',
     primaryOutlineHover: '#e2b500',
@@ -57,6 +73,8 @@ const colors = {
   },
   tableOfContent: {
     separatorBorder: '#E6ECF1',
+    itemColorActive: '#222222',
+    itemColor: '#747373',
   },
   mobileMenuItemDivider: '#E6ECF1',
   githubStarButton: {
@@ -67,6 +85,38 @@ const colors = {
     defaultBorder: '#D4DDE5',
     defaultBackground: '#F5F7F9',
   },
+  header: {
+    headerBorderColor: '#F0F0F0',
+    color: '#222222',
+    burgerMenuIcon: '#3F3F3F',
+  },
+  contactButton: {
+    borderColor: '#F7CA18',
+  },
+  authorHeader: {
+    author: '#131313',
+    authorDate: '#6B6B6B',
+  },
+  footer: {
+    header: '#9F9C9C',
+    officeHeader: '#3F3F3F',
+    officeText: '#222222',
+    reviewScore: '#9F9F9F',
+    border: '#F0F0F0',
+    copyright: '#A2A2A2',
+    rodo: '#F7F7F7',
+    ctaBackground: '#F9F9F9',
+  },
+  ctaArticle: {
+    background: '#FAFAFA',
+  },
+  relatedArticles: {
+    border: '#979797',
+    link: '#101010',
+  },
+  input: {
+    border: '#9F9F9F',
+  },
 };
 
 /* eslint-disable prefer-destructuring */
@@ -74,8 +124,6 @@ const fontSizes = Object.assign(
   [...defaultTheme.fontSizes],
   defaultTheme.fontSizes
 );
-fontSizes.body = fontSizes[2];
-/* eslint-enable prefer-destructuring */
 
 const lightTheme = {
   ...defaultTheme,

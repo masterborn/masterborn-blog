@@ -12,6 +12,7 @@ import useSiteMetadata from '../hooks/useSiteMetadata';
 const getSrcFromGraphqlImage = image =>
   image && image.childImageSharp && image.childImageSharp.fixed.src;
 
+// eslint-disable-next-line complexity
 const SEO = ({ title, description, image, slug }) => {
   const defaultOgImage = useDefaultOgImage();
   const {

@@ -3,8 +3,10 @@ require('dotenv').config();
 const remarkSlug = require('remark-slug');
 
 const config = require('./config');
+const getAlgoliaQueries = require('./scripts/get-algolia-queries');
 
 const plugins = [
+  'gatsby-plugin-styled-components',
   'gatsby-plugin-sitemap',
   'gatsby-plugin-sharp',
   'gatsby-transformer-sharp',
@@ -18,7 +20,15 @@ const plugins = [
   {
     resolve: `gatsby-transformer-remark`,
     options: {
-      plugins: [`gatsby-remark-images`],
+      plugins: [
+        `gatsby-remark-images`,
+        {
+          resolve: "gatsby-remark-related-posts",
+          options: {
+            posts_dir: `${__dirname}/${config.general.markdownPath}`,
+          },
+        },
+      ],
     },
   },
   {
@@ -85,20 +95,21 @@ const plugins = [
     },
   },
   {
-    resolve: `gatsby-plugin-google-fonts`,
+    resolve: 'gatsby-plugin-web-font-loader',
     options: {
-      fonts: [
-        `IBM Plex Sans\:300`,
-        `IBM Plex Sans\:400i`,
-        `IBM Plex Sans\:400`,
-        `IBM Plex Sans\:500`,
-        `IBM Plex Sans\:600`,
-        `IBM Plex Sans\:700`,
-        `IBM Plex Mono\:300`,
-        `IBM Plex Mono\:400`,
-        `IBM Plex Mono\:500`,
-      ],
-      display: 'swap',
+      custom: {
+        families: ['Inter'],
+        urls: ['/fonts.css'],
+      },
+    },
+  },
+  {
+    resolve: `gatsby-plugin-algolia`,
+    options: {
+      appId: config.algolia.appId,
+      apiKey: config.algolia.adminKey,
+      indexName: config.algolia.indexName,
+      queries: getAlgoliaQueries(),
     },
   },
 ];

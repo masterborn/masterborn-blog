@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="11px" viewBox="0 0 14 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="offer" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="single_offer---desktop" transform="translate(-134.000000, -961.000000)">
+            <g id="Group-19" transform="translate(126.000000, 673.000000)">
+                <g id="Group-15" transform="translate(0.000000, 225.000000)">
+                    <g id="Group-4" transform="translate(0.000000, 52.979167)">
+                        <g id="Group-3">
+                            <g id="icons/tick" transform="translate(6.000000, 6.000000)">
+                                <g id="baseline-done-24px">
+                                    <polygon id="Path" points="0 0 18 0 18 18 0 18"></polygon>
+                                    <polygon id="Path" fill="#F7CA18" fill-rule="nonzero" points="6.75 12.15 3.6 9 2.55 10.05 6.75 14.25 15.75 5.25 14.7 4.2"></polygon>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

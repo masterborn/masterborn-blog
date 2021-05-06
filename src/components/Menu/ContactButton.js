@@ -1,32 +1,43 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from '@emotion/styled';
 
+import { media } from '../../utils/emotion';
 import Button from '../Button';
 import Link from '../Link';
 
-const ContactButton = ({ isCollapsedHeader, onClick, href }) => {
+const StyledContactButton = styled(Button)`
+  margin-left: 0;
+  padding: .7rem 5rem;
+  border: 1px solid ${props => props.theme.colors.contactButton.borderColor};
+  ${media.desktop`
+    margin-left: 5rem;
+  `}
+
+`
+
+const ContactButton = ({ isCollapsedHeader, children, onClick, href, ...rest }) => {
   return (
-    <Button
-      variant="primary"
-      outline="primary"
-      size={isCollapsedHeader ? 'small' : 'default'}
+    <StyledContactButton
+      {...rest}
       as={Link}
       href={href}
-      ml={{
-        _: 0,
-        lg: 3,
-      }}
+      variant="cta"
+      size="cta"
       onClick={onClick}
     >
-      Contact us
-    </Button>
+      {children}
+    </StyledContactButton>
   );
 };
 
 ContactButton.propTypes = {
   isCollapsedHeader: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
-  href: PropTypes.string.isRequired,
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node),
+  ]).isRequired,
 };
 
 ContactButton.defaultProps = {

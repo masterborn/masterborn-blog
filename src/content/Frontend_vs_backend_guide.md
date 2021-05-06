@@ -5,13 +5,10 @@ description: 'The market demand for developers is growing. Plenty of companies a
 author: 'Małgorzata Galińska'
 authorAvatar: ./assets/avatar_malgorzata_g.jpeg
 metaImage: ./assets/Frontend_vs_backend_guide/hero_image.jpg
-metaTitle: 'Front-end, Back-end, DevOps vs Full-stack: A Developers’ Guide for Founders and CEOs'
-metaDescription: 'The market demand for developers is growing. Plenty of companies are looking to hire a new developer for a project or their team. At the same time, the technology industry is becoming increasingly complex and developers are getting specialized in many disparate areas.'
 isFeature: false
 ---
 
 The market demand for developers is growing. Plenty of companies are looking to hire a new developer for a project or their team. At the same time, the technology industry is becoming increasingly complex and developers are getting specialized in many disparate areas.
-![developer_hero_image](./assets/Frontend_vs_backend_guide/hero_image.jpg)
 
 Choosing the right people for your company is not an easy task and might be slightly confusing. As a CEO assembling a team of IT specialists for your project, there are four basic roles you should definitely be aware of when discussing a project:
 

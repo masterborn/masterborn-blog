@@ -5,15 +5,8 @@ description: 'We all love to use tech products like messaging apps, email apps, 
 author: 'Małgorzata Galińska'
 authorAvatar: ./assets/avatar_malgorzata_g.jpeg
 metaImage: ./assets/Top_privacy_apps/hero_image_top_privacy_app.jpg
-metaTitle: 'Signal, DuckDuckGo, Brave and other TOP privacy apps for 2021'
-metaDescription: 'We all love to use tech products like messaging apps, email apps, and search engines. But this comfort comes at a price. Tech giants like Facebook and Google, which own the most popular communication tools in the world, are in the business of user data. Scandals like Cambridge Analytica made that painfully clear.'
 isFeature: false
 ---
-
-
-![hero_top_privacy_app](./assets/Top_privacy_apps/hero_image_top_privacy_app.jpg)
-
-We all love to use tech products like messaging apps, email apps, and search engines. **But this comfort comes at a price.** Tech giants like Facebook and Google, which own the most popular communication tools in the world, are in the business of user data. Scandals like Cambridge Analytica made that painfully clear.
 
 **WhatsApp recently asked users to agree to updated terms of service, triggering a massive exodus to alternative apps like Signal or Telegram.** Take a look at the Google Play and Apple App stores: Signal saw [7.5 million downloads](https://www.businessinsider.com/whatsapp-facebook-data-signal-download-telegram-encrypted-messaging-2021-1?r=DE&IR=T) that week - a 4,200% increase on the previous week - and Telegram got 9 million downloads, a 91% increase.
 

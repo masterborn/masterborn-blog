@@ -4,13 +4,9 @@ date: 2020-12-22
 description: 'I know it’s a bold statement, but I don’t believe every company needs a CTO in the very beginning.'
 author: 'Gray Skinner'
 authorAvatar: ./assets/avatar_gray_skinner.jpeg
-metaImage: ./assets/Why_your_startup_doesnt_need_a_CTO/lead_article_photo.jpeg
-metaTitle: 'Why your startup doesn’t need a CTO'
-metaDescription: 'I know it’s a bold statement, but I don’t believe every company needs a CTO in the very beginning.'
+metaImage: ./assets/Why_your_startup_doesnt_need_a_CTO/lead_article_photo.jpg
 isFeature: false
 ---
-
-![developer_hero_image](./assets/Why_your_startup_doesnt_need_a_CTO/lead_article_photo.jpeg)
 
 The title might sound like heresy, but bear with me. What I really mean is, that it’s important to be aware of the stage your company is in and how well the CTO role fits your current needs.
 

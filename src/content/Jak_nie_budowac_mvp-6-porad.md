@@ -5,16 +5,8 @@ description: 'W MasterBorn ulepszanie procesu tworzenia oprogramowania stało si
 author: 'Gray Skinner'
 authorAvatar: ./assets/avatar_gray_skinner.jpeg
 metaImage: ./assets/How_not_to_build_a_mvp/elevator_image.jpg
-metaTitle: 'Jak NIE budować MVP - 6 porad dla CEO i Founderów'
-metaDescription: 'W MasterBorn ulepszanie procesu tworzenia oprogramowania stało się naszą firmową “obsesją”. W przypadku większości firm i zespołów proces ten zaczyna się od utworzenia i zdefiniowania MVP. W tym artykule chciałbym się podzielić spostrzeżeniami i najlepszymi praktykami, których nauczyliśmy się tworząc MVP dla naszych amerykańskich Klientów.'
 isFeature: false
 ---
-
-W MasterBorn ulepszanie procesu tworzenia oprogramowania stało się naszą firmową “obsesją”. W przypadku większości firm i zespołów proces ten zaczyna się od utworzenia i zdefiniowania MVP. W tym artykule chciałbym się podzielić spostrzeżeniami i najlepszymi praktykami, których nauczyliśmy się tworząc MVP dla naszych amerykańskich Klientów.
-
-![elevator_heading_image](assets/How_not_to_build_a_mvp/elevator_image.jpg)
-
-<br/>
 
 ## 1. Zakres oparty na ego: tworzenie produktu, który jest bardziej dla Ciebie niż dla klientów
 

@@ -12,22 +12,26 @@ import MobileMenu from '../Menu/MobileMenu';
 import Icon from '../Icon';
 import Logo from '../Logo';
 
-import Container from './HeaderContainer';
+import HeaderContainer from './HeaderContainer';
 
 const StyledLink = styled.a`
-  margin-left: auto;
+  margin-left: initial;
   margin-right: auto;
-  ${media.desktop`
-    margin-left: initial;
-    margin-right: initial;
-  `}
 `;
 
+const HeaderLogo = styled(Logo)`
+  height: 4.2rem;
+  ${media.desktop`
+    height: 5rem;
+  `}
+`
+
 const ToggleMenuButton = styled(ToggleIcon)`
-  color: ${({ theme }) => theme.colors.icons};
+  color: ${({ theme }) => theme.colors.header.burgerMenuIcon};
   display: flex;
   align-items: center;
   justify-content: center;
+  display: block;
   ${media.desktop`
     display: none;
   `}
@@ -40,9 +44,9 @@ const Header = ({ isCollapsedHeader }) => {
   const [isVisibleMobileMenu, setIsVisibleMenu] = useState(false);
   const toggleMobileMenu = () => setIsVisibleMenu(state => !state);
   return (
-    <Container isCollapsedHeader={isCollapsedHeader}>
+    <HeaderContainer isCollapsedHeader={isCollapsedHeader}>
       <StyledLink href={config.env.masterbornWebsite} title="Masterborn.com">
-        <Logo height={isCollapsedHeader ? '3rem' : undefined} />
+        <HeaderLogo />
       </StyledLink>
       <ToggleMenuButton
         CollapsedIcon={BurgerIcon}
@@ -52,14 +56,13 @@ const Header = ({ isCollapsedHeader }) => {
       />
       <>
         <Menu isCollapsedHeader={isCollapsedHeader} />
-
         <MobileMenu
           onClickItem={toggleMobileMenu}
           isVisible={isVisibleMobileMenu}
           isCollapsedHeader={isCollapsedHeader}
         />
       </>
-    </Container>
+    </HeaderContainer>
   );
 };
 

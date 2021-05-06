@@ -5,6 +5,7 @@ import { BREAKPOINTS } from '../utils/rwd';
 const colors = {
   dark: '#242A31',
   white: '#fff',
+  black: '#000',
   dirtyWhite: '#D0DEFF',
   background: '#0A1A2B',
   accentBackground: '#162535',
@@ -33,6 +34,11 @@ const colors = {
   dropdownMenuItemHover: '#0A1A2B',
   dropdownMenuBorder: 'transparent',
   dropdownMenuShadow: 'rgba(0,0,0,0.2)',
+  featurePost:{
+    header: '#131313',
+    description:'#616161',
+    readMore:'#101010',
+  },
   button: {
     primaryShadow: 'rgba(82,199,234,0.4)',
     primaryActive: '#0A1A2B',
@@ -74,13 +80,13 @@ const colors = {
 const fontSizes = [
   '1.2rem',
   '1.4rem',
+  '1.4rem',
   '1.6rem',
   '1.8rem',
-  '2rem',
-  '2.5rem',
-  '2.8rem',
-  '3.2rem',
-  '4rem',
+  '2.2rem',
+  '2.6rem',
+  '3.8rem',
+  '4.3rem',
   '4.6rem',
 ];
 fontSizes.caption = fontSizes[0];
@@ -93,17 +99,19 @@ fontSizes.h3 = fontSizes[6];
 fontSizes.h4 = fontSizes[5];
 fontSizes.h5 = fontSizes[4];
 fontSizes.h6 = fontSizes[3];
+fontSizes.listItem = fontSizes[4];
 
-const fonts = ['IBM Plex Sans', 'IBM Plex Mono'];
+const fonts = ['Inter, sans-serif'];
 fonts.heading = fonts[0];
 fonts.body = fonts[0];
-fonts.special = fonts[1];
+fonts.special = fonts[0];
 
-const fontWeights = [300, 400, 500, 600, 700];
-fontWeights.body = fontWeights[1];
+const fontWeights = [300, 400, 600];
+fontWeights.body = fontWeights[0];
 fontWeights.heading = fontWeights[2];
-fontWeights.button = fontWeights[2];
+fontWeights.button = fontWeights[1];
 fontWeights.buttonSmall = fontWeights[1];
+fontWeights.buttonBig = fontWeights[2];
 
 const lineHeights = ['1.2', '1.5'];
 lineHeights.small = lineHeights[0];

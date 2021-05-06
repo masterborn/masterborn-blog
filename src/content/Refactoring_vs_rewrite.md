@@ -4,21 +4,14 @@ date: 2021-03-05
 description: 'Refactoring vs. Rewrite. When to Refactor or Rewrite Your Code? What factors should you consider before the final decision?'
 author: 'Przemysław Królik'
 authorAvatar: ./assets/avatar_przemyslaw_k.jpg
-metaImage: ./assets/Refactoring_vs_rewrite/refactoring_vs_rewrite_cover_photo.png
-metaTitle: 'Refactoring vs. Rewrite - Which is a Better Option'
-metaDescription: 'Refactoring vs. Rewrite. When to Refactor or Rewrite Your Code? What factors should you consider before the final decision?'
+metaImage: ./assets/Refactoring_vs_rewrite/refactoring_vs_rewrite_cover_photo.jpg
 isFeature: false
 ---
-
-# Refactoring vs. Rewrite - Which is a Better Option?
-
-![cover_photo_refactoring](/assets/Refactoring_vs_rewrite/refactoring_vs_rewrite_cover_photo.png)
 
 Did you know that in companies with 100+ developers and/or an active codebase of 500k+ lines of code, maintenance accounts for more than half of the entire development budget?
 That’s a lot, right?
 
 At MasterBorn, we're quite new to the topic of technical debt management. Most of our software developers write brand-new code. But recently more and more clients come to us with an already existing codebase that usually requires refactoring or a total rewrite of the legacy system.
-
 
 
 ## Refactoring vs. Rewrite

@@ -6,7 +6,7 @@ const config = {
     siteUrl: process.env.GATSBY_ROOT_URL || 'http://localhost:3000',
   },
   env: {
-    masterbornWebsite: process.env.MASTERBORN_WEBSITE || 'https://masterborn.com/',
+    masterbornWebsite: process.env.MASTERBORN_WEBSITE || 'https://masterborn.com',
     ROOT_URL: process.env.GATSBY_ROOT_URL || 'http://localhost:3000',
   },
   general: {
@@ -19,6 +19,19 @@ const config = {
     description:
       "Let's start the journey of creating your software with Premium Professionals.",
   },
+  algolia: {
+    appId: process.env.ALGOLIA_APP_ID,
+    searchKey: process.env.ALGOLIA_SEARCH_KEY,
+    adminKey: process.env.ALGOLIA_ADMIN_KEY,
+    indexName: process.env.ALGOLIA_INDEX_NAME || 'local_BLOG',
+  },
+  custom: {
+    localization: {
+      url: 'https://ipapi.co/json/',
+      countryCode: 'PL',
+    },
+  },
+  apiUrl: process.env.API_HOST || 'https://website-api.masterborn.com',
 };
 
 module.exports = config;

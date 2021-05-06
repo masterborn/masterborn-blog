@@ -4,9 +4,7 @@ date: 2021-01-19
 description: 'When it comes to startups and innovative tech, the United States is way more than just Silicon Valley today. The country is full of tech hubs that give birth to countless exciting startups.'
 author: 'Małgorzata Galińska'
 authorAvatar: ./assets/avatar_malgorzata_g.jpeg
-metaImage: ./assets/14_disruptive_US_based_startups_to_watch_in_2021/hero_image.jpeg
-metaTitle: '14 disruptive U.S.-based startups to watch in 2021'
-metaDescription: 'When it comes to startups and innovative tech, the United States is way more than just Silicon Valley today. The country is full of tech hubs that give birth to countless exciting startups.'
+metaImage: ./assets/14_disruptive_US_based_startups_to_watch_in_2021/hero_image.jpg
 isFeature: false
 ---
 
@@ -17,8 +15,6 @@ As the largest tech market in the world representing 33% of the total - or appro
 Despite the COVID-19 pandemic, founders enjoyed a stream of funding for realizing their ideas. U.S.-based venture capital funds raised a combined [$69.1 billion in 2020](https://pitchbook.com/news/articles/us-vc-fundraising-hits-record-69b-in-2020-after-a16z-closes-two-mega-funds), with highlights Andreessen Horowitz announcing a couple of mega-funds with $4.5 billion in commitments.
 
 So, what are the most interesting startups that we’re all going to hear about in 2021? Here are 14 companies on the path to disrupting their industries.
-
-![developer_hero_image](./assets/14_disruptive_US_based_startups_to_watch_in_2021/hero_image.jpeg)
 
 ## 14 U.S.-based startups to watch in 2021
 

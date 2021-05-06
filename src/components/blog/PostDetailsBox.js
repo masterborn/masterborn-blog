@@ -7,7 +7,6 @@ const PostDetailsBox = styled(Caption)``;
 PostDetailsBox.defaultProps = {
   fontSize: 1,
   fontWeight: 2,
-  fontFamily: 'special',
   mb: 3,
 };
 

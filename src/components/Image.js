@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import styled from '@emotion/styled';
 
 import getMemoizedAltForFilepath from '../utils/getMemoizedAltForFilepath';
 
@@ -17,4 +18,9 @@ Image.defaultProps = {
   alt: '',
 };
 
-export default Image;
+const StyledImage = styled(Image)`
+  border-radius: 4px;
+}
+`
+
+export default StyledImage;

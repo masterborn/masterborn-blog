@@ -10,6 +10,8 @@ const List = styled('ul')(
       marginLeft: theme.space.none,
       paddingLeft: theme.space.none,
       lineHeight: theme.lineHeights.body,
+      fontSize: theme.fontSizes.listItem,
+      color: theme.colors.heading,
     },
   }),
   space,

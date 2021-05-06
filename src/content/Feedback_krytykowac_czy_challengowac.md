@@ -3,6 +3,7 @@ title: 'Feedback- krytykować czy challengować'
 date: 2020-05-20
 description: 'W ostatnim  czasie dużo można zauważyć artykułów, opinii, podcastów na temat prawdziwości i skuteczności informacji zwrotnej. Pada wiele pytań po co feedback, jaki on powinien być, w czym on nam tak naprawdę pomoże'
 author: 'Adrianna Wojewoda'
+metaImage: ./assets/feedback-krytykowac-czy-challengowac/mb_blog_cover_feedback.jpg
 authorAvatar: ./assets/avatar_ada.jpg
 isFeature: false
 ---

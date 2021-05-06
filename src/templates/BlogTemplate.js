@@ -9,16 +9,6 @@ import PageLayout from '../layouts/PageLayout';
 import Post from '../components/blog/Post';
 import defaultAvatar from '../assets/default_avatar.png';
 
-const GreyWrapper = styled.div`
-  position: absolute;
-  top: -8.8rem;
-  left: 0;
-  width: 100%;
-  height: 62.5rem;
-  background-color: ${props => props.theme.colors.accentBackground};
-  z-index: 1;
-`;
-
 const Wrapper = styled.div`
   position: relative;
   background-color: ${props => props.theme.colors.background};
@@ -33,14 +23,13 @@ const Content = styled.div`
 `;
 export default function BlogTemplate(props) {
   const {
-    data: { mdx },
+    data: { mdx, relatedPosts },
     location,
   } = props;
 
   const {
     frontmatter: {
-      metaTitle,
-      metaDescription,
+      description,
       metaImage,
       date,
       author,
@@ -50,26 +39,33 @@ export default function BlogTemplate(props) {
     parent: { relativePath },
     body,
     tableOfContents,
+    timeToRead,
   } = mdx;
 
   const imageAvatar = authorAvatar
     ? authorAvatar.childImageSharp.fixed.src
     : defaultAvatar;
 
-  const metaImageSrc = get(metaImage, 'childImageSharp.fixed.src', null);
-
+  const metaImageSrc = get(metaImage, 'childImageSharp.fluid.src', null);
+  const footerCta = {
+    headings:[
+      'Join our Team of world-class React & Node.js developers',
+      'We build valuable and successful products for U.S. based startups',
+  ],
+    buttonTexts:['See open positions!', 'Hire us!'],
+  };
   return (
-    <PageLayout location={location} themeName="blog">
+    <PageLayout location={location} themeName="blog" footerCta={footerCta}>
       <SEO
-        title={metaTitle}
-        description={metaDescription}
+        title={title}
+        description={description}
         image={metaImageSrc}
         slug={slug}
       />
       <Wrapper>
-        <GreyWrapper />
         <Content>
           <Post
+            metaImage={metaImage}
             body={body}
             title={title}
             authorAvatar={imageAvatar}
@@ -78,6 +74,9 @@ export default function BlogTemplate(props) {
             location={location}
             filePath={relativePath}
             tableOfContents={tableOfContents}
+            description={description}
+            timeToRead={timeToRead}
+            relatedPosts={relatedPosts.nodes}
           />
         </Content>
       </Wrapper>
@@ -97,10 +96,16 @@ BlogTemplate.propTypes = {
         relativePath: PropTypes.string,
       }),
       frontmatter: PropTypes.shape({
-        metaTitle: PropTypes.string,
-        metaDescription: PropTypes.string,
+        description: PropTypes.string,
         date: PropTypes.string,
         author: PropTypes.string,
+        metaImage: PropTypes.shape({
+          childImageSharp: PropTypes.shape({
+            fluid: PropTypes.shape({
+              src: PropTypes.string,
+            }),
+          }),
+        }),
         authorAvatar: PropTypes.shape({
           childImageSharp: PropTypes.shape({
             fixed: PropTypes.shape({
@@ -113,6 +118,23 @@ BlogTemplate.propTypes = {
         items: PropTypes.arrayOf(PropTypes.shape({})),
       }),
       body: PropTypes.string,
+      timeToRead: PropTypes.number,
+    }),
+    relatedPosts: PropTypes.shape({
+      nodes: PropTypes.arrayOf(PropTypes.shape({
+        slug: PropTypes.string,
+        frontmatter: PropTypes.shape({
+          title: PropTypes.string,
+          description: PropTypes.string,
+          metaImage: PropTypes.shape({
+            childImageSharp: PropTypes.shape({
+              fluid: PropTypes.shape({
+                src: PropTypes.string,
+              }),
+            }),
+          }),
+        }),
+      })),
     }),
   }),
   location: PropTypes.shape({
@@ -131,7 +153,7 @@ BlogTemplate.defaultProps = {
 };
 
 export const pageQuery = graphql`
-  query($id: String!) {
+  query($id: String!, $relatedFileAbsolutePaths: [String!]!) {
     mdx(fields: { id: { eq: $id } }) {
       fields {
         id
@@ -148,10 +170,11 @@ export const pageQuery = graphql`
       frontmatter {
         metaTitle
         metaDescription
+        description
         metaImage {
           childImageSharp {
-            fixed {
-              ...GatsbyImageSharpFixed
+            fluid(fit: COVER, cropFocus: CENTER, maxHeight: 314, maxWidth: 600, quality: 100) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -161,6 +184,27 @@ export const pageQuery = graphql`
           childImageSharp {
             fixed {
               ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+      timeToRead
+    }
+    relatedPosts: allMdx(
+      filter: { fileAbsolutePath: { in: $relatedFileAbsolutePaths } }
+      limit: 3
+    ) {
+      nodes {
+        slug
+        excerpt
+        frontmatter {
+          title
+          description
+          metaImage {
+            childImageSharp {
+              fluid(cropFocus: CENTER, fit: COVER, maxHeight: 221, maxWidth: 368, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
             }
           }
         }
