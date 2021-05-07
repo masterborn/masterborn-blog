@@ -8,6 +8,7 @@ const getAlgoliaQueries = require('./scripts/get-algolia-queries');
 const plugins = [
   'gatsby-plugin-styled-components',
   'gatsby-plugin-sitemap',
+  'gatsby-plugin-image',
   'gatsby-plugin-sharp',
   'gatsby-transformer-sharp',
   'gatsby-plugin-svgr',
@@ -51,7 +52,6 @@ const plugins = [
       extensions: ['.mdx', '.md'],
     },
   },
-  'gatsby-plugin-emotion',
   'gatsby-plugin-remove-trailing-slashes',
   'gatsby-plugin-react-helmet',
   {
@@ -89,7 +89,7 @@ const plugins = [
     resolve: `gatsby-plugin-emotion`,
     options: {
       sourceMap: true,
-      autoLabel: process.env.NODE_ENV !== 'production',
+      autoLabel: "dev-only",
       labelFormat: '[local]',
       cssPropOptimization: true,
     },

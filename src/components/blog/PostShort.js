@@ -94,9 +94,7 @@ PostShort.propTypes = {
   title: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  image: PropTypes.shape({
-    fluid: PropTypes.shape().isRequired,
-  }).isRequired,
+  image: PropTypes.shape().isRequired,
 };
 
 export default PostShort;

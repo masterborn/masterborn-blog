@@ -158,7 +158,6 @@ FeaturePost.propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     author: PropTypes.string.isRequired,
-    authorAvatar: PropTypes.string.isRequired,
     slug: PropTypes.string.isRequired,
     metaImage: PropTypes.shape({
       fluid: PropTypes.shape({

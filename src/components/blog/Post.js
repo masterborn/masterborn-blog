@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import styled from '@emotion/styled';
 import { MDXProvider } from '@mdx-js/react';
-import Image from 'gatsby-image';
+import { GatsbyImage } from "gatsby-plugin-image"
 import get from 'lodash/get';
 
 import { media } from '../../utils/emotion';
@@ -36,15 +36,17 @@ const PostHeader = styled('div')`
 const PostContent = styled('div')`
   display: grid;
   grid-row-gap: 2rem;
+  padding: 9.5rem 0 0;
   grid-template-areas:
     'body'
     'sidebar';
   ${media.desktop`
-  grid-row-gap: 0;
-  grid-column-gap: 7rem;
-  grid-template-columns: 7fr 3fr;
-   grid-template-areas:
-    "body sidebar";
+    padding: 0;
+    grid-row-gap: 0;
+    grid-column-gap: 7rem;
+    grid-template-columns: 7fr 3fr;
+    grid-template-areas:
+      "body sidebar";
   `}
 `;
 
@@ -87,7 +89,7 @@ const PostDescription = styled(Heading)`
   `}
 `
 
-const PostHeroImage = styled(Image)`
+const PostHeroImage = styled(GatsbyImage)`
   border-radius: 4px;
   margin-bottom: 4rem;
   box-shadow: 0 35px 30px -37px rgba(0,0,0,0.2);
@@ -112,7 +114,6 @@ const Post = ({
     month: 'short',
   }).format(new Date(date))
   const {isInPoland} = useContext(CountryContext);
-  const metaImageSrc = get(metaImage, 'childImageSharp.fluid', null);
 
   return (
     <Wrapper>
@@ -131,7 +132,7 @@ const Post = ({
               </PostDescription>
               <AuthorBox image={authorAvatar} name={author} date={localeDate} timeToRead={timeToRead} />
             </PostHeader>
-            <PostHeroImage fluid={metaImageSrc} alt={title} />
+            <PostHeroImage image={metaImage} alt={title} />
             <MDXProvider components={mdxComponents}>
               <MDXRenderer>{body}</MDXRenderer>
             </MDXProvider>
