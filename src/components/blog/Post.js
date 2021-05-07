@@ -76,7 +76,8 @@ const BackLink = styled(Link)`
 const PostHeading = styled(Heading)`
   font-size: 2.9rem;
   ${media.desktop`
-    font-size: 3.8rem;
+    font-size: 4.3rem;
+    line-height: 5.2rem;
   `}
 `
 
@@ -123,7 +124,7 @@ const Post = ({
               <BackLink to="/" title="Back">
                 <img src={ArrowIcon} alt="Back" />
               </BackLink>
-              <PostHeading lineHeight="4.8rem" as="h1" mb={3}>
+              <PostHeading lineHeight="5.2rem" as="h1" mb={3}>
                 {title}
               </PostHeading>
               <PostDescription color="header.color" lineHeight="2.6rem" as="h5" mb={3} mt={1} opacity={0.9}>
