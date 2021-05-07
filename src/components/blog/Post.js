@@ -36,15 +36,17 @@ const PostHeader = styled('div')`
 const PostContent = styled('div')`
   display: grid;
   grid-row-gap: 2rem;
+  padding: 9.5rem 0 0;
   grid-template-areas:
     'body'
     'sidebar';
   ${media.desktop`
-  grid-row-gap: 0;
-  grid-column-gap: 7rem;
-  grid-template-columns: 7fr 3fr;
-   grid-template-areas:
-    "body sidebar";
+    padding: 0;
+    grid-row-gap: 0;
+    grid-column-gap: 7rem;
+    grid-template-columns: 7fr 3fr;
+    grid-template-areas:
+      "body sidebar";
   `}
 `;
 
