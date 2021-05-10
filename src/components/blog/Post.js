@@ -84,8 +84,12 @@ const PostHeading = styled(Heading)`
 
 const PostDescription = styled(Heading)`
   width: 100%;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
   ${media.desktop`
     max-width: 80%;
+    font-size: 1.8rem;
+    line-height: 2.6rem;
   `}
 `
 

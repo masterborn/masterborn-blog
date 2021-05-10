@@ -29,6 +29,8 @@ const MenuLink = styled(Link)`
   }
   ${media.desktop`
     margin: 2rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
   `}
 `;
 

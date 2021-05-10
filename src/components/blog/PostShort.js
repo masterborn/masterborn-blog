@@ -34,7 +34,7 @@ const StyledDescription = styled(LinesEllipsis)`
   margin-top: 0;
   margin-bottom: 1.6rem;
   color: ${({ theme, color }) => get(theme.colors, color)};
-  line-height: 3;
+  line-height: 2.6rem;
   font-weight: 300;
   font-size: 1.6rem;
   order: 3;
@@ -70,6 +70,7 @@ const PostShort = ({ slug, title, description, image }) => {
         <Heading
           color={`${colorsCategory}.header`}
           lineHeight="3.2rem"
+          fontSize="2.2rem"
           as="h4"
           mb={2}
           mt={3}
