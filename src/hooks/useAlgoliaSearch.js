@@ -4,7 +4,7 @@ import  { useState } from 'react';
 import config from '../../config';
 
 const useAlgoliaSearch = () => {
-  const [query, setQuery] = useState();
+  const [, setQuery] = useState();
   const searchClient = algoliasearch(
     config.algolia.appId,
     config.algolia.searchKey

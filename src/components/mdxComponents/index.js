@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import Image from '../Image';
 
@@ -16,11 +17,18 @@ import Table from './Table';
 import Strong from './Strong';
 import CtaArticleComponent from './CtaArticleComponent';
 
-const generateHeading = size => props => (
+
+const HeadingComponent = (props, size) => (
   <Heading {...props} as={size} linked>
     {props.children}
   </Heading>
 );
+
+const generateHeading = size => props => HeadingComponent(props, size);
+
+HeadingComponent.propTypes = {
+  children: PropTypes.oneOfType([PropTypes.node, null]).isRequired,
+};
 
 export default {
   h1: generateHeading('h1'),

@@ -60,7 +60,7 @@ const PageLayout = ({ children, themeName, location, footerCta }) => {
         const isSameCountry = country === countryCode;
         setCountry(isSameCountry)
       });
-  }, [])
+  }, [countryCode, setCountry, url]);
 
   return (
     <ThemeProvider themeName={themeName}>
