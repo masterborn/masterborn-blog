@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/order
 const path = require('path');
 
 const { createFilePath } = require(`gatsby-source-filesystem`);

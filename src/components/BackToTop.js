@@ -67,7 +67,7 @@ const BackToTop = () =>{
   useEffect(() => {
     window.addEventListener('scroll', throttleScroll);
     return () => window.removeEventListener('scroll', throttleScroll);
-  }, []);
+  }, [throttleScroll]);
 
   return (
     transitions.map(({ item, key, props }) => item && (

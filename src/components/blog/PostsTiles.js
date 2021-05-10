@@ -16,7 +16,7 @@ const Container = styled.div`
   `}
 `;
 
-const PostsTiles = connectStateResults(({ searchResults = {}, posts, children }) => {
+const PostsTiles = connectStateResults(({ posts, children }) => {
   // const { hits = [] } = searchResults || {};
   // const enabledSlugs = hits.map(({ slug })=> slug);
   // const filteredPosts = posts.filter(({ slug }) => enabledSlugs.includes(slug));
