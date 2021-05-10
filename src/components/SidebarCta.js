@@ -37,11 +37,10 @@ const StyledBorder = styled.div`
 `
 
 const SidebarCta = ({ isInPoland }) => {
-  const [, showContactModal, hideContactModal] = useModal(ContactModal, { onSubmitContactForm });
+  const onSubmitContactForm = () => {}
 
-  function onSubmitContactForm () {
-    hideContactModal();
-  }
+  const [, showContactModal] = useModal(ContactModal, { onSubmitContactForm, alwaysHideOnSubmit: true });
+
 
   function openContactModal () {
     showContactModal();

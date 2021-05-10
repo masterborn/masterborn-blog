@@ -195,11 +195,13 @@ const StyledButton = styled(Button)`
 
 const Footer = ({ headings, buttonTexts }) => {
   const { isInPoland } = useContext(CountryContext);
-  const [, showContactModal, hideContactModal] = useModal(ContactModal, { onSubmitContactForm });
 
-  function onSubmitContactForm () {
-    hideContactModal();
-  }
+  const onSubmitContactForm = () => {}
+  
+  const [, showContactModal] = useModal(ContactModal, {
+    onSubmitContactForm, alwaysHideOnSubmit: true });
+
+
 
   function openContactModal () {
     showContactModal();
