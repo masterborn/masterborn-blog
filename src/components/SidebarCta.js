@@ -19,6 +19,7 @@ const Container = styled('div')`
   text-align: left;
   box-shadow: 0 35px 42px -33px rgba(0,0,0,0.08);
   padding: 4rem;
+  padding-bottom: 3.5rem;
   margin: 2rem 0;
   position: sticky;
   top: 14rem;
@@ -26,15 +27,18 @@ const Container = styled('div')`
 
 const StyledHeading = styled(Heading)`
   letter-spacing: 0;
-  line-height: 26px;
-`
+  line-height: 2.6rem;
+  color: ${({theme}) => theme.colors.ctaArticle.text};
+  
+`;
 
 const StyledBorder = styled.div`
   width: 60%;
   height: 2px;
-  margin: 1rem 0;
-  background:  ${props => props.theme.colors.primary};
-`
+  margin: 1.5rem 0;
+  // margin-bottom: 1.5rem;
+  background: ${props => props.theme.colors.primary};
+`;
 
 const SidebarCta = ({ isInPoland }) => {
   const [, showContactModal, hideContactModal] = useModal(ContactModal, { onSubmitContactForm });

@@ -34,7 +34,7 @@ const StyledDescription = styled(LinesEllipsis)`
   margin-top: 0;
   margin-bottom: 1.6rem;
   color: ${({ theme, color }) => get(theme.colors, color)};
-  line-height: 1.5;
+  line-height: 3;
   font-weight: 300;
   font-size: 1.6rem;
   order: 3;

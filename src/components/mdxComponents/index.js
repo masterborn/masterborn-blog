@@ -29,7 +29,7 @@ export default {
   h4: generateHeading('h4'),
   h5: generateHeading('h5'),
   h6: generateHeading('h6'),
-  p: props => <Text {...props} lineHeight="2.6rem" mt={4} mb={4} opacity={0.9} fontSize={3} fontWeight={1} />,
+  p: props => <Text {...props} lineHeight="2.6rem" mt={4} mb={4} opacity={0.9} fontSize={2} fontWeight={1} />,
   pre: Pre,
   code: CodeBlock,
   strong: Strong,

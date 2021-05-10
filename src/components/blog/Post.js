@@ -78,6 +78,7 @@ const PostHeading = styled(Heading)`
   ${media.desktop`
     font-size: 4.3rem;
     line-height: 5.2rem;
+    margin-bottom: 2rem;
   `}
 `
 
@@ -127,7 +128,7 @@ const Post = ({
               <PostHeading lineHeight="5.2rem" as="h1" mb={3}>
                 {title}
               </PostHeading>
-              <PostDescription color="header.color" lineHeight="2.6rem" as="h5" mb={3} mt={1} opacity={0.9}>
+              <PostDescription color="header.color" lineHeight="2.6rem" as="h6" mb={3} mt={1} opacity={0.9}>
                 {description}
               </PostDescription>
               <AuthorBox image={authorAvatar} name={author} date={localeDate} timeToRead={timeToRead} />
