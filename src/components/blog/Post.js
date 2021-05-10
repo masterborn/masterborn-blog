@@ -22,7 +22,7 @@ import RelatedArticles from './RelatedArticles';
 
 const Wrapper = styled('div')`
   ${media.desktop`
-    padding-top: 12rem;
+    padding-top: 10rem;
   `}
 `;
 
