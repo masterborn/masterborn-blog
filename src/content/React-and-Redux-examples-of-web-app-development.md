@@ -119,7 +119,7 @@ The Netflix team used React to develop the most popular video streaming web appl
 
 As the Netflix UI engineers say:
 
-#### “Our decision to adopt React was influenced by a number of factors, most notably: 1) startup speed, 2) runtime performance, and 3) modularity.”
+“Our decision to adopt React was influenced by a number of factors, most notably: 1) startup speed, 2) runtime performance, and 3) modularity.”
 
 ### React App #2: Dropbox
 ![Dropbox](./assets/React-and-Redux-examples-of-web-app-development/Dropbox.jpg)
