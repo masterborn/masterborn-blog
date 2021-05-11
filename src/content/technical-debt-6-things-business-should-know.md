@@ -7,7 +7,6 @@ authorAvatar: ./assets/avatar_lukasz_miedzinski.jpg
 metaImage: assets/technical-debt-6-things-business-should-know/210410_MB_blog_cover_technical_debts_16_9.jpg
 isFeature: false
 ---
-# Technical debt - 6 things a business should know about it
 
 Just like financial debt, technical debt is not totally bad by definition. In fact, you could argue that technical debt is absolutely essential for business growth.
 
