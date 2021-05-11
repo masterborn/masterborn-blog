@@ -15,14 +15,19 @@ const StyledModalTitle = styled(ModalTitle)`
 `;
 
 const ContactModal = ({
-  isActive, hide, onSubmitContactForm,
-}) => (
-  <StyledModal hide={hide} isActive={isActive}>
-    <StyledModalTitle>Tell us about your next amazing project!</StyledModalTitle>
-    <DealForm onSubmitComplete={onSubmitContactForm} isSection={false} />
-  </StyledModal>
-
-);
+  isActive, hide, onSubmitContactForm, alwaysHideOnSubmit,
+}) => {
+  const onSubmitComplete = (args)=>{
+    onSubmitContactForm(args);
+    if(alwaysHideOnSubmit) hide()
+  }
+ return (
+   <StyledModal hide={hide} isActive={isActive}>
+     <StyledModalTitle>Tell us about your next amazing project!</StyledModalTitle>
+     <DealForm onSubmitComplete={onSubmitComplete} isSection={false} />
+   </StyledModal>
+  );
+};
 
 ContactModal.propTypes = {
   hide: PropTypes.func.isRequired,
@@ -31,6 +36,7 @@ ContactModal.propTypes = {
     email: PropTypes.string,
   }),
   isActive: PropTypes.bool,
+  alwaysHideOnSubmit: PropTypes.bool,
 };
 
 ContactModal.defaultProps = {
@@ -38,6 +44,7 @@ ContactModal.defaultProps = {
     email: '',
   },
   isActive: false,
+  alwaysHideOnSubmit: false,
 };
 
 export default ContactModal;

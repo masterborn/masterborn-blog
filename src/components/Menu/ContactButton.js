@@ -18,12 +18,11 @@ const StyledContactButton = styled(Button)`
 
 `
 
-const ContactButton = ({ isCollapsedHeader, children, onClick, href, ...rest }) => {
+const ContactButton = ({ isCollapsedHeader, children, onClick, ...rest }) => {
   return (
     <StyledContactButton
       {...rest}
       as={Link}
-      href={href}
       variant="cta"
       size="cta"
       onClick={onClick}

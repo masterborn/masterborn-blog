@@ -23,18 +23,26 @@ const getBasePathToFolder = path => {
   return dropRight(basePath.split('/'), 2).join('/');
 };
 
+const getDestination = ({ href, location, isRelative, isAnchor }) => {
+   if (isRelative && !isAnchor) {
+     const toPath = href.substr(2);
+     const basePath = getBasePathToFolder(location.pathname);
+     return `${basePath}/${toPath}`;
+   }
+   return href;
+};
+
+const isAnchorFunction = (href) => isString(href) && href.charAt(0) === '#';
+
 const AnchorTag = ({ children: link, href }) => {
-  const isAnchor = isString(href) && href.charAt(0) === '#';
+  const isAnchor = isAnchorFunction(href);
   const location = useLocation();
 
   if (!link) return null;
   if (isAnchor) return <StyledLink href={href}>{link}</StyledLink>;
-  let to = href;
-  if (isRelativePath(to) && !isAnchor) {
-    const toPath = to.substr(2);
-    const basePath = getBasePathToFolder(location.pathname);
-    to = `${basePath}/${toPath}`;
-  }
+  const isRelative = isRelativePath(href);
+  const to = getDestination({ href, location, isRelative, isAnchor });
+
   const isExternalLink = !href.startsWith('/');
   return (
     <StyledLink to={to} target={isExternalLink ? '_blank' : null}>

@@ -20,7 +20,7 @@ const GithubLink = styled(Button)`
   padding-left: 0;
 `;
 
-const EditOnGithubLink = ({ filePath, dependedRepos }) => {
+const EditOnGithubLink = ({ filePath }) => {
   const {
     githubRepoUrl,
     markdownPath,

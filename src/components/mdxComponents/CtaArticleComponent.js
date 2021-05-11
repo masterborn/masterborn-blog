@@ -69,11 +69,9 @@ const StyledButton = styled(Button)`
 // eslint-disable-next-line complexity
 const CtaArticleComponent = ({ headings, buttonTexts, showYellowUnderline }) => {
   const { isInPoland } = useContext(CountryContext);
-  const [, showContactModal, hideContactModal] = useModal(ContactModal, { onSubmitContactForm });
+  const onSubmitContactForm = () => {}
 
-  function onSubmitContactForm () {
-    hideContactModal();
-  }
+  const [, showContactModal] = useModal(ContactModal, { onSubmitContactForm, alwaysHideOnSubmit: true });
 
   function openContactModal () {
     showContactModal();
