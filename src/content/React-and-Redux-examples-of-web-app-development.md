@@ -7,7 +7,6 @@ authorAvatar: ./assets/avatar_malgorzata_g.jpeg
 metaImage: ./assets/React-and-Redux-examples-of-web-app-development/210415_mb_blog_reactredux_cover16_9.jpg
 isFeature: true
 ---
-# React and Redux - 10 examples of successful Web App Development
 
 
 At MasterBorn, we bet on quality, not quantity. The approach of “less is more” works well for us and we apply it to both the people we hire and the technologies we add to our stack.

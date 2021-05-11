@@ -9,8 +9,6 @@ isFeature: false
 
 ---
 
-# TypeScript vs JavaScript: What's the Difference?
-
 
 
 JavaScript and TypeScript may be seen as sibling programming languages. They share a space in web development and beyond, and have been existing in that space in creative tension.

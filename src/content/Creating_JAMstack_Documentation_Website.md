@@ -7,7 +7,7 @@ metaImage: ./assets/creating-jamstack/hero_cover.jpg
 authorAvatar: ./assets/avatar_lukasz_miedzinski.jpg
 ---​
 
-## What is all about?
+## What is it all about?
 
 When you navigate to the official website of [JAMstack](https://jamstack.org/), the first thing you’ll see is a description of its technology:
 
