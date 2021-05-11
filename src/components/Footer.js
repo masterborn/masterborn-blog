@@ -53,6 +53,7 @@ const OfficesContainer = styled.div`
 const OfficeItem = styled.div`
   margin: 0;
   width: 100%;
+  line-height: 2.6rem;
   h5 {
     color: ${props => props.theme.colors.footer.officeHeader};
     font-size: ${props => props.theme.fontSizes[2]};
@@ -182,6 +183,7 @@ const FooterCta = styled.div`
 const StyledHeading = styled(Heading)`
   text-align: center;
   font-size: 2rem;
+  line-height: 3.9rem;
   ${media.desktop`
     font-size: 3.2rem;
   `}
@@ -191,6 +193,8 @@ const StyledButton = styled(Button)`
   margin: 5rem auto;
   display: flex;
   padding: 0.9rem 8.5rem;
+  font-size: 1.6rem;
+  line-height: 2rem;
 `
 
 const Footer = ({ headings, buttonTexts }) => {

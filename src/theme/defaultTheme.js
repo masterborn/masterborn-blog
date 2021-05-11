@@ -80,13 +80,13 @@ const colors = {
 const fontSizes = [
   '1.2rem',
   '1.4rem',
-  '1.4rem',
   '1.6rem',
   '1.8rem',
-  '2.2rem',
-  '2.6rem',
-  '3.8rem',
-  '4.3rem',
+  '2rem',
+  '2.5rem',
+  '2.8rem',
+  '3.2rem',
+  '4rem',
   '4.6rem',
 ];
 fontSizes.caption = fontSizes[0];

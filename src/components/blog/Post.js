@@ -22,7 +22,7 @@ import RelatedArticles from './RelatedArticles';
 
 const Wrapper = styled('div')`
   ${media.desktop`
-    padding-top: 12rem;
+    padding-top: 10rem;
   `}
 `;
 
@@ -78,14 +78,20 @@ const BackLink = styled(Link)`
 const PostHeading = styled(Heading)`
   font-size: 2.9rem;
   ${media.desktop`
-    font-size: 3.8rem;
+    font-size: 4.3rem;
+    line-height: 5.2rem;
+    margin-bottom: 2rem;
   `}
 `
 
 const PostDescription = styled(Heading)`
   width: 100%;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
   ${media.desktop`
     max-width: 80%;
+    font-size: 1.8rem;
+    line-height: 2.6rem;
   `}
 `
 
@@ -124,10 +130,10 @@ const Post = ({
               <BackLink to="/" title="Back">
                 <img src={ArrowIcon} alt="Back" />
               </BackLink>
-              <PostHeading lineHeight="4.8rem" as="h1" mb={3}>
+              <PostHeading lineHeight="5.2rem" as="h1" mb={3}>
                 {title}
               </PostHeading>
-              <PostDescription color="header.color" lineHeight="2.6rem" as="h5" mb={3} mt={1} opacity={0.9}>
+              <PostDescription color="header.color" lineHeight="2.6rem" as="h6" mb={3} mt={1} opacity={0.9}>
                 {description}
               </PostDescription>
               <AuthorBox image={authorAvatar} name={author} date={localeDate} timeToRead={timeToRead} />
