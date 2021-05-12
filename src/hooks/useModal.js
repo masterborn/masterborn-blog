@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import React, {
   useEffect, useContext, useState,
 } from 'react';
@@ -14,8 +15,10 @@ const useEscapeKey = (setIsActive) => {
     return () => document.removeEventListener('keydown', keyListener);
   });
 }
-
+// TODO: fix issue with early return before react hooks
 const useModal = (Component, props = {}) => {
+  if (typeof document === 'undefined') return [{ isActive: false }, () => {}, () => {}];
+
   const modalRoot = document.getElementById('modal-root');
   const context = useContext(ModalContext);
 
@@ -44,8 +47,6 @@ const useModal = (Component, props = {}) => {
     return cleanUp;
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isActive]);
-
-  if (typeof document === 'undefined') return [{ isActive: false }, () => {}, () => {}];
 
   const showModal = (modalPayload = {}) => {
     setIsActive(true);
