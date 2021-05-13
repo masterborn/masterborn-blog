@@ -5,7 +5,6 @@ description: 'Almost half of React apps use Redux today. The question is - why i
 author: 'Małgorzata Galińska'
 authorAvatar: ./assets/avatar_malgorzata_g.jpeg
 metaImage: ./assets/React-and-Redux-examples-of-web-app-development/210415_mb_blog_reactredux_cover16_9.jpg
-isFeature: true
 ---
 # React and Redux - 10 examples of successful Web App Development
 
