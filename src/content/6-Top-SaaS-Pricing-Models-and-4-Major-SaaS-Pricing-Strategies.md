@@ -1,7 +1,7 @@
 ---
 title: 'Top 6 SaaS Pricing Models and 4 Major SaaS Pricing Strategies'
 date: 2021-05-13
-description: 'A product is not worth much until and unless it’s properly priced. Learn more about SaaS Pricing Models which are most commonly used by SaaS'
+description: 'A product is not worth much until and unless it’s properly priced. Learn more about SaaS Pricing Models which are most commonly used by SaaS ventures.'
 author: 'Małgorzata Galińska'
 authorAvatar: ./assets/avatar_malgorzata_g.jpeg
 metaImage: ./assets/6-Top-SaaS-Pricing-Models-and-4-Major-SaaS-Pricing-Strategies/210512_mb_blog_top_6_SaaS_Pricing_Models_cover16_9.jpg
