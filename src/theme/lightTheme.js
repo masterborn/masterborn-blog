@@ -109,6 +109,7 @@ const colors = {
   },
   ctaArticle: {
     background: '#FAFAFA',
+    text: '#222222',
   },
   relatedArticles: {
     border: '#979797',

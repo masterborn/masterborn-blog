@@ -1,7 +1,9 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
+import { getSrc } from "gatsby-plugin-image"
 
+import { CountryContext } from '../contexts/CountryContext';
 import appleTouchIcon from '../assets/apple-touch-icon.png';
 import favicon32 from '../assets/favicon-32x32.png';
 import favicon16 from '../assets/favicon-16x16.png';
@@ -9,19 +11,19 @@ import config from '../../config';
 import useDefaultOgImage from '../hooks/useDefaultOgImage';
 import useSiteMetadata from '../hooks/useSiteMetadata';
 
-const getSrcFromGraphqlImage = image =>
-  image && image.childImageSharp && image.childImageSharp.fixed.src;
-
 // eslint-disable-next-line complexity
 const SEO = ({ title, description, image, slug }) => {
   const defaultOgImage = useDefaultOgImage();
+  const { isInPoland } = useContext(CountryContext);
+
   const {
     env: { ROOT_URL },
     title: defaultTitle,
     description: defaultDescription,
   } = useSiteMetadata();
-  const metaImage = image || getSrcFromGraphqlImage(defaultOgImage);
+  const metaImage = image || getSrc(defaultOgImage);
   const metaImageUrl = ROOT_URL + metaImage;
+
   const metaTitle = title || defaultTitle;
   const metaDescription = description || defaultDescription;
 
@@ -33,7 +35,11 @@ const SEO = ({ title, description, image, slug }) => {
   canonicalUrl += slug;
 
   return (
-    <Helmet>
+    <Helmet
+      htmlAttributes={{
+        lang: isInPoland ? 'pl' : 'en',
+      }}
+    >
       <title>{metaTitle}</title>
       <link rel="apple-touch-icon" sizes="180x180" href={touchIconUrl} />
       <link rel="icon" type="image/png" sizes="32x32" href={favicon32} />

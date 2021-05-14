@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react';
 import styled from '@emotion/styled';
-import { keyframes } from '@emotion/core';
+import { keyframes } from '@emotion/react';
 import PropTypes from 'prop-types';
 
 import useOnEventOutside from '../hooks/useOnEventOutside';

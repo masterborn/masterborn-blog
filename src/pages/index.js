@@ -9,7 +9,7 @@ import FeaturePost from '../components/blog/FeaturePost';
 import BlogContent from '../components/blog/BlogContent';
 import { media } from '../utils/emotion';
 import SEO from '../components/SEO';
-import Search from '../components/Search';
+// import Search from '../components/Search';
 import BlogPostsContent from '../components/blog/BlogPostsContent';
 
 const Wrapper = styled('div')`
@@ -26,18 +26,18 @@ const BlogFeatureArticleContent = styled(BlogContent)`
     adding-bottom: 6.5rem;
   `}
 `;
-const SearchContainer = styled(BlogContent)`
-  padding-bottom: 0rem;
-  display: flex;
-  width: 118rem;
-  ${media.desktop`
-    padding-bottom: 0rem;
-    padding-top: 3rem;
-    padding-right: 0;
-    width: 118rem;
-    max-width: 118rem;
-  `}
-`
+// const SearchContainer = styled(BlogContent)`
+//   padding-bottom: 0rem;
+//   display: flex;
+//   width: 118rem;
+//   ${media.desktop`
+//     padding-bottom: 0rem;
+//     padding-top: 3rem;
+//     padding-right: 0;
+//     width: 118rem;
+//     max-width: 118rem;
+//   `}
+// `
 
 const Index = () => {
   const { searchClient, setQuery, indexName } = useAlgoliaSearch();

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import styled from '@emotion/styled';
 import { MDXProvider } from '@mdx-js/react';
-import Image from 'gatsby-image';
+import { GatsbyImage } from "gatsby-plugin-image"
 import get from 'lodash/get';
 
 import { media } from '../../utils/emotion';
@@ -22,7 +22,7 @@ import RelatedArticles from './RelatedArticles';
 
 const Wrapper = styled('div')`
   ${media.desktop`
-    padding-top: 12rem;
+    padding-top: 10rem;
   `}
 `;
 
@@ -36,15 +36,17 @@ const PostHeader = styled('div')`
 const PostContent = styled('div')`
   display: grid;
   grid-row-gap: 2rem;
+  padding: 9.5rem 0 0;
   grid-template-areas:
     'body'
     'sidebar';
   ${media.desktop`
-  grid-row-gap: 0;
-  grid-column-gap: 7rem;
-  grid-template-columns: 7fr 3fr;
-   grid-template-areas:
-    "body sidebar";
+    padding: 0;
+    grid-row-gap: 0;
+    grid-column-gap: 7rem;
+    grid-template-columns: 7fr 3fr;
+    grid-template-areas:
+      "body sidebar";
   `}
 `;
 
@@ -76,18 +78,24 @@ const BackLink = styled(Link)`
 const PostHeading = styled(Heading)`
   font-size: 2.9rem;
   ${media.desktop`
-    font-size: 3.8rem;
+    font-size: 4.3rem;
+    line-height: 5.2rem;
+    margin-bottom: 2rem;
   `}
 `
 
 const PostDescription = styled(Heading)`
   width: 100%;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
   ${media.desktop`
     max-width: 80%;
+    font-size: 1.8rem;
+    line-height: 2.6rem;
   `}
 `
 
-const PostHeroImage = styled(Image)`
+const PostHeroImage = styled(GatsbyImage)`
   border-radius: 4px;
   margin-bottom: 4rem;
   box-shadow: 0 35px 30px -37px rgba(0,0,0,0.2);
@@ -112,7 +120,6 @@ const Post = ({
     month: 'short',
   }).format(new Date(date))
   const {isInPoland} = useContext(CountryContext);
-  const metaImageSrc = get(metaImage, 'childImageSharp.fluid', null);
 
   return (
     <Wrapper>
@@ -123,15 +130,15 @@ const Post = ({
               <BackLink to="/" title="Back">
                 <img src={ArrowIcon} alt="Back" />
               </BackLink>
-              <PostHeading lineHeight="4.8rem" as="h1" mb={3}>
+              <PostHeading lineHeight="5.2rem" as="h1" mb={3}>
                 {title}
               </PostHeading>
-              <PostDescription color="header.color" lineHeight="2.6rem" as="h5" mb={3} mt={1} opacity={0.9}>
+              <PostDescription color="header.color" lineHeight="2.6rem" as="h6" mb={3} mt={1} opacity={0.9}>
                 {description}
               </PostDescription>
               <AuthorBox image={authorAvatar} name={author} date={localeDate} timeToRead={timeToRead} />
             </PostHeader>
-            <PostHeroImage fluid={metaImageSrc} alt={title} />
+            <PostHeroImage image={metaImage} alt={title} />
             <MDXProvider components={mdxComponents}>
               <MDXRenderer>{body}</MDXRenderer>
             </MDXProvider>

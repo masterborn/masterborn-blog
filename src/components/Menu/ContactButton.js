@@ -12,16 +12,17 @@ const StyledContactButton = styled(Button)`
   border: 1px solid ${props => props.theme.colors.contactButton.borderColor};
   ${media.desktop`
     margin-left: 5rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
   `}
 
 `
 
-const ContactButton = ({ isCollapsedHeader, children, onClick, href, ...rest }) => {
+const ContactButton = ({ isCollapsedHeader, children, onClick, ...rest }) => {
   return (
     <StyledContactButton
       {...rest}
       as={Link}
-      href={href}
       variant="cta"
       size="cta"
       onClick={onClick}

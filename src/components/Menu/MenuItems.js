@@ -29,6 +29,8 @@ const MenuLink = styled(Link)`
   }
   ${media.desktop`
     margin: 2rem;
+    font-size: 1.6rem;
+    line-height: 2rem;
   `}
 `;
 
@@ -38,11 +40,10 @@ const MenuItems = ({ isCollapsedHeader, onClickItem, contactAsButton }) => {
 
   const LinkFontSize = 3;
   const contactButtonText = isInPoland ? 'Join us' : 'Contact us';
-  const [, showContactModal, hideContactModal] = useModal(ContactModal, { onSubmitContactForm });
+  const onSubmitContactForm = () => {}
 
-  function onSubmitContactForm () {
-    hideContactModal();
-  }
+  const [, showContactModal] = useModal(ContactModal, { onSubmitContactForm, alwaysHideOnSubmit: true });
+
 
   function openContactModal () {
     showContactModal();

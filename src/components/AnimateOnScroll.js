@@ -28,6 +28,15 @@ const slideInTranslateGenerator = {
   },
 };
 
+const useSpringAnimation = ({ slideIn, showFadeIn, showAnimation, delay }) => useSpring({
+  from: { opacity: 0, transform: slideInTranslateGenerator[slideIn].from },
+  to: {
+    opacity: showFadeIn ? 1 : 0,
+    transform: slideInTranslateGenerator[slideIn].to(showAnimation),
+  },
+  delay,
+});
+
 const AnimateOnScroll = ({
   children,
   animateOnce,
@@ -47,14 +56,7 @@ const AnimateOnScroll = ({
   const showOnce = isVisibleOnce && animateOnce;
   const showAnimation = isInViewport || showOnce;
   const showFadeIn = showAnimation || !fadeIn;
-  const props = useSpring({
-    from: { opacity: 0, transform: slideInTranslateGenerator[slideIn].from },
-    to: {
-      opacity: showFadeIn ? 1 : 0,
-      transform: slideInTranslateGenerator[slideIn].to(showAnimation),
-    },
-    delay,
-  });
+  const props = useSpringAnimation({ slideIn, showFadeIn, showAnimation, delay });
 
   useEffect(() => {
     if (isVisibleOnce) return;

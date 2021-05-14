@@ -49,27 +49,29 @@ const StyledHeading = styled(Heading)`
   align-self: center;
   position: relative;
   font-size: 1.7rem;
+  color: ${({ theme })=> theme.colors.ctaArticle.text};
   ${media.desktop`
     font-size: 2.2rem;
+    line-height: 2.6rem;
   `}
 `
 
 const StyledButton = styled(Button)`
-  padding: 0.6rem 3.5rem;
+  padding: 0.9rem 3.5rem;
   margin: 5rem 0 0;
   ${media.desktop`
-   margin: 1.2rem auto;
+    margin: 1.2rem auto;
+    font-size: 1.6rem;
+    line-height: 2rem;
   `}
 `
 
 // eslint-disable-next-line complexity
 const CtaArticleComponent = ({ headings, buttonTexts, showYellowUnderline }) => {
   const { isInPoland } = useContext(CountryContext);
-  const [, showContactModal, hideContactModal] = useModal(ContactModal, { onSubmitContactForm });
+  const onSubmitContactForm = () => {}
 
-  function onSubmitContactForm () {
-    hideContactModal();
-  }
+  const [, showContactModal] = useModal(ContactModal, { onSubmitContactForm, alwaysHideOnSubmit: true });
 
   function openContactModal () {
     showContactModal();

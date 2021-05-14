@@ -2,7 +2,7 @@ import React, { useContext, useEffect } from 'react';
 import axios from 'axios';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
-import { Global } from '@emotion/core';
+import { Global } from '@emotion/react';
 
 import { media } from '../utils/emotion';
 import normalizeCss from '../theme/normalizeCss';
@@ -60,7 +60,7 @@ const PageLayout = ({ children, themeName, location, footerCta }) => {
         const isSameCountry = country === countryCode;
         setCountry(isSameCountry)
       });
-  }, [])
+  }, [countryCode, setCountry, url]);
 
   return (
     <ThemeProvider themeName={themeName}>
@@ -76,7 +76,7 @@ const PageLayout = ({ children, themeName, location, footerCta }) => {
               </Content>
             </StickyMenuWrapper>
             {children}
-            <Footer 
+            <Footer
               headings={footerCta.headings}
               buttonTexts={footerCta.buttonTexts}
             />

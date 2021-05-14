@@ -4,7 +4,6 @@ import styled from '@emotion/styled';
 import isArray from 'lodash/isArray';
 
 import BaseHeading from '../Heading';
-import BaseList from '../List';
 import { media } from '../../utils/emotion';
 import useActiveHashInViewport from '../../hooks/useActiveHashInViewport';
 
@@ -19,11 +18,14 @@ const StickyContainer = styled('div')`
 `;
 
 const Heading = styled(BaseHeading)`
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 3rem;
+  line-height: 2rem;
+  opacity: 0.9;
+  font-size: 1.6rem;
 `;
 
-const List = styled(BaseList)`
+const List = styled.ul`
   margin-left: 0;
   margin-bottom: 0;
   padding-left: 0;
@@ -73,7 +75,7 @@ const TableOfContent = ({ items }) => {
 
   return (
     <StickyContainer>
-      <Heading as="h6">
+      <Heading as="h5">
         Table of Content
       </Heading>
       <List>
