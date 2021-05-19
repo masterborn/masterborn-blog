@@ -1,9 +1,11 @@
+import { get } from 'lodash';
+
 const getErrorMessages = (errors) => {
   const messages = {};
 
   if (!errors) return messages;
   errors.forEach((error) => {
-    let key = error.params.errors[0].params.missingProperty;
+    let key = get(error,'params.errors[0].params.missingProperty');
 
     const [parentPath, nestedPath] = error.dataPath.replace('/', '').split('/');
 

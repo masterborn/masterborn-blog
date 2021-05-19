@@ -4,19 +4,21 @@ import schemaCompilator from './schemaCompilator';
 const schema = {
   required: ['firstName', 'lastName', 'email', 'privacy'],
   properties: {
-    firstName: { type: 'string', maxLength: 100 },
-    lastName: { type: 'string', maxLength: 100 },
+    firstName: { type: 'string', minLength: 1, maxLength: 100 },
+    lastName: { type: 'string', minLength: 1, maxLength: 100 },
     phone: { type: 'string' },
     email: {
       type: 'string',
       format: 'email',
       maxLength: 40,
+      minLength: 1,
     },
+    description: { type: 'string', maxLength: 256 },
     linkedin: { type: 'string', maxLength: 100 },
     portfolio: { type: 'string', maxLength: 100 },
     recommendation: { type: 'string' },
     other: { type: 'string', maxLength: 100 },
-    privacy: { type: 'boolean' },
+    privacy: { type: 'boolean', const: true },
     marketing: { type: 'boolean' },
     resume: { type: 'object' },
     stage: { type: 'string' },
@@ -41,6 +43,6 @@ const schema = {
 };
 
 const validateSchema = schemaCompilator(schema);
-const offerFormValidator = data => validate(data, validateSchema);
+const dealFormValidator = data => validate(data, validateSchema);
 
-export default offerFormValidator;
+export default dealFormValidator;
