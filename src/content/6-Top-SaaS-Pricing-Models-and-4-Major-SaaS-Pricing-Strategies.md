@@ -5,7 +5,7 @@ description: 'A product is not worth much until and unless it’s properly price
 author: 'Małgorzata Galińska'
 authorAvatar: ./assets/avatar_malgorzata_g.jpeg
 metaImage: ./assets/6-Top-SaaS-Pricing-Models-and-4-Major-SaaS-Pricing-Strategies/210512_mb_blog_top_6_SaaS_Pricing_Models_cover16_9.jpg
-isFeature: true
+isFeature: false
 ---
 # Top 6 SaaS Pricing Models and 4 Major SaaS Pricing Strategies - with Examples
 
