@@ -2,8 +2,8 @@
 title: 'Best Productivity Apps for Mac'
 date: 2021-05-23
 description: 'Here is a Lifehack-exclusive list of my cherry-picked collection of the 17 best productivity apps for Mac. As they say: work smarter, not harder!'
-author: 'Małgorzata Galińska'
-authorAvatar: ./assets/default_avatar.png
+author: 'Adam Kopf'
+authorAvatar: ./assets/avatar_adam_kopf.jpg
 metaImage: ./assets/best-productivity-apps-for-mac/210511_mb_blog_bestappsmac_AdamK_cover.jpg
 isFeature: true
 ---
