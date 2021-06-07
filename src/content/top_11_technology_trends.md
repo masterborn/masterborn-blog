@@ -303,4 +303,5 @@ But one thing is certain – the future will definitely be shaped by these techn
 
 *****
 
-Are you an innovator looking to leverage disruptive technologies? At MasterBorn, we love ambitious, challenging projects and are fascinated by the emerging possibilities of AI and ML. If you have a technology project you’d like to discuss, drop me a line at malgorzata.g@masterborn.com. Our engineers will be more than happy to get back to you and discuss how we can help.
+Are you an innovator looking to leverage disruptive technologies? At MasterBorn, we love ambitious, challenging projects and are fascinated by the emerging possibilities of AI and ML. We’ve also happy to say that we’ve been recognized among best Software Development Companies in Austin, TX in 2021 by [DesignRush](https://www.designrush.com/agency/software-development/texas/austin) Marketplace.
+If you have a technology project you’d like to discuss, drop us a line - our engineers will be more than happy to get back to you and discuss how we can help.

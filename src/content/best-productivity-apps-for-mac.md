@@ -5,7 +5,7 @@ description: 'Here is a Lifehack-exclusive list of my cherry-picked collection o
 author: 'Adam Kopf'
 authorAvatar: ./assets/avatar_adam_kopf.jpg
 metaImage: ./assets/best-productivity-apps-for-mac/210511_mb_blog_bestappsmac_AdamK_cover.jpg
-isFeature: true
+isFeature: false
 ---
 
 
