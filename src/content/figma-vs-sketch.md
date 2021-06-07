@@ -1,14 +1,12 @@
 ---
-title: 'Figma vs Sketch'
+title: 'Figma vs Sketch - How choosing one tool saved us 6.8K USD a year'
 date: 2021-06-04
 description: 'Both tools are top of line so why are people switching from Sketch to Figma? And why did we decide to do so in MasterBorn?'
 author: 'Damian Fejdasz'
-authorAvatar: ./assets/default_avatar.png
+authorAvatar: ./assets/avatar_damian_fejdasz.jpg
 metaImage: ./assets/figma-vs-sketch/210523_mb_blog_figma_vs_sketch_cover.jpg
 isFeature: true
 ---
-# Figma vs Sketch - how choosing one tool saved us 6.8K USD a year
-
 
 ## What is Figma?
 
@@ -92,6 +90,8 @@ A tie. Both tools perfectly do what they were created to do. The difference is i
 
 
 ## Figma vs Sketch - Plugins and components
+
+![210523_mb_blog_figma_vs_sketch_plugin](./assets/figma-vs-sketch/210523_mb_blog_figma_vs_sketch_plugin.jpg)
 
 Plugins are one of the defining features of the modern software industry. Remember the old-school, monolithic, and closed applications that only changed when the company behind it decided to add something new to their program? It often took ages and slowed down the evolution of solutions.
 
