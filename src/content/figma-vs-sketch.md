@@ -5,7 +5,7 @@ description: 'Both tools are top of line so why are people switching from Sketch
 author: 'Damian Fejdasz'
 authorAvatar: ./assets/avatar_damian_fejdasz.jpg
 metaImage: ./assets/figma-vs-sketch/210523_mb_blog_figma_vs_sketch_cover.jpg
-isFeature: true
+isFeature: false
 ---
 
 ## What is Figma?
