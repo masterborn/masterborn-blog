@@ -5,7 +5,7 @@ description: 'The choice of online Retrospective tools on the market is really m
 author: 'Agata Martyniszyn'
 authorAvatar: ./assets/avatar_agata_martyniszyn.jpg
 metaImage: ./assets/10-retrospective-tools-for-scrum-masters/210520_mb_blog_retrospectivetools_AgataM_cover.png
-isFeature: true
+isFeature: false
 ---
 
 
