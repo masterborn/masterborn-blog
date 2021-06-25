@@ -7,7 +7,7 @@ function scrollToAnchor(location) {
   // Check for location so build does not fail
   const HEADER_OFFEST = 96;
   if (location && location.hash) {
-    const item = document.querySelector(`${CSS.escape(location.hash)}`);
+    const item = document.getElementById(`${location.hash}`);
     if (!item) return;
     const rect = item.getBoundingClientRect();
     const topOffset = rect.top + window.scrollY;
