@@ -5,7 +5,7 @@ description: 'At MasterBorn, we repeatedly emphasize Clarity as a core value, bu
 author: 'Gray Skinner'
 authorAvatar: ./assets/avatar_gray_skinner.jpeg
 metaImage: ./assets/Vompany-Values-Clarity-vs-Slack/210615_mb_blog_clarity_cover.jpeg
-isFeature: true
+isFeature: false
 ---
 
 
