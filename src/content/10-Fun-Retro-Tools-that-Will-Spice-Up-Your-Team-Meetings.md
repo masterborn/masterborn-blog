@@ -48,8 +48,11 @@ Let's have some fun, shall we?
 This is a great exercise to start a Retrospective. [Draw your feelings](https://www.funretrospectives.com/draw-your-feelings/) relaxes the meeting atmosphere and stimulates creativity and thinking "out of the box." During remote meetings, you can use drawing boards or even better - pictures, gifs, or memes… and who doesn’t like memes, right?
 
 ![meme1](assets/10-Fun-Retro-Tools-that-Will-Spice-Up-Your-Team-Meetings/meme1.jpeg)
+
 ![mem2](assets/10-Fun-Retro-Tools-that-Will-Spice-Up-Your-Team-Meetings/mem2.jpeg)
+
 ![mem3](assets/10-Fun-Retro-Tools-that-Will-Spice-Up-Your-Team-Meetings/mem3.jpeg)
+
 ![mem4](assets/10-Fun-Retro-Tools-that-Will-Spice-Up-Your-Team-Meetings/mem4.png)
 
 
@@ -117,6 +120,6 @@ We start a new project, put together a team, and it just so happens that nobody 
 
 We recommend testing both regular Retro tools and Fun Retro tools, keeping in mind that there are no perfect tools out there. There is no one-size-fits-all solution.
 
-We recommended quite a few options in this and previous article, but each team is different - so it's important to customize these tools to your needs.
+We recommended quite a few options in this and [previous article](/10-retrospective-tools-for-scrum-masters), but each team is different - so it's important to customize these tools to your needs.
 
 Have fun in your own search for agile Retrospective tools!
