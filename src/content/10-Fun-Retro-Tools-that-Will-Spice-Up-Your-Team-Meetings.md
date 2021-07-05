@@ -94,7 +94,7 @@ Words can offer valuable information to the Scrum Master about the feelings of t
 ## Teambuilding
 
 ### 7. Fun Fact
-![Fun-photo](assets/10-Fun-Retro-Tools-that-Will-Spice-Up-Your-Team-Meetings/Fun-photo.jpg)
+![Fun-photo](assets/10-Fun-Retro-Tools-that-Will-Spice-Up-Your-Team-Meetings/Funfact.jpg)
 
 This is a great exercise that allows everyone to break the ice, learning something new about the team, and creates a relaxed atmosphere where team members feel more comfortable. [Fun fact](https://www.funretrospectives.com/fun-fact/) is a Retrospective tool that helps team members discover shared interests, which often leads to spending time together outside of work hours.
 
