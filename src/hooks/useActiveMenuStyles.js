@@ -22,7 +22,7 @@ const useActiveMenuStyles = () => {
 
   const getActiveStyleForPathname = useCallback(
     (pathname, position) => {
-      let activeStyle =
+      const activeStyle =
         {
           header: headerActiveLinkStyle,
           footer: footerActiveLinkStyle,
