@@ -80,7 +80,7 @@ const MenuItems = ({ isCollapsedHeader, onClickItem, contactAsButton }) => {
       <MenuLink
         fontSize={LinkFontSize}
         onClick={onClickItem}
-        style={getActiveStyleForPathname('/blog')}
+        style={getActiveStyleForPathname('/blog', 'header')}
         title="Blog"
         href="/blog"
       >

@@ -8,6 +8,7 @@ import MBLogoGray from '../assets/footer/logo-gray.svg';
 import config from '../../config';
 import { CountryContext } from '../contexts/CountryContext';
 import useModal from '../hooks/useModal';
+import useActiveMenuStyles from '../hooks/useActiveMenuStyles';
 import { media } from '../utils/emotion';
 import navigateToWebsiteCarrier from '../utils/navigateToWebsiteCarrier';
 
@@ -198,10 +199,11 @@ const StyledButton = styled(Button)`
 `
 
 const Footer = ({ headings, buttonTexts }) => {
+  const { getActiveStyleForPathname } = useActiveMenuStyles();
   const { isInPoland } = useContext(CountryContext);
 
   const onSubmitContactForm = () => {}
-  
+
   const [, showContactModal] = useModal(ContactModal, {
     onSubmitContactForm, alwaysHideOnSubmit: true });
 
@@ -296,6 +298,7 @@ const Footer = ({ headings, buttonTexts }) => {
             <FooterLink
               title="Blog"
               href="/blog"
+              style={getActiveStyleForPathname('/blog', 'footer')}
             >
               Blog
             </FooterLink>
