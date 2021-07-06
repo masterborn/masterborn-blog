@@ -50,7 +50,7 @@ const SidebarCta = ({ isInPoland }) => {
     showContactModal();
   };
 
-  const utmCampaignName = utmCampaignNames["POST_RIGHT_SIDEBAR"];
+  const utmCampaignName = utmCampaignNames.POST_RIGHT_SIDEBAR;
   const contactButtonAction = isInPoland ? () => navigateToWebsiteCarrier(utmCampaignName) : openContactModal;
   return (
     <Container>

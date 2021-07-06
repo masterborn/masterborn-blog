@@ -27,7 +27,7 @@ const HeadingComponent = (props, size) => (
 
 const generateHeading = size => props => HeadingComponent(props, size);
 
-const utmCampaignName = utmCampaignNames["POST_CTA"];
+const utmCampaignName = utmCampaignNames.POST_CTA;
 
 HeadingComponent.propTypes = {
   children: PropTypes.oneOfType([PropTypes.node, null]).isRequired,

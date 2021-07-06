@@ -7,6 +7,7 @@ import { CountryContext } from '../../contexts/CountryContext';
 import useModal from '../../hooks/useModal';
 import ContactModal from '../ContactModal';
 import navigateToWebsiteCarrier from '../../utils/navigateToWebsiteCarrier';
+import utmCampaignNames from '../../utils/utmCampaignNames';
 import Button from '../Button';
 
 import Heading from './Heading';
@@ -98,7 +99,7 @@ CtaArticleComponent.propTypes = {
   headings: PropTypes.arrayOf(PropTypes.string),
   buttonTexts: PropTypes.arrayOf(PropTypes.string),
   showYellowUnderline: PropTypes.bool,
-  utmCampaign: PropTypes.string.isRequired
+  utmCampaign: PropTypes.oneOf(Object.values(utmCampaignNames)).isRequired,
 };
 
 CtaArticleComponent.defaultProps = {

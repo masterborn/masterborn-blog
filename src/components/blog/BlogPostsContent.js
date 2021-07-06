@@ -70,7 +70,7 @@ const BlogPostsContent = ({postsPerPage, offset, posts, setOffset })=> {
     'Your React & Node.js trusted partners',
   ];
   const ctaButtonTexts = ['See open positions!', 'Contact us!'];
-  const utmCampaignName = utmCampaignNames["HOMEPAGE_CTA"];
+  const utmCampaignName = utmCampaignNames.HOMEPAGE_CTA;
 
   return (
     <Container>

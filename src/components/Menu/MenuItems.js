@@ -50,7 +50,7 @@ const MenuItems = ({ isCollapsedHeader, onClickItem, contactAsButton }) => {
     showContactModal();
   };
 
-  const utmCampaignName = utmCampaignNames["HEADER_BUTTON"];
+  const utmCampaignName = utmCampaignNames.HEADER_BUTTON;
   const contactButtonAction = isInPoland ? () => navigateToWebsiteCarrier(utmCampaignName) : openContactModal;
 
   return (

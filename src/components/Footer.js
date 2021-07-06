@@ -212,7 +212,7 @@ const Footer = ({ headings, buttonTexts }) => {
     showContactModal();
   };
 
-  const utmCampaignName = utmCampaignNames["FOOTER_BUTTON"];
+  const utmCampaignName = utmCampaignNames.FOOTER_BUTTON;
   const contactButtonAction = isInPoland ? () => navigateToWebsiteCarrier(utmCampaignName) : openContactModal;
   return (
     <>
