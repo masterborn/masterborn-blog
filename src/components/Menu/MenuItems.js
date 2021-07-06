@@ -9,6 +9,7 @@ import navigateToWebsiteCarrier from '../../utils/navigateToWebsiteCarrier';
 import ContactModal from '../ContactModal';
 import useModal from '../../hooks/useModal';
 import { media } from '../../utils/emotion';
+import utmCampaignNames from '../../utils/utmCampaignNames';
 import { CountryContext } from '../../contexts/CountryContext';
 
 import ContactButton from './ContactButton';
@@ -49,7 +50,8 @@ const MenuItems = ({ isCollapsedHeader, onClickItem, contactAsButton }) => {
     showContactModal();
   };
 
-  const contactButtonAction = isInPoland ? () => navigateToWebsiteCarrier("przycisk_top") : openContactModal;
+  const utmCampaignName = utmCampaignNames["HEADER_BUTTON"];
+  const contactButtonAction = isInPoland ? () => navigateToWebsiteCarrier(utmCampaignName) : openContactModal;
 
   return (
     <>
