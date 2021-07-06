@@ -49,7 +49,7 @@ const MenuItems = ({ isCollapsedHeader, onClickItem, contactAsButton }) => {
     showContactModal();
   };
 
-  const contactButtonAction = isInPoland ? navigateToWebsiteCarrier : openContactModal;
+  const contactButtonAction = isInPoland ? () => navigateToWebsiteCarrier("przycisk_top") : openContactModal;
 
   return (
     <>

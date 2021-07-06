@@ -49,5 +49,5 @@ export default {
   table: props => <Table {...props} mb={4} />,
   blockquote: props => <Blockquote {...props} />,
   hr: props => <Hr {...props} />,
-  CtaComponent: props => <CtaArticleComponent {...props} />,
+  CtaComponent: props => <CtaArticleComponent {...props} utmCampaign="przycisk_blogpost_srodek"/>,
 };

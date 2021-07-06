@@ -201,7 +201,7 @@ const Footer = ({ headings, buttonTexts }) => {
   const { isInPoland } = useContext(CountryContext);
 
   const onSubmitContactForm = () => {}
-  
+
   const [, showContactModal] = useModal(ContactModal, {
     onSubmitContactForm, alwaysHideOnSubmit: true });
 
@@ -211,7 +211,7 @@ const Footer = ({ headings, buttonTexts }) => {
     showContactModal();
   };
 
-  const contactButtonAction = isInPoland ? navigateToWebsiteCarrier : openContactModal;
+  const contactButtonAction = isInPoland ? () => navigateToWebsiteCarrier("przycisk_dol") : openContactModal;
   return (
     <>
       <FooterCta>

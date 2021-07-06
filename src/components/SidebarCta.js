@@ -29,7 +29,7 @@ const StyledHeading = styled(Heading)`
   letter-spacing: 0;
   line-height: 2.6rem;
   color: ${({theme}) => theme.colors.ctaArticle.text};
-  
+
 `;
 
 const StyledBorder = styled.div`
@@ -50,7 +50,7 @@ const SidebarCta = ({ isInPoland }) => {
     showContactModal();
   };
 
-  const contactButtonAction = isInPoland ? navigateToWebsiteCarrier : openContactModal;
+  const contactButtonAction = isInPoland ? () => navigateToWebsiteCarrier("przycisk_blogpost_box") : openContactModal;
   return (
     <Container>
       <StyledHeading as="h5">

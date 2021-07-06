@@ -78,6 +78,7 @@ const BlogPostsContent = ({postsPerPage, offset, posts, setOffset })=> {
             headings={ctaHeadings}
             showYellowUnderline
             buttonTexts={ctaButtonTexts}
+            utmCampaign="przycisk_srodek"
           />
         </CtaContainer>
       </PostsTiles>
