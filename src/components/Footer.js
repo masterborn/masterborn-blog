@@ -308,7 +308,9 @@ const Footer = ({ headings, buttonTexts }) => {
       </PageSection>
       <RodoBox>
         <Content mb={0} mt={0}>
-          The Administrator of your data is MasterBorn, with its registered office in Wroclaw, Krupnicza 13, Wroclaw.  If you want to withdraw, get an insight or update information about you, then contact us: contact@masterborn.com
+          The Administrator of your data is MasterBorn, with its registered office in Wroclaw, Krupnicza 13, Wroclaw.  If you want to withdraw, get an insight or update information about you, then contact us:
+          {' '}
+          <a href="mailto:contact@masterborn.com">contact@masterborn.com</a>
         </Content>
       </RodoBox>
     </>
