@@ -10,6 +10,7 @@ import { CountryContext } from '../contexts/CountryContext';
 import useModal from '../hooks/useModal';
 import useActiveMenuStyles from '../hooks/useActiveMenuStyles';
 import { media } from '../utils/emotion';
+import utmCampaignNames from '../utils/utmCampaignNames';
 import navigateToWebsiteCarrier from '../utils/navigateToWebsiteCarrier';
 
 import ContactModal from './ContactModal';
@@ -213,7 +214,8 @@ const Footer = ({ headings, buttonTexts }) => {
     showContactModal();
   };
 
-  const contactButtonAction = isInPoland ? navigateToWebsiteCarrier : openContactModal;
+  const utmCampaignName = utmCampaignNames.FOOTER_BUTTON;
+  const contactButtonAction = isInPoland ? () => navigateToWebsiteCarrier(utmCampaignName) : openContactModal;
   return (
     <>
       <FooterCta>

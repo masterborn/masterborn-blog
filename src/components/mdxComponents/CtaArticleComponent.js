@@ -7,6 +7,7 @@ import { CountryContext } from '../../contexts/CountryContext';
 import useModal from '../../hooks/useModal';
 import ContactModal from '../ContactModal';
 import navigateToWebsiteCarrier from '../../utils/navigateToWebsiteCarrier';
+import utmCampaignNames from '../../utils/utmCampaignNames';
 import Button from '../Button';
 
 import Heading from './Heading';
@@ -67,7 +68,7 @@ const StyledButton = styled(Button)`
 `
 
 // eslint-disable-next-line complexity
-const CtaArticleComponent = ({ headings, buttonTexts, showYellowUnderline }) => {
+const CtaArticleComponent = ({ headings, buttonTexts, showYellowUnderline, utmCampaign }) => {
   const { isInPoland } = useContext(CountryContext);
   const onSubmitContactForm = () => {}
 
@@ -77,7 +78,7 @@ const CtaArticleComponent = ({ headings, buttonTexts, showYellowUnderline }) => 
     showContactModal();
   };
 
-  const buttonAction = isInPoland ? navigateToWebsiteCarrier : openContactModal;
+  const buttonAction = isInPoland ? () => navigateToWebsiteCarrier(utmCampaign) : openContactModal;
   return (
     <Container>
       <StyledHeading as="h5" mb={0}>
@@ -98,6 +99,7 @@ CtaArticleComponent.propTypes = {
   headings: PropTypes.arrayOf(PropTypes.string),
   buttonTexts: PropTypes.arrayOf(PropTypes.string),
   showYellowUnderline: PropTypes.bool,
+  utmCampaign: PropTypes.oneOf(Object.values(utmCampaignNames)).isRequired,
 };
 
 CtaArticleComponent.defaultProps = {

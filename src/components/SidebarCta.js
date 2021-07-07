@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 import useModal from '../hooks/useModal';
 import navigateToWebsiteCarrier from '../utils/navigateToWebsiteCarrier';
+import utmCampaignNames from '../utils/utmCampaignNames';
 
 import ContactModal from './ContactModal';
 import Heading from './Heading';
@@ -29,7 +30,7 @@ const StyledHeading = styled(Heading)`
   letter-spacing: 0;
   line-height: 2.6rem;
   color: ${({theme}) => theme.colors.ctaArticle.text};
-  
+
 `;
 
 const StyledBorder = styled.div`
@@ -45,12 +46,12 @@ const SidebarCta = ({ isInPoland }) => {
 
   const [, showContactModal] = useModal(ContactModal, { onSubmitContactForm, alwaysHideOnSubmit: true });
 
-
   function openContactModal () {
     showContactModal();
   };
 
-  const contactButtonAction = isInPoland ? navigateToWebsiteCarrier : openContactModal;
+  const utmCampaignName = utmCampaignNames.POST_RIGHT_SIDEBAR;
+  const contactButtonAction = isInPoland ? () => navigateToWebsiteCarrier(utmCampaignName) : openContactModal;
   return (
     <Container>
       <StyledHeading as="h5">
