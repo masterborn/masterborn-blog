@@ -5,7 +5,7 @@ description: 'It’s time to bring fun to your Retro meetings! Check out our lis
 author: 'Agata Martyniszyn'
 authorAvatar: ./assets/avatar_agata_martyniszyn.jpg
 metaImage: ./assets/10-Fun-Retro-Tools-that-Will-Spice-Up-Your-Team-Meetings/210610_mb_blog_funretrotools_cover.jpg
-isFeature: true
+isFeature: false
 ---
 
 In the previous article, I showed you what a Retro meeting is all about, what purpose it serves, and how to conduct it with the help of some handy Retrospective tools.

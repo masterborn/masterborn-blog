@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 import ReactPaginate from 'react-paginate';
 
 import { media } from '../../utils/emotion';
+import utmCampaignNames from '../../utils/utmCampaignNames';
 import CtaArticleComponent from '../mdxComponents/CtaArticleComponent';
 
 import BlogContent from './BlogContent';
@@ -69,6 +70,7 @@ const BlogPostsContent = ({postsPerPage, offset, posts, setOffset })=> {
     'Your React & Node.js trusted partners',
   ];
   const ctaButtonTexts = ['See open positions!', 'Contact us!'];
+  const utmCampaignName = utmCampaignNames.HOMEPAGE_CTA;
 
   return (
     <Container>
@@ -78,6 +80,7 @@ const BlogPostsContent = ({postsPerPage, offset, posts, setOffset })=> {
             headings={ctaHeadings}
             showYellowUnderline
             buttonTexts={ctaButtonTexts}
+            utmCampaign={utmCampaignName}
           />
         </CtaContainer>
       </PostsTiles>

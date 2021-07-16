@@ -36,7 +36,7 @@ jobs:
         run: npm run build
         env:
           NODE_ENV: production
-          GATSBY_ROOT_URL: http://stage.masterborn.com
+          GATSBY_ROOT_URL: https://stage.masterborn.com
           ALGOLIA_APP_ID: ${{ secrets.STAGE_ALGOLIA_APP_ID }}
           ALGOLIA_SEARCH_KEY: ${{ secrets.STAGE_ALGOLIA_SEARCH_KEY }}
           ALGOLIA_ADMIN_KEY: ${{ secrets.STAGE_ALGOLIA_ADMIN_KEY }}

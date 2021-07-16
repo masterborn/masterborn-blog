@@ -8,7 +8,9 @@ import MBLogoGray from '../assets/footer/logo-gray.svg';
 import config from '../../config';
 import { CountryContext } from '../contexts/CountryContext';
 import useModal from '../hooks/useModal';
+import useActiveMenuStyles from '../hooks/useActiveMenuStyles';
 import { media } from '../utils/emotion';
+import utmCampaignNames from '../utils/utmCampaignNames';
 import navigateToWebsiteCarrier from '../utils/navigateToWebsiteCarrier';
 
 import ContactModal from './ContactModal';
@@ -198,10 +200,11 @@ const StyledButton = styled(Button)`
 `
 
 const Footer = ({ headings, buttonTexts }) => {
+  const { getActiveStyleForPathname } = useActiveMenuStyles();
   const { isInPoland } = useContext(CountryContext);
 
   const onSubmitContactForm = () => {}
-  
+
   const [, showContactModal] = useModal(ContactModal, {
     onSubmitContactForm, alwaysHideOnSubmit: true });
 
@@ -211,7 +214,8 @@ const Footer = ({ headings, buttonTexts }) => {
     showContactModal();
   };
 
-  const contactButtonAction = isInPoland ? navigateToWebsiteCarrier : openContactModal;
+  const utmCampaignName = utmCampaignNames.FOOTER_BUTTON;
+  const contactButtonAction = isInPoland ? () => navigateToWebsiteCarrier(utmCampaignName) : openContactModal;
   return (
     <>
       <FooterCta>
@@ -296,6 +300,7 @@ const Footer = ({ headings, buttonTexts }) => {
             <FooterLink
               title="Blog"
               href="/blog"
+              style={getActiveStyleForPathname('/blog', 'footer')}
             >
               Blog
             </FooterLink>
@@ -305,7 +310,9 @@ const Footer = ({ headings, buttonTexts }) => {
       </PageSection>
       <RodoBox>
         <Content mb={0} mt={0}>
-          The Administrator of your data is MasterBorn, with its registered office in Wroclaw, Krupnicza 13, Wroclaw.  If you want to withdraw, get an insight or update information about you, then contact us: contact@masterborn.com
+          The Administrator of your data is MasterBorn, with its registered office in Wroclaw, Krupnicza 13, Wroclaw.  If you want to withdraw, get an insight or update information about you, then contact us:
+          {' '}
+          <a href="mailto:contact@masterborn.com">contact@masterborn.com</a>
         </Content>
       </RodoBox>
     </>

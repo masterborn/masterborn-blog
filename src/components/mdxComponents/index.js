@@ -17,6 +17,7 @@ import Table from './Table';
 import Strong from './Strong';
 import CtaArticleComponent from './CtaArticleComponent';
 
+import utmCampaignNames from '../../utils/utmCampaignNames';
 
 const HeadingComponent = (props, size) => (
   <Heading {...props} as={size} linked>
@@ -25,6 +26,8 @@ const HeadingComponent = (props, size) => (
 );
 
 const generateHeading = size => props => HeadingComponent(props, size);
+
+const utmCampaignName = utmCampaignNames.POST_CTA;
 
 HeadingComponent.propTypes = {
   children: PropTypes.oneOfType([PropTypes.node, null]).isRequired,
@@ -49,5 +52,5 @@ export default {
   table: props => <Table {...props} mb={4} />,
   blockquote: props => <Blockquote {...props} />,
   hr: props => <Hr {...props} />,
-  CtaComponent: props => <CtaArticleComponent {...props} />,
+  CtaComponent: props => <CtaArticleComponent {...props} utmCampaign={utmCampaignName} />,
 };
