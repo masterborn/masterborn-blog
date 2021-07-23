@@ -5,7 +5,7 @@ description: ' Why both unicorns and bootstrapped startups are choosing Node.js 
 author: 'Małgorzata Galińska'
 authorAvatar: ./assets/avatar_malgorzata_g.jpeg
 metaImage: ./assets/Why-Startups-Choose-Node-js/210702_mb_blog_loving_nodejs_cover.jpg
-isFeature: true
+isFeature: false
 ---
 
 
