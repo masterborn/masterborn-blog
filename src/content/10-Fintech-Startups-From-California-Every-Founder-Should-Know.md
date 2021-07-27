@@ -74,6 +74,7 @@ We picked these 10 startups and tech companies based in San Francisco, Los Angel
 ## 10 top Fintech companies based in California you should know
 
 ## 1. Stripe
+![1_Stripe_blog_fintech](assets/10-Fintech-Startups-From-California-Every-Founder-Should-Know/1_Stripe_blog_fintech.jpg)
 
 
 
@@ -90,6 +91,7 @@ One key fact to remember: The British Government [uses Stripe](https://www.payme
 
 
 ## 2. Riskalyze
+![2_risklyze_blog_fintech](assets/10-Fintech-Startups-From-California-Every-Founder-Should-Know/2_risklyze_blog_fintech.jpg)
 
 
 
@@ -107,6 +109,7 @@ We've been working with Riskalyze since 2019. So, if you’re looking for a part
 
 
 ## 3. Sofi
+![3_sofi_blog_fintech](assets/10-Fintech-Startups-From-California-Every-Founder-Should-Know/3_sofi_blog_fintech.jpg)
 
 Funding: $2.5 Billion
 
@@ -119,6 +122,7 @@ One key fact to remember: SoFi offers really cool benefits that most banks charg
 
 
 ## 4. Chime
+![4_chime_blog_fintech](assets/10-Fintech-Startups-From-California-Every-Founder-Should-Know/4_chime_blog_fintech.jpg)
 
 
 
@@ -133,6 +137,7 @@ One key fact to remember: It’s hard to believe, but Chime doesn’t charge ser
 
 
 ## 5. Robinhood
+![5_robinhood_blog_fintech](assets/10-Fintech-Startups-From-California-Every-Founder-Should-Know/5_robinhood_blog_fintech.jpg)
 
 
 
@@ -148,6 +153,7 @@ One key fact to remember: Since it doesn’t charge any fees, the company’s re
 
 
 ## 6. Figure
+![6_figure_blog_fintech](assets/10-Fintech-Startups-From-California-Every-Founder-Should-Know/6_figure_blog_fintech.jpg)
 
 Funding: $1.4 billion
 
@@ -160,6 +166,7 @@ What they do: [Figure](https://www.figure.com/) delivers a range of financial so
 
 
 ## 7. Brex
+![7_brex_blog_fintech](assets/10-Fintech-Startups-From-California-Every-Founder-Should-Know/7_brex_blog_fintech.jpg)
 
 Funding: $732 million
 
@@ -176,6 +183,7 @@ One key fact to remember: The smart thing about Brex? It dissociates a startup�
 
 
 ## 8. Tradeshift
+![8_tradeshift_blog_fintech](assets/10-Fintech-Startups-From-California-Every-Founder-Should-Know/8_tradeshift_blog_fintech.jpg)
 
 Total funding: $661 million
 
@@ -190,6 +198,7 @@ One key fact to remember: The company acquired the unicorn status after a round 
 
 
 ## 9. Next Insurance
+![9_next_insurance_blog_fintech](assets/10-Fintech-Startups-From-California-Every-Founder-Should-Know/9_next_insurance_blog_fintech.jpg)
 
 Funding: $631 million
 
@@ -202,6 +211,7 @@ One key fact to remember: The company delivers tailored policies for thousands o
 
 
 ## 10. Carta
+![10_carta_blog_fintech](assets/10-Fintech-Startups-From-California-Every-Founder-Should-Know/10_carta_blog_fintech.jpg)
 
 Funding: $628 million
 
