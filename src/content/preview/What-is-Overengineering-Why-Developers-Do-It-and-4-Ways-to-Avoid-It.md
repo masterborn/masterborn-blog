@@ -5,7 +5,8 @@ description: 'Overengineering in software development: What is it, why does it h
 author: 'Przemysław Królik'
 authorAvatar: ./assets/avatar_przemyslaw_k.jpg
 metaImage: ./assets/What-is-Overengineering-Why-Developers-Do-It-and-4-Ways-to-Avoid-It/210713_mb_blog_overengineering_Przemek_cover.jpg
-isFeature: true
+isFeature: false
+isPreview: true
 ---
 
 # What is Overengineering? Why Developers Do It and 4 Ways to Avoid It
