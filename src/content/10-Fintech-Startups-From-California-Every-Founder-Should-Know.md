@@ -5,7 +5,7 @@ description: 'Fintech market experts predict an annual growth rate of 25% until 
 author: 'Małgorzata Galińska'
 authorAvatar: ./assets/avatar_malgorzata_g.jpeg
 metaImage: ./assets/10-Fintech-Startups-From-California-Every-Founder-Should-Know/10_fintech_startups_blog_cover.jpg
-isFeature: true
+isFeature: false
 ---
 
 
