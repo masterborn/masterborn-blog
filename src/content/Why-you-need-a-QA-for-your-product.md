@@ -5,7 +5,7 @@ description: 'Is QA really necessary? What could happen if you didn’t hire an 
 author: 'Rafał Świętek '
 authorAvatar: ./assets/avatar_rafal_swietek.png
 metaImage: ./assets/Why-you-need-a-QA-for-your-product/210809_mb_blog_Why_you_need_a_QA_cover.jpg
-isFeature: true
+isFeature: false
 ---
 
 It’s often said that people divide into 2 groups:
