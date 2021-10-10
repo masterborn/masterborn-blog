@@ -5,7 +5,7 @@ description: 'Design systems are gaining traction in the product development wor
 author: 'Damian Fejdasz'
 authorAvatar: ./assets/avatar_damian_fejdasz.jpg
 metaImage: ./assets/Design-systems-the-benefits-for-start-ups-and-product-teams/210723_mb_blog_designsystem_cover.jpg
-isFeature: true
+isFeature: false
 ---
 
 
