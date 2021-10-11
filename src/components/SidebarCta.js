@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
 import useModal from '../hooks/useModal';
-import navigateToWebsiteCarrier from '../utils/navigateToWebsiteCarrier';
+import navigateToWebsiteCareer from '../utils/navigateToWebsiteCareer';
 import utmCampaignNames from '../utils/utmCampaignNames';
 
 import ContactModal from './ContactModal';
@@ -51,7 +51,7 @@ const SidebarCta = ({ isInPoland }) => {
   };
 
   const utmCampaignName = utmCampaignNames.POST_RIGHT_SIDEBAR;
-  const contactButtonAction = isInPoland ? () => navigateToWebsiteCarrier(utmCampaignName) : openContactModal;
+  const contactButtonAction = isInPoland ? () => navigateToWebsiteCareer(utmCampaignName) : openContactModal;
   return (
     <Container>
       <StyledHeading as="h5">

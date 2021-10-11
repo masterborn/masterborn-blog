@@ -11,7 +11,7 @@ import useModal from '../hooks/useModal';
 import useActiveMenuStyles from '../hooks/useActiveMenuStyles';
 import { media } from '../utils/emotion';
 import utmCampaignNames from '../utils/utmCampaignNames';
-import navigateToWebsiteCarrier from '../utils/navigateToWebsiteCarrier';
+import navigateToWebsiteCareer from '../utils/navigateToWebsiteCareer';
 
 import ContactModal from './ContactModal';
 import PageSection from './pages/PageSection';
@@ -215,7 +215,7 @@ const Footer = ({ headings, buttonTexts }) => {
   };
 
   const utmCampaignName = utmCampaignNames.FOOTER_BUTTON;
-  const contactButtonAction = isInPoland ? () => navigateToWebsiteCarrier(utmCampaignName) : openContactModal;
+  const contactButtonAction = isInPoland ? () => navigateToWebsiteCareer(utmCampaignName) : openContactModal;
   return (
     <>
       <FooterCta>
