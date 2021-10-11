@@ -69,14 +69,17 @@ const plugins = [
     },
   },
   {
-    resolve: `gatsby-plugin-gtag`,
+    resolve: `gatsby-plugin-google-gtag`,
     options: {
-      // your google analytics tracking id
-      trackingId: config.gatsby.gaTrackingId,
-      // Puts tracking script in the head instead of the body
-      head: true,
-      // enable ip anonymization
-      anonymize: false,
+      trackingIds: [
+        config.gatsby.gaTrackingId
+      ],
+      gtagConfig: {
+        anonymize_ip: true,
+      },
+      pluginConfig: {
+        head: true,
+      },
     },
   },
   {
