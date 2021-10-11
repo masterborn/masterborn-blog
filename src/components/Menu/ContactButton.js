@@ -4,12 +4,12 @@ import styled from '@emotion/styled';
 
 import { media } from '../../utils/emotion';
 import Button from '../Button';
-import Link from '../Link';
 
 const StyledContactButton = styled(Button)`
   margin-left: 0;
   padding: .7rem 5rem;
   border: 1px solid ${props => props.theme.colors.contactButton.borderColor};
+  cursor: pointer;
   ${media.desktop`
     margin-left: 5rem;
     font-size: 1.6rem;
@@ -22,7 +22,7 @@ const ContactButton = ({ isCollapsedHeader, children, onClick, ...rest }) => {
   return (
     <StyledContactButton
       {...rest}
-      as={Link}
+      as="a"
       variant="cta"
       size="cta"
       onClick={onClick}
