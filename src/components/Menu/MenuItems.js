@@ -5,7 +5,7 @@ import styled from '@emotion/styled';
 import Link from '../Link';
 import useActiveMenuStyles from '../../hooks/useActiveMenuStyles';
 import config from '../../../config';
-import navigateToWebsiteCarrier from '../../utils/navigateToWebsiteCarrier';
+import navigateToWebsiteCareer from '../../utils/navigateToWebsiteCareer';
 import ContactModal from '../ContactModal';
 import useModal from '../../hooks/useModal';
 import { media } from '../../utils/emotion';
@@ -51,7 +51,7 @@ const MenuItems = ({ isCollapsedHeader, onClickItem, contactAsButton }) => {
   };
 
   const utmCampaignName = utmCampaignNames.HEADER_BUTTON;
-  const contactButtonAction = isInPoland ? () => navigateToWebsiteCarrier(utmCampaignName) : openContactModal;
+  const contactButtonAction = isInPoland ? () => navigateToWebsiteCareer(utmCampaignName) : openContactModal;
 
   return (
     <>

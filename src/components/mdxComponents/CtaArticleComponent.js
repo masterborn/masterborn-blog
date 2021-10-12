@@ -6,7 +6,7 @@ import { media } from '../../utils/emotion';
 import { CountryContext } from '../../contexts/CountryContext';
 import useModal from '../../hooks/useModal';
 import ContactModal from '../ContactModal';
-import navigateToWebsiteCarrier from '../../utils/navigateToWebsiteCarrier';
+import navigateToWebsiteCareer from '../../utils/navigateToWebsiteCareer';
 import utmCampaignNames from '../../utils/utmCampaignNames';
 import Button from '../Button';
 
@@ -78,7 +78,7 @@ const CtaArticleComponent = ({ headings, buttonTexts, showYellowUnderline, utmCa
     showContactModal();
   };
 
-  const buttonAction = isInPoland ? () => navigateToWebsiteCarrier(utmCampaign) : openContactModal;
+  const buttonAction = isInPoland ? () => navigateToWebsiteCareer(utmCampaign) : openContactModal;
   return (
     <Container>
       <StyledHeading as="h5" mb={0}>
