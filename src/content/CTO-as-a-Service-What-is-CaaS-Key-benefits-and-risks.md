@@ -95,7 +95,7 @@ On the other hand, sometimes as an owner of the business, you may need some expe
 
 There may be a case where during an audit, its result may be unsatisfactory and you will need to make a hard decision of firing your current CTO and substitute them with a new one that will be more competent or business-oriented. In this case, having a CTO as a service on a "now" basis may be highly beneficial in terms of business continuity.
 
-## When Should you hire a full-time CTO?
+## When should you hire a full-time CTO?
 
 There is no good answer to this question, unfortunately. I would highly suggest keeping common sense in this matter as a decision on who and when to hire is actually highly dependent on variables/issues that touch your business right now.
 
@@ -104,6 +104,7 @@ A typical case for having such a person inside of the team/company should be bas
 Generally, I would recommend hiring a full-time CTO whenever you are sure of this person's skills, personality and you trust that they will deliver the value you need.
 
 ## My experiences after working as a "part-time" Chief Technology Officer
+![pexels-olia-danilevich-4974915](assets/CTO-as-a-Service-What-is-CaaS-Key-benefits-and-risks/pexels-olia-danilevich-4974915.jpg)
 
 From the perspective of a person being hired, I love it! I would even use the term "the more the merrier"! It is always great to have additional experience from a different source that boosts your creativity, problem-solving skills, and expertise!
 
@@ -111,7 +112,7 @@ Having this possibility to work on many different cases gives you this exactly! 
 
 With each new app, I develop my skills even more which gives even greater value to the end customer and boosts future projects. Having an understanding of these common pieces of each application (i.e. authorization and authentication - you almost always need these in your app) gives your decisions momentum and lowers the general cost as you don't need to spend a lot of time on these.
 
-## Choosing MasterBorn as your CTO as a Service.
+## Choosing MasterBorn as your CTO as a Service
 
 If you are considering hiring a CTO in the CaaS model - let's talk. At MasterBorn, we specialize in creating valuable MVPs for American startups and have extensive experience in this area.
 
