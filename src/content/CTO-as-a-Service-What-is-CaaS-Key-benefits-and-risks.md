@@ -5,7 +5,7 @@ description: 'CTO as a Service is not just another XYZaaS fancy word. It’s a s
 author: 'Przemysław Królik'
 authorAvatar: ./assets/avatar_przemyslaw_k.jpg
 metaImage: ./assets/CTO-as-a-Service-What-is-CaaS-Key-benefits-and-risks/210721_mb_blog_CTO_as_a_service_cover.jpg
-isFeature: true
+isFeature: false
 ---
 
 
