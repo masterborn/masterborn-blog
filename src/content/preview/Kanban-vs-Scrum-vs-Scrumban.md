@@ -1,7 +1,7 @@
 ---
 title: 'Kanban vs. Scrum vs. Scrumban - What are the differences?'
 date: 2021-02-08
-description: 'Preview description'
+description: 'Scrum, Kanban, Scrumban - these terms are often confused and used interchangeably. Which is best for your team and when is it worth applying each?'
 author: 'Agata Martyniszyn'
 authorAvatar: ./assets/avatar_agata_martyniszyn.jpg
 metaImage: ./assets/Kanban-vs-Scrum-vs-Scrumban/mb_blog_kanbanvs_cover.jpg
@@ -21,8 +21,6 @@ The world is becoming increasingly complex, and everything changes constantly. T
 Remember that Agile is an approach - a way of thinking, attitude, and mode of reacting to changes. It’s a set of traits supporting an agile working environment that is based on respect, constant improvement and learning cycles, cooperation, strong ownership, a value-centered approach, and the ability to adapt to change quickly.
 
 ## Scrum, Kanban, Scrumban
-
-![mb_blog_Scrum_vs_Kanban_vs_Scrumban](assets/Kanban-vs-Scrum-vs-Scrumban/mb_blog_Scrum_vs_Kanban_vs_Scrumban.jpg)
 
 Scrum, Kanban, Scrumban - you've probably heard about them already. They are frameworks that help optimize the product, project, or service development and empower teams to generate the best possible value. These frameworks are slightly different from each other. Scrum is a specific one described in the [Scrum Guide](https://scrumguides.org/index.html). Kanban is rather a conceptual framework, more of a set of principles. Scrumban, on the other hand, can be called a "pathway" because it’s a combination of some of Scrum's strict principles with Kanban's conceptual approach.
 

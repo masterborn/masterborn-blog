@@ -46,6 +46,7 @@ After this simple warm-up, we can move to something that can handle data.
 In this test, I add data classes initialized with values that I use in my method. In this test case, we pass the correct data. Now it only requires refactoring the code from the previous test case. The resulting status should be equal to `HOLD`.
 
 ![MB_Blog_TDD_03](assets/How-to-start-a-project-with-Test-Driven-Development-TDD/MB_Blog_TDD_03.jpg)
+
 The previous test was very naive considering we don't know there is enough money in the sender's account. The only value that we change here is the amount to pay. We can see big red text informing us that our test failed. Now — I will add such one condition to handle this case:
 
 ![MB_Blog_TDD_04](assets/How-to-start-a-project-with-Test-Driven-Development-TDD/MB_Blog_TDD_04.jpg)
