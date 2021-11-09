@@ -6,12 +6,11 @@ author: 'Agata Martyniszyn'
 authorAvatar: ./assets/avatar_agata_martyniszyn.jpg
 metaImage: ./assets/Kanban-vs-Scrum-vs-Scrumban/mb_blog_kanbanvs_cover.jpg
 metaDescription: 'Scrum, Kanban, Scrumban - these terms are often confused and used interchangeably. Which is best for your team and when is it worth applying each?'
-isPreview: true
+isFeature: true
 ---
 
 
 Let's start with the foundation and a short reminder of what Agile is.
-
 
 
 The world is becoming increasingly complex, and everything changes constantly. Traditional project management methods are less and less able to cope with such a rapidly changing environment. Currently, no products can be developed for years or months without applying some changes during development. This is where Agile comes in. It’s an iterative approach to project management in many different industries, but it found the greatest popularity in software development. Instead of betting everything on a "big bang" launch as it used to be in Waterfall projects, Agile teams deliver work in small but consumable increments. Requirements, plans, and results are evaluated continuously, so teams have a natural mechanism for responding to change quickly.
