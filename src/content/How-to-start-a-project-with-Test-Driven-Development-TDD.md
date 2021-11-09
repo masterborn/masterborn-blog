@@ -3,9 +3,9 @@ title: 'How to start a project with Test-Driven Development (TDD)'
 date: 2021-10-26
 description: 'What is Test-Driven Development? Learn how to perform TDD with real code examples that focus on the Payment process.'
 author: 'Mateusz Kubaszek'
-authorAvatar: ./assets/default_avatar.png
+authorAvatar: ./assets/avatar_mateusz_kubaszek.jpg
 metaImage: ./assets/How-to-start-a-project-with-Test-Driven-Development-TDD/MB_Blog_TDD_Cover.jpg
-isFeature: true
+isFeature: false
 ---
 
 
