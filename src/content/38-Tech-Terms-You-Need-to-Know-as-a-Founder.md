@@ -123,7 +123,9 @@ According to GitHub it is [used by over 65 million developers and over 3 million
 StackOverflow is a community for developers where they learn, exchange knowledge and solutions to common problems. It’s powerful knowledge database is a source of many jokes with some developers claiming you don’t need to write any code any more and can simply copy it chunk by chunk from StackOverflow.
 
 ![meme1](assets/38-Tech-Terms-You-Need-to-Know-as-a-Founder/meme1.png)
+
 ![meme2](assets/38-Tech-Terms-You-Need-to-Know-as-a-Founder/meme2.png)
+
 ![meme3](assets/38-Tech-Terms-You-Need-to-Know-as-a-Founder/meme3.png)
 
 But jokes aside, StackOverflow is deeply embedded in the software development community with [14 million users and 21 million code related questions](https://en.wikipedia.org/wiki/Stack_Overflow). Without it, your product team would have to continuously reinvent the wheel and solve problems that have already been solved.
