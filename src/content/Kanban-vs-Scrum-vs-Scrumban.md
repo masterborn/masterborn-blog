@@ -1,12 +1,12 @@
 ---
 title: 'Kanban vs. Scrum vs. Scrumban - What are the differences?'
-date: 2021-02-08
+date: 2021-11-08
 description: 'Scrum, Kanban, Scrumban - these terms are often confused and used interchangeably. Which is best for your team and when is it worth applying each?'
 author: 'Agata Martyniszyn'
 authorAvatar: ./assets/avatar_agata_martyniszyn.jpg
 metaImage: ./assets/Kanban-vs-Scrum-vs-Scrumban/mb_blog_kanbanvs_cover.jpg
 metaDescription: 'Scrum, Kanban, Scrumban - these terms are often confused and used interchangeably. Which is best for your team and when is it worth applying each?'
-isFeature: true
+isFeature: false
 ---
 
 
