@@ -229,7 +229,7 @@ This is a very important role, and contrary to popular belief, it’s NOT restri
 
 
 
-### 18. SRE - Site Responsibility Engineer
+### 18. SRE - Site Reliability Engineer
 
 
 #### Who is a Site Reliability Engineer?
