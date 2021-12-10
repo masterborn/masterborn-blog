@@ -1,7 +1,7 @@
 ---
 title: '9 No-Nonsense Tips That Will Help You Connect With Gen Z'
 date: 2021-12-10
-description: 'Gen Z is soon going to surpass Millennials as the most populous generation on the globe. How to find a common ground with Gen Z (not only) at work? (edited)'
+description: 'Gen Z is soon going to surpass Millennials as the most populous generation on the globe. How to find a common ground with Gen Z (not only) at work?'
 author: 'Małgorzata Galińska'
 authorAvatar: ./assets/avatar_malgorzata_g.jpeg
 metaImage: ./assets/9-No-Nonsense-Tips-That-Will-Help-You-Connect-With-Gen-Z/mb_blog_9_No-Nonsense_Tips_GenZ_cover.jpg
