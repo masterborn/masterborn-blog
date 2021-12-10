@@ -5,7 +5,7 @@ description: 'As a non-technical founder or CEO it’s essential for you to know
 author: 'Przemysław Królik'
 authorAvatar: ./assets/avatar_przemyslaw_k.jpg
 metaImage: ./assets/38-Tech-Terms-You-Need-to-Know-as-a-Founder/mb_blog_38-Tech-Terms-You-Need-to-Know-as-a-Start-up-Founder_cover.jpg
-isFeature: true
+isFeature: false
 ---
 
 
