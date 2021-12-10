@@ -16,6 +16,7 @@ In fact, Gen Z is soon going to surpass Millennials as the most populous generat
 How do previous generations approach Gen Z?
 
 ## Gen Z is demanding and too sensitive
+![giacomo-lucarini--pOMjxrXBIY-unsplash](assets/9-No-Nonsense-Tips-That-Will-Help-You-Connect-With-Gen-Z/giacomo-lucarini--pOMjxrXBIY-unsplash.jpg)
 
 
 
