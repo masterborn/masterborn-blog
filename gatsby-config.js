@@ -62,6 +62,13 @@ const plugins = [
     },
   },
   {
+    resolve: 'gatsby-plugin-google-tagmanager',
+    options: {
+      id: '5LB3KK3',
+      includeInDevelopment: true,
+    },
+  },
+  {
     resolve: `gatsby-source-filesystem`,
     options: {
       name: `images`,
