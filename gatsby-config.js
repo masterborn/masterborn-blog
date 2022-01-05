@@ -24,7 +24,7 @@ const plugins = [
       plugins: [
         `gatsby-remark-images`,
         {
-          resolve: "gatsby-remark-related-posts",
+          resolve: 'gatsby-remark-related-posts',
           options: {
             posts_dir: `${__dirname}/${config.general.markdownPath}`,
           },
@@ -64,7 +64,7 @@ const plugins = [
   {
     resolve: 'gatsby-plugin-google-tagmanager',
     options: {
-      id: '5LB3KK3',
+      id: config.gatsby.googleTagManagerId,
       includeInDevelopment: true,
     },
   },
@@ -78,9 +78,7 @@ const plugins = [
   {
     resolve: `gatsby-plugin-google-gtag`,
     options: {
-      trackingIds: [
-        config.gatsby.gaTrackingId
-      ],
+      trackingIds: [config.gatsby.gaTrackingId],
       gtagConfig: {
         anonymize_ip: true,
       },
@@ -99,7 +97,7 @@ const plugins = [
     resolve: `gatsby-plugin-emotion`,
     options: {
       sourceMap: true,
-      autoLabel: "dev-only",
+      autoLabel: 'dev-only',
       labelFormat: '[local]',
       cssPropOptimization: true,
     },
