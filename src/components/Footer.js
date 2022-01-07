@@ -40,7 +40,7 @@ const FooterContainer = styled.footer`
 const OfficesContainer = styled.div`
   display: flex;
   padding: 1rem 3rem;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   padding: 0;
   font-size: 1.6rem;
@@ -70,7 +70,7 @@ const OfficeItem = styled.div`
   }
   ${media.desktop`
     margin: 0 5rem 0 0;
-    width: 100%;
+    width: auto;
   `}
 `
 
@@ -245,6 +245,13 @@ const Footer = ({ headings, buttonTexts }) => {
               <p>ul. Gabrieli Zapolskiej 45B
                 <br />
                 25-435 Kielce
+              </p>
+            </OfficeItem>
+            <OfficeItem>
+              <h5>Szczecin, PL</h5>
+              <p>ul. Wielka Odrzańska 26
+                <br />
+                70-202 Szczecin
               </p>
             </OfficeItem>
             <OfficeItem>
