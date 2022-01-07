@@ -22,7 +22,7 @@ import Logo from './Logo';
 import Heading from './Heading';
 import Button from './Button';
 
-const OfficeHeader = styled.h5`
+const OfficeHeader = styled.h4`
   color: ${props => props.theme.colors.footer.header};
   opacity: 0.9;
   font-weight: ${props => props.theme.fontWeights[1]};
@@ -122,11 +122,15 @@ const ratings = [
     title: 'Clutch.co',
     logo: ClutchLogo,
     url: 'https://clutch.co/profile/masterborn',
+    imgHeight: 38, //[Page metrics] images need exact dimensions for good scoring
+    imgWidth: 130,
     score: '4,9/5',
   },
   {
     title: 'Google Reviews',
     logo: GoogleReviewsLogo,
+    imgHeight: 47,
+    imgWidth: 130,
     url: 'https://www.google.com/search?q=masterborn&rlz=1C5CHFA_enPL917PL917&oq=masterborn&aqs=chrome..69i57j46i175i199j0j69i60l2j69i61j69i65j69i60.3723j0j9&sourceid=chrome&ie=UTF-8',
     score: '5.0',
   },
@@ -146,12 +150,16 @@ const FooterNavigation = styled.ul`
 
 const FooterLink = styled(Link)`
   color: ${props => props.theme.colors.header.color};
-  margin: 1.5rem;
-  padding: 1rem 0;
   :hover {
     color: ${props => props.theme.colors.primary};
     text-shadow: 0 0 1px;
   }
+`
+
+const FooterItem = styled.li`
+  margin: 1.5rem;
+  width: max-content;
+  padding: 1rem 0;
 `
 
 const CopyrightBox = styled.p`
@@ -263,7 +271,7 @@ const Footer = ({ headings, buttonTexts }) => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <img src={rating.logo} alt={rating.title} />
+                    <img width={rating.imgWidth} height={rating.imgHeight} src={rating.logo} alt={rating.title} />
                   </a>
                   <RatingWrapper>
                     <StarRating />
@@ -279,24 +287,31 @@ const Footer = ({ headings, buttonTexts }) => {
             <StyledLogo src={MBLogoGray} />
           </Link>
           <FooterNavigation>
+            <FooterItem>
             <FooterLink
               title="Home"
               href={config.env.masterbornWebsite}
             >
               Home
             </FooterLink>
+            </FooterItem>
+            <FooterItem>
             <FooterLink
               title="About Us"
               href="/about"
             >
               About Us
             </FooterLink>
+            </FooterItem>
+            <FooterItem>
             <FooterLink
               title="Career"
               href="/career"
             >
               Career
             </FooterLink>
+            </FooterItem>
+            <FooterItem>
             <FooterLink
               title="Blog"
               href="/blog"
@@ -304,6 +319,7 @@ const Footer = ({ headings, buttonTexts }) => {
             >
               Blog
             </FooterLink>
+            </FooterItem>
           </FooterNavigation>
           <CopyrightBox>Copyright © MasterBorn 2016-2021</CopyrightBox>
         </FooterNavigationWrapper>

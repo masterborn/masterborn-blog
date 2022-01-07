@@ -95,7 +95,7 @@ const MouseOverHandler = ({ children, setHovered }) => (
   </MouseOverHandlerContainer>
 );
 
-const FeaturePost = ({ post }) => {
+const FeaturePost = ({ post, isFirst }) => {
   const [isHovered, setHovered] = useState(false);
   const { title, description, slug, metaImage } = post;
   const colorsCategory = isHovered ? 'featurePostHover' : 'featurePost';
@@ -126,6 +126,7 @@ const FeaturePost = ({ post }) => {
             slug={slug}
           />
           <StyledImageMobile
+            isFirst={isFirst}
             slug={slug}
             metaImage={metaImage}
             isHovered={isHovered}

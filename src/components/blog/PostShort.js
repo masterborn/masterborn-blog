@@ -71,7 +71,7 @@ const PostShort = ({ slug, title, description, image }) => {
           color={`${colorsCategory}.header`}
           lineHeight="3.2rem"
           fontSize="2.2rem"
-          as="h4"
+          as="h2"
           mb={2}
           mt={3}
         >
