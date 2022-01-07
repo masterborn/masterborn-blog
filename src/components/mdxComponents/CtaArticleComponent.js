@@ -17,11 +17,9 @@ const Container = styled('div')`
   margin: 5rem 0;
   border-radius: 4px;
   justify-items: center;
-  background: linear-gradient(
-    90deg,
-    ${props => props.theme.colors.white} 27%,
-    ${props => props.theme.colors.ctaArticle.background} 27%
-  );
+  background: 
+    ${props => props.theme.colors.ctaArticle.background};
+
   ${media.desktop`
     margin: 2rem 0;
     display: grid;
