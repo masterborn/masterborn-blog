@@ -3,10 +3,12 @@ const config = {
     pathPrefix: '/blog',
     gaTrackingId: 'UA-140964154-1',
     faceBookPixelId: '261143155633730',
+    googleTagManagerId: '5LB3KK3',
     siteUrl: process.env.GATSBY_ROOT_URL || 'http://localhost:3000',
   },
   env: {
-    masterbornWebsite: process.env.MASTERBORN_WEBSITE || 'https://masterborn.com',
+    masterbornWebsite:
+      process.env.MASTERBORN_WEBSITE || 'https://masterborn.com',
     ROOT_URL: process.env.GATSBY_ROOT_URL || 'http://localhost:3000',
   },
   general: {
