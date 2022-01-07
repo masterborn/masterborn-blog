@@ -21,7 +21,7 @@ const BlogFeatureArticleContent = styled(BlogContent)`
   padding-top: 0;
   ${media.desktop`
     padding-top: 5rem;
-    width: 129rem;
+    width: auto;
     max-width: 129rem;
     adding-bottom: 6.5rem;
   `}

@@ -16,7 +16,7 @@ const Container = styled(BlogContent)`
   ${media.desktop`
     padding-bottom: 0;
     padding-top: 8rem;
-    width: 129rem;
+    width: auto;
     max-width: 129rem;
   `};
 
