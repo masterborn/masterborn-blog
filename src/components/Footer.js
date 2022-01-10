@@ -72,7 +72,7 @@ const OfficeItem = styled.div`
   }
   ${media.desktop`
     margin: 0 5rem 0 0;
-    width: auto;
+    width: 100%;
   `}
 `
 
@@ -257,13 +257,7 @@ const Footer = ({ headings, buttonTexts }) => {
                 25-435 Kielce
               </p>
             </OfficeItem>
-            <OfficeItem>
-              <h5>Szczecin, PL</h5>
-              <p>ul. Wielka Odrzańska 26
-                <br />
-                70-202 Szczecin
-              </p>
-            </OfficeItem>
+            
             <OfficeItem>
               <h5>Austin, U.S.</h5>
               <p>Austin, TX
