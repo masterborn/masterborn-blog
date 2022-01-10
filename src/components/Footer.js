@@ -56,6 +56,8 @@ const OfficeItem = styled.div`
   margin: 0;
   width: 100%;
   line-height: 2.6rem;
+  align-items: center;
+
   h5 {
     color: ${props => props.theme.colors.footer.officeHeader};
     font-size: ${props => props.theme.fontSizes[2]};
@@ -70,7 +72,7 @@ const OfficeItem = styled.div`
   }
   ${media.desktop`
     margin: 0 5rem 0 0;
-    width: auto;
+    width: 100%;
   `}
 `
 
@@ -230,7 +232,7 @@ const Footer = ({ headings, buttonTexts }) => {
         <StyledHeading as="h3">
           {isInPoland ? headings[0] : headings[1]}
         </StyledHeading>
-        <StyledButton
+        <StyledButton 
           variant="cta"
           size="cta"
           onClick={contactButtonAction}
@@ -253,13 +255,6 @@ const Footer = ({ headings, buttonTexts }) => {
               <p>ul. Gabrieli Zapolskiej 45B
                 <br />
                 25-435 Kielce
-              </p>
-            </OfficeItem>
-            <OfficeItem>
-              <h5>Szczecin, PL</h5>
-              <p>ul. Wielka Odrzańska 26
-                <br />
-                70-202 Szczecin
               </p>
             </OfficeItem>
             <OfficeItem>
