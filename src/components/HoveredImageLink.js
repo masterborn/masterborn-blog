@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 import { GatsbyImage } from "gatsby-plugin-image"
 
 import Link from './Link';
+import VanillaImage from './VanillaImage';
 
 const StyledImage = styled(GatsbyImage)`
   height: 100%;
@@ -48,10 +49,14 @@ const Container = styled.div`
 `;
 
 
-const HoveredImageLink = ({ slug, metaImage, className, isHovered, withShadow }) => (
+const HoveredImageLink = ({ slug, metaImage, className, isHovered, withShadow, isFirst }) => (
   <Container className={className}>
     <Link to={slug}>
-      <StyledImage withShadow={withShadow} image={metaImage.gatsbyImageData} loading="lazy" alt={slug} />
+      {/* [PageSpeed metrics] Render first image as regular <img/>, so that it loads faster. */}
+      {isFirst ? 
+      <VanillaImage metaImage={metaImage} slug={slug} />
+       : 
+      <StyledImage withShadow={withShadow} image={metaImage.gatsbyImageData} loading={'lazy'} alt={slug} />}
       <Overlay isHovered={isHovered}>
         <BlackArrow>&#8594;</BlackArrow>
       </Overlay>
