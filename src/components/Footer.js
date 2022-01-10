@@ -56,6 +56,8 @@ const OfficeItem = styled.div`
   margin: 0;
   width: 100%;
   line-height: 2.6rem;
+  align-items: center;
+
   h5 {
     color: ${props => props.theme.colors.footer.officeHeader};
     font-size: ${props => props.theme.fontSizes[2]};
@@ -230,7 +232,7 @@ const Footer = ({ headings, buttonTexts }) => {
         <StyledHeading as="h3">
           {isInPoland ? headings[0] : headings[1]}
         </StyledHeading>
-        <StyledButton
+        <StyledButton 
           variant="cta"
           size="cta"
           onClick={contactButtonAction}
