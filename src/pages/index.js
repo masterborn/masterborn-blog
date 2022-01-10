@@ -63,8 +63,8 @@ const Index = () => {
         {/* </SearchContainer> */}
         {offset === 0 && (
           <BlogFeatureArticleContent>
-            {featurePosts.map(featurePost => (
-              <FeaturePost key={featurePost.id} post={featurePost} />
+            {featurePosts.map((featurePost, index) => (
+              <FeaturePost isFirst={index===0} key={featurePost.id} post={featurePost} />
           ))}
           </BlogFeatureArticleContent>
         )}

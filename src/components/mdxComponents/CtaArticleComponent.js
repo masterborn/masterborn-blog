@@ -81,7 +81,7 @@ const CtaArticleComponent = ({ headings, buttonTexts, showYellowUnderline, utmCa
   const buttonAction = isInPoland ? () => navigateToWebsiteCareer(utmCampaign) : openContactModal;
   return (
     <Container>
-      <StyledHeading as="h5" mb={0}>
+      <StyledHeading as="h3" mb={0}>
         {isInPoland ? headings[0] : headings[1]}
         {showYellowUnderline && <Underline />}
       </StyledHeading>
