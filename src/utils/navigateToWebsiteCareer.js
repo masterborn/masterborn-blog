@@ -7,4 +7,5 @@ const navigateToWebsiteCareer = campaignName =>
     ? (window.location.href = `${config.env.masterbornWebsite}/career/?utm_campaign=${campaignName}`)
     : navigate('/career');
 
+
 export default navigateToWebsiteCareer;
