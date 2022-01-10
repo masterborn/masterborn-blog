@@ -1,9 +1,10 @@
 import { navigate } from 'gatsby';
 
+import config from '../../config';
+
 const navigateToWebsiteCareer = campaignName =>
-  navigate(
-    campaignName
-      ? `../career/?utm_source=MasterBorn&utm_medium=blog&utm_campaign=${campaignName}/`
-      : `../career/`
-  );
+  campaignName
+    ? (window.location.href = `${config.env.masterbornWebsite}/career/?utm_campaign=${campaignName}`)
+    : navigate('/career');
+
 export default navigateToWebsiteCareer;
