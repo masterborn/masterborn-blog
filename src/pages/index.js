@@ -21,9 +21,9 @@ const BlogFeatureArticleContent = styled(BlogContent)`
   padding-top: 0;
   ${media.desktop`
     padding-top: 5rem;
-    width: 129rem;
+    width: auto;
     max-width: 129rem;
-    adding-bottom: 6.5rem;
+    padding-bottom: 6.5rem;
   `}
 `;
 // const SearchContainer = styled(BlogContent)`
@@ -63,8 +63,8 @@ const Index = () => {
         {/* </SearchContainer> */}
         {offset === 0 && (
           <BlogFeatureArticleContent>
-            {featurePosts.map(featurePost => (
-              <FeaturePost key={featurePost.id} post={featurePost} />
+            {featurePosts.map((featurePost, index) => (
+              <FeaturePost isFirst={index===0} key={featurePost.id} post={featurePost} />
           ))}
           </BlogFeatureArticleContent>
         )}

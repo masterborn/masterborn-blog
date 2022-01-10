@@ -12,6 +12,7 @@ const Container = styled.div`
   flex-wrap: wrap;
   justify-content: start;
   ${media.desktop`
+  justify-content: center;
     gap: 0px 35px;
   `}
 `;
