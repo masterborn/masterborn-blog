@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { InstantSearch } from "react-instantsearch-dom";
 import partition from 'lodash/partition';
-import { Router, Link, Location, Redirect } from "@reach/router"
+import { Router, Location,} from "@reach/router"
 
 import useAlgoliaSearch from '../hooks/useAlgoliaSearch';
 import useAllBlogPosts from '../hooks/useAllBlogPosts';
