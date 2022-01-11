@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { InstantSearch } from "react-instantsearch-dom";
 import partition from 'lodash/partition';
+import { Router, Link, Location, Redirect } from "@reach/router"
 
 import useAlgoliaSearch from '../hooks/useAlgoliaSearch';
 import useAllBlogPosts from '../hooks/useAllBlogPosts';
@@ -43,8 +44,7 @@ const Index = () => {
   const { searchClient, setQuery, indexName } = useAlgoliaSearch();
   const posts = useAllBlogPosts();
   const postsPerPage = 12;
-  const [offset, setOffset] = useState(0);
-
+  const offset = 0;
   const [featurePosts, restPosts] = partition(posts, ({ isFeature }) => !!isFeature);
 
   return (
@@ -68,12 +68,22 @@ const Index = () => {
           ))}
           </BlogFeatureArticleContent>
         )}
+        <Location>
+        {({ location }) => (
+        <Router location={location}>
         <BlogPostsContent
+          exact path="/"
           postsPerPage={postsPerPage}
           offset={offset}
-          setOffset={setOffset}
           posts={restPosts}
         />
+          <BlogPostsContent
+          path="/posts/:page"
+          postsPerPage={postsPerPage}
+          posts={restPosts}
+        />
+        </Router>)}
+        </Location>
       </Wrapper>
     </InstantSearch>
   );

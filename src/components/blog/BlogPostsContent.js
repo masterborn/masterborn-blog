@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import ReactPaginate from 'react-paginate';
+import { navigate, useParams } from "@reach/router"
 
 import { media } from '../../utils/emotion';
 import utmCampaignNames from '../../utils/utmCampaignNames';
@@ -58,11 +59,17 @@ const CtaContainer = styled.div`
 
 `;
 
-const BlogPostsContent = ({postsPerPage, offset, posts, setOffset })=> {
+const BlogPostsContent = ({postsPerPage, offset, posts })=> {
+  const { page } = useParams()
+  if (page <= 0 || (posts.length/postsPerPage < page - 1)) navigate('/')
+  if (page > 0) offset = (page - 1) * postsPerPage
   const pageCount = Math.ceil(posts.length / postsPerPage);
   const onPageChange = ({ selected }) => {
-    setOffset(Math.ceil(selected * postsPerPage));
-    window.scrollTo(0, 0);
+    if (selected === 0){
+      navigate('/')
+      return;
+    }
+    navigate(`/posts/${selected + 1}`)
   };
   const paginatedPosts = posts.slice(offset, offset + postsPerPage);
   const ctaHeadings = [
@@ -71,6 +78,7 @@ const BlogPostsContent = ({postsPerPage, offset, posts, setOffset })=> {
   ];
   const ctaButtonTexts = ['See open positions!', 'Contact us!'];
   const utmCampaignName = utmCampaignNames.HOMEPAGE_CTA;
+  
 
   return (
     <Container>
