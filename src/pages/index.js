@@ -74,14 +74,14 @@ const Index = () => {
         {({ location }) => (
             <Router location={location}>
             <BlogPostsContent
-              exact path="/blog"
+               path="/blog"
               postsPerPage={postsPerPage}
               offset={offset}
               posts={restPosts}
               setOffset={setOffset}
             />
               <BlogPostsContent
-              exact path="/blog/posts/:page"
+               path="/blog/posts/:page"
               postsPerPage={postsPerPage}
               posts={restPosts}
               offset={offset}
