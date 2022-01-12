@@ -111,15 +111,15 @@ const plugins = [
       },
     },
   },
-  // {
-  //   resolve: `gatsby-plugin-algolia`,
-  //   options: {
-  //     appId: config.algolia.appId,
-  //     apiKey: config.algolia.adminKey,
-  //     indexName: config.algolia.indexName,
-  //     queries: getAlgoliaQueries(),
-  //   },
-  // },
+  {
+    resolve: `gatsby-plugin-algolia`,
+    options: {
+      appId: config.algolia.appId,
+      apiKey: config.algolia.adminKey,
+      indexName: config.algolia.indexName,
+      queries: getAlgoliaQueries(),
+    },
+  },
 ];
 
 module.exports = {
