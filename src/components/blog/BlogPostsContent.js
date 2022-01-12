@@ -59,17 +59,28 @@ const CtaContainer = styled.div`
 
 `;
 
-const BlogPostsContent = ({postsPerPage, offset, posts })=> {
-  const { page } = useParams()
-  if (page <= 0 || (posts.length/postsPerPage < page - 1)) navigate('/')
-  if (page > 0) offset = (page - 1) * postsPerPage
+const BlogPostsContent = ({postsPerPage, offset, posts, setOffset })=> {
+  const { page: pageParam } = useParams()
+  
+  const isValidPage = (param) => {
+    return (param.match(/^[\d]+$/) && (posts.length/postsPerPage > param - 1))
+  }
+  
+  if (pageParam && !isValidPage(pageParam)) navigate('/blog')
+  const page = pageParam ? pageParam : 1
+
+
+  
+  setOffset((page - 1) * postsPerPage)
   const pageCount = Math.ceil(posts.length / postsPerPage);
   const onPageChange = ({ selected }) => {
     if (selected === 0){
-      navigate('/')
+      setOffset(0)
+      navigate('/blog')
       return;
     }
-    navigate(`/posts/${selected + 1}`)
+    setOffset((page - 1) * postsPerPage)
+    navigate(`/blog/posts/${selected + 1}`)
   };
   const paginatedPosts = posts.slice(offset, offset + postsPerPage);
   const ctaHeadings = [
@@ -103,6 +114,7 @@ const BlogPostsContent = ({postsPerPage, offset, posts })=> {
         onPageChange={onPageChange}
         containerClassName="pagination"
         activeClassName="active"
+        forcePage={page - 1}
       />
     </Container>
   );
