@@ -2,16 +2,16 @@ import React, {useState, useEffect} from 'react';
 import styled from '@emotion/styled';
 import { InstantSearch } from "react-instantsearch-dom";
 import partition from 'lodash/partition';
-import { Router, Location,} from "@reach/router"
+import { Router, Location, Redirect} from "@reach/router"
 
-import useAlgoliaSearch from '../../hooks/useAlgoliaSearch';
-import useAllBlogPosts from '../../hooks/useAllBlogPosts';
-import FeaturePost from '../../components/blog/FeaturePost';
-import BlogContent from '../../components/blog/BlogContent';
-import { media } from '../../utils/emotion';
-import SEO from "../../components/SEO"
+import useAlgoliaSearch from '../hooks/useAlgoliaSearch';
+import useAllBlogPosts from '../hooks/useAllBlogPosts';
+import FeaturePost from '../components/blog/FeaturePost';
+import BlogContent from '../components/blog/BlogContent';
+import { media } from '../utils/emotion';
+import SEO from "../components/SEO"
 // import Search from '../components/Search';
-import BlogPostsContent from '../../components/blog/BlogPostsContent';
+import BlogPostsContent from '../components/blog/BlogPostsContent';
 
 const Wrapper = styled('div')`
   margin-top: 12rem;
@@ -87,6 +87,7 @@ const Index = () => {
               offset={offset}
               setOffset={setOffset}
             />
+            <Redirect from="*" to="/blog"/>
             </Router>)}
             </Location>
       </Wrapper>
