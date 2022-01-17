@@ -39,9 +39,13 @@ const RelatedArticlesContainer = styled.div`
   ${media.desktop`
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    
+    width: 76rem;
+    margin: 0 auto;
   `}
+  @media (min-width: 1225px) {
+    width: auto;
+    margin: 0;
+  }
 `;
 
 const StyledPageSection = styled(PageSection)`
