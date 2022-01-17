@@ -12,7 +12,7 @@ const BlogContent = styled(Content)`
       max-width: 100%;
   `};
   ${media.ultraWide`
-      width: 116rem;
+      width: 100%;
       max-width: 116rem;
   `}
 `;
