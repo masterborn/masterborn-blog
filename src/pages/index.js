@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
-import { InstantSearch } from "react-instantsearch-dom";
+import { InstantSearch } from 'react-instantsearch-dom';
 import partition from 'lodash/partition';
 
 import useAlgoliaSearch from '../hooks/useAlgoliaSearch';
@@ -45,7 +45,10 @@ const Index = () => {
   const postsPerPage = 12;
   const [offset, setOffset] = useState(0);
 
-  const [featurePosts, restPosts] = partition(posts, ({ isFeature }) => !!isFeature);
+  const [featurePosts, restPosts] = partition(
+    posts,
+    ({ isFeature }) => !!isFeature
+  );
 
   return (
     <InstantSearch
@@ -55,8 +58,8 @@ const Index = () => {
     >
       <Wrapper>
         <SEO
-          title="MasterBorn | Blog"
-          description="Let's start the journey of creating your software with Premium Professionals."
+          title="Blog | MasterBorn: Your React and Node.js Trusted Partners"
+          description="Read our latest articles and deepen your JS & business know-how. Explore technical guides, tips, hints, startup insights & more."
         />
         {/* <SearchContainer> */}
         {/* <Search /> */}
@@ -64,8 +67,12 @@ const Index = () => {
         {offset === 0 && (
           <BlogFeatureArticleContent>
             {featurePosts.map((featurePost, index) => (
-              <FeaturePost isFirst={index===0} key={featurePost.id} post={featurePost} />
-          ))}
+              <FeaturePost
+                isFirst={index === 0}
+                key={featurePost.id}
+                post={featurePost}
+              />
+            ))}
           </BlogFeatureArticleContent>
         )}
         <BlogPostsContent
