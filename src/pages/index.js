@@ -1,15 +1,14 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { InstantSearch } from "react-instantsearch-dom";
 import partition from 'lodash/partition';
-import { Router, Location, Redirect} from "@reach/router"
 
 import useAlgoliaSearch from '../hooks/useAlgoliaSearch';
 import useAllBlogPosts from '../hooks/useAllBlogPosts';
 import FeaturePost from '../components/blog/FeaturePost';
 import BlogContent from '../components/blog/BlogContent';
 import { media } from '../utils/emotion';
-import SEO from "../components/SEO"
+import SEO from '../components/SEO';
 // import Search from '../components/Search';
 import BlogPostsContent from '../components/blog/BlogPostsContent';
 
@@ -40,12 +39,12 @@ const BlogFeatureArticleContent = styled(BlogContent)`
 //   `}
 // `
 
-
 const Index = () => {
   const { searchClient, setQuery, indexName } = useAlgoliaSearch();
   const posts = useAllBlogPosts();
   const postsPerPage = 12;
-  const [offset, setOffset] = useState(0)
+  const [offset, setOffset] = useState(0);
+
   const [featurePosts, restPosts] = partition(posts, ({ isFeature }) => !!isFeature);
 
   return (
@@ -54,7 +53,6 @@ const Index = () => {
       indexName={indexName}
       onSearchStateChange={({ query }) => setQuery(query)}
     >
-
       <Wrapper>
         <SEO
           title="MasterBorn | Blog"
@@ -70,28 +68,13 @@ const Index = () => {
           ))}
           </BlogFeatureArticleContent>
         )}
-              <Location>
-        {({ location }) => (
-            <Router location={location}>
-            <BlogPostsContent
-              path="/blog"
-              postsPerPage={postsPerPage}
-              offset={offset}
-              posts={restPosts}
-              setOffset={setOffset}
-            />
-              <BlogPostsContent
-                path="/blog/posts/:page"
-              postsPerPage={postsPerPage}
-              posts={restPosts}
-              offset={offset}
-              setOffset={setOffset}
-            />
-            <Redirect from="*" to="/blog"/>
-            </Router>)}
-            </Location>
+        <BlogPostsContent
+          postsPerPage={postsPerPage}
+          offset={offset}
+          setOffset={setOffset}
+          posts={restPosts}
+        />
       </Wrapper>
-
     </InstantSearch>
   );
 };
