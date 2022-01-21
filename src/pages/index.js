@@ -3,11 +3,13 @@ import styled from '@emotion/styled';
 import partition from 'lodash/partition';
 
 import config from '../../config';
+
 import useAllBlogPosts from '../hooks/useAllBlogPosts';
 import FeaturePost from '../components/blog/FeaturePost';
 import BlogContent from '../components/blog/BlogContent';
 import { media } from '../utils/emotion';
 import SEO from '../components/SEO';
+
 import BlogPostsContent from '../components/blog/BlogPostsContent';
 
 const Wrapper = styled('div')`

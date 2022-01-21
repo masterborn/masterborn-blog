@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
 import { navigate } from 'gatsby';
+
 import PropTypes from 'prop-types';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import styled from '@emotion/styled';
 import { MDXProvider } from '@mdx-js/react';
 import { GatsbyImage } from 'gatsby-plugin-image';
+
 
 import { media } from '../../utils/emotion';
 import Heading from '../Heading';
