@@ -34,7 +34,6 @@ const Index = () => {
     posts,
     ({ isFeature }) => !!isFeature
   );
-
   return (
     <Wrapper>
       <SEO
@@ -53,7 +52,7 @@ const Index = () => {
       <BlogPostsContent
         posts={restPosts.slice(0, postsPerPage)}
         page={1}
-        pageCount={Math.ceil(posts.length / postsPerPage)}
+        pageCount={Math.ceil((posts.length - 13) / postsPerPage) + 1}
       />
     </Wrapper>
   );

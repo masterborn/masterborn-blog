@@ -16,10 +16,12 @@ const mapReadmeSlug = slug => {
 };
 
 async function getPageData(graphql) {
-  const blogPosts = await getAllPosts(graphql).then(posts =>
-    posts.filter(post => !post.isFeature).slice(postsPerPage) //get rid off first page
-  );
-  const pageCount = Math.ceil(blogPosts.length / postsPerPage) + 1;
+  const allPosts = await getAllPosts(graphql);
+  const blogPosts = allPosts
+    .filter(post => !post.isFeature)
+    .slice(postsPerPage); //get rid off first page
+
+  const pageCount = Math.ceil((allPosts.length - 13) / postsPerPage) + 1;
   const blogPageData = chunk(blogPosts, postsPerPage).map((chunk, index) => ({
     posts: chunk,
     page: index + 2, //first page is at /blog

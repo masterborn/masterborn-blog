@@ -4,7 +4,6 @@ import styled from '@emotion/styled';
 import ReactPaginate from 'react-paginate';
 import { navigate } from '@reach/router';
 
-
 import { media } from '../../utils/emotion';
 import utmCampaignNames from '../../utils/utmCampaignNames';
 import CtaArticleComponent from '../mdxComponents/CtaArticleComponent';
@@ -98,6 +97,7 @@ const BlogPostsContent = ({ posts, page, pageCount }) => {
         onPageChange={onPageChange}
         containerClassName="pagination"
         activeClassName="active"
+        forcePage={page - 1}
       />
     </Container>
   );
