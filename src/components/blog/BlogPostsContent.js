@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import ReactPaginate from 'react-paginate';
-import { navigate, useParams } from "@reach/router"
+import { navigate } from '@reach/router';
 
 import { media } from '../../utils/emotion';
 import utmCampaignNames from '../../utils/utmCampaignNames';
@@ -41,7 +41,8 @@ const Container = styled(BlogContent)`
       color: ${({ theme }) => theme.colors.pagination.disabled};
       cursor: auto;
     }
-    .previous, .next {
+    .previous,
+    .next {
       width: 10rem;
     }
   }
@@ -56,44 +57,26 @@ const CtaContainer = styled.div`
   ${media.desktop`
     grid-template-columns: 600pt;
   `}
-
 `;
 
-const BlogPostsContent = ({postsPerPage, offset, posts, setOffset })=> {
-  const { page: pageParam } = useParams()
-  
-  const isValidPage = (param) => {
-    return (param.match(/^[\d]+$/) && (posts.length/postsPerPage > param - 1))
-  }
-  
-  if (pageParam && !isValidPage(pageParam)) navigate('/blog')
-  const page = pageParam ? pageParam : 1
-
-
-  
-  setOffset((page - 1) * postsPerPage)
-  const pageCount = Math.ceil(posts.length / postsPerPage);
+const BlogPostsContent = ({ posts, page, pageCount }) => {
   const onPageChange = ({ selected }) => {
-    if (selected === 0){
-      setOffset(0)
-      navigate('/blog')
+    if (selected === 0) {
+      navigate('/blog');
       return;
     }
-    setOffset((page - 1) * postsPerPage)
-    navigate(`/blog/posts/${selected + 1}`)
+    navigate(`/blog/posts/${selected + 1}`);
   };
-  const paginatedPosts = posts.slice(offset, offset + postsPerPage);
   const ctaHeadings = [
     'Be bold and create your future',
     'Your React & Node.js trusted partners',
   ];
   const ctaButtonTexts = ['See open positions!', 'Contact us!'];
   const utmCampaignName = utmCampaignNames.HOMEPAGE_CTA;
-  
 
   return (
     <Container>
-      <PostsTiles posts={paginatedPosts}>
+      <PostsTiles posts={posts}>
         <CtaContainer>
           <CtaArticleComponent
             headings={ctaHeadings}
@@ -118,18 +101,12 @@ const BlogPostsContent = ({postsPerPage, offset, posts, setOffset })=> {
       />
     </Container>
   );
-}
-
-BlogPostsContent.propTypes = {
-    posts: PropTypes.arrayOf(PropTypes.shape()).isRequired,
-    setOffset: PropTypes.func.isRequired,
-    postsPerPage: PropTypes.number,
-    offset: PropTypes.number,
 };
 
-BlogPostsContent.defaultProps = {
-    postsPerPage: 12,
-    offset: 0,
+BlogPostsContent.propTypes = {
+  posts: PropTypes.arrayOf(PropTypes.shape()).isRequired,
+  page: PropTypes.number.isRequired,
+  pageCount: PropTypes.number.isRequired,
 };
 
 export default BlogPostsContent;
