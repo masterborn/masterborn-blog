@@ -20,8 +20,8 @@ async function getPageData(graphql) {
   const blogPosts = allPosts
     .filter(post => !post.isFeature)
     .slice(postsPerPage); //get rid off first page
-
-  const pageCount = Math.ceil((allPosts.length - 13) / postsPerPage) + 1;
+  const pageCount =
+    Math.ceil((allPosts.length - postsPerPage - 1) / postsPerPage) + 1; // first page has postsPerPage + featured-post posts, rest have 12
   const blogPageData = chunk(blogPosts, postsPerPage).map((chunk, index) => ({
     posts: chunk,
     page: index + 2, //first page is at /blog
