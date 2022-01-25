@@ -67,7 +67,7 @@ const RelatedArticles = ({ relatedPosts }) => {
           {relatedPosts.map(({ slug, frontmatter, excerpt }) => (
             <PostShort
               key={slug}
-              slug={`/${slug}`}
+              slug={`/${slug}/`}
               title={frontmatter.title}
               image={
                 frontmatter.metaImage
