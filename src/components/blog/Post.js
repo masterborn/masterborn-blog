@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
+import { navigate } from 'gatsby';
+
 import PropTypes from 'prop-types';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import styled from '@emotion/styled';
 import { MDXProvider } from '@mdx-js/react';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import get from 'lodash/get';
+
 
 import { media } from '../../utils/emotion';
 import Heading from '../Heading';
@@ -127,7 +129,7 @@ const Post = ({
         <PostContent>
           <PostBody>
             <PostHeader>
-              <BackLink to="/" title="Back">
+              <BackLink onClick={() => navigate(-1)} title="Back">
                 <img src={ArrowIcon} alt="Back" />
               </BackLink>
               <PostHeading lineHeight="5.2rem" as="h1" mb={3}>
