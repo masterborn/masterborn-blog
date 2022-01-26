@@ -14,6 +14,7 @@ const config = {
   general: {
     githubRepoUrl: 'https://github.com/masterborn/masterborn-blog',
     markdownPath: 'src/content',
+    postsPerPage: 12,
     githubProductionPath: 'tree/master',
   },
   siteMetadata: {

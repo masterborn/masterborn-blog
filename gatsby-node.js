@@ -1,20 +1,50 @@
 // eslint-disable-next-line import/order
 const path = require('path');
 
+const config = require('./config');
+const getAllPosts = require('./scripts/get-all-posts');
 const { createFilePath } = require(`gatsby-source-filesystem`);
-const { startCase } = require('lodash');
+const { startCase, chunk } = require('lodash');
 
 const getMarkdownPages = require('./scripts/get-markdown-pages');
 const addCtaButton = require('./src/utils/addCtaButton');
+
+const postsPerPage = config.general.postsPerPage;
 
 const mapReadmeSlug = slug => {
   return slug.replace(/\/readme/gi, '');
 };
 
+async function getPageData(graphql) {
+  const allPosts = await getAllPosts(graphql);
+  const blogPosts = allPosts
+    .filter(post => !post.isFeature)
+    .slice(postsPerPage); //get rid off first page
+  const pageCount =
+    Math.ceil((allPosts.length - postsPerPage - 1) / postsPerPage) + 1; // first page has postsPerPage + featured-post posts, rest have 12
+  const blogPageData = chunk(blogPosts, postsPerPage).map((chunk, index) => ({
+    posts: chunk,
+    page: index + 2, //first page is at /blog
+    pageCount: pageCount,
+  }));
+  return blogPageData;
+}
 const relatedPosts = {};
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
+  const blogPageData = await getPageData(graphql);
+  blogPageData.forEach(({ page, posts, pageCount }) =>
+    createPage({
+      path: `/posts/${page}`,
+      component: require.resolve('./src/templates/BlogPostTemplate.js'),
+      context: {
+        page,
+        posts,
+        pageCount,
+      },
+    })
+  );
   const mdxPages = await getMarkdownPages(graphql);
   mdxPages.forEach(mdxPage => createPage(mdxPage));
 };
