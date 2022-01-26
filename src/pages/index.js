@@ -38,8 +38,8 @@ const Index = () => {
   return (
     <Wrapper>
       <SEO
-        title="MasterBorn | Blog"
-        description="Let's start the journey of creating your software with Premium Professionals."
+        title="Blog | MasterBorn: Your React and Node.js Trusted Partners"
+          description="Read our latest articles and deepen your JS & business know-how. Explore technical guides, tips, hints, startup insights & more."
       />
       <BlogFeatureArticleContent>
         {featurePosts.map((featurePost, index) => (
