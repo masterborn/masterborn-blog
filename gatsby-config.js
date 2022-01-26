@@ -11,6 +11,7 @@ const plugins = [
   'gatsby-plugin-sharp',
   'gatsby-transformer-sharp',
   'gatsby-plugin-svgr',
+
   {
     resolve: `gatsby-plugin-layout`,
     options: {
@@ -51,7 +52,6 @@ const plugins = [
       extensions: ['.mdx', '.md'],
     },
   },
-  'gatsby-plugin-remove-trailing-slashes',
   'gatsby-plugin-react-helmet',
   {
     resolve: 'gatsby-source-filesystem',
@@ -99,6 +99,13 @@ const plugins = [
       autoLabel: 'dev-only',
       labelFormat: '[local]',
       cssPropOptimization: true,
+    },
+  },
+  {
+    resolve: `gatsby-plugin-canonical-urls`,
+    options: {
+      siteUrl: `https://www.masterborn.com/blog`,
+      stripQueryString: true,
     },
   },
   {

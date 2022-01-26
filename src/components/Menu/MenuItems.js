@@ -18,12 +18,12 @@ const MenuLink = styled(Link)`
   color: ${props => props.theme.colors.header.color};
   margin: 2rem 0;
   padding: 1rem 0;
-  transition: all .3s;
+  transition: all 0.3s;
   border-bottom: 2px solid transparent;
   :hover {
     color: ${props => props.theme.colors.menuTextActive};
     fontw-weight: ${props => props.theme.fontWeights.heading};
-    border-bottom: 2px solid ${ props => props.theme.colors.primary};
+    border-bottom: 2px solid ${props => props.theme.colors.primary};
     svg {
       color: ${props => props.theme.colors.link.hover};
     }
@@ -41,17 +41,21 @@ const MenuItems = ({ isCollapsedHeader, onClickItem, contactAsButton }) => {
 
   const LinkFontSize = 3;
   const contactButtonText = isInPoland ? 'Join us' : 'Contact us';
-  const onSubmitContactForm = () => {}
+  const onSubmitContactForm = () => {};
 
-  const [, showContactModal] = useModal(ContactModal, { onSubmitContactForm, alwaysHideOnSubmit: true });
+  const [, showContactModal] = useModal(ContactModal, {
+    onSubmitContactForm,
+    alwaysHideOnSubmit: true,
+  });
 
-
-  function openContactModal () {
+  function openContactModal() {
     showContactModal();
-  };
+  }
 
   const utmCampaignName = utmCampaignNames.HEADER_BUTTON;
-  const contactButtonAction = isInPoland ? () => navigateToWebsiteCareer(utmCampaignName) : openContactModal;
+  const contactButtonAction = isInPoland
+    ? () => navigateToWebsiteCareer(utmCampaignName)
+    : openContactModal;
 
   return (
     <>
@@ -67,7 +71,7 @@ const MenuItems = ({ isCollapsedHeader, onClickItem, contactAsButton }) => {
         fontSize={LinkFontSize}
         onClick={onClickItem}
         title="About Us"
-        href="/about"
+        href="/about/"
       >
         About Us
       </MenuLink>
@@ -75,7 +79,7 @@ const MenuItems = ({ isCollapsedHeader, onClickItem, contactAsButton }) => {
         fontSize={LinkFontSize}
         onClick={onClickItem}
         title="Career"
-        href="/career"
+        href="/career/"
       >
         Career
       </MenuLink>
@@ -84,7 +88,7 @@ const MenuItems = ({ isCollapsedHeader, onClickItem, contactAsButton }) => {
         onClick={onClickItem}
         style={getActiveStyleForPathname('/blog', 'header')}
         title="Blog"
-        href="/blog"
+        href="/blog/"
       >
         Blog
       </MenuLink>
@@ -93,7 +97,8 @@ const MenuItems = ({ isCollapsedHeader, onClickItem, contactAsButton }) => {
         isCollapsedHeader={isCollapsedHeader}
         onClick={contactButtonAction}
         linkFontSize={LinkFontSize}
-      >{contactButtonText}
+      >
+        {contactButtonText}
       </ContactButton>
     </>
   );
