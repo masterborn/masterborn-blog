@@ -61,11 +61,8 @@ const CtaContainer = styled.div`
 
 const BlogPostsContent = ({ posts, page, pageCount }) => {
   const onPageChange = ({ selected }) => {
-    if (selected === 0) {
-      navigate('/blog');
-      return;
-    }
-    navigate(`/blog/posts/${selected + 1}`);
+    const path = selected === 0 ? '/blog' : `/blog/posts/${selected + 1}`;
+    navigate(path)
   };
   const ctaHeadings = [
     'Be bold and create your future',
