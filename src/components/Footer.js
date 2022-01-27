@@ -417,7 +417,7 @@ const Footer = ({ headings, buttonTexts }) => {
               </FooterLink>
             </FooterItem>
             <FooterItem>
-              <FooterLink title="About Us" href="/about">
+              <FooterLink title="About Us" href="/about/">
                 About Us
               </FooterLink>
             </FooterItem>
@@ -431,7 +431,7 @@ const Footer = ({ headings, buttonTexts }) => {
               </FooterLink>
             </FooterItem>
             <FooterItem>
-              <FooterLink title="Career" href="/career">
+              <FooterLink title="Career" href="/career/">
                 Career
               </FooterLink>
             </FooterItem>
