@@ -3,8 +3,10 @@ import isBrowser from './isBrowser';
 export const BREAKPOINTS = {
   phone: 540,
   tablet: 720,
+  mobileMax: 767, //website compatible breakpoints
   desktop: 960,
   ultraWide: 1140,
+  tabletMax: 1200, // ^^ same as above
   xUltraWide: 1580,
   fourK: 1960,
 };
