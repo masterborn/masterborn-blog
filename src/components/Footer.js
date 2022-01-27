@@ -189,7 +189,6 @@ const GreyBreakLine = styled.div`
   background-color: ${({ theme: { colors } }) => colors.footer.border};
   ${media.mobileMax`
     display: none;
-    
   `};
 `;
 
@@ -215,7 +214,6 @@ const FooterItem = styled.li`
 
   padding: 0.8rem 0px;
   display: flex;
-  -webkit-box-pack: center;
   justify-content: center;
   width: 15.1rem;
   height: 4rem;
@@ -424,7 +422,7 @@ const Footer = ({ headings, buttonTexts }) => {
             <FooterItem>
               <FooterLink
                 title="Blog"
-                href="/blog"
+                href="/blog/"
                 style={getActiveStyleForPathname('/blog', 'footer')}
               >
                 Blog
