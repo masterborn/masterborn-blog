@@ -6,6 +6,7 @@ const colors = {
   dark: '#242A31',
   white: '#fff',
   black: '#000',
+  outlineGrey: '#F3F3F3',
   dirtyWhite: '#D0DEFF',
   background: '#0A1A2B',
   accentBackground: '#162535',
@@ -34,10 +35,11 @@ const colors = {
   dropdownMenuItemHover: '#0A1A2B',
   dropdownMenuBorder: 'transparent',
   dropdownMenuShadow: 'rgba(0,0,0,0.2)',
-  featurePost:{
+  base150: '#A0A7AB',
+  featurePost: {
     header: '#131313',
-    description:'#616161',
-    readMore:'#101010',
+    description: '#616161',
+    readMore: '#101010',
   },
   button: {
     primaryShadow: 'rgba(82,199,234,0.4)',
