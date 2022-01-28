@@ -5,7 +5,10 @@ import mapBlogPostEdges from '../utils/mapBlogPostEdges';
 const useAllBlogPosts = () => {
   const { allMdx } = useStaticQuery(graphql`
     query allBlogPostsQuery {
-      allMdx(filter: {frontmatter: {isPreview: {ne: true}}}, sort: { order: DESC, fields: frontmatter___date }) {
+      allMdx(
+        filter: { frontmatter: { isPreview: { ne: true } } }
+        sort: { order: DESC, fields: frontmatter___date }
+      ) {
         edges {
           node {
             id
@@ -23,7 +26,7 @@ const useAllBlogPosts = () => {
               isFeature
               metaImage {
                 childImageSharp {
-                  gatsbyImageData(layout: FULL_WIDTH placeholder: BLURRED)
+                  gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
                 }
               }
               authorAvatar {

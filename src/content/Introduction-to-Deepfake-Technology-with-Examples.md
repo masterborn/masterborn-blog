@@ -3,7 +3,7 @@ title: 'Introduction to Deepfake Technology with Examples'
 date: 2021-01-12
 description: 'Deepfake technology is real and might be frightening. We have no choice but to educate ourselves and accept the challenges of the 21st century.'
 author: 'Mateusz Lewandowski'
-authorAvatar: ./assets/default_avatar.png
+authorAvatar: ./assets/avatar_mateusz_lewandowski.png
 metaImage: ./assets/Introduction-to-Deepfake-Technology-with-Examples/mb_blog_Introduction_to_deep_fake_technology_cover.jpg
 isFeature: true
 ---
@@ -78,7 +78,7 @@ That demeaning technology could be used to reduce election chances or ruin someb
 How effective is GAN at generating realistically looking pictures of people that do not exist?
 
 Very effective. Judge for yourself:
-![deepfake_soviet_time_picture](assets/Introduction-to-Deepfake-Technology-with-Examples/deepfake_soviet_time_picture.png)
+![deepfake_soviet_time_picture](assets/Introduction-to-Deepfake-Technology-with-Examples/deepfake_picture_examples.png)
 
 Those are not real people.
 
@@ -91,15 +91,13 @@ First described in 2014 for the task of learning sequence to sequence representa
 
 Today’s deepfake may refer to [4]:
 
-1.  An Entire Face Synthesis in which some version of GAN is used to create a nonexisting face. Current technology is breathtakingly accurate and is capable of generating faces that are not discernible to the human eye. Check www.thispersondoesnotexist.com for more.
+1. An Entire Face Synthesis in which some version of GAN is used to create a nonexisting face. Current technology is breathtakingly accurate and is capable of generating faces that are not discernible to the human eye. Check www.thispersondoesnotexist.com for more.
 
-2.  The Identity Swap technique of replacing a face of one person with the face of another person in a video. Identity swap can be achieved using classical methods or deeplearning based methods.
+2. The Identity Swap technique of replacing a face of one person with the face of another person in a video. Identity swap can be achieved using classical methods or deeplearning based methods.
 
+3. Attribute manipulation is a technique to modify existing faces (hair color, skin color etc). It could be used by customers to try on a variety of products (glasses, cosmetics etc.).
 
-3.  Attribute manipulation is a technique to modify existing faces (hair color, skin color etc). It could be used by customers to try on a variety of products (glasses, cosmetics etc.).
-
-
-4.  Expression Swap in which one person is filmed doing something, and then another person’s face is inserted into the face of an original actor. See Tom Cruise DeepFake, Queen DeepFake etc. The technology at the current moment does not allow someone to tell the original from a copy.
+4. Expression Swap in which one person is filmed doing something, and then another person’s face is inserted into the face of an original actor. See Tom Cruise DeepFake, Queen DeepFake etc. The technology at the current moment does not allow someone to tell the original from a copy.
 
 
 
@@ -156,10 +154,13 @@ The generation entering the labor market in the 21th century is likely to be for
 It simply pays off. Good luck!
 
 
-### References:
+### References
 
 [1] Tolosana, Ruben, et al. "Deepfakes and beyond: A survey of face manipulation and fake detection." Information Fusion 64 (2020): 131-148.
+
 [2] Goodfellow, Ian, et al. "Generative adversarial nets." Advances in neural information processing systems 27 (2014).
+
 [3] Cho, Kyunghyun, et al. "Learning phrase representations using RNN encoder-decoder for statistical machine translation." arXiv preprint arXiv:1406.1078 (2014).
+
 [4] Tolosana, Ruben, et al. "Deepfakes and beyond: A survey of face manipulation and fake detection." Information Fusion 64 (2020): 131-148.
 

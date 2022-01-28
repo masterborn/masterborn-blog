@@ -22,7 +22,7 @@ const RelatedArticlesWrapper = styled.div`
     top: 0;
     left: 0;
   }
-`
+`;
 
 const RelatedArticlesHeading = styled(Heading)`
   text-align: center;
@@ -30,16 +30,23 @@ const RelatedArticlesHeading = styled(Heading)`
   ${media.desktop`
     margin: 4rem 0;
   `}
-`
+`;
 
 const RelatedArticlesContainer = styled.div`
   display: grid;
   grid-column-gap: 2rem;
   grid-template-columns: 1fr;
   ${media.desktop`
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    width: 76rem;
+    margin: 0 auto;
   `}
-`
+  @media (min-width: 1225px) {
+    width: auto;
+    margin: 0;
+  }
+`;
 
 const StyledPageSection = styled(PageSection)`
   padding: 0 3rem;
@@ -47,42 +54,41 @@ const StyledPageSection = styled(PageSection)`
   ${media.desktop`
     margin-bottom: 10rem;
   `}
-`
+`;
 
-const RelatedArticles = ({relatedPosts}) => {
+const RelatedArticles = ({ relatedPosts }) => {
   return (
     <StyledPageSection>
       <RelatedArticlesWrapper>
-        <RelatedArticlesHeading as="h6">Related articles:</RelatedArticlesHeading>
+        <RelatedArticlesHeading as="h6">
+          Related articles:
+        </RelatedArticlesHeading>
         <RelatedArticlesContainer>
           {relatedPosts.map(({ slug, frontmatter, excerpt }) => (
             <PostShort
               key={slug}
-              slug={`/${slug}`}
+              slug={`/${slug}/`}
               title={frontmatter.title}
-              image={frontmatter.metaImage ? frontmatter.metaImage.childImageSharp : {}}
+              image={
+                frontmatter.metaImage
+                  ? frontmatter.metaImage.childImageSharp
+                  : {}
+              }
               description={excerpt}
             />
-          )
-          )}
-
+          ))}
         </RelatedArticlesContainer>
       </RelatedArticlesWrapper>
     </StyledPageSection>
-
-
-
   );
 };
 
 RelatedArticles.propTypes = {
-  relatedPosts: PropTypes.arrayOf(PropTypes.shape({
-
-   })),
-}
+  relatedPosts: PropTypes.arrayOf(PropTypes.shape({})),
+};
 
 RelatedArticles.defaultProps = {
   relatedPosts: [],
-}
+};
 
 export default RelatedArticles;

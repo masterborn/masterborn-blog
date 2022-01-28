@@ -3,7 +3,6 @@ require('dotenv').config();
 const remarkSlug = require('remark-slug');
 
 const config = require('./config');
-const getAlgoliaQueries = require('./scripts/get-algolia-queries');
 
 const plugins = [
   'gatsby-plugin-styled-components',
@@ -12,6 +11,7 @@ const plugins = [
   'gatsby-plugin-sharp',
   'gatsby-transformer-sharp',
   'gatsby-plugin-svgr',
+
   {
     resolve: `gatsby-plugin-layout`,
     options: {
@@ -52,7 +52,6 @@ const plugins = [
       extensions: ['.mdx', '.md'],
     },
   },
-  'gatsby-plugin-remove-trailing-slashes',
   'gatsby-plugin-react-helmet',
   {
     resolve: 'gatsby-source-filesystem',
@@ -103,21 +102,19 @@ const plugins = [
     },
   },
   {
+    resolve: `gatsby-plugin-canonical-urls`,
+    options: {
+      siteUrl: `https://www.masterborn.com/blog`,
+      stripQueryString: true,
+    },
+  },
+  {
     resolve: 'gatsby-plugin-web-font-loader',
     options: {
       custom: {
         families: ['Inter'],
         urls: ['/fonts.css'],
       },
-    },
-  },
-  {
-    resolve: `gatsby-plugin-algolia`,
-    options: {
-      appId: config.algolia.appId,
-      apiKey: config.algolia.adminKey,
-      indexName: config.algolia.indexName,
-      queries: getAlgoliaQueries(),
     },
   },
 ];
