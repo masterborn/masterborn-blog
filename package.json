@@ -103,6 +103,9 @@
     "prettier": "^1.19.1",
     "pretty-quick": "^2.0.1"
   },
+  "overrides": {
+    "webpack": "5.52.1"
+  },
   "lint-staged": {
     "*.{js,jsx}": [
       "eslint --cache --fix",
