@@ -10,7 +10,7 @@ const getBorderColor = (props) => {
 const Checkbox = styled.span`
   width: 2rem;
   height: 2rem;
-  display: inline;
+  display: block;
   min-width: 2rem;
   border-radius: 4px;
   margin-right: 1.5rem;
