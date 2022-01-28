@@ -85,6 +85,8 @@
     "use-is-in-viewport": "^1.0.7"
   },
   "devDependencies": {
+    "@commitlint/cli": "^12.1.1",
+    "@commitlint/config-conventional": "^12.1.1",
     "eslint": "^7.25.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier": "^6.10.0",
@@ -94,7 +96,8 @@
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.0",
     "gatsby-plugin-remove-trailing-slashes": "^3.4.0",
-    "husky": "^4.2.5",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.1.2",
     "prettier": "^1.19.1",
     "pretty-quick": "^2.0.1"
   }
