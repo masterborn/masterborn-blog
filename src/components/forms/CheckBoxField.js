@@ -10,13 +10,13 @@ const getBorderColor = (props) => {
 const Checkbox = styled.span`
   width: 2rem;
   height: 2rem;
-  display: block;
+  display: inline;
   min-width: 2rem;
   border-radius: 4px;
   margin-right: 1.5rem;
   cursor: pointer;
   position: relative;
-  background-color: ${props => (props.checked ? props.theme.colors.primary : 'transparent')};
+  background-color: ${(props) => (props.checked ? props.theme.colors.primary : 'transparent')};
   border: 2px solid ${getBorderColor};
 
   &:focus {
@@ -25,12 +25,12 @@ const Checkbox = styled.span`
 
   &::after {
     content: '\\0000AC';
-    display: ${props => (props.checked ? 'block' : 'none')};
+    display: ${(props) => (props.checked ? 'block' : 'none')};
     font-size: 2.6rem;
     top: 50%;
     left: 50%;
     position: absolute;
-     color: ${props => props.theme.colors.black};
+    color: ${(props) => props.theme.colors.black};
     transform: translate(-38%, -50%) rotate(135deg);
   }
 `;
@@ -42,15 +42,14 @@ const CheckBoxFieldInput = styled.input`
 const CheckBoxFieldWrapper = styled.div`
   width: 100%;
   display: flex;
-  color: ${props => props.theme.colors.input.border};
+  color: ${(props) => props.theme.colors.input.border};
   position: relative;
   cursor: pointer;
   grid-column: 1 / end;
 
   &:hover ${Checkbox} {
-    border-color: ${props => props.theme.colors.primary};
+    border-color: ${(props) => props.theme.colors.primary};
   }
-
 `;
 
 const CheckBoxFieldLabel = styled.label`
@@ -61,14 +60,7 @@ const CheckBoxFieldLabel = styled.label`
   line-height: 1.4;
 `;
 
-const CheckBoxField = ({
-  name,
-  value,
-  error,
-  disabled,
-  onChange,
-  children,
-}) => {
+const CheckBoxField = ({ name, value, error, disabled, onChange, children }) => {
   const onClickHandler = () => {
     onChange({ [name]: !value });
   };
@@ -83,9 +75,7 @@ const CheckBoxField = ({
         onChange={() => {}}
       />
       <Checkbox checked={value} error={error} />
-      <CheckBoxFieldLabel>
-        {children}
-      </CheckBoxFieldLabel>
+      <CheckBoxFieldLabel>{children}</CheckBoxFieldLabel>
     </CheckBoxFieldWrapper>
   );
 };

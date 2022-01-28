@@ -22,6 +22,7 @@
     "@emotion/is-prop-valid": "^0.8.8",
     "@emotion/react": "^11.1.5",
     "@emotion/styled": "^11.3.0",
+    "@masterborn/eslint-config": "^0.0.13",
     "@mdx-js/loader": "^1.5.7",
     "@mdx-js/mdx": "^1.5.7",
     "@mdx-js/react": "^1.5.7",
@@ -88,6 +89,7 @@
     "@commitlint/cli": "^12.1.1",
     "@commitlint/config-conventional": "^12.1.1",
     "eslint": "^7.25.0",
+    "babel-eslint": "10.1.0",
     "eslint-config-airbnb": "^18.1.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-import": "^2.20.1",
@@ -100,5 +102,11 @@
     "lint-staged": "^11.1.2",
     "prettier": "^1.19.1",
     "pretty-quick": "^2.0.1"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "eslint --cache --fix",
+      "prettier --write"
+    ]
   }
 }
