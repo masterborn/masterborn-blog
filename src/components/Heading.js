@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { space, color, typography, layout, flexbox } from 'styled-system';
 import React, { useState } from 'react';
 import LinkIcon from 'emotion-icons/ion-ios/Link';
@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 import Icon from './Icon';
 
-const BaseHeading = styled('h1')(
+const BaseHeading = styled.h1(
   props => ({
     fontSize: props.as
       ? props.theme.fontSizes[props.as]

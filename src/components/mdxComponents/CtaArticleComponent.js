@@ -1,5 +1,5 @@
-import React, {useContext} from 'react';
-import styled from '@emotion/styled';
+import React, { useContext } from 'react';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import { media } from '../../utils/emotion';
@@ -12,7 +12,7 @@ import Button from '../Button';
 
 import Heading from './Heading';
 
-const Container = styled('div')`
+const Container = styled.div`
   display: block;
   margin: 5rem 0;
   border-radius: 4px;
@@ -50,12 +50,12 @@ const StyledHeading = styled(Heading)`
   align-self: center;
   position: relative;
   font-size: 1.7rem;
-  color: ${({ theme })=> theme.colors.ctaArticle.text};
+  color: ${({ theme }) => theme.colors.ctaArticle.text};
   ${media.desktop`
     font-size: 2.2rem;
     line-height: 2.6rem;
   `}
-`
+`;
 
 const StyledButton = styled(Button)`
   padding: 0.9rem 3.5rem;
@@ -65,31 +65,38 @@ const StyledButton = styled(Button)`
     font-size: 1.6rem;
     line-height: 2rem;
   `}
-`
+`;
 
 // eslint-disable-next-line complexity
-const CtaArticleComponent = ({ headings, buttonTexts, showYellowUnderline, utmCampaign }) => {
+const CtaArticleComponent = ({
+  headings,
+  buttonTexts,
+  showYellowUnderline,
+  utmCampaign,
+}) => {
   const { isInPoland } = useContext(CountryContext);
-  const onSubmitContactForm = () => {}
+  const onSubmitContactForm = () => {};
 
-  const [, showContactModal] = useModal(ContactModal, { onSubmitContactForm, alwaysHideOnSubmit: true });
+  const [, showContactModal] = useModal(ContactModal, {
+    onSubmitContactForm,
+    alwaysHideOnSubmit: true,
+  });
 
-  function openContactModal () {
+  function openContactModal() {
     showContactModal();
-  };
+  }
 
-  const buttonAction = isInPoland ? () => navigateToWebsiteCareer(utmCampaign) : openContactModal;
+  const buttonAction = isInPoland
+    ? () => navigateToWebsiteCareer(utmCampaign)
+    : openContactModal;
   return (
     <Container>
       <StyledHeading as="h3" mb={0}>
         {isInPoland ? headings[0] : headings[1]}
         {showYellowUnderline && <Underline />}
       </StyledHeading>
-      <StyledButton
-        variant="cta"
-        size="cta"
-        onClick={buttonAction}
-      >{isInPoland ? buttonTexts[0] : buttonTexts[1]}
+      <StyledButton variant="cta" size="cta" onClick={buttonAction}>
+        {isInPoland ? buttonTexts[0] : buttonTexts[1]}
       </StyledButton>
     </Container>
   );
@@ -104,10 +111,10 @@ CtaArticleComponent.propTypes = {
 
 CtaArticleComponent.defaultProps = {
   headings: [
-    "Let’s build disruptive JavaScript products together",
+    'Let’s build disruptive JavaScript products together',
     'Build your modern Web App with top React & Node.js engineers',
   ],
   buttonTexts: ['Join our Team!', "Let's talk!"],
   showYellowUnderline: false,
-}
+};
 export default CtaArticleComponent;

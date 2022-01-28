@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import partition from 'lodash/partition';
 
 import config from '../../config';
@@ -12,7 +12,7 @@ import SEO from '../components/SEO';
 
 import BlogPostsContent from '../components/blog/BlogPostsContent';
 
-const Wrapper = styled('div')`
+const Wrapper = styled.div`
   margin-top: 12rem;
 `;
 
@@ -39,7 +39,7 @@ const Index = () => {
     <Wrapper>
       <SEO
         title="Blog | MasterBorn: Your React and Node.js Trusted Partners"
-          description="Read our latest articles and deepen your JS & business know-how. Explore technical guides, tips, hints, startup insights & more."
+        description="Read our latest articles and deepen your JS & business know-how. Explore technical guides, tips, hints, startup insights & more."
       />
       <BlogFeatureArticleContent>
         {featurePosts.map((featurePost, index) => (

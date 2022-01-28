@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { animated, useTransition } from 'react-spring';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { space, flex } from 'styled-system';
 
 import { ReactComponent as ChevronRightIcon } from '../assets/chevron-right-icon.svg';
@@ -9,7 +9,7 @@ import { ReactComponent as CrossIcon } from '../assets/cross-icon.svg';
 
 import Icon from './Icon';
 
-const IconContainer = styled('div')(
+const IconContainer = styled.div(
   {
     position: 'relative',
     cursor: 'pointer',

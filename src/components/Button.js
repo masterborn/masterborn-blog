@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import {
   space,
   color,
@@ -59,7 +59,7 @@ const statesForButtonOutline = {
     }`,
 };
 
-const Button = styled('button')(
+const Button = styled.button(
   props => ({
     borderRadius: props.theme.radii.button,
     fontSize: props.theme.fontSizes.body,

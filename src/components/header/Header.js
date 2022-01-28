@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import MenuIcon from 'emotion-icons/feather/Menu';
 import CrossIcon from 'emotion-icons/feather/X';
@@ -24,7 +24,7 @@ const HeaderLogo = styled(Logo)`
   ${media.desktop`
     height: 5rem;
   `}
-`
+`;
 
 const ToggleMenuButton = styled(ToggleIcon)`
   color: ${({ theme }) => theme.colors.header.burgerMenuIcon};

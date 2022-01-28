@@ -1,9 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 import PageLayout from '../layouts/PageLayout';
-
 
 const Wrapper = styled.div`
   position: relative;
@@ -20,11 +19,11 @@ const Content = styled.div`
 
 const PageTemplate = ({ children, location }) => {
   const footerCta = {
-    headings:[
+    headings: [
       'We build valuable, JavaScript products for U.S. based companies',
       'Build your next innovative JavaScript product with us',
     ],
-    buttonTexts:['Join us!','Let\'s talk!'],
+    buttonTexts: ['Join us!', "Let's talk!"],
   };
   return (
     <PageLayout location={location} footerCta={footerCta}>

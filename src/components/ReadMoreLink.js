@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 import Text from './Text';
 import Link from './Link';
-
 
 const YellowArrow = styled.span`
   color: ${({ theme }) => theme.colors.primary};
@@ -26,13 +25,10 @@ const ReadMoreText = styled(Text)`
 
 const ReadMoreLink = ({ slug, className }) => (
   <StyledLink className={className} to={slug}>
-    <ReadMoreText color="featurePost.readMore">
-      Read more
-    </ReadMoreText>
+    <ReadMoreText color="featurePost.readMore">Read more</ReadMoreText>
     <YellowArrow>&#8594;</YellowArrow>
   </StyledLink>
 );
-
 
 ReadMoreLink.propTypes = {
   slug: PropTypes.string.isRequired,

@@ -1,23 +1,9 @@
 import * as React from 'react';
-import { ThemeProvider as EmotionThemeProvider } from '@emotion/react';
+import { ThemeProvider as StyledThemeProvider } from 'styled-components';
 import PropTypes from 'prop-types';
 
-import defaultTheme from '../theme/defaultTheme';
-import lightTheme from '../theme/lightTheme';
-import blogTheme from '../theme/blogTheme';
-
-const theme = {
-  dark: defaultTheme,
-  light: lightTheme,
-  blog: blogTheme,
-};
-
-const ThemeProvider = ({ children, themeName, themeConfig = {} }) => {
-  return (
-    <EmotionThemeProvider theme={{ ...theme[themeName], ...themeConfig }}>
-      {children}
-    </EmotionThemeProvider>
-  );
+const ThemeProvider = ({ children, theme }) => {
+  return <StyledThemeProvider theme={theme}>{children}</StyledThemeProvider>;
 };
 
 ThemeProvider.propTypes = {
@@ -25,13 +11,6 @@ ThemeProvider.propTypes = {
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node),
   ]).isRequired,
-  themeConfig: PropTypes.shape({}),
-  themeName: PropTypes.oneOf(['light', 'dark', 'blog']),
-};
-
-ThemeProvider.defaultProps = {
-  themeConfig: {},
-  themeName: 'dark',
 };
 
 export default ThemeProvider;

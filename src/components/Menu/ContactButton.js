@@ -1,13 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 import { media } from '../../utils/emotion';
 import Button from '../Button';
 
 const StyledContactButton = styled(Button)`
   margin-left: 0;
-  padding: .7rem 5rem;
+  padding: 0.7rem 5rem;
   border: 1px solid ${props => props.theme.colors.contactButton.borderColor};
   cursor: pointer;
   ${media.desktop`
@@ -15,8 +15,7 @@ const StyledContactButton = styled(Button)`
     font-size: 1.6rem;
     line-height: 2rem;
   `}
-
-`
+`;
 
 const ContactButton = ({ isCollapsedHeader, children, onClick, ...rest }) => {
   return (

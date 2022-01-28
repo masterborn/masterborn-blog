@@ -1,4 +1,4 @@
-import { useTheme } from '@emotion/react';
+import { useTheme } from 'styled-components';
 import { useCallback } from 'react';
 
 import useLocation from './useLocation';

@@ -1,7 +1,7 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import LinesEllipsis from 'react-lines-ellipsis'
+import LinesEllipsis from 'react-lines-ellipsis';
 import get from 'lodash/get';
 
 import Heading from '../Heading';
@@ -46,7 +46,7 @@ const StyledDescription = styled(LinesEllipsis)`
 
 const StyledReadMoreLink = styled(ReadMoreLink)`
   order: 4;
-`
+`;
 
 const StyledHeader = styled(Link)`
   order: 1;
@@ -54,7 +54,7 @@ const StyledHeader = styled(Link)`
     width: 37rem;
     order: 2;
   `}
-`
+`;
 
 const PostShort = ({ slug, title, description, image }) => {
   const [hover, setHover] = useState(false);
@@ -81,10 +81,10 @@ const PostShort = ({ slug, title, description, image }) => {
       <StyledDescription
         color={`${colorsCategory}.description`}
         text={description}
-        maxLine='3'
-        ellipsis='...'
+        maxLine="3"
+        ellipsis="..."
         trimRight
-        basedOn='words'
+        basedOn="words"
       />
       <StyledReadMoreLink slug={slug} />
     </Container>

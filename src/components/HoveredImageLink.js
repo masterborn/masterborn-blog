@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
-import { GatsbyImage } from "gatsby-plugin-image"
+import styled from 'styled-components';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 import Link from './Link';
 import VanillaImage from './VanillaImage';
@@ -9,9 +9,8 @@ import VanillaImage from './VanillaImage';
 const StyledImage = styled(GatsbyImage)`
   height: 100%;
   border-radius: 4px;
-  ${({ withShadow })=> withShadow &&
-    'box-shadow: 0 35px 30px -37px rgba(0,0,0,0.2);'
-  };
+  ${({ withShadow }) =>
+    withShadow && 'box-shadow: 0 35px 30px -37px rgba(0,0,0,0.2);'};
 `;
 
 const Overlay = styled.div`
@@ -23,7 +22,7 @@ const Overlay = styled.div`
   height: 100%;
   width: 100%;
   opacity: 0;
-  transition: .5s ease;
+  transition: 0.5s ease;
   background-color: ${({ theme }) => theme.colors.primary};
   display: grid;
 
@@ -31,7 +30,9 @@ const Overlay = styled.div`
     opacity: 0.85;
   }
 
-  ${({ isHovered })=> isHovered && `
+  ${({ isHovered }) =>
+    isHovered &&
+    `
     opacity: 0.85;
   `}
 `;
@@ -48,15 +49,27 @@ const Container = styled.div`
   position: relative;
 `;
 
-
-const HoveredImageLink = ({ slug, metaImage, className, isHovered, withShadow, isFirst }) => (
+const HoveredImageLink = ({
+  slug,
+  metaImage,
+  className,
+  isHovered,
+  withShadow,
+  isFirst,
+}) => (
   <Container className={className}>
     <Link to={slug}>
       {/* [PageSpeed metrics] Render first image as regular <img/>, so that it loads faster. */}
-      {isFirst ? 
-      <VanillaImage metaImage={metaImage} slug={slug} />
-       : 
-      <StyledImage withShadow={withShadow} image={metaImage.gatsbyImageData} loading={'lazy'} alt={slug} />}
+      {isFirst ? (
+        <VanillaImage metaImage={metaImage} slug={slug} />
+      ) : (
+        <StyledImage
+          withShadow={withShadow}
+          image={metaImage.gatsbyImageData}
+          loading={'lazy'}
+          alt={slug}
+        />
+      )}
       <Overlay isHovered={isHovered}>
         <BlackArrow>&#8594;</BlackArrow>
       </Overlay>
@@ -77,6 +90,6 @@ HoveredImageLink.propTypes = {
 HoveredImageLink.defaultProps = {
   isHovered: false,
   withShadow: false,
-}
+};
 
 export default HoveredImageLink;

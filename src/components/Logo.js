@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { layout, space } from 'styled-system';
 
 import mbLogo from '../assets/masterborn-logo.svg';

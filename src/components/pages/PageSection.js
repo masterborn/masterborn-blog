@@ -1,12 +1,12 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { space, color, layout } from 'styled-system';
 import PropTypes from 'prop-types';
 import { darken } from 'polished';
 
 import Content from './Content';
 
-const Wrapper = styled('div')(
+const Wrapper = styled.div(
   props => ({
     marginBottom: '18rem',
     backgroundColor: props.darkBg

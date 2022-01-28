@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 import Content from '../pages/Content';
 import { media } from '../../utils/emotion';

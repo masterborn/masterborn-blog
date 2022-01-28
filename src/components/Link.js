@@ -2,7 +2,7 @@ import React, { forwardRef } from 'react';
 import { Link as GatsbyLink } from 'gatsby';
 import isAbsoluteUrl from 'is-absolute-url';
 import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import {
   space,
   color,

@@ -1,13 +1,14 @@
 import React, { useContext, useEffect } from 'react';
 import axios from 'axios';
-import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 import { Global } from '@emotion/react';
+import styled from 'styled-components';
 
+import { ThemeProvider } from 'styled-components';
+import blogTheme from '../theme/blogTheme';
 import { media } from '../utils/emotion';
 import normalizeCss from '../theme/normalizeCss';
 import globalStyles from '../theme/globalStyles';
-import ThemeProvider from '../components/themeProvider';
 import Header from '../components/header/Header';
 import Content from '../components/pages/Content';
 import Footer from '../components/Footer';
@@ -15,9 +16,10 @@ import { LocationContextProvider } from '../contexts/LocationContext';
 import { CountryContext } from '../contexts/CountryContext';
 import config from '../../config';
 import { ModalContextProvider } from '../contexts/ModalContext';
-import InfoModal from '../components/InfoModal'
+import InfoModal from '../components/InfoModal';
 
 const PageWrapper = styled.div`
+  ${props => console.log(props)};
   background-color: ${({ theme }) => theme.colors.background};
   display: flex;
   position: relative;
@@ -41,29 +43,27 @@ const StickyMenuWrapper = styled(HeaderWrapper)`
   position: fixed;
   top: 0;
   background-color: ${props => props.theme.colors.white};
-  border: 1px solid  ${props => props.theme.colors.header.headerBorderColor};
+  border: 1px solid ${props => props.theme.colors.header.headerBorderColor};
   padding: 2rem 0;
   ${media.desktop`
     padding: 1rem 0;
   `}
 `;
 
-const PageLayout = ({ children, themeName, location, footerCta }) => {
-
+const PageLayout = ({ children, location, footerCta }) => {
   const { setCountry } = useContext(CountryContext);
   const { url, countryCode } = config.custom.localization;
 
   useEffect(() => {
-    axios.get(url)
-      .then((response) => {
-        const { country } = response.data;
-        const isSameCountry = country === countryCode;
-        setCountry(isSameCountry)
-      });
+    axios.get(url).then(response => {
+      const { country } = response.data;
+      const isSameCountry = country === countryCode;
+      setCountry(isSameCountry);
+    });
   }, [countryCode, setCountry, url]);
 
   return (
-    <ThemeProvider themeName={themeName}>
+    <ThemeProvider theme={blogTheme}>
       <ModalContextProvider>
         <LocationContextProvider location={location}>
           <PageWrapper>

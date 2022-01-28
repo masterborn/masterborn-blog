@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
-import LinesEllipsis from 'react-lines-ellipsis'
+import styled from 'styled-components';
+import LinesEllipsis from 'react-lines-ellipsis';
 import get from 'lodash/get';
 
 import { media } from '../../utils/emotion';
@@ -13,7 +13,8 @@ import Link from '../Link';
 const Container = styled.div`
   display: grid;
   grid-template-columns: 1fr;
-  border-bottom: 1px solid ${props => props.theme.colors.header.headerBorderColor};
+  border-bottom: 1px solid
+    ${props => props.theme.colors.header.headerBorderColor};
   padding: 0 0 2rem;
   ${media.desktop`
     border: 0;
@@ -24,11 +25,12 @@ const Container = styled.div`
 `;
 
 const Description = styled(LinesEllipsis)`
+  ${({ theme, color }) => console.log(theme, color)}
   margin: 2rem 0;
   opacity: 0.9;
   line-height: 2.6rem;
   font-size: 1.6rem;
-  color: ${({ theme, color }) => get(theme.colors, color)};
+  color: ${({ theme, color }) => theme.colors[color]};
   font-weight: 300;
   order: 3;
   ${media.desktop`
@@ -45,8 +47,9 @@ const LeftSide = styled.div`
   `}
 `;
 
-const StyledHeading = styled(Heading)`
+const StyledHeading = styled.h2`
   line-height: 3.4rem;
+  color: ${({ theme, color }) => theme.colors[color]};
   font-size: 2.9rem;
   order: 1;
   ${media.desktop`
@@ -72,7 +75,7 @@ const StyledImageMobile = styled(StyledImage)`
   ${media.desktop`
     display: none;
   `}
-`
+`;
 
 const MouseOverHandlerContainer = styled.div`
   display: flex;
@@ -80,11 +83,11 @@ const MouseOverHandlerContainer = styled.div`
   ${media.desktop`
     display: block;
   `}
-`
+`;
 
 const StyledReadMoreLink = styled(ReadMoreLink)`
   order: 4;
-`
+`;
 
 const MouseOverHandler = ({ children, setHovered }) => (
   <MouseOverHandlerContainer
@@ -108,23 +111,21 @@ const FeaturePost = ({ post, isFirst }) => {
               color={`${colorsCategory}.header`}
               fontWeight={600}
               as="h2"
-            >{title}
+            >
+              {title}
             </StyledHeading>
           </Link>
           <Description
             color={`${colorsCategory}.description`}
             text={description}
-            maxLine='3'
-            ellipsis='...'
+            maxLine="3"
+            ellipsis="..."
             trimRight
-            basedOn='words'
+            basedOn="words"
           >
             {description}
           </Description>
-          <StyledReadMoreLink
-            isHovered={isHovered}
-            slug={slug}
-          />
+          <StyledReadMoreLink isHovered={isHovered} slug={slug} />
           <StyledImageMobile
             isFirst={isFirst}
             slug={slug}

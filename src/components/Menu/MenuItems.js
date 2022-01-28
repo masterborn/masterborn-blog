@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 import Link from '../Link';
 import useActiveMenuStyles from '../../hooks/useActiveMenuStyles';
