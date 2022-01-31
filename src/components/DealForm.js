@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import useDealForm from '../hooks/useDealForm';
@@ -23,7 +23,6 @@ const Form = styled.form`
   `}
 `;
 
-
 const Submit = styled(Button)`
   grid-column: 1 / end;
   justify-self: center;
@@ -34,7 +33,6 @@ const Submit = styled(Button)`
     width: 18rem;
     margin-left: auto;
   `}
-
 `;
 function DealForm({ headerComponent: HeaderComponent, onSubmitComplete }) {
   const onSuccess = () => {
@@ -45,11 +43,10 @@ function DealForm({ headerComponent: HeaderComponent, onSubmitComplete }) {
     onSubmitComplete();
   };
 
-  const [{
-    values,
-    pending,
-    errors,
-  }, onChange, onSubmit] = useDealForm(onSuccess, onError);
+  const [{ values, pending, errors }, onChange, onSubmit] = useDealForm(
+    onSuccess,
+    onError
+  );
 
   return (
     <div>
@@ -107,10 +104,9 @@ function DealForm({ headerComponent: HeaderComponent, onSubmitComplete }) {
             disabled={pending}
           >
             I agree to processing of my personal data included in this form for
-            the present and future recruitment-related purposes
-            by MasterBorn with its registered office in Wrocław, Krupnicza 13,
-            Poland, KRS 0000673935, NIP 899-281-66-01
-            For details see our Privacy Policy.*
+            the present and future recruitment-related purposes by MasterBorn
+            with its registered office in Wrocław, Krupnicza 13, Poland, KRS
+            0000673935, NIP 899-281-66-01 For details see our Privacy Policy.*
           </CheckBoxField>
           <CheckBoxField
             name="marketing"
@@ -119,10 +115,10 @@ function DealForm({ headerComponent: HeaderComponent, onSubmitComplete }) {
             onChange={onChange}
             disabled={pending}
           >
-            I agree to processing my personal data for the marketing activities by
-            MasterBorn with its registered office in Wrocław, Krupnicza 13,
-            Poland, KRS 0000673935, NIP 899-281-66-01
-            For details see our Privacy Policy.
+            I agree to processing my personal data for the marketing activities
+            by MasterBorn with its registered office in Wrocław, Krupnicza 13,
+            Poland, KRS 0000673935, NIP 899-281-66-01 For details see our
+            Privacy Policy.
           </CheckBoxField>
           <Submit
             type="submit"

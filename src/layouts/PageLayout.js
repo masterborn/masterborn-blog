@@ -19,7 +19,6 @@ import { ModalContextProvider } from '../contexts/ModalContext';
 import InfoModal from '../components/InfoModal';
 
 const PageWrapper = styled.div`
-  ${props => console.log(props)};
   background-color: ${({ theme }) => theme.colors.background};
   display: flex;
   position: relative;

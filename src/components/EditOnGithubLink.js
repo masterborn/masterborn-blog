@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import GithubIcon from 'emotion-icons/simpleIcons/GitHub';
 
 import useSiteMetadata from '../hooks/useSiteMetadata';
@@ -9,7 +9,7 @@ import Icon from './Icon';
 import Link from './Link';
 import Button from './Button';
 
-const Container = styled('div')`
+const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;

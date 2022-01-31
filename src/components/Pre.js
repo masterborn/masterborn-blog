@@ -1,7 +1,7 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { fontFamily, space, color, layout } from 'styled-system';
 
-const Pre = styled('pre')(
+const Pre = styled.pre(
   {
     overflow: 'auto',
   },

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import dropRight from 'lodash/dropRight';
 import isString from 'lodash/isString';
 
@@ -24,15 +24,15 @@ const getBasePathToFolder = path => {
 };
 
 const getDestination = ({ href, location, isRelative, isAnchor }) => {
-   if (isRelative && !isAnchor) {
-     const toPath = href.substr(2);
-     const basePath = getBasePathToFolder(location.pathname);
-     return `${basePath}/${toPath}`;
-   }
-   return href;
+  if (isRelative && !isAnchor) {
+    const toPath = href.substr(2);
+    const basePath = getBasePathToFolder(location.pathname);
+    return `${basePath}/${toPath}`;
+  }
+  return href;
 };
 
-const isAnchorFunction = (href) => isString(href) && href.charAt(0) === '#';
+const isAnchorFunction = href => isString(href) && href.charAt(0) === '#';
 
 const AnchorTag = ({ children: link, href }) => {
   const isAnchor = isAnchorFunction(href);

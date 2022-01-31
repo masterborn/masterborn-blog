@@ -1,7 +1,7 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { space, color } from 'styled-system';
 
-const Hr = styled('hr')(
+const Hr = styled.hr(
   props => ({
     border: 'none',
     borderBottom: `1px solid ${props.theme.colors.accentBackground}`,

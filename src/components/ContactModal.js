@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import DealForm from './DealForm';
@@ -15,17 +15,22 @@ const StyledModalTitle = styled(ModalTitle)`
 `;
 
 const ContactModal = ({
-  isActive, hide, onSubmitContactForm, alwaysHideOnSubmit,
+  isActive,
+  hide,
+  onSubmitContactForm,
+  alwaysHideOnSubmit,
 }) => {
-  const onSubmitComplete = (args)=>{
+  const onSubmitComplete = args => {
     onSubmitContactForm(args);
-    if(alwaysHideOnSubmit) hide()
-  }
- return (
-   <StyledModal hide={hide} isActive={isActive}>
-     <StyledModalTitle>Tell us about your next amazing project!</StyledModalTitle>
-     <DealForm onSubmitComplete={onSubmitComplete} isSection={false} />
-   </StyledModal>
+    if (alwaysHideOnSubmit) hide();
+  };
+  return (
+    <StyledModal hide={hide} isActive={isActive}>
+      <StyledModalTitle>
+        Tell us about your next amazing project!
+      </StyledModalTitle>
+      <DealForm onSubmitComplete={onSubmitComplete} isSection={false} />
+    </StyledModal>
   );
 };
 

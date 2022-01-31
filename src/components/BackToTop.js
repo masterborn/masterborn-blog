@@ -1,6 +1,5 @@
-
 import React, { useState, useEffect, useCallback } from 'react';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import throttle from 'lodash/throttle';
 import { ChevronUp } from '@styled-icons/fa-solid';
 import { useTransition, animated } from 'react-spring';
@@ -25,37 +24,35 @@ const BackTopContainer = styled.div`
     bottom: 4rem;
     right: 4rem;
   `}
-`
+`;
 
 const AnimatedWrapper = animated(BackTopContainer);
 
 const StyledIcon = styled(ChevronUp)`
   fill: ${props => props.theme.colors.black};
   margin-left: -1px;
-`
+`;
 
-const BackToTop = () =>{
+const BackToTop = () => {
   const [showScroll, setShowScroll] = useState(false);
-  const transitions = useTransition(
-    showScroll,
-    null,
-    {
-      from: { opacity: 0, transform: 'translateY(-5vh)' },
-      enter: { opacity: 1, transform: 'translateY(0)' },
-      leave: { opacity: 0, transform: 'translateY(-5vh)' },
-      config: { tension: 60, friction: 5, mass: 0.55 },
-    }
-  );
+  const transitions = useTransition(showScroll, null, {
+    from: { opacity: 0, transform: 'translateY(-5vh)' },
+    enter: { opacity: 1, transform: 'translateY(0)' },
+    leave: { opacity: 0, transform: 'translateY(-5vh)' },
+    config: { tension: 60, friction: 5, mass: 0.55 },
+  });
 
   const checkScrollTop = () => {
-    if (window.pageYOffset > 400){
+    if (window.pageYOffset > 400) {
       setShowScroll(true);
-    } else if (window.pageYOffset <= 400){
+    } else if (window.pageYOffset <= 400) {
       setShowScroll(false);
     }
   };
 
-  const throttleScroll = useCallback(throttle(checkScrollTop, 300), [showScroll]);
+  const throttleScroll = useCallback(throttle(checkScrollTop, 300), [
+    showScroll,
+  ]);
 
   const scrollTop = () => {
     window.scrollTo({
@@ -69,16 +66,18 @@ const BackToTop = () =>{
     return () => window.removeEventListener('scroll', throttleScroll);
   }, [throttleScroll]);
 
-  return (
-    transitions.map(({ item, key, props }) => item && (
-      <AnimatedWrapper
-        key={key}
-        style={{ transform: props.transform, opacity: props.opacity }}
-        onClick={scrollTop}
-      >
-        <StyledIcon size="11" />
-      </AnimatedWrapper>
-  )));
-}
+  return transitions.map(
+    ({ item, key, props }) =>
+      item && (
+        <AnimatedWrapper
+          key={key}
+          style={{ transform: props.transform, opacity: props.opacity }}
+          onClick={scrollTop}
+        >
+          <StyledIcon size="11" />
+        </AnimatedWrapper>
+      )
+  );
+};
 
 export default BackToTop;

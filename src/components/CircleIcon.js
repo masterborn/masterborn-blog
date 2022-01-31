@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 const CircleIcon = styled.div`
   display: block;
@@ -15,7 +15,7 @@ const CircleIcon = styled.div`
     background-image: url(${props => props.icon});
     background-position: center center;
     background-repeat: no-repeat;
-    transition: all .2s linear;
+    transition: all 0.2s linear;
   }
 `;
 

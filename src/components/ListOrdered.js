@@ -1,7 +1,7 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { space, typography } from 'styled-system';
 
-const ListOrdered = styled('ol')(
+const ListOrdered = styled.ol(
   ({ theme }) => ({
     listStyle: 'decimal',
     li: {

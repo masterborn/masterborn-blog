@@ -1,9 +1,9 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import ReactScrollbar from 'react-scrollbars-custom';
 import PropTypes from 'prop-types';
 
-const Container = styled('div')`
+const Container = styled.div`
   position: relative;
   height: 100%;
   .ScrollbarsCustom-Content {

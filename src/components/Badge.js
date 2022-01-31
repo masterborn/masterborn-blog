@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import {
   border,
   color,
@@ -8,7 +8,7 @@ import {
   variant,
 } from 'styled-system';
 
-const Badge = styled('span')(
+const Badge = styled.span(
   space,
   color,
   typography,

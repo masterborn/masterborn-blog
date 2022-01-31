@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Global } from '@emotion/react';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 import normalizeCss from '../theme/normalizeCss';
 import globalStyles from '../theme/globalStyles';

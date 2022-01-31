@@ -1,7 +1,7 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { space, typography, color } from 'styled-system';
 
-const ListItem = styled('li')`
+const ListItem = styled.li`
   list-style: none;
   border-left-style: solid;
   border-left-width: 2px;
@@ -11,11 +11,13 @@ const ListItem = styled('li')`
   line-height: 2.4rem;
   border-color: ${props =>
     props.isActive ? props.theme.colors.primary : 'transparent'};
-  color: ${props => props.isActive 
-    ? props.theme.colors.tableOfContent.itemColorActive 
-    : props.theme.colors.tableOfContent.itemColor};
+  color: ${props =>
+    props.isActive
+      ? props.theme.colors.tableOfContent.itemColorActive
+      : props.theme.colors.tableOfContent.itemColor};
   font-weight: ${props => (props.isActive ? '600' : '300')};
-  padding-left: ${props => (props.level === 2 ? '2.8rem' : '1.9rem')} !important;
+  padding-left: ${props =>
+    props.level === 2 ? '2.8rem' : '1.9rem'} !important;
   opacity: ${props => (props.isActive ? '1' : '0.9')};
 `;
 

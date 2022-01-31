@@ -3,10 +3,9 @@ import { navigate } from 'gatsby';
 
 import PropTypes from 'prop-types';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { MDXProvider } from '@mdx-js/react';
 import { GatsbyImage } from 'gatsby-plugin-image';
-
 
 import { media } from '../../utils/emotion';
 import Heading from '../Heading';
@@ -22,20 +21,20 @@ import AuthorBox from './AuthorBox';
 import BlogContent from './BlogContent';
 import RelatedArticles from './RelatedArticles';
 
-const Wrapper = styled('div')`
+const Wrapper = styled.div`
   ${media.desktop`
     padding-top: 10rem;
   `}
 `;
 
-const PostHeader = styled('div')`
+const PostHeader = styled.div`
   margin-bottom: 2.5rem;
   ${media.desktop`
     margin-bottom: 3.5rem;
   `}
 `;
 
-const PostContent = styled('div')`
+const PostContent = styled.div`
   display: grid;
   grid-row-gap: 2rem;
   padding: 9.5rem 0 0;
@@ -52,13 +51,13 @@ const PostContent = styled('div')`
   `}
 `;
 
-const PostBody = styled('div')`
+const PostBody = styled.div`
   grid-area: body;
   min-width: 0;
   position: relative;
 `;
 
-const RightSidebarWrapper = styled('div')`
+const RightSidebarWrapper = styled.div`
   grid-area: sidebar;
   min-width: 0;
   display: none;

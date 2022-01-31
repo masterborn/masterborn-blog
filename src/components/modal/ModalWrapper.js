@@ -1,10 +1,10 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 import { media } from '../../utils/emotion';
 
 const ModalWrapper = styled.div`
   display: grid;
-  overflow-y:auto;
+  overflow-y: auto;
   align-items: center;
   justify-content: center;
   position: fixed;

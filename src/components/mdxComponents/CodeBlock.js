@@ -1,13 +1,13 @@
 import * as React from 'react';
 import Highlight, { defaultProps } from 'prism-react-renderer';
 import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 import darkTheme from '../../theme/prismTheme';
 
 import Pre from './Pre';
 
-const LineNumber = styled('span')`
+const LineNumber = styled.span`
   display: inline-block;
   width: 3em;
   user-select: none;
@@ -16,7 +16,7 @@ const LineNumber = styled('span')`
   position: relative;
 `;
 
-const CodeBlockContainer = styled('div')`
+const CodeBlockContainer = styled.div`
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
   .prism-code {

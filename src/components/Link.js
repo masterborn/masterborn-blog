@@ -12,7 +12,7 @@ import {
   position,
 } from 'styled-system';
 
-const ActionLink = styled('a')`
+const ActionLink = styled.a`
   cursor: pointer;
 `;
 
@@ -45,8 +45,8 @@ const Link = styled(BaseLink)`
   ${color};
   ${typography};
   ${layout};
-  ${flexbox}
-  ${position}
+  ${flexbox};
+  ${position};
   transition: all 150ms ease-in-out;
   color: ${props => props.theme.colors.link.default};
   :hover {

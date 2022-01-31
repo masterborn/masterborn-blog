@@ -1,4 +1,4 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { darken, lighten } from 'polished';
 import { size, typography, space } from 'styled-system';
 
@@ -6,7 +6,7 @@ const borderColor = props => darken(0.05, props.theme.custom.table.accentColor);
 const evenRowColor = props =>
   lighten(0.009, props.theme.custom.table.accentColor);
 
-const BaseTable = styled('table')`
+const BaseTable = styled.table`
   border-radius: ${props => props.theme.radii[1]};
   border-collapse: collapse;
   overflow: hidden;

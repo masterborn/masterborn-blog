@@ -1,7 +1,7 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { space, color, typography } from 'styled-system';
 
-const Caption = styled('span')(
+const Caption = styled.span(
   props => ({
     color: props.theme.colors.caption,
     fontSize: props.theme.fontSizes.caption,

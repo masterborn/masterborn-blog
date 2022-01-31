@@ -1,8 +1,8 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
-const getBorderColor = (props) => {
+const getBorderColor = props => {
   if (props.checked) return 'pink';
   return props.error ? 'red' : 'black';
 };
@@ -16,7 +16,8 @@ const Checkbox = styled.span`
   margin-right: 1.5rem;
   cursor: pointer;
   position: relative;
-  background-color: ${props => (props.checked ? props.theme.colors.primary : 'transparent')};
+  background-color: ${props =>
+    props.checked ? props.theme.colors.primary : 'transparent'};
   border: 2px solid ${getBorderColor};
 
   &:focus {
@@ -30,7 +31,7 @@ const Checkbox = styled.span`
     top: 50%;
     left: 50%;
     position: absolute;
-     color: ${props => props.theme.colors.black};
+    color: ${props => props.theme.colors.black};
     transform: translate(-38%, -50%) rotate(135deg);
   }
 `;
@@ -50,7 +51,6 @@ const CheckBoxFieldWrapper = styled.div`
   &:hover ${Checkbox} {
     border-color: ${props => props.theme.colors.primary};
   }
-
 `;
 
 const CheckBoxFieldLabel = styled.label`
@@ -83,9 +83,7 @@ const CheckBoxField = ({
         onChange={() => {}}
       />
       <Checkbox checked={value} error={error} />
-      <CheckBoxFieldLabel>
-        {children}
-      </CheckBoxFieldLabel>
+      <CheckBoxFieldLabel>{children}</CheckBoxFieldLabel>
     </CheckBoxFieldWrapper>
   );
 };

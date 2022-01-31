@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 import Caption from '../Caption';
 
@@ -14,8 +14,7 @@ const Container = styled.div`
 const ContentContainer = styled.div`
   display: flex;
   flex-direction: column;
-
-`
+`;
 const Avatar = styled.div`
   border-radius: 50%;
   width: 4rem;
@@ -31,14 +30,23 @@ const AuthorBox = ({ image, name, date, timeToRead }) => {
     <Container>
       <Avatar src={image} />
       <ContentContainer>
-        <Caption fontSize={0} color="authorHeader.author" opacity={0.9} fontWeight={2}>
+        <Caption
+          fontSize={0}
+          color="authorHeader.author"
+          opacity={0.9}
+          fontWeight={2}
+        >
           {name}
         </Caption>
-        <Caption fontSize={0} color="authorHeader.authorDate" mt={2} opacity={0.9}>
+        <Caption
+          fontSize={0}
+          color="authorHeader.authorDate"
+          mt={2}
+          opacity={0.9}
+        >
           {date} | {timeToRead} min read
         </Caption>
       </ContentContainer>
-
     </Container>
   );
 };

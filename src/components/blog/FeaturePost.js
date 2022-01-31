@@ -25,12 +25,11 @@ const Container = styled.div`
 `;
 
 const Description = styled(LinesEllipsis)`
-  ${({ theme, color }) => console.log(theme, color)}
   margin: 2rem 0;
   opacity: 0.9;
   line-height: 2.6rem;
   font-size: 1.6rem;
-  color: ${({ theme, color }) => theme.colors[color]};
+  color: ${({ theme, color }) => get(theme.colors, color)};
   font-weight: 300;
   order: 3;
   ${media.desktop`
@@ -47,9 +46,8 @@ const LeftSide = styled.div`
   `}
 `;
 
-const StyledHeading = styled.h2`
+const StyledHeading = styled(Heading)`
   line-height: 3.4rem;
-  color: ${({ theme, color }) => theme.colors[color]};
   font-size: 2.9rem;
   order: 1;
   ${media.desktop`

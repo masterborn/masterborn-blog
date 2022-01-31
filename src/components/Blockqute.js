@@ -1,7 +1,7 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { transparentize } from 'polished';
 
-const Blockquote = styled('blockquote')`
+const Blockquote = styled.blockquote`
   border-left: 3px solid ${props => props.theme.colors.accentBackground};
   p {
     color: ${props => transparentize(0.25, props.theme.colors.text)};

@@ -1,9 +1,9 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import get from 'lodash/get';
-import { getSrc } from "gatsby-plugin-image"
+import { getSrc } from 'gatsby-plugin-image';
 
 import SEO from '../components/SEO';
 import PageLayout from '../layouts/PageLayout';
@@ -29,13 +29,7 @@ export default function BlogTemplate(props) {
   } = props;
 
   const {
-    frontmatter: {
-      description,
-      metaImage,
-      date,
-      author,
-      authorAvatar,
-    },
+    frontmatter: { description, metaImage, date, author, authorAvatar },
     fields: { slug, title },
     parent: { relativePath },
     body,
@@ -48,11 +42,11 @@ export default function BlogTemplate(props) {
   const heroImage = get(metaImage, 'childImageSharp.gatsbyImageData', null);
 
   const footerCta = {
-    headings:[
+    headings: [
       'Join our Team of world-class React & Node.js developers',
       'We build valuable and successful products for U.S. based startups',
-  ],
-    buttonTexts:['See open positions!', 'Hire us!'],
+    ],
+    buttonTexts: ['See open positions!', 'Hire us!'],
   };
   return (
     <PageLayout location={location} themeName="blog" footerCta={footerCta}>
@@ -121,20 +115,22 @@ BlogTemplate.propTypes = {
       timeToRead: PropTypes.number,
     }),
     relatedPosts: PropTypes.shape({
-      nodes: PropTypes.arrayOf(PropTypes.shape({
-        slug: PropTypes.string,
-        frontmatter: PropTypes.shape({
-          title: PropTypes.string,
-          description: PropTypes.string,
-          metaImage: PropTypes.shape({
-            childImageSharp: PropTypes.shape({
-              fluid: PropTypes.shape({
-                src: PropTypes.string,
+      nodes: PropTypes.arrayOf(
+        PropTypes.shape({
+          slug: PropTypes.string,
+          frontmatter: PropTypes.shape({
+            title: PropTypes.string,
+            description: PropTypes.string,
+            metaImage: PropTypes.shape({
+              childImageSharp: PropTypes.shape({
+                fluid: PropTypes.shape({
+                  src: PropTypes.string,
+                }),
               }),
             }),
           }),
-        }),
-      })),
+        })
+      ),
     }),
   }),
   location: PropTypes.shape({
@@ -173,7 +169,7 @@ export const pageQuery = graphql`
         description
         metaImage {
           childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH placeholder: BLURRED)
+            gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
           }
         }
         date
@@ -198,7 +194,7 @@ export const pageQuery = graphql`
           description
           metaImage {
             childImageSharp {
-              gatsbyImageData(layout: FULL_WIDTH placeholder: BLURRED)
+              gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
             }
           }
         }

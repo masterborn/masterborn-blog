@@ -1,7 +1,7 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { space, typography } from 'styled-system';
 
-const List = styled('ul')(
+const List = styled.ul(
   ({ theme }) => ({
     listStyle: 'initial',
     li: {
@@ -12,10 +12,10 @@ const List = styled('ul')(
       lineHeight: theme.lineHeights.body,
       fontSize: theme.fontSizes.bodySmall,
       color: theme.colors.heading,
-      "p": {
+      p: {
         marginTop: theme.space.none,
         marginBottom: theme.space.none,
-      }
+      },
     },
   }),
   space,

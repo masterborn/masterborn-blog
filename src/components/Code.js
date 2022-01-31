@@ -1,6 +1,6 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
-const Code = styled('code')`
+const Code = styled.code`
   background: ${props => props.theme.custom.code.backgroundColor};
   color: ${props => props.theme.colors.code};
   font-size: ${props => props.theme.fontSizes.caption};

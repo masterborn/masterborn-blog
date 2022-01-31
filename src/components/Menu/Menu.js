@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 import { media } from '../../utils/emotion';
@@ -10,6 +10,7 @@ const Container = styled.div`
   width: auto;
   margin-left: auto;
   display: none;
+
   ${media.desktop`
     display: flex;
     align-items: center;

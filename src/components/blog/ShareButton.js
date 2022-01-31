@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 import { media } from '../../utils/emotion';
 import Icon from '../Icon';
@@ -61,6 +61,5 @@ ShareButton.propTypes = {
 ShareButton.defaultProps = {
   children: null,
 };
-
 
 export default ShareButton;

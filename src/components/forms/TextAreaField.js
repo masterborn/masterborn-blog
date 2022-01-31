@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const TextAreaWrapper = styled.div`
@@ -8,8 +8,6 @@ const TextAreaWrapper = styled.div`
   line-height: 1.6;
   position: relative;
   grid-column: 1 / end;
-
-
 `;
 
 const TextAreaLabel = styled.span`
@@ -18,9 +16,10 @@ const TextAreaLabel = styled.span`
   position: absolute;
   left: 2rem;
   top: 3rem;
-  transform: ${props => (props.filled || props.error ? 'translateY(-100%)' : 'translateY(-50%)')};
+  transform: ${props =>
+    props.filled || props.error ? 'translateY(-100%)' : 'translateY(-50%)'};
   opacity: ${props => (props.filled && props.error ? '0' : '1')};
-  transition: all .1s linear;
+  transition: all 0.1s linear;
   font-size: ${props => (props.filled ? '1.rem' : '1.6rem')};
   white-space: nowrap;
   overflow: hidden;
@@ -34,9 +33,10 @@ const TextAreaErrorLabel = styled.span`
   position: absolute;
   left: 2rem;
   top: 3rem;
-  transform: ${props => (props.filled || props.error ? 'translateY(-125%)' : 'translateY(-50%)')};
+  transform: ${props =>
+    props.filled || props.error ? 'translateY(-125%)' : 'translateY(-50%)'};
   opacity: ${props => (props.filled && props.error ? '0' : '1')};
-  transition: all .1s linear;
+  transition: all 0.1s linear;
   font-size: 1.2rem;
 `;
 
@@ -55,20 +55,28 @@ const TextArea = styled.textarea`
   line-height: 1.6;
   background: transparent;
   padding: 3rem 2rem 1rem;
-  maxLength: ${props => props.maxLength};
-  border: 1px solid ${props => (!props.error ? props.theme.colors.input.border : props.theme.colors.alizarinCrimson)};
+  maxlength: ${props => props.maxLength};
+  border: 1px solid
+    ${props =>
+      !props.error
+        ? props.theme.colors.input.border
+        : props.theme.colors.alizarinCrimson};
   & + ${TextAreaLabel} {
     transform: ${props => (props.error && !props.value ? 'translateY(0)' : '')};
   }
 
   &:focus {
     outline: none;
-    border: 1px solid ${props => (!props.error ? props.theme.colors.input.border : props.theme.colors.alizarinCrimson)};
+    border: 1px solid
+      ${props =>
+        !props.error
+          ? props.theme.colors.input.border
+          : props.theme.colors.alizarinCrimson};
     & + ${TextAreaLabel} {
       transform: translateY(-125%);
       font-size: 1.2rem;
       top: 3rem;
-      opacity:1;
+      opacity: 1;
     }
   }
 `;
@@ -83,7 +91,7 @@ const TextAreaField = ({
   onChange,
   maxLength,
 }) => {
-  const onChangeHandler = (e) => {
+  const onChangeHandler = e => {
     onChange({ [name]: e.target.value });
   };
 
@@ -99,10 +107,10 @@ const TextAreaField = ({
         maxWidth={maxWidth}
         maxLength={maxLength}
       />
-      <TextAreaLabel filled={value} error={error}>{label}</TextAreaLabel>
-      {error
-        && <TextAreaErrorLabel error={error}>{error}</TextAreaErrorLabel>
-      }
+      <TextAreaLabel filled={value} error={error}>
+        {label}
+      </TextAreaLabel>
+      {error && <TextAreaErrorLabel error={error}>{error}</TextAreaErrorLabel>}
     </TextAreaWrapper>
   );
 };

@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import { keyframes } from '@emotion/react';
 import PropTypes from 'prop-types';
 

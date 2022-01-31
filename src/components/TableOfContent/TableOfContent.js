@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 import isArray from 'lodash/isArray';
 
 import BaseHeading from '../Heading';
@@ -9,7 +9,7 @@ import useActiveHashInViewport from '../../hooks/useActiveHashInViewport';
 
 import TableOfContentItem from './TableOfContentItem';
 
-const StickyContainer = styled('div')`
+const StickyContainer = styled.div`
   display: none;
   margin-bottom: 4rem;
   ${media.desktop`
@@ -30,7 +30,7 @@ const List = styled.ul`
   margin-bottom: 0;
   padding-left: 0;
   border-left: 1px solid
-  ${props => props.theme.colors.tableOfContent.separatorBorder};
+    ${props => props.theme.colors.tableOfContent.separatorBorder};
   ${TableOfContentItem} {
     margin: 0.5rem 0;
   }
@@ -75,9 +75,7 @@ const TableOfContent = ({ items }) => {
 
   return (
     <StickyContainer>
-      <Heading as="h5">
-        Table of Content
-      </Heading>
+      <Heading as="h5">Table of Content</Heading>
       <List>
         {itemsWithoutRoot.map(lvl1Item => (
           <React.Fragment key={lvl1Item.url}>

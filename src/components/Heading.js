@@ -7,20 +7,20 @@ import PropTypes from 'prop-types';
 import Icon from './Icon';
 
 const BaseHeading = styled.h1(
+  space,
+  color,
+  typography,
+  layout,
+  flexbox,
   props => ({
     fontSize: props.as
       ? props.theme.fontSizes[props.as]
       : props.theme.fontSizes[0],
     textTransform: props.capitalize ? 'capitalize' : 'none',
-  }),
-  space,
-  color,
-  typography,
-  layout,
-  flexbox
+    marginTop: 0,
+    mb: 3,
+  })
 );
-
-BaseHeading.displayName = 'Heading';
 
 BaseHeading.defaultProps = {
   mt: 0,
@@ -31,6 +31,7 @@ BaseHeading.defaultProps = {
   fontWeight: 'heading',
   capitalize: false,
 };
+BaseHeading.displayName = 'Heading';
 
 const AnchorIcon = styled(Icon)`
   :hover {
