@@ -120,6 +120,6 @@ We start a new project, put together a team, and it just so happens that nobody 
 
 We recommend testing both regular Retro tools and Fun Retro tools, keeping in mind that there are no perfect tools out there. There is no one-size-fits-all solution.
 
-We recommended quite a few options in this and [previous article](./10-retrospective-tools-for-scrum-masters), but each team is different - so it's important to customize these tools to your needs.
+We recommended quite a few options in this and [previous article](../10-retrospective-tools-for-scrum-masters), but each team is different - so it's important to customize these tools to your needs.
 
 Have fun in your own search for agile Retrospective tools!
