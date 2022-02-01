@@ -374,20 +374,13 @@ const Footer = ({ headings, buttonTexts }) => {
             <ReviewsWrapper>
               {ratings.map(rating => (
                 <ReviewItem
+                  key={rating.title}
                   href={rating.url}
                   title={rating.title}
                   target="_blank"
                   rel="noreferrer"
-                  key={rating.title}
                 >
-                  <a
-                    href={rating.url}
-                    title={rating.title}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <img src={rating.logo} alt={rating.title} />
-                  </a>
+                  <img src={rating.logo} alt={rating.title} />
                   {rating.score && (
                     <RatingWrapper>
                       <StarRating />

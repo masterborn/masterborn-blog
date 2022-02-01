@@ -21,7 +21,6 @@
   "dependencies": {
     "@emotion/is-prop-valid": "^0.8.8",
     "@emotion/react": "^11.1.5",
-    "@emotion/styled": "^11.3.0",
     "@mdx-js/loader": "^1.5.7",
     "@mdx-js/mdx": "^1.5.7",
     "@mdx-js/react": "^1.5.7",
