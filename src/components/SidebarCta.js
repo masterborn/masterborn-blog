@@ -24,13 +24,19 @@ const Container = styled.div`
   margin: 2rem 0;
   position: sticky;
   top: 14rem;
+
+  h5 {
+    letter-spacing: 0;
+    line-height: 2.6rem;
+    color: ${({ theme }) => theme.colors.ctaArticle.text};
+  }
 `;
 
-const StyledHeading = styled(Heading)`
-  letter-spacing: 0;
-  line-height: 2.6rem;
-  color: ${({ theme }) => theme.colors.ctaArticle.text};
-`;
+// const StyledHeading = styled(Heading)`
+//   letter-spacing: 0;
+//   line-height: 2.6rem;
+//   color: ${({ theme }) => theme.colors.ctaArticle.text};
+// `;
 
 const StyledBorder = styled.div`
   width: 60%;
@@ -58,11 +64,11 @@ const SidebarCta = ({ isInPoland }) => {
     : openContactModal;
   return (
     <Container>
-      <StyledHeading as="h5">
+      <Heading as="h5">
         {isInPoland
           ? 'World-class React & Node.js experts'
           : 'We build success with U.S. based startups'}
-      </StyledHeading>
+      </Heading>
       <StyledBorder />
       <Button
         variant="cta"

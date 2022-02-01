@@ -32,6 +32,24 @@ const PostHeader = styled.div`
   ${media.desktop`
     margin-bottom: 3.5rem;
   `}
+  h1 {
+    font-size: 2.9rem;
+    ${media.desktop`
+    font-size: 4.3rem;
+    line-height: 5.2rem;
+    margin-bottom: 2rem;
+  `}
+  }
+  h6 {
+    width: 100%;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    ${media.desktop`
+    max-width: 80%;
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+  `}
+  }
 `;
 
 const PostContent = styled.div`
@@ -76,25 +94,25 @@ const BackLink = styled(Link)`
   `}
 `;
 
-const PostHeading = styled(Heading)`
-  font-size: 2.9rem;
-  ${media.desktop`
-    font-size: 4.3rem;
-    line-height: 5.2rem;
-    margin-bottom: 2rem;
-  `}
-`;
+// const PostHeading = styled(Heading)`
+//   font-size: 2.9rem;
+//   ${media.desktop`
+//     font-size: 4.3rem;
+//     line-height: 5.2rem;
+//     margin-bottom: 2rem;
+//   `}
+// `;
 
-const PostDescription = styled(Heading)`
-  width: 100%;
-  font-size: 1.6rem;
-  line-height: 2.4rem;
-  ${media.desktop`
-    max-width: 80%;
-    font-size: 1.8rem;
-    line-height: 2.6rem;
-  `}
-`;
+// const PostDescription = styled(Heading)`
+//   width: 100%;
+//   font-size: 1.6rem;
+//   line-height: 2.4rem;
+//   ${media.desktop`
+//     max-width: 80%;
+//     font-size: 1.8rem;
+//     line-height: 2.6rem;
+//   `}
+// `;
 
 const PostHeroImage = styled(GatsbyImage)`
   border-radius: 4px;
@@ -131,10 +149,10 @@ const Post = ({
               <BackLink onClick={() => navigate(-1)} title="Back">
                 <img src={ArrowIcon} alt="Back" />
               </BackLink>
-              <PostHeading lineHeight="5.2rem" as="h1" mb={3}>
+              <Heading lineHeight="5.2rem" as="h1" mb={3}>
                 {title}
-              </PostHeading>
-              <PostDescription
+              </Heading>
+              <Heading
                 color="header.color"
                 lineHeight="2.6rem"
                 as="h6"
@@ -143,7 +161,7 @@ const Post = ({
                 opacity={0.9}
               >
                 {description}
-              </PostDescription>
+              </Heading>
               <AuthorBox
                 image={authorAvatar}
                 name={author}

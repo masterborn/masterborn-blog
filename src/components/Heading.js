@@ -7,19 +7,17 @@ import PropTypes from 'prop-types';
 import Icon from './Icon';
 
 const BaseHeading = styled.h1(
-  space,
-  color,
-  typography,
-  layout,
-  flexbox,
   props => ({
     fontSize: props.as
       ? props.theme.fontSizes[props.as]
       : props.theme.fontSizes[0],
     textTransform: props.capitalize ? 'capitalize' : 'none',
-    marginTop: 0,
-    mb: 3,
-  })
+  }),
+  space,
+  color,
+  typography,
+  layout,
+  flexbox
 );
 
 BaseHeading.defaultProps = {
@@ -34,6 +32,7 @@ BaseHeading.defaultProps = {
 BaseHeading.displayName = 'Heading';
 
 const AnchorIcon = styled(Icon)`
+  display: ${({ display }) => display};
   :hover {
     color: ${props => props.theme.colors.primary};
   }
@@ -71,7 +70,7 @@ const Heading = props => {
           ml={1}
           icon={LinkIcon}
           size={mapIconSize[props.as]}
-          display={focus ? 'inline' : 'none'}
+          display={focus ? 'block-inline' : 'none'}
         />
       </a>
     </BaseHeading>

@@ -44,6 +44,17 @@ const LeftSide = styled.div`
   ${media.desktop`
     max-width: 47rem;
   `}
+
+  h2 {
+    line-height: 3.4rem;
+    font-size: 2.9rem;
+    order: 1;
+    ${media.desktop`
+    order: 2;
+    line-height: 4.8rem;
+    font-size: 3.8rem;
+  `}
+  }
 `;
 
 const StyledHeading = styled(Heading)`
@@ -105,13 +116,13 @@ const FeaturePost = ({ post, isFirst }) => {
       <LeftSide>
         <MouseOverHandler setHovered={setHovered}>
           <Link to={slug}>
-            <StyledHeading
+            <Heading
               color={`${colorsCategory}.header`}
               fontWeight={600}
               as="h2"
             >
               {title}
-            </StyledHeading>
+            </Heading>
           </Link>
           <Description
             color={`${colorsCategory}.description`}

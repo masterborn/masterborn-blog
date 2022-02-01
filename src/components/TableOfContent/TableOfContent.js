@@ -15,6 +15,13 @@ const StickyContainer = styled.div`
   ${media.desktop`
     display: block;
   `}
+  h5 {
+    font-weight: 600;
+    margin-bottom: 3rem;
+    line-height: 2rem;
+    opacity: 0.9;
+    font-size: 1.6rem;
+  }
 `;
 
 const Heading = styled(BaseHeading)`
@@ -75,7 +82,7 @@ const TableOfContent = ({ items }) => {
 
   return (
     <StickyContainer>
-      <Heading as="h5">Table of Content</Heading>
+      <BaseHeading as="h5">Table of Content</BaseHeading>
       <List>
         {itemsWithoutRoot.map(lvl1Item => (
           <React.Fragment key={lvl1Item.url}>

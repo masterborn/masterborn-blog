@@ -4,19 +4,15 @@ import styled from 'styled-components';
 import { color, space, layout } from 'styled-system';
 
 const generateStyledIcon = Icon =>
-  styled(Icon)(
-    props => ({
-      color: props.theme.colors.icon,
-      transition: 'all 150ms ease-in-out',
-      margin: 'initial',
-      ':hover': {
-        color: 'currentColor',
-      },
-    }),
-    color,
-    space,
-    layout
-  );
+  styled(Icon)(color, space, layout, props => ({
+    color: props.theme.colors.icon,
+    transition: 'all 150ms ease-in-out',
+    margin: 'initial',
+    ':hover': {
+      color: 'currentColor',
+    },
+    display: props.display,
+  }));
 
 const Icon = ({ icon: Component, size, ...rest }) => {
   const IconComponent = generateStyledIcon(Component);

@@ -22,15 +22,22 @@ const RelatedArticlesWrapper = styled.div`
     top: 0;
     left: 0;
   }
-`;
-
-const RelatedArticlesHeading = styled(Heading)`
-  text-align: center;
-  margin: 2rem 0;
-  ${media.desktop`
+  h6 {
+    text-align: center;
+    margin: 2rem 0;
+    ${media.desktop`
     margin: 4rem 0;
   `}
+  }
 `;
+
+// const RelatedArticlesHeading = styled(Heading)`
+//   text-align: center;
+//   margin: 2rem 0;
+//   ${media.desktop`
+//     margin: 4rem 0;
+//   `}
+// `;
 
 const RelatedArticlesContainer = styled.div`
   display: grid;
@@ -60,9 +67,7 @@ const RelatedArticles = ({ relatedPosts }) => {
   return (
     <StyledPageSection>
       <RelatedArticlesWrapper>
-        <RelatedArticlesHeading as="h6">
-          Related articles:
-        </RelatedArticlesHeading>
+        <Heading as="h6">Related articles:</Heading>
         <RelatedArticlesContainer>
           {relatedPosts.map(({ slug, frontmatter, excerpt }) => (
             <PostShort
