@@ -26,8 +26,8 @@ import Button from './Button';
 const OfficeHeader = styled.h4`
   color: ${({ theme: { colors } }) => colors.base150};
   opacity: 0.9;
-  font-weight: ${props => props.theme.fontWeights[1]};
-  font-size: ${props => props.theme.fontSizes[2]};
+  font-weight: ${(props) => props.theme.fontWeights[1]};
+  font-size: ${(props) => props.theme.fontSizes[2]};
   margin: 4rem 0 4.4rem 0;
 
   ${media.tabletMax`
@@ -79,15 +79,15 @@ const OfficeItem = styled.div`
   text-align: left;
 
   h5 {
-    color: ${props => props.theme.colors.footer.officeHeader};
-    font-size: ${props => props.theme.fontSizes[2]};
+    color: ${(props) => props.theme.colors.footer.officeHeader};
+    font-size: ${(props) => props.theme.fontSizes[2]};
     opacity: 0.9;
     line-height: 2.4rem;
     margin: 0;
   }
   p {
     color: ${({ theme: { colors } }) => colors.base150};
-    font-size: ${props => props.theme.fontSizes[1]};
+    font-size: ${(props) => props.theme.fontSizes[1]};
     line-height: 2.1rem;
     opacity: 0.9;
     margin: 0;
@@ -116,7 +116,7 @@ const FooterNavigationWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-top: 0px solid ${props => props.theme.colors.footer.border};
+  border-top: 0px solid ${(props) => props.theme.colors.footer.border};
 
   ${media.mobileMax`
     padding: 4.4rem 0px 4rem;
@@ -193,9 +193,9 @@ const GreyBreakLine = styled.div`
 `;
 
 const FooterLink = styled(Link)`
-  color: ${props => props.theme.colors.header.color};
+  color: ${(props) => props.theme.colors.header.color};
   :hover {
-    color: ${props => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.primary};
     text-shadow: 0 0 1px;
   }
 `;
@@ -205,6 +205,9 @@ const FooterItem = styled.li`
   width: max-content;
   margin-right: 0;
   padding: 1rem 2rem;
+  :nth-child(3) {
+    order: 1;
+  }
   `};
 
   ${media.tabletMax`
@@ -245,7 +248,7 @@ const RodoBox = styled.div`
 `;
 
 const FooterCta = styled.div`
-  background: ${props => props.theme.colors.footer.ctaBackground};
+  background: ${(props) => props.theme.colors.footer.ctaBackground};
   clip-path: ellipse(129% 106% at 50% 110%);
   padding: 7rem 2rem 2rem;
   ${media.desktop`
@@ -339,9 +342,7 @@ const Footer = ({ headings, buttonTexts }) => {
   return (
     <>
       <FooterCta>
-        <StyledHeading as="h3">
-          {isInPoland ? headings[0] : headings[1]}
-        </StyledHeading>
+        <StyledHeading as="h3">{isInPoland ? headings[0] : headings[1]}</StyledHeading>
         <StyledButton variant="cta" size="cta" onClick={contactButtonAction}>
           {isInPoland ? buttonTexts[0] : buttonTexts[1]}
         </StyledButton>
@@ -372,7 +373,7 @@ const Footer = ({ headings, buttonTexts }) => {
               </OfficeItem>
             </OfficesWrapper>
             <ReviewsWrapper>
-              {ratings.map(rating => (
+              {ratings.map((rating) => (
                 <ReviewItem
                   key={rating.title}
                   href={rating.url}
@@ -394,11 +395,7 @@ const Footer = ({ headings, buttonTexts }) => {
         </FooterContainer>
         <FooterNavigationWrapper>
           <GreyBreakLine />
-          <Link
-            to="/"
-            href={config.env.masterbornWebsite}
-            title="Masterborn.com"
-          >
+          <Link to="/" href={config.env.masterbornWebsite} title="Masterborn.com">
             <StyledLogo src={MBLogoGray} />
           </Link>
           <FooterNavigation>
@@ -427,15 +424,13 @@ const Footer = ({ headings, buttonTexts }) => {
               </FooterLink>
             </FooterItem>
           </FooterNavigation>
-          <CopyrightBox>
-            Copyright © MasterBorn 2016 -{` ${new Date().getFullYear()}`}
-          </CopyrightBox>
+          <CopyrightBox>Copyright © MasterBorn 2016 -{` ${new Date().getFullYear()}`}</CopyrightBox>
         </FooterNavigationWrapper>
         <RodoBox>
           <Content mb={0} mt={0}>
-            The Administrator of your data is MasterBorn, with its registered
-            office in Wroclaw, Krupnicza 13, Wroclaw. If you want to withdraw,
-            get an insight or update information about you, then contact us:{' '}
+            The Administrator of your data is MasterBorn, with its registered office in Wroclaw,
+            Krupnicza 13, Wroclaw. If you want to withdraw, get an insight or update information
+            about you, then contact us:{' '}
             <a href="mailto:contact@masterborn.com">contact@masterborn.com</a>
           </Content>
         </RodoBox>
