@@ -1,10 +1,12 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
+import { navigate } from 'gatsby';
+
 import PropTypes from 'prop-types';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import styled from '@emotion/styled';
 import { MDXProvider } from '@mdx-js/react';
-import { GatsbyImage } from "gatsby-plugin-image"
-import get from 'lodash/get';
+import { GatsbyImage } from 'gatsby-plugin-image';
+
 
 import { media } from '../../utils/emotion';
 import Heading from '../Heading';
@@ -73,7 +75,7 @@ const BackLink = styled(Link)`
     left: -4rem;
     display: block;
   `}
-`
+`;
 
 const PostHeading = styled(Heading)`
   font-size: 2.9rem;
@@ -82,7 +84,7 @@ const PostHeading = styled(Heading)`
     line-height: 5.2rem;
     margin-bottom: 2rem;
   `}
-`
+`;
 
 const PostDescription = styled(Heading)`
   width: 100%;
@@ -93,13 +95,13 @@ const PostDescription = styled(Heading)`
     font-size: 1.8rem;
     line-height: 2.6rem;
   `}
-`
+`;
 
 const PostHeroImage = styled(GatsbyImage)`
   border-radius: 4px;
   margin-bottom: 4rem;
-  box-shadow: 0 35px 30px -37px rgba(0,0,0,0.2);
-`
+  box-shadow: 0 35px 30px -37px rgba(0, 0, 0, 0.2);
+`;
 
 const Post = ({
   filePath,
@@ -118,8 +120,8 @@ const Post = ({
     day: 'numeric',
     year: 'numeric',
     month: 'short',
-  }).format(new Date(date))
-  const {isInPoland} = useContext(CountryContext);
+  }).format(new Date(date));
+  const { isInPoland } = useContext(CountryContext);
 
   return (
     <Wrapper>
@@ -127,16 +129,28 @@ const Post = ({
         <PostContent>
           <PostBody>
             <PostHeader>
-              <BackLink to="/" title="Back">
+              <BackLink onClick={() => navigate(-1)} title="Back">
                 <img src={ArrowIcon} alt="Back" />
               </BackLink>
               <PostHeading lineHeight="5.2rem" as="h1" mb={3}>
                 {title}
               </PostHeading>
-              <PostDescription color="header.color" lineHeight="2.6rem" as="h6" mb={3} mt={1} opacity={0.9}>
+              <PostDescription
+                color="header.color"
+                lineHeight="2.6rem"
+                as="h6"
+                mb={3}
+                mt={1}
+                opacity={0.9}
+              >
                 {description}
               </PostDescription>
-              <AuthorBox image={authorAvatar} name={author} date={localeDate} timeToRead={timeToRead} />
+              <AuthorBox
+                image={authorAvatar}
+                name={author}
+                date={localeDate}
+                timeToRead={timeToRead}
+              />
             </PostHeader>
             <PostHeroImage image={metaImage} alt={title} />
             <MDXProvider components={mdxComponents}>

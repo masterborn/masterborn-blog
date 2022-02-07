@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from '@emotion/styled';
 import ReactPaginate from 'react-paginate';
+import { navigate } from '@reach/router';
 
 import { media } from '../../utils/emotion';
 import utmCampaignNames from '../../utils/utmCampaignNames';
@@ -40,7 +41,8 @@ const Container = styled(BlogContent)`
       color: ${({ theme }) => theme.colors.pagination.disabled};
       cursor: auto;
     }
-    .previous, .next {
+    .previous,
+    .next {
       width: 10rem;
     }
   }
@@ -55,16 +57,13 @@ const CtaContainer = styled.div`
   ${media.desktop`
     grid-template-columns: 600pt;
   `}
-
 `;
 
-const BlogPostsContent = ({postsPerPage, offset, posts, setOffset })=> {
-  const pageCount = Math.ceil(posts.length / postsPerPage);
+const BlogPostsContent = ({ posts, page, pageCount }) => {
   const onPageChange = ({ selected }) => {
-    setOffset(Math.ceil(selected * postsPerPage));
-    window.scrollTo(0, 0);
+    const path = selected === 0 ? '/blog' : `/blog/posts/${selected + 1}`;
+    navigate(path)
   };
-  const paginatedPosts = posts.slice(offset, offset + postsPerPage);
   const ctaHeadings = [
     'Be bold and create your future',
     'Your React & Node.js trusted partners',
@@ -74,7 +73,7 @@ const BlogPostsContent = ({postsPerPage, offset, posts, setOffset })=> {
 
   return (
     <Container>
-      <PostsTiles posts={paginatedPosts}>
+      <PostsTiles posts={posts}>
         <CtaContainer>
           <CtaArticleComponent
             headings={ctaHeadings}
@@ -95,21 +94,16 @@ const BlogPostsContent = ({postsPerPage, offset, posts, setOffset })=> {
         onPageChange={onPageChange}
         containerClassName="pagination"
         activeClassName="active"
+        forcePage={page - 1}
       />
     </Container>
   );
-}
-
-BlogPostsContent.propTypes = {
-    posts: PropTypes.arrayOf(PropTypes.shape()).isRequired,
-    setOffset: PropTypes.func.isRequired,
-    postsPerPage: PropTypes.number,
-    offset: PropTypes.number,
 };
 
-BlogPostsContent.defaultProps = {
-    postsPerPage: 12,
-    offset: 0,
+BlogPostsContent.propTypes = {
+  posts: PropTypes.arrayOf(PropTypes.shape()).isRequired,
+  page: PropTypes.number.isRequired,
+  pageCount: PropTypes.number.isRequired,
 };
 
 export default BlogPostsContent;

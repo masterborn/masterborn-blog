@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import { connectStateResults } from "react-instantsearch-dom";
 import chunk from 'lodash/chunk';
 
 import { media } from '../../utils/emotion';
@@ -17,10 +16,7 @@ const Container = styled.div`
   `}
 `;
 
-const PostsTiles = connectStateResults(({ posts, children }) => {
-  // const { hits = [] } = searchResults || {};
-  // const enabledSlugs = hits.map(({ slug })=> slug);
-  // const filteredPosts = posts.filter(({ slug }) => enabledSlugs.includes(slug));
+const PostsTiles = ({ posts, children }) => {
   const chunkSize = posts.length > 6 ? 6 : 3;
 
   const [firstHalf = [], secondHalf = []] = chunk(posts, chunkSize);
@@ -47,7 +43,7 @@ const PostsTiles = connectStateResults(({ posts, children }) => {
         />
       ))}
     </Container>
-  )
-});
+  );
+};
 
-  export default PostsTiles;
+export default PostsTiles;
