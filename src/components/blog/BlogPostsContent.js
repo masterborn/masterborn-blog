@@ -22,6 +22,7 @@ const Container = styled(BlogContent)`
   `};
 
   .pagination {
+    padding: 0;
     display: grid;
     grid-auto-flow: column;
     width: max-content;
@@ -45,6 +46,9 @@ const Container = styled(BlogContent)`
     .next {
       width: 10rem;
     }
+    .next {
+      max-width: max-content;
+    }
   }
 `;
 
@@ -62,7 +66,7 @@ const CtaContainer = styled.div`
 const BlogPostsContent = ({ posts, page, pageCount }) => {
   const onPageChange = ({ selected }) => {
     const path = selected === 0 ? '/blog' : `/blog/posts/${selected + 1}`;
-    navigate(path)
+    navigate(path);
   };
   const ctaHeadings = [
     'Be bold and create your future',

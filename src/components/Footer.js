@@ -1,10 +1,11 @@
-import React, {useContext} from 'react';
+import React, { useContext } from 'react';
 import styled from '@emotion/styled';
 import PropTypes from 'prop-types';
 
-import ClutchLogo from '../assets/footer/clutch-co-logo.png';
-import GoogleReviewsLogo from '../assets/footer/google-reviews-logo.png';
-import MBLogoGray from '../assets/footer/logo-gray.svg';
+import DribbbleLogo from '../assets/footer/dribbble-logo.svg';
+import ClutchLogo from '../assets/footer/clutch-logo.svg';
+import GoogleReviewsLogo from '../assets/footer/google-reviews-logo.svg';
+import MBLogoGray from '../assets/footer/logo-color.svg';
 import config from '../../config';
 import { CountryContext } from '../contexts/CountryContext';
 import useModal from '../hooks/useModal';
@@ -23,174 +24,237 @@ import Heading from './Heading';
 import Button from './Button';
 
 const OfficeHeader = styled.h4`
-  color: ${props => props.theme.colors.footer.header};
+  color: ${({ theme: { colors } }) => colors.base150};
   opacity: 0.9;
-  font-weight: ${props => props.theme.fontWeights[1]};
-  font-size: ${props => props.theme.fontSizes[2]};
-  margin: 0.5rem 0;
-`
+  font-weight: ${(props) => props.theme.fontWeights[1]};
+  font-size: ${(props) => props.theme.fontSizes[2]};
+  margin: 4rem 0 4.4rem 0;
+
+  ${media.tabletMax`
+    margin-top: 9.6rem;
+    margin-bottom: 3.2rem;
+  `}
+`;
 
 const FooterContainer = styled.footer`
-  padding: 3rem 3rem 0;
-  ${media.desktop`
-    padding: 3rem 0 0;
+  margin-bottom: 4rem;
+  ${media.tabletMax`
+    margin-bottom: 4.8rem;
   `}
-`
+`;
 
 const OfficesContainer = styled.div`
   display: flex;
-  padding: 1rem 3rem;
   align-items: flex-start;
   width: 100%;
   padding: 0;
   font-size: 1.6rem;
   line-height: 2rem;
   flex-direction: column;
-  ${media.desktop`
-    padding: 1rem 0;
-    flex-direction: initial;
+
+  ${media.tabletMax`
+    flex-direction: row;
   `}
-`
+`;
+
+const OfficesWrapper = styled.div`
+  display: grid;
+  ${media.tabletMax`
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem 4.5rem;
+    width: 62.6rem;
+    height: 13.2rem;
+  `}
+  grid-template-columns: 1fr;
+  gap: 3.2rem;
+  height: auto;
+  width: 100%;
+`;
 
 const OfficeItem = styled.div`
   margin: 0;
-  width: 100%;
-  line-height: 2.6rem;
-  align-items: center;
+  width: 28.2rem;
+  min-width: 28.2rem;
+  height: 4.6rem;
+  text-align: left;
 
   h5 {
-    color: ${props => props.theme.colors.footer.officeHeader};
-    font-size: ${props => props.theme.fontSizes[2]};
-    margin-bottom: 2rem;
+    color: ${(props) => props.theme.colors.footer.officeHeader};
+    font-size: ${(props) => props.theme.fontSizes[2]};
     opacity: 0.9;
+    line-height: 2.4rem;
+    margin: 0;
   }
   p {
-    color: ${props => props.theme.colors.footer.officeText};
-    font-size: ${props => props.theme.fontSizes[2]};
-    line-height: 3rem;
+    color: ${({ theme: { colors } }) => colors.base150};
+    font-size: ${(props) => props.theme.fontSizes[1]};
+    line-height: 2.1rem;
     opacity: 0.9;
+    margin: 0;
   }
   ${media.desktop`
-    margin: 0 5rem 0 0;
     width: 100%;
   `}
-`
+`;
 
 const ReviewsWrapper = styled.div`
-  display: grid;
-  margin: 4rem 0px;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 4rem;
-  ${media.desktop`
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
+  gap: 1rem;
+  margin-top: 4.4rem;
+  ${media.tabletMax`
     display: flex;
     margin-left: auto;
+    margin-top: 0;
+    gap: 1.2rem;
   `}
-`;
-
-const RatingWrapper = styled.div`
-  display: flex;
-  img {
-    width: 15px;
-    margin-right: 5px;
-  }
-`;
-
-const ReviewItem = styled.div`
-  color: ${props => props.theme.colors.footer.reviewScore};
-   a {
-     display: block;
-     height: 4.7rem;
-   }
-   p {
-    font-size: 1.4rem;
-    margin-left: auto;
-   }
 `;
 
 const FooterNavigationWrapper = styled.div`
-   display: flex;
-   align-items: center;
-   border-top: 1px solid ${props => props.theme.colors.footer.border};
-   flex-direction: column;
-   padding: 4rem 0px;
-   ${media.desktop`
-    padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-top: 0px solid ${(props) => props.theme.colors.footer.border};
+
+  ${media.mobileMax`
+    padding: 4.4rem 0px 4rem;
+    border-top-width: 1px;
+  `};
+
+  ${media.tabletMax`
+    align-items: flex-start;
+    padding: 4.8rem 0 6.9rem 0;
     flex-direction: initial;
-  `}
-`
+  `};
+`;
 
 const ratings = [
+  {
+    title: 'Dribbble',
+    logo: DribbbleLogo,
+    url: 'https://dribbble.com/MasterBornSoftware',
+    score: null,
+  },
   {
     title: 'Clutch.co',
     logo: ClutchLogo,
     url: 'https://clutch.co/profile/masterborn',
-    imgHeight: 38, //[Page metrics] images need exact dimensions for good scoring
-    imgWidth: 130,
-    score: '4,9/5',
+    score: '4.9/5',
   },
   {
     title: 'Google Reviews',
     logo: GoogleReviewsLogo,
-    imgHeight: 47,
-    imgWidth: 130,
-    url: 'https://www.google.com/search?q=masterborn&rlz=1C5CHFA_enPL917PL917&oq=masterborn&aqs=chrome..69i57j46i175i199j0j69i60l2j69i61j69i65j69i60.3723j0j9&sourceid=chrome&ie=UTF-8',
-    score: '5.0',
+    url:
+      'https://www.google.com/search?q=masterborn&rlz=1C5CHFA_enPL917PL917&oq=masterborn&aqs=chrome..69i57j46i175i199j0j69i60l2j69i61j69i65j69i60.3723j0j9&sourceid=chrome&ie=UTF-8',
+    score: '5/5',
   },
 ];
 
 const StyledLogo = styled(Logo)`
   width: 9rem;
-  height: 3.8rem;
+  height: 3.2rem;
+  ${media.tabletMax`
+  width: 7.7rem;
+  `}
 `;
 
 const FooterNavigation = styled.ul`
-  display: flex;
-  flex-flow: row nowrap;
-  align-items: center;
-  padding: 0 2rem;
-`
+  order: -1;
+  padding: 0;
+  display: grid;
+  margin: 0;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem 2.2rem;
+
+  ${media.mobileMax`
+    order: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 0;
+    margin: 4rem 0;
+  `};
+  ${media.tabletMax`
+    margin: 0.6rem 0 0 7.3rem;
+  `};
+`;
+
+const GreyBreakLine = styled.div`
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 1px;
+  margin: 5.6rem 0;
+  background-color: ${({ theme: { colors } }) => colors.footer.border};
+  ${media.mobileMax`
+    display: none;
+  `};
+`;
 
 const FooterLink = styled(Link)`
-  color: ${props => props.theme.colors.header.color};
+  color: ${(props) => props.theme.colors.header.color};
   :hover {
-    color: ${props => props.theme.colors.primary};
+    color: ${(props) => props.theme.colors.primary};
     text-shadow: 0 0 1px;
   }
-`
+`;
 
 const FooterItem = styled.li`
-  margin: 1.5rem;
+  ${media.mobileMax`
   width: max-content;
-  padding: 1rem 0;
-`
+  margin-right: 0;
+  padding: 1rem 2rem;
+  :nth-child(3) {
+    order: 1;
+  }
+  `};
+
+  ${media.tabletMax`
+  padding: 0;
+  margin-right: 3rem;
+  `};
+
+  padding: 0.8rem 0px;
+  display: flex;
+  justify-content: center;
+  width: 15.1rem;
+  height: 4rem;
+`;
 
 const CopyrightBox = styled.p`
-  margin: 0;
-  color: ${props => props.theme.colors.footer.copyright};
-  ${media.desktop`
+  margin: 4rem 0 3.2rem 0;
+  color: ${({ theme: { colors } }) => colors.base150};
+
+  ${media.mobileMax`
+    margin: 0;
+    order: 3;
+  `};
+
+  ${media.tabletMax`
     margin-left: auto;
-  `}
-`
+  `};
+`;
 
 const RodoBox = styled.div`
-  background: ${props => props.theme.colors.footer.rodo};
-  color: ${props => props.theme.colors.footer.officeHeader};
+  color: ${({ theme: { colors } }) => colors.base150};
   font-size: 1.2rem;
-  padding: 2rem;
-  ${media.desktop`
+  text-align: center;
+  margin-bottom: 1.6rem;
+  ${media.tabletMax`
+    text-align: left;
     font-size: 1.1rem;
-    padding: 1.5rem 0;
-  `}
-`
+  `};
+`;
 
 const FooterCta = styled.div`
-  background:  ${props => props.theme.colors.footer.ctaBackground};
+  background: ${(props) => props.theme.colors.footer.ctaBackground};
   clip-path: ellipse(129% 106% at 50% 110%);
   padding: 7rem 2rem 2rem;
   ${media.desktop`
     padding: 10rem 0;
   `}
-`
+`;
 
 const StyledHeading = styled(Heading)`
   text-align: center;
@@ -199,7 +263,7 @@ const StyledHeading = styled(Heading)`
   ${media.desktop`
     font-size: 3.2rem;
   `}
-`
+`;
 
 const StyledButton = styled(Button)`
   margin: 5rem auto;
@@ -207,133 +271,170 @@ const StyledButton = styled(Button)`
   padding: 0.9rem 8.5rem;
   font-size: 1.6rem;
   line-height: 2rem;
-`
+`;
+
+const FooterSection = styled(PageSection)`
+  margin-bottom: 0;
+  > div {
+    padding: 0 2rem;
+    ${media.xUltraWide`
+    padding: 0;
+  `}
+  }
+`;
+
+const ReviewItem = styled.a`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 12rem;
+  height: 8.6rem;
+  color: ${({ theme: { colors } }) => colors.base150};
+  border: 1px ${({ theme: { colors } }) => colors.outlineGrey} solid;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: all 0.3s linear;
+
+  &:hover {
+    background-color: ${({ theme: { colors } }) => colors.outlineGrey};
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    margin-left: 3px;
+  }
+`;
+
+const RatingWrapper = styled.div`
+  display: flex;
+  margin-top: 1rem;
+  height: 9px;
+  img {
+    width: 8.5px;
+    margin-right: 3px;
+  }
+  p {
+    margin-top: 0;
+  }
+`;
 
 const Footer = ({ headings, buttonTexts }) => {
   const { getActiveStyleForPathname } = useActiveMenuStyles();
   const { isInPoland } = useContext(CountryContext);
 
-  const onSubmitContactForm = () => {}
+  const onSubmitContactForm = () => {};
 
   const [, showContactModal] = useModal(ContactModal, {
-    onSubmitContactForm, alwaysHideOnSubmit: true });
+    onSubmitContactForm,
+    alwaysHideOnSubmit: true,
+  });
 
-
-
-  function openContactModal () {
+  function openContactModal() {
     showContactModal();
-  };
+  }
 
   const utmCampaignName = utmCampaignNames.FOOTER_BUTTON;
-  const contactButtonAction = isInPoland ? () => navigateToWebsiteCareer(utmCampaignName) : openContactModal;
+  const contactButtonAction = isInPoland
+    ? () => navigateToWebsiteCareer(utmCampaignName)
+    : openContactModal;
   return (
     <>
       <FooterCta>
-        <StyledHeading as="h3">
-          {isInPoland ? headings[0] : headings[1]}
-        </StyledHeading>
-        <StyledButton 
-          variant="cta"
-          size="cta"
-          onClick={contactButtonAction}
-        >{isInPoland ? buttonTexts[0] : buttonTexts[1]}
+        <StyledHeading as="h3">{isInPoland ? headings[0] : headings[1]}</StyledHeading>
+        <StyledButton variant="cta" size="cta" onClick={contactButtonAction}>
+          {isInPoland ? buttonTexts[0] : buttonTexts[1]}
         </StyledButton>
       </FooterCta>
-      <PageSection marginBottom="5rem">
+      <FooterSection>
         <FooterContainer>
           <OfficeHeader>Our offices are waiting for you in:</OfficeHeader>
           <OfficesContainer>
-            <OfficeItem>
-              <h5>Wrocław, PL (HQ)</h5>
-              <p>ul. Krupnicza 13,
-                <br />
-                50-075 Wrocław
-              </p>
-            </OfficeItem>
-            <OfficeItem>
-              <h5>Kielce, PL</h5>
-              <p>ul. Gabrieli Zapolskiej 45B
-                <br />
-                25-435 Kielce
-              </p>
-            </OfficeItem>
-            
-            <OfficeItem>
-              <h5>Austin, U.S.</h5>
-              <p>Austin, TX
-                <br />
-                United States
-              </p>
-            </OfficeItem>
+            <OfficesWrapper>
+              <OfficeItem>
+                <h5>Wrocław, PL (HQ)</h5>
+                <p>ul. Krupnicza 13, 50-075 Wrocław</p>
+              </OfficeItem>
+              <OfficeItem>
+                <h5>Szczecin, PL</h5>
+                <p>
+                  ul. Wielka Odrzańska 26,
+                  {' 70-535 Szczecin'}
+                </p>
+              </OfficeItem>
+              <OfficeItem>
+                <h5>Kielce, PL</h5>
+                <p>ul. Gabrieli Zapolskiej 45B, 25-435 Kielce</p>
+              </OfficeItem>
+              <OfficeItem>
+                <h5>Austin, U.S.</h5>
+                <p>Austin, TX United States</p>
+              </OfficeItem>
+            </OfficesWrapper>
             <ReviewsWrapper>
-              {ratings.map(rating => (
-                <ReviewItem key={rating.title}>
-                  <a
-                    href={rating.url}
-                    title={rating.title}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <img width={rating.imgWidth} height={rating.imgHeight} src={rating.logo} alt={rating.title} />
-                  </a>
-                  <RatingWrapper>
-                    <StarRating />
-                    <p>{rating.score}</p>
-                  </RatingWrapper>
+              {ratings.map((rating) => (
+                <ReviewItem
+                  key={rating.title}
+                  href={rating.url}
+                  title={rating.title}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <img src={rating.logo} alt={rating.title} />
+                  {rating.score && (
+                    <RatingWrapper>
+                      <StarRating />
+                      <p>{rating.score}</p>
+                    </RatingWrapper>
+                  )}
                 </ReviewItem>
-            ))}
+              ))}
             </ReviewsWrapper>
           </OfficesContainer>
         </FooterContainer>
         <FooterNavigationWrapper>
+          <GreyBreakLine />
           <Link to="/" href={config.env.masterbornWebsite} title="Masterborn.com">
             <StyledLogo src={MBLogoGray} />
           </Link>
           <FooterNavigation>
             <FooterItem>
-            <FooterLink
-              title="Home"
-              href={config.env.masterbornWebsite}
-            >
-              Home
-            </FooterLink>
+              <FooterLink title="Home" href={config.env.masterbornWebsite}>
+                Home
+              </FooterLink>
             </FooterItem>
             <FooterItem>
-            <FooterLink
-              title="About Us"
-              href="/about"
-            >
-              About Us
-            </FooterLink>
+              <FooterLink title="About Us" href="/about/">
+                About Us
+              </FooterLink>
             </FooterItem>
             <FooterItem>
-            <FooterLink
-              title="Career"
-              href="/career"
-            >
-              Career
-            </FooterLink>
+              <FooterLink
+                title="Blog"
+                href="/blog/"
+                style={getActiveStyleForPathname('/blog', 'footer')}
+              >
+                Blog
+              </FooterLink>
             </FooterItem>
             <FooterItem>
-            <FooterLink
-              title="Blog"
-              href="/blog"
-              style={getActiveStyleForPathname('/blog', 'footer')}
-            >
-              Blog
-            </FooterLink>
+              <FooterLink title="Career" href="/career/">
+                Career
+              </FooterLink>
             </FooterItem>
           </FooterNavigation>
-          <CopyrightBox>Copyright © MasterBorn 2016-2021</CopyrightBox>
+          <CopyrightBox>Copyright © MasterBorn 2016 -{` ${new Date().getFullYear()}`}</CopyrightBox>
         </FooterNavigationWrapper>
-      </PageSection>
-      <RodoBox>
-        <Content mb={0} mt={0}>
-          The Administrator of your data is MasterBorn, with its registered office in Wroclaw, Krupnicza 13, Wroclaw.  If you want to withdraw, get an insight or update information about you, then contact us:
-          {' '}
-          <a href="mailto:contact@masterborn.com">contact@masterborn.com</a>
-        </Content>
-      </RodoBox>
+        <RodoBox>
+          <Content mb={0} mt={0}>
+            The Administrator of your data is MasterBorn, with its registered office in Wroclaw,
+            Krupnicza 13, Wroclaw. If you want to withdraw, get an insight or update information
+            about you, then contact us:{' '}
+            <a href="mailto:contact@masterborn.com">contact@masterborn.com</a>
+          </Content>
+        </RodoBox>
+      </FooterSection>
     </>
   );
 };
@@ -348,7 +449,7 @@ Footer.defaultProps = {
     'We build valuable, JavaScript products for U.S. based companies',
     'Build your next innovative JavaScript product with us',
   ],
-  buttonTexts: ['Join us!', 'Let\'s talk!'],
-}
+  buttonTexts: ['Join us!', "Let's talk!"],
+};
 
 export default Footer;
