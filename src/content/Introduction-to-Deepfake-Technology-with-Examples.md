@@ -5,7 +5,7 @@ description: 'Deepfake technology is real and might be frightening. We have no c
 author: 'Mateusz Lewandowski'
 authorAvatar: ./assets/avatar_mateusz_lewandowski.png
 metaImage: ./assets/Introduction-to-Deepfake-Technology-with-Examples/mb_blog_Introduction_to_deep_fake_technology_cover.jpg
-isFeature: true
+isFeature: false
 ---
 
 
